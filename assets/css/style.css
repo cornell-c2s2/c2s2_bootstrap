@@ -604,14 +604,14 @@ section {
 
 .services .icon-box:hover {
   transform: translateY(-5px);
-  border-color: #ef7f4d;
+  border-color: #de2424;
 }
 
 .services .icon i {
   font-size: 48px;
   line-height: 1;
   margin-bottom: 15px;
-  color: #ef7f4d;
+  color: #de2424;
 }
 
 .services .title {
@@ -1422,4 +1422,94 @@ section {
 
 .counts .count-box a:hover {
   color: #6e9fb4;
+}
+
+/*--------------------------------------------------------------
+# Timeline
+--------------------------------------------------------------*/
+.timeline-with-icons {
+  margin-left: 100px;
+  margin-right: 100px;
+  border-left: 1px solid hsl(0, 0%, 24%);
+  position: relative;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-with-icons .timeline-item {
+  position: relative;
+}
+
+.timeline-with-icons .timeline-item:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+
+.timeline-with-icons .timeline-icon {
+  position: absolute;
+  left: -48px;
+  background-color: #ffcaca;
+  color: #de2424;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 24%);
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-with-icons .timeline-icon i {
+  display: block;
+  font-size: 20px;
+  color: #b31b1b;
+  float: center;
+  line-height: 0;
+}
+
+.timeline-with-icons .application-icon {
+  position: absolute;
+  left: -48px;
+  background-color: #b31b1b;
+  color: #de2424;
+  border-radius: 50%;
+  border: 1px solid hsl(0, 0%, 24%);
+  height: 31px;
+  width: 31px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-with-icons .application-icon i {
+  display: block;
+  font-size: 20px;
+  color: #ffffff;
+  float: center;
+  line-height: 0;
+}
+
+/*--------------------------------------------------------------
+# Application
+--------------------------------------------------------------*/
+
+.application-btn {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 3px;
+  transition: 0.5s;
+  margin-top: 30px;
+  color: #fff;
+  background: #b31b1b;
+}
+
+.application-btn:hover {
+  color: #fff;
+  background: #de2424;
 }
