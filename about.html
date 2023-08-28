@@ -52,20 +52,30 @@
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-          <li class="dropdown"><a href="#team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+          <li><a class="nav-link scrollto" href="#hero">Home</a></li>
+          <li><a class="nav-link scrollto active" href="#about">About Us</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#portfolio">Portfolio</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
-              <li><a href="#">Analog</a></li>
-              <li><a href="#">Digital</a></li>
-              <li><a href="#">Software</a></li>
-              <li><a href="#">System Architecture</a></li>
-              <li><a href="#">Project Management</a></li>
+              <li><a href="#">Drop Down 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#">Deep Drop Down 1</a></li>
+                  <li><a href="#">Deep Drop Down 2</a></li>
+                  <li><a href="#">Deep Drop Down 3</a></li>
+                  <li><a href="#">Deep Drop Down 4</a></li>
+                  <li><a href="#">Deep Drop Down 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Drop Down 2</a></li>
+              <li><a href="#">Drop Down 3</a></li>
+              <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li>
-          <li><a class="nav-link scrollto" href="#team">Blog</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact Us</a></li>
-          <li><a class="getstarted scrollto" href="#about">Apply</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="getstarted scrollto" href="#about">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -75,25 +85,117 @@
 
   <main id="main">
 
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex align-items-center">
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="about" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>About Us</h1>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page">
+      <div class="container">
+        <!-- <h2 class="section-title">About the Team</h2> -->
+        <p>
+          Silicon CMOS chips are at the heart of every modern computing device
+          from the smallest Internet-of-Things (IoT) device to the largest
+          supercomputer.Unfortunately, undergraduate students currently do not
+          have any opportunity to actually go through the process of fully
+          specifying, designing, implementing, testing, fabricating, and
+          evaluating a computer chip. Undergraduates leave Cornell thinking that
+          fabricating computer chips is only possible at huge companies like Intel,
+          AMD, NVIDIA, and Apple. Until recently, there was no realistic hands-on
+          way for students to experience the complete computer chip design process.
+          At the same time, exposing students to the beauty of computer chip design
+          has never been more important, since the slowing of CMOS technology
+          scaling means computer system designers must increasingly rely on
+          specialized computer chips for continued improvements in performance
+          and/or energy efficiency.
+        </p>
+
+        <p>
+          How can students (from freshmen to seniors) gain hands-on computer chip
+          design experience? The answer lies in the recent explosion in open-source
+          chip design tools, open-source chip implementations, open-source process
+          design kits, and low-cost computer chip fabrication services. Just as
+          open-source software has democratized software design, open-source
+          hardware is poised to democratized hardware design.
+        </p>
+
+        <p>
+          The Cornell Custom Silicon Systems (C2S2) Project Team is a new project
+          team funded through the <strong>Shen Fund for Social Impact.</strong>
+          We leverage this emerging open-source
+          hardware ecosystem to enable undergraduate students to specify, design,
+          implement, test, fabricate, and evaluate custom computer chips. The final
+          outcome will be a custom computer chip integrated on a custom circuit
+          board with a complete software stack targeting an important application
+          domain (we are currently partnered with the <a target="_blank"
+            href="https://www.birds.cornell.edu/home/">Cornell Lab of Ornithology</a>
+          ). This ambitious student-led team is likely unique across US universities, and will
+          hopefully inspire a new generation of computer system designers.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts  section-bg">
 
       <div class="container">
-        <div class="row gy-4">
-          <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1>Welcome to C2S2!</h1>
-            <h2>A Cornell Engineering Project Team dedicated to undergraduate semiconductor design</h2>
-            <div>
-              <a href="#about" class="btn-get-started scrollto">Fall 2023 Applications</a>
+
+        <div class="row no-gutters">
+
+          <!-- <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="bi bi-people"></i>
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Happy Clients</strong> consequuntur quae</p>
+          </div>
+        </div> -->
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-center">
+            <div class="count-box">
+              <i class="bi bi-people"></i>
+              <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Team Members</strong></p>
             </div>
           </div>
-          <div class="col-lg-6 order-1 order-lg-2 hero-img">
-            <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-center">
+            <div class="count-box">
+              <i class="bi bi-diagram-2"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Subteams</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-center">
+            <div class="count-box">
+              <i class="bi bi-mortarboard"></i>
+              <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1"
+                class="purecounter"></span>
+              <p><strong>Majors</strong></p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
+          <div class="count-box">
+            <i class="bi bi-cpu"></i>
+            <span data-purecounter-start="0" data-purecounter-end="2" data-purecounter-duration="1" class="purecounter"></span>
+            <p><strong>Taped-Out Chips</strong></p>
           </div>
         </div>
-      </div>
 
-    </section><!-- End Hero -->
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
 
   </main><!-- End #main -->
 
@@ -153,11 +255,11 @@
               <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
               <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a> -->
+            </div>
+          </div>
+
         </div>
       </div>
-
-    </div>
-    </div>
     </div>
 
     <div class="container py-4">
@@ -178,6 +280,7 @@
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
