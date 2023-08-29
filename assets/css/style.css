@@ -1260,7 +1260,7 @@ section {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #eb5d1e;
+  background: #b31b1b;
   color: #fff;
   transition: 0.3s;
   border-radius: 4px;
@@ -1268,7 +1268,7 @@ section {
 }
 
 #footer .footer-newsletter form input[type=submit]:hover {
-  background: #c54811;
+  background: #b31b1b;
 }
 
 #footer .footer-top {
@@ -1316,7 +1316,7 @@ section {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #f39e7a;
+  color: #e27070;
   font-size: 18px;
   line-height: 1;
 }
