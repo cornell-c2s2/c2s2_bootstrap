@@ -99,6 +99,7 @@ h6,
 #header .logo h1 a,
 #header .logo h1 a:hover {
   color: #7a6960;
+  color: #6d4b4b;
   text-decoration: none;
 }
 
@@ -469,16 +470,17 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 0px;
 }
 
 .section-title h2 {
   font-size: 24px;
   font-weight: 700;
-  padding-bottom: 0;
+  padding-bottom: 15px;
   line-height: 1px;
   margin-bottom: 15px;
-  color: #c2b7b1;
+  margin-top: 15px;
+  color: #440a0a;
 }
 
 .section-title p {
@@ -494,11 +496,32 @@ section {
   content: "";
   position: absolute;
   display: block;
-  width: 60px;
+  /* width: 60px; */
+  width: 75%;
   height: 2px;
   background: #b31b1b;
   bottom: 0;
-  left: calc(50% - 30px);
+  /* left: calc(50% - 30px); */
+  left: 12.5%;
+}
+
+.underline {
+  padding-bottom: 20px !important;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.underline::after {
+  content: "";
+  position: absolute;
+  display: block;
+  /* width: 60px; */
+  width: 75%;
+  height: 2px;
+  background: #b31b1b;
+  bottom: 0;
+  /* left: calc(50% - 30px); */
+  left: 12.5%;
 }
 
 /*--------------------------------------------------------------
@@ -506,7 +529,7 @@ section {
 --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 30px 0;
-  background-color: #fef5f1;
+  background-color: #fef7f7;
   min-height: 40px;
 }
 
@@ -1552,4 +1575,16 @@ section {
   padding-bottom: 20px;
   margin-bottom: 15px;
   color: #c2b7b1;
+}
+
+/*--------------------------------------------------------------
+# Blog-Post
+--------------------------------------------------------------*/
+
+.blog-post {
+  width: 100%;
+  min-height: 70vh;
+  padding: 0 !important;
+  background: #fef7f7;
+  border-bottom: 2px solid #b31b1b;
 }
