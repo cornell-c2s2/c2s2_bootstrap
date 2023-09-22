@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Software and Relative Position Estimator</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Software and Relative Position Estimator</h1>
+          <h2>Akanksha Sarkar and Sana Chawla</h2>
+          <h2 class="underline">April 23rd, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+        <p>
+          Hello! I am Akanksha, a co-lead of the software sub-team, and a sophomore studying Computer Science and Mathematics. I 
+          joined C2S2 last Fall and have learnt a lot about chip design and its development process. As the software team, our main 
+          goal is to come up with a testing infrastructure for the chip and make sure all of its components are communicating with 
+          each other properly. 
+        </p>
+
+        <p>
+          We have therefore till now been working on smaller projects like calculators and crash detectors to understand how to work 
+          with the chip and gain some experience coding in C++. However, things are escalating this semester because ... <i>(drumroll please)</i> 
+          we have a campus partner now! Since we are now working with the Lab of Ornithology, we have a better understanding of our project's 
+          software needs and because of all the work we have been doing before, are well equipped to come up with the functionality required. 
+          We are now working on a Relative position estimator to track the movement of the Scrub Jays and potentially collect attitude and 
+          audio data from the tagged chip.
+        </p>
+
+        <p>
+          We are primarily working with the Uno R3 microcontroller. One of the problems we were facing is the issue of GPS tracking. While 
+          tracking using  a GPS module is highly accurate, it consumes a lot of power and has other weight considerations. Therefore, we have 
+          decided to work with an error logging procedure. The idea is that the microcontroller  starts at a known position and is then moved 
+          around campus. We log the error of our R3 approximation function using another device and realign the estimated position of the R3 
+          function to the true coordinates. My co-lead Ananya and I have been working on the external communication capabilities of our crash 
+          detector which we are hoping to use for the relative position estimator as well. This will help us store the data as well as transform 
+          it post collection for further analysis. 
+        </p>
+
+        <p>
+          Another goal for the software team is to write code which can be easily translated to other environments. We want to create programs 
+          that can be run independently of the platform. We have been focusing on better documentation habits so that all the code we are writing 
+          for Arduino boards can be translated to our custom chip without changing the structure massively. 
+        </p>
+
+        <p>
+          Looking forward, we will be working on figuring out how to translate the 2D mapping we have to a 3D setting as well as test our code by 
+          moving around campus. I also think the software team will be collaborating more with the system architecture team more and look forward 
+          to watching our project come to life. This was my first semester being a co-lead and I am enjoying being part of this cool community of 
+          chip design enthusiasts. This is definitely an interesting time to be in this field and I am very grateful to be exposed to this field so 
+          early on in my CS career. <i>(Go C2S2!!!!)</i>
+        </p>
+
+        <p>
+          Hello, I am Sana Chawla, a member of the Software subteam of C2S2 and a sophomore studying Computer Science. I joined C2S2 this semester 
+          with the goal of learning about and gaining experience in the chip design process. So far, as a new member I have had the chance to learn 
+          a lot about the industry and its various fields, like analog design, microarchitecture etc.
+        </p>
+
+        <p>
+          Michael (my subteam partner) and I began the semester working on a crash detector to get acquainted with using the UNO R3 microcontroller, 
+          C++ coding, etc. The crash detector code uses the timestamp and x, y, z acceleration values which are available as inputs from the accelerometer 
+          to calculate the relative position and velocity by integration. A crash is then “detected” if the change in acceleration is found to meet a 
+          certain predetermined threshold. This served as a very insightful first project for me as a C2S2 member, as I gained a lot of experience in C++ 
+          coding and using Arduino libraries like Adafruit.
+        </p>
+
+        <p>
+          Once the C2S2 campus partner was finalized, we have switched our focus to begin working on a relative position estimator which is more in line 
+          with the needs of the partner, the Lab of Ornithology. The position estimator would be used to determine the relative position of the Scrub Jays. 
+        </p>
+
+        <p>
+          Even though I have been in C2S2 for only one semester now I have gained a lot of insight into the semiconductor industry. I look forward to working 
+          on the position estimator project and possibly collaborating with the System Architecture team to assist our campus partner with the project. I am 
+          grateful for this opportunity to learn about the chip design process and broaden my knowledge in this field. 
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>

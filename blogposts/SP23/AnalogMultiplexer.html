@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Analog Multiplexer</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Analog Multiplexer</h1>
+          <h2>Adele Thompson and David Bertuch</h2>
+          <h2 class="underline">April 2nd, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+        <p>
+          Hello everyone! As new members of C2S2, we were tasked with building an analog multiplexer using digital logic gates and MOSFETs. 
+          Since we are limited by the number of output pins on a chip, a MUX would allow us to measure more signals on the circuit.
+        </p>
+
+        <p>
+          Our idea for the analog MUX is fundamentally different from a digital MUX. In the digital case, you would typically see the input 
+          signal combined with the select logic. 
+        </p>
+
+        <figure>
+          <img src="imgs/AnalogMultiplexer/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br><a href="https://electronics.stackexchange.com/users/34156/gabrieljcs">2-to-1 Digital Multiplexer</a></figcaption>
+        </figure>
+
+        <p>
+          You can see that an analog signal would not be compatible with this design. Because of this, we decided to break our multiplexer into 
+          two parts: a decoder and an analog switch array. 
+        </p>
+
+        <p>
+          To start, we designed a decoder (Figure 2) using NAND and NOT gates. Each output (and its inverse) is connected to an analog switch 
+          (Figure 3). The decoder uses a 4-bit digital input to select one of the 16 possible analog switches. This selection turns on a MOSFET pass-gate 
+          that connects the desired signal to the analog output. 
+        </p>
+
+        <figure style="max-width:100% !important;">
+          <img src="imgs/AnalogMultiplexer/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>4-to-16 Digital Decoder</figcaption>
+        </figure>
+
+        <p>
+          The second part of our circuit is made up of 16 analog switches. These switches are MOSFET pass-gates made from complementary transistor pairs 
+          (Figure 3). Each analog signal enters the switch's source, and the switches' drains are tied together to form the MUX output (see Figure 4). 
+          Each switch was designed to have low on-resistance to ensure minimal signal loss and maximum signal quality. It is also essential to ensure the 
+          on-resistance is linear across the range of voltages we use. The MOSFET switches are controlled by the digital decoder and can be turned on or 
+          off depending on the selected input.
+        </p>
+
+        <figure>
+          <img src="imgs/AnalogMultiplexer/image3.png"/>
+          <figcaption><strong>Figure 3</strong><br>Analog switch made from a complementary MOSFET pair (VPG and VNG must take opposite signals)</figcaption>
+        </figure>
+
+        <figure style="max-width:100% !important;">
+          <img src="imgs/AnalogMultiplexer/image4.png"/>
+          <figcaption><strong>Figure 4</strong><br>16 Analog Switches (modeled as boxes) with Connected Drains</figcaption>
+        </figure>
+
+        <p>
+          After we had completed the design and construction of the analog mux, we tested it using all 16 truth table values. We were pleased to find 
+          that it works as expected.  
+        </p>
+
+        <p>
+          To optimize the performance of the MUX, we went back to test the on-resistance of an individual switch (Figure 3). We are currently working on this 
+          to minimize the loss of input signals and to linearize the resistance. This is a matter of adjusting the MOSFET aspect ratios.
+        </p>
+
+        <p>
+          One of the key benefits of an analog mux is that it can take in both analog and digital inputs, making it incredibly versatile for circuit design. 
+          Our project aimed to create more outputs for an analog circuit design, and with the successful creation of our analog mux, we were able to achieve just that. 
+        </p>
+
+        <p>
+          Overall, the project was a challenging but rewarding experience for us. We were able to put our skills in digital logic gates and MOSFET transistors to 
+          practical use and create a functional and useful analog mux. We are excited to continue exploring and expanding our knowledge and look forward to future 
+          projects and challenges.
+        </p>
+
+        <figure>
+          <img src="imgs/AnalogMultiplexer/image5.png"/>
+          <figcaption><strong>Figure 5</strong><br>Analog Mux from the Decoder and 16 signal Analog Switch</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imgs/AnalogMultiplexer/image6.png"/>
+          <figcaption><strong>Figure 6</strong><br>Top-level Symbol of the Analog MUX</figcaption>
+        </figure>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
