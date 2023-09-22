@@ -34,6 +34,12 @@ h6,
   font-family: "Raleway", sans-serif;
 }
 
+.code {
+  font-family: "Courier New";
+  font-weight: bold;
+  text-decoration: underline #440a0a;
+}
+
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -1571,8 +1577,7 @@ section {
 
 .inner-page p {
   font-size: 24px;
-  padding-bottom: 20px;
-  margin-bottom: 15px;
+  padding: 0;
   color: #c2b7b1;
 }
 
