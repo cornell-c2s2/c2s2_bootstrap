@@ -1571,7 +1571,6 @@ section {
 
 .inner-page p {
   font-size: 24px;
-  font-weight: 700;
   padding-bottom: 20px;
   margin-bottom: 15px;
   color: #c2b7b1;
@@ -1583,7 +1582,7 @@ section {
 
 .blog-post {
   min-height: 70vh;
-  padding: 0 !important;
+  padding: 0;
   background: #fef7f7;
   border-bottom: 2px solid #b31b1b;
 }
@@ -1591,29 +1590,37 @@ section {
 .blog-post p {
   font-size: 15px;
   color: #440a0a;
+  text-align: left;
+  text-indent: 80px;
 }
 
 .blog-post figure {
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
   position: relative;
   overflow: hidden;
   background-color: #fff;
-  border: 2px solid #440a0a;
-  border-radius: 7%;
+  border: 2px solid #b31b1b;
+  border-radius: 2rem;
   align-items: center;
   max-width: min(70%, 500px);
+  height: auto;
 }
 
 .blog-post figure img {
   margin: auto;
-  max-width: 100%;
+  width: 100%;
+  height: auto;
 }
 
 .blog-post figure figcaption {
   margin: auto;
+  max-width: 100%;
   font-size: 20px;
+  padding: 0 !important;
   color: #440a0a;
-  border-top: 2px solid #440a0a;
+  border-top: 2px solid #b31b1b;
 }
 
 /*--------------------------------------------------------------
