@@ -135,10 +135,10 @@
         </figure>
 
         <p>
-          One of the reasons I applied to C2S2 was that I wanted a source of “accelerated learning”. I was very eager to learn and 
+          One of the reasons I applied to C2S2 was that I wanted a source of 'accelerated learning'. I was very eager to learn and 
           solve all the mysteries that were bothering my mind regarding topics in ECE. I thought that if I took classes while 
           simultaneously being in a project team that applied those topics, I would learn at a rate faster than anyone else. In C2S2, 
-          I was able to experience this “accelerated learning” in two different forms. For the Analog subteam, I used the design 
+          I was able to experience this 'accelerated learning' in two different forms. For the Analog subteam, I used the design 
           experience from C2S2 to better understand the applications behind the physics behind semiconductors information that I 
           learned in Microelectronics class. For the Digital subteam, I applied the theoretical knowledge behind combinational and 
           sequential logic blocks that I got from Digital Logic class into its Verilog implementation with timing and data loss 
@@ -161,7 +161,7 @@
 
         <p>
           The Wishbone specification is a handshake-based read/write cycle protocol where a master sends read/write instructions to a slave, 
-          and the slave sends an “acknowledge” signal once it is done processing the instruction. This ensures that the master never sends 
+          and the slave sends an 'acknowledge' signal once it is done processing the instruction. This ensures that the master never sends 
           instructions too fast for the slave to process. A diagram of the Wishbone interface is below. The Caravel harness includes a Wishbone 
           bus master, so I am creating a wishbone slave that will act as an interface to a first-in-first-out (FIFO) queue. Writing to this 
           module will add data into the queue, and reading will extract from the front of the queue. This will allow meaningful testing of 
@@ -174,7 +174,7 @@
         </figure>
 
         <p>
-          The queue uses a different communication protocol, called the val/rdy stream interface (meaning “valid” and “ready”). The protocol 
+          The queue uses a different communication protocol, called the val/rdy stream interface (meaning 'valid' and 'ready'). The protocol 
           connects a sender, which controls the valid signal, and a receiver which controls the ready signal. Every cycle, the sender sets the 
           valid signal to high if it is sending a valid data message along the data line. The receiver also sets the ready signal to high if 
           it is ready to receive a message from the data line. Both the sender and the receiver monitor both signals, and when they detect that 
@@ -186,7 +186,7 @@
         <p>
           The Wishbone queue module needs to use two val/rdy interfaces: one for the queue to receive data (with the wishbone as the sender and 
           the queue as the reader), and one for the queue to send data (with the queue as the sender and the wishbone as the reader). The former 
-          is through the ports prefixed by “recv”, and the latter is through the ports prefixed by “send” on the queue, and all the connections of 
+          is through the ports prefixed by 'recv', and the latter is through the ports prefixed by 'send' on the queue, and all the connections of 
           my module are shown in the block diagram below. Most of the design of my module involved combinational logic to connect the wishbone 
           interface with the val/rdy interfaces appropriately. 
         </p>

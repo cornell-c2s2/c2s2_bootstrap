@@ -178,7 +178,7 @@
           To test our shield board, I got the opportunity to help create a testing library and framework to test everything we 
           wanted to test. The testing library is designed to hold all the necessary functions needed to properly run both the PSU 
           and the DMM. Since these devices require their own specialized inputs, it was a hassle having to consistently perform a 
-          “control + f” to hopefully find the correct commands. <span class="code">DMM.write(':FUNCtion:CURRent:DC')</span> and 
+          'control + f' to hopefully find the correct commands. <span class="code">DMM.write(':FUNCtion:CURRent:DC')</span> and 
           <span class="code">DMM.query(':MEASure:VOLTage:DC?')</span> are both instances of the types of commands required for 
           setting the input function and the measurement we are trying to record with the DMM. Instead, I created functions that, 
           depending on the user input as a global variable, will instantly affect every instance. As an example, most commands 
