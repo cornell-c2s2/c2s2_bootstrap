@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>The Analog Subteam Process Flow</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>The Analog Subteam Process Flow</h1>
+          <h2>Thomas Figura and David Bertuch</h2>
+          <h2 class="underline">October 15th, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <p>
+          To properly tape out an analog integrated circuit, one needs to know how to make their way through the 
+          analog tape out flow, so we want to share the processes that we used in last year's tape out.
+        </p>
+
+        <p>
+          For this blog post, we will go through the process flow of a simple inverter circuit in the SKY130 PDK 
+          through the use of XSCHEM/NGSpice, Magic VLSI, and Netgen. We use XSCHEM for the schematic capture and 
+          SPICE testing, Magic VLSI for laying out the schematic into metal, and Netgen to check whether the schematic 
+          netlist from XSCHEM matches the netlist from Magic.
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br>The Analog Subteam's Process Flow</figcaption>
+        </figure>
+
+        <p>
+          To begin, we start with creating the circuit through XSCHEM.  
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>Schematic of the Inverter</figcaption>
+        </figure>
+
+        <p>
+          After finalizing our schematic, we move on to testing with Ngspice, integrated into XSCHEM. We start by 
+          importing models from the SKY130 PDK to inform Ngspice about how our components should behave. Following this, 
+          we conduct specific tests to check the performance of our circuit. The choice of tests depends on the type of 
+          circuit we're working with. Typically, we perform transient analysis to observe how our design behaves over time. 
+          Subsequently, we proceed to frequency testing to assess the operational limits of our circuit. Ngspice provides a 
+          graphing tool to help us understand the circuit's response. 
+        </p>
+
+        <p>
+          Below are some simulations:
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image3.png"/>
+          <figcaption><strong>Figure 3</strong><br>DC Voltage Stepping</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image4.png"/>
+          <figcaption><strong>Figure 4</strong><br>Transient of a Square Wave Input</figcaption>
+        </figure>
+
+        <p>
+          Once our tests confirm the expected behavior, we transition to the layout phase.
+        </p>
+
+        <p>
+          Unlike digital design, analog circuits have to be laid out manually. This involves arranging our components and routing 
+          them with the materials available on the chip. The tool we use is called Magic VLSI. Before getting started, we must import 
+          the caravel magic files from Efabless. This will give us the chip's footprint so that we know where all the IO pads are. 
+          We can then import the devices used in our schematic into Magic and begin arranging them.
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image5.png"/>
+          <figcaption><strong>Figure 5</strong><br>Layout of the Inverter in Magic</figcaption>
+        </figure>
+
+        <p>
+          As we paint on the materials, we closely monitor that our layout is within the design requirements of SKY130. Some materials 
+          need sufficient spacing or have a minimum size requirement. 
+        </p>
+
+        <p>
+          If our chip layout looks good and meets all the design specifications, we have to ensure that everything is connected properly. 
+        </p>
+
+        <p>
+          To confirm the consistency between our Magic layout and the schematic designed in XSCHEM, we utilize Netgen software. This tool 
+          thoroughly examines the connections and devices within our Magic layout, comparing them with the schematic connections. This 
+          verification process is known as LVS, short for layout-versus-schematic. To get this to work, we have to export a complete 
+          description of the connections from both designs to a netlist. Netgen will process these netlists and give a rundown of how the 
+          circuits compare. 
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image6.png"/>
+          <figcaption><strong>Figure 6</strong><br>Netgen Output of LVS Test</figcaption>
+        </figure>
+
+        <p>
+          If everything matches up, we can move on to the final step, simulating the extracted layout.
+        </p>
+
+        <p>
+          Unfortunately, the materials used in a chip are not ideal: they have some capacitance and resistivity, which we call “parasitics.” 
+          However, we can model these approximate parasitic values from our Magic layout in a process called extraction. Instead of having 
+          idealized connections, the extracted netlist will have connections modeled by resistor and capacitor components. We can run the same 
+          simulations as before, but now with something that models how our design would act on a chip.
+        </p>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image7.png"/>
+          <figcaption><strong>Figure 7</strong><br>Extracted Circuit in XSCHEM</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image8.png"/>
+          <figcaption><strong>Figure 8</strong><br>Extracted DC Sweep</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imgs/TheAnalogSubteamProcessFlow/image9.png"/>
+          <figcaption><strong>Figure 9</strong><br>Extracted Transient</figcaption>
+        </figure>
+
+        <p>
+          Seeing that our post-extraction simulations run as expected, we have completed the process flow!
+        </p>
+
+        <p>
+          Going from an idea to a chip can seem like an intimidating process, especially in the world of analog design. But, by writing this blog post, 
+          we hope we have broken down the process flow into small steps that are easier to follow and understand.
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
