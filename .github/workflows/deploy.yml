@@ -10,22 +10,21 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Install SSH Key
-        uses: shimataro/ssh-key-action@v2
-        with:
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          known_hosts: unnecessary
-
-      - name: Adding Known Hosts
-        run: echo "${{ secrets.KHOSTS }}" >> ~/.ssh/known_hosts
+      # - name: Install SSH Key
+      #   uses: shimataro/ssh-key-action@v2
+      #   with:
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     known_hosts: ${{ secrets.KHOSTS }}
 
       - name: Pull Changes
-        uses: appleboy/ssh-action@master
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           password: ${{ secrets.PASSWORD }}
+          known_hosts: ${{ secrets.KHOSTS }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          debug: true
           script: |
             cd /users/acm289/coursewww/c2s2.engineering.cornell.edu/htdocs
             git pull
