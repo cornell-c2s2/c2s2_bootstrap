@@ -1716,12 +1716,6 @@ section {
   max-height: 180px;
 }
 
-.sponsors .sponsor:hover {
-  border: 2px solid #b31b1b;
-  opacity: 1;
-  transition: 0.2s ease;
-}
-
 .sponsors .sponsor a {
   text-align: center;
   display: flex;
