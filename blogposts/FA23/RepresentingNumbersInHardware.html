@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Representing Numbers In Hardware</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Representing Numbers In Hardware</h1>
+          <h2>Madeleine Lee and Vicky Le</h2>
+          <h2 class="underline">October 22nd, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <p>
+          Have you ever wondered how your computer represents numbers? You've probably already heard of binary numbers - using 
+          a series of 0's and 1's to represent numerical values - but how do we use binary to represent values between 0 and 1 
+          ("decimal" values)? There are two primary ways to do this. They are called <i>"fixed point"</i> and <i>"floating point"</i> representations. 
+        </p>
+
+        <h2>Review of Binary Numbers</h2>
+
+        <p>
+          Before we get into these representations of numbers, let's do a quick review of what we call <i>integer</i> binary numbers. Binary 
+          numbers are a base 2 number system, so unlike our everyday base 10 system where we use digits 0-9, binary uses the digits 
+          0-1 to represent numbers. Each of these digits is referred to as a bit, and when multiple bits are put together the right-most 
+          bit is called the "least significant bit" (LSB) representing 2<sup>0</sup> , while each bit left represents 2<sup>bit position</sup>. The left-most 
+          bit is called the "most significant bit" (MSB). Below is a diagram that can help visualize this system.
+        </p>
+
+        <figure>
+          <img src="imgs/RepresentingNumbersInHardware/image1.png"/>
+          <figcaption>Visualization of Base 2</figcaption>
+        </figure>
+
+        <p>
+          Relatively simple right? To convert to decimal, just multiply each digit by its corresponding power of two and add all of the digits 
+          together. However, this system as it stands, does not allow us to represent numbers between 0 and 1. So, enter fixed point representations!
+        </p>
+
+        <h2>Fixed Point Numbers</h2>
+
+        <p>
+          One way that we can begin to represent fractional values is by introducing negative powers of two. We can split our binary digits into 
+          two parts: a whole number part and a fractional part, with the whole number part representing positive powers of two, and the fractional 
+          part representing negative powers of two.
+        </p>
+
+        <figure>
+          <img src="imgs/RepresentingNumbersInHardware/image2.png"/>
+          <figcaption>Visualization of Fixed Point</figcaption>
+        </figure>
+
+        <p>
+          We use a "binary point" to denote the boundary between the two parts (not "decimal" point because that would indicate base 10!). We call 
+          this representation "fixed point" because the binary point is fixed. That is, it stays in the same position for all numbers within the 
+          representation. Thus, we cannot perform computations with one number whose binary point is between digits 15 and 16, and one whose point 
+          is between digits 5 and 6 without converting them to the same binary point. Additionally, we are limited in the range of numbers that we 
+          can represent with this representation. Although it increases precision by having a fractional part, the overall range of numbers we can 
+          represent is decreased since we decrease the number of bits with positive powers of two. One way to increase the range that we can represent 
+          is by using floating point numbers. 
+        </p>
+
+        <h2>Floating Point Numbers</h2>
+
+        <p>
+          The concept of floating point is that the binary point is no longer fixed. It can "float" around to different locations within the binary 
+          number. This allows us to represent a larger range of numbers. However, this means that we have to have some way to communicate where the 
+          binary point is within the number. 
+        </p>
+
+        <p>
+          To effectively organize all of the information needed for a floating point number, the total bit width of a number is broken into 3 parts: 
+          a sign bit, exponent bits, and mantissa bits. The MSB is the sign bit and is used to denote whether the number is negative (1) or positive 
+          (0). Following the sign bits are the exponent bits which are used to represent positive and negative exponents and a bias is added in order 
+          to get the stored exponent. A bias is added to these bits in order to make full use of the bits available such that each set of unique 
+          combinations represents a different number. Lastly are the mantissa bits which represent the significant digits within the floating point 
+          number. 
+        </p>
+
+        <p>
+          We can think of floating point as a version of scientific notation, except instead of multiplying the coefficient (mantissa) by a power of 10, 
+          we multiply by a power of two. 
+        </p>
+
+        <figure>
+          <img src="imgs/RepresentingNumbersInHardware/image3.png"/>
+          <figcaption>Relation to Scientific Notation</figcaption>
+        </figure>
+
+        <p>
+          Using the diagram of scientific notation above, the analog for floating point would be that the coefficient is the mantissa, the base is always 
+          two, and the exponent is the exponent. 
+        </p>
+
+        <p>
+          Now that we know the basics of floating point numbers, let's look at an example based on IEEE 754 standard for single precision numbers.
+        </p>
+
+        <figure>
+          <img src="imgs/RepresentingNumbersInHardware/image4.png"/>
+          <figcaption>IEEE Specification</figcaption>
+        </figure>
+
+        <figure>
+          <img src="imgs/RepresentingNumbersInHardware/image5.png"/>
+          <figcaption>Conversion to Floating Point</figcaption>
+        </figure>
+
+        <p>
+          From this it can be seen that floating point can represent multiple numbers, but due to this flexibility there are special cases in floating 
+          point such as what to do when a number does not terminate or when there are undefined results. For these situations we have special numbers 
+          such as zero, infinity, and not a number (NaN). 
+        </p>
+
+        <h2>Floating Point in Hardware</h2>
+
+        <p>
+          This semester we are working on creating a floating point library that consists of floating point arithmetic units such as a multiplier, divider, 
+          subtractor and adder to the C2S2 IP (intellectual property). This will enable the team to hopefully be able to work with more precise numbers as 
+          well as a larger range of numbers. We also hope to have parameterizable bit widths for total size of input, number of exponent bits, and number of 
+          mantissa bits. By adding this element of resizeable bit fields, different ranges of numbers and different precisions can be chosen depending on the 
+          application of the arithmetic units. Although it will be a challenging journey to accomplish this, we hope that this project will be helpful to the 
+          team in the future by enabling us to have more options and we hope you learned more about different representations of numbers in binary!
+        </p>
+
+        <h2>Additional Resources</h2>
+
+        <ul style="padding: auto; text-align: left;">
+          <li><a href="https://mathcenter.oxford.emory.edu/site/cs170/ieee754/">The IEEE 754 Format</a></li>
+          <li><a href="https://www.youtube.com/watch?v=dQhj5RGtag0">How Floating Point Works</a></li>
+        </ul>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
