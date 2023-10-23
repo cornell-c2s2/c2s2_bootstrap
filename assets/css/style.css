@@ -1602,7 +1602,7 @@ section {
   font-size: 15px;
   color: #440a0a;
   text-align: left;
-  text-indent: 80px;
+  text-indent: 0;
 }
 
 .blog-post figure {
