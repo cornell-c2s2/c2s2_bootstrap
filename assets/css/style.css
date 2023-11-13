@@ -1605,6 +1605,26 @@ section {
   text-indent: 0;
 }
 
+.blog-post h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.blog-post ol, ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0;
+  margin: 0; */
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.blog-post li {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
 .blog-post figure {
   margin-left: auto;
   margin-right: auto;
@@ -1632,6 +1652,7 @@ section {
   padding: 0 !important;
   color: #440a0a;
   border-top: 2px solid #b31b1b;
+  text-align: center;
 }
 
 /*--------------------------------------------------------------
