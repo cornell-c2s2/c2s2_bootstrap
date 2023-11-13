@@ -37,7 +37,13 @@ h6,
 .code {
   font-family: "Courier New";
   font-weight: bold;
-  text-decoration: underline #440a0a;
+  text-decoration: #440a0a;
+}
+
+ul {
+  text-align: center;
+  list-style-position: inside;
+  display: inline-block;
 }
 
 /*--------------------------------------------------------------
@@ -1596,7 +1602,7 @@ section {
   font-size: 15px;
   color: #440a0a;
   text-align: left;
-  text-indent: 80px;
+  text-indent: 0;
 }
 
 .blog-post figure {

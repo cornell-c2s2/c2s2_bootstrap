@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>From Sand to Silicon: ASICs and FPGAs Explained</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>From Sand to Silicon: ASICs and FPGAs Explained</h1>
+          <h2>Tomas Choi and Johnny Martinez</h2>
+          <h2 class="underline">October 29th, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <p>
+          If I asked you to think of some electronic devices, what comes to mind? Most people would probably say something along
+          the lines of "laptops," "PCs," and "smartphones." These everyday gadgets have become integral parts of our lives, and
+          we interact with them constantly. But have you ever wondered what enables these devices to do what they do? The answer
+          lies in the intricate world of semiconductors, and two key players within that world are Field-Programmable Gate
+          Arrays (FPGAs) and Application-Specific Integrated Circuits (ASICs).
+        </p>
+
+        <p>
+          In this blog post, we are going to pull back the curtain, and explain a bit more about what FPGAs and ASICs are, and
+          why they are so important.
+        </p>
+
+        <h2>What is Digital Logic</h2>
+
+        <p>
+          All computers work by processing a bunch of data in the form of ones and zeros. In digital electronics, we refer to
+          these ones and zeros as bits. A bit can either be one or zero at a given time. On these bits, you can perform numerous
+          logical operations using logic gates. We visualize the output of these logical operations as truth tables, which tell
+          us the expected output given two bits at any given state. See the graphic below.
+        </p>
+
+        <figure>
+          <img src="imgs/FromSandToSilicon/image1.png"/>
+        </figure>
+
+        <p>
+          For example, if I had bits X and Y, holding states one and zero respectively, and I performed the AND operation on
+          them, the expected output is zero. An AND gate is just one example of the many logical operations/gates that exist.
+          Each operation/gate has rather simple, well defined behavior, but when combined, are a powerful tool. With them, we
+          can construct complex logical expressions that allow us to build computers, microprocessors, microcontrollers, etc.
+        </p>
+
+        <h2>What is an FPGA?</h2>
+
+        <figure>
+          <img src="imgs/FromSandToSilicon/image2.png"/>
+        </figure>
+
+        <p>
+          Recall, FPGA stands for Field Programmable Gate Arrays. Believe it or not, the name is rather intuitive. An FPGA is an
+          assortment of millions of different logic gates constructed into groupings called logic elements. The programmer can
+          connect these logic elements though a hardware description language (HDL) such as Verilog or VHDL. On C2S2, we use
+          Verilog, but other designers have their own preferences. FPGA vendors typically provide closed-source IP blocks to
+          accelerate the development process and make it easier for designers to implement complex functions in their FPGA-based
+          designs. They can help save time and effort, as designers don't need to create these components from scratch.
+          Furthermore, their functionality has already been verified by the vendor. However, because they are closed-source, the
+          internal details and source code of these IP blocks are not accessible or modifiable by the designers. Onboard memory
+          components, such as RAM and flash memory, are also frequently integrated into FPGAs. These memory resources are
+          essential for storing data and program code, and they can be critical for the performance and functionality of
+          FPGA-based applications.
+        </p>
+
+        <h2>FPGA Design Flow</h2>
+
+        <p>
+          The first step in programming an FPGA is implementing your design. As I mentioned before, FPGAs are basically just an
+          assortment of gates; we need to tell the FPGA how to configure these gates. To do this, we write code in our preferred
+          HDL. These HDLs allow us to represent combinations of gates though words and operators. For example, if I wanted to
+          perform the AND operation on bits X and Y in Verilog, I could use the & operator. See the code snippet below.
+        </p>
+
+        <span class="code" style="display: inline-block; text-align: left;">
+          logic X;               <br>
+          logic Y;               <br>
+          logic result;          <br>
+          assign X = 1;          <br>
+          assign Y = 0;          <br>
+          assign result = X & Y; <br>
+        </span>
+
+        <p>
+          Once a designer finishes their implementation, they must synthesize their design. Synthesis is the process in which
+          the register transfer level (RTL) design is converted into a gate-level netlist, a representation of the digital
+          circuit using gates and flip-flops (a storage element). FPGA vendors provide software in their IDEs that take care of
+          the Synthesis stage. As a matter of fact, vendors provide software to take care of the remaining steps in the design
+          process. After synthesis, the design goes through Place and Route (PnR). During placement, the optimal physical
+          arrangement of logic elements on the chip's surface is determined, taking into account performance, power, and space
+          constraints. Subsequently, routing controls the interconnections and wiring paths, ensuring efficient signal
+          propagation and adhering to design specifications. Once the PnR is completed, the final step is to generate the
+          bitstream. This step generates a binary file (the bitstream) that encodes the configuration of the FPGA, specifying
+          which logic elements are activated, how they are interconnected, and the values of various configuration bits. Now
+          that we have generated our bitstream, we can flash it to our FPGA, and observe if our design runs. It is also good
+          practice to conduct simulation testing on our designs as well. This step allows you to simulate the hardware's
+          behavior, and can be used to ensure the functionality of a design by conducting tests.
+        </p>
+
+        <h2>What is an ASIC?</h2>
+
+        <p>
+          Application Specific Integrated Circuits, or ASICs for short, have become more popular in the evolving semiconductor
+          industry and they now play a pivotal role in numerous technological domains. Unlike general purpose processors that
+          can handle a variety of tasks, ASICs are designed to perform specific functions with unparalleled efficiency and
+          precision. The idea of an ASIC came about in order to keep up with the ever growing demands for better performance.
+          ASICs allow you to achieve an invaluable performance optimization since it only needs to excel at executing a singular
+          task. With a streamlined design that eliminates unnecessary components, ASICs also consume less power compared to
+          general purpose processors.
+        </p>
+
+        <figure>
+          <img src="imgs/FromSandToSilicon/image3.png"/>
+        </figure>
+
+        <p>
+          However, designing an ASIC has its complexities and challenges. Engineers need to be well-versed in hardware
+          description languages and the intricacies of semiconductor technology. Understanding the nuances of the application
+          and how to optimize the design for it is critical because that is where ASICs shine in comparison to general purpose
+          chips. There is also a long timeline that results from multiple phases, including RTL coding, verification, synthesis,
+          place and route, power analysis, fabrication, and testing. Each of these steps involves meticulous planning, design,
+          and rigorous testing to ensure the ASIC functions as intended. Any hiccup in this extended timeline could impact
+          project schedules and budgets.
+        </p>
+
+        <p>
+          The world of ASICs is a complex and intricate one, but the rewards are significant. ASICs have the potential to
+          deliver unmatched performance, power efficiency, and cost savings in the right applications, providing favorable trade
+          offs. Also, there are an increasing number of open source hardware tools that can be used to facilitate the entire
+          design flow. C2S2 leverages these open source hardware tools to allow anyone with the creativity and passion in chip
+          design to fulfill this complex but rewarding task.
+        </p>
+
+        <h2>FPGA vs. ASIC</h2>
+
+        <p>
+          FPGAs and ASICs are both critical components in the world of digital design, but they serve different purposes and
+          have unique characteristics. ASICs are tailor-made for specific applications. This customization allows ASICs to excel
+          in dedicated tasks, providing the highest performance and power efficiency. ASICs are also smaller and consume less
+          power compared to FPGAs. On the other hand, FPGAs are highly flexible and can be reprogrammed to perform various
+          tasks. Their architecture consists of programmable logic gates, allowing designers to change the functionality of the
+          chip as needed. FPGAs are excellent for rapid prototyping and iterative development. Engineers can experiment with
+          different designs without the high costs and long lead times associated with ASIC development. Both technologies have
+          their advantages, and these clearly depict why they are so prevalent in the semiconductor industry. Everyone's
+          fascination with FPGAs and ASICs stems from their role as the foundation upon which our modern world of electronics
+          and computing is built, enabling breakthroughs, efficiency, and customization that drive technological progress.
+        </p>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
