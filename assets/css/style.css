@@ -1697,3 +1697,39 @@ section {
   bottom: 10%;
   transition: bottom 0.4s;
 }
+
+/*--------------------------------------------------------------
+# Sponsors
+--------------------------------------------------------------*/
+
+.sponsors {
+  background: #fef7f7;
+}
+
+.sponsors h1 {
+  position: relative;
+  font-weight: 400;
+  color: #440a0a;
+}
+
+.sponsors .sponsor {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  background: #fef7f7;
+  border-radius: 0.5em;
+  transition: 0.2s ease;
+  max-height: 180px;
+}
+
+.sponsors .sponsor a {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.sponsors .sponsor img {
+  padding: 1rem;
+  margin: auto;
+  display: block;
+}
