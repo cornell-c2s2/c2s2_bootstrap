@@ -1610,7 +1610,7 @@ section {
   font-weight: 600;
 }
 
-.blog-post ol, ul {
+.blog-post ol, .blog-post ul {
   display: flex;
   flex-wrap: wrap;
   /* padding: 0;
