@@ -222,7 +222,7 @@
           performs dead code elimination, which removes unreachable nodes from the IR. Another common pass that the XLS compiler
           implements is constant folding, which has the potential to eliminate computational complexity from the IR. For
           example, if an arithmetic expression has only constants as inputs, the compiler is able to compute its value at
-          compile time, rather than runtime (in this case, the “runtime” is the execution of the hardware). From here, the
+          compile time, rather than runtime (in this case, the "runtime" is the execution of the hardware). From here, the
           compiler performs many application-specific optimizations, which are targeted at generating the most efficient
           hardware descriptions possible. There are quite a lot of them, and they are detailed 
           <a href="https://google.github.io/xls/optimizations/optimizations/#narrowing-optimizations">here</a>.
