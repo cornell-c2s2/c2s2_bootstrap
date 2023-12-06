@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Designing and Synthesizing a Better FFT</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Designing and Synthesizing a Better FFT</h1>
+          <h2>Edmund Lam and Barry Lyu</h2>
+          <h2 class="underline">December 3rd, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <h2>FFT Redesign and Optimization</h2>
+
+        <p>
+          The Fast Fourier Transform is an algorithm that converts time-domain signals into their frequency-domain
+          representations. It has many different applications including audio processing, machine learning, etc.
+        </p>
+
+        <p>
+          In an earlier blog, we talked about the design of our ASIC FFT accelerator. Figure 1 from that blog post shows the
+          architecture of it. This design used a Cooley-Tukey structure, in which each stage of the FFT is fully instantiated
+          and FFT is composed recursively with smaller FFTs with half the sample points. However, this design is not especially
+          space-efficient, because only one stage is used at a time, while all other stages are idle. In this blog post, we will
+          talk about the optimizations we did to bring massive increases in both performance and area efficiency.
+        </p>
+
+        <figure>
+          <img src="imgs/DesigningAndSynthesizingABetterFFT/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br>Earlier FFT Topology</figcaption>
+        </figure>
+
+        <p>
+          As in Figure 2 below, the newly optimized FFT adopts an iterative approach following the Pease FFT implementation. The
+          Pease FFT is an adaptation of the Cooley-Tukey FFT, instead of instantiating all the stages with different inputs, it
+          only instantiates one stage that is iteratively used. All the butterfly units are fixed in space, although their
+          inputs are routed differently from stage to stage. This saves the amount of registers and multipliers needed
+          drastically, especially for FFTs with large sample sizes (more stages). For an 8-point FFT, which has 3 stages, this
+          means reducing the number of butterflies from 12 to 4, for a 32-point FFT, which has 5 stages, it reduces 80
+          butterflies to just 16. Furthermore, we implemented a multi-butterfly module, which allows several pairs of data
+          points to share one butterfly. The butterfly would rotate between them and compute one by one. This means that we can
+          adjust the number of butterfly modules freely to explore the optimal setup between area and performance.
+        </p>
+
+        <figure>
+          <img src="imgs/DesigningAndSynthesizingABetterFFT/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>Updated FFT Topology</figcaption>
+        </figure>
+
+        <p>
+          Another optimization that is enabled by the reduction of butterfly modules is the use of single-cycle multipliers
+          instead of iterative multipliers. Previous implementations of the butterfly modules used an iterative multiplier
+          design to save space. However, iterative multipliers are extremely inefficient: multiplication between two 32-bit
+          fixed-point numbers takes up to 32 cycles to finish. Since the new design has far fewer space constraints, we opted to
+          use a single-cycle multiplier, which has higher cycle time and area, but far higher area efficiency and overall
+          performance compared to the iterative counterparts.
+        </p>
+
+        <h2>Synthesis</h2>
+
+        <h3>The Manual Synthesis Flow</h3>
+
+        <p>
+          We synthesize our components using the caravel user project repository targeting sky130 PDK. Normally, this is a
+          process that takes several steps:
+        </p>
+
+        <ol>
+          <li>First, we run <span class=code>pytest</span> in order to generate versions of our top-level fft module that has
+            the right parameter values set for our design.</li>
+        
+          <li>Next, we copy our files to a clone of the <span class="code">caravel_user_project</span> github repository, under
+            the <span class="code">verilog/rtl</span> directory.</li>
+        
+          <li>Then, we run <span class="code">sv2v</span> to convert our SystemVerilog code into Verilog.</li>
+        
+          <li>Now that our Verilog is set up, we set up our OpenLANE files in a subdirectory of the <span
+              class="code">openlane</span> directory.</li>
+        
+          <li>To fill this out, we need a <span class="code">config.json</span> file to tell OpenLANE what configuration we want
+            for our designs, specifying things like the target clock period</li>
+
+            <figure>
+              <img src="imgs/DesigningAndSynthesizingABetterFFT/image3.png"/>
+              <figcaption>An example <span class="code">config.json</span></figcaption>
+            </figure>
+        
+          <li>Finally, we fill in <span class="code">pin_order.cfg</span>, which tells OpenLANE which cardinal direction to
+            place each of the ports in our design.</li>
+        
+          <li>With all our files set up, we can now push things through the flow using <span class="code">make
+              design_name</span>.</li>
+        </ol>
+
+        <p>
+          This is a process that not only takes many different steps, but <i>is difficult to easily reproduce on other members'
+            machines</i>. The <span class="code">caravel_user_project</span> repository is an entirely different repository from
+          our workspace repository, so we would have to not only copy over many files to a different repository with a different
+          structure, we also have to run <span class="code">pytest</span> and find the right file out of potentially hundreds of
+          generated files.
+        </p>
+
+        <p>
+          Most importantly, we often want to generate multiple macros for different parameter values, target densities, or clock
+          periods. The steps above would have to be repeated for every single one of these combinations, which requires a lot of
+          repetitive work that can be automated. This leads us to the custom automated caravel script we have developed for this
+          exact purpose.
+        </p>
+
+        <h3>The Automated Synthesis Flow</h3>
+
+        <p>
+          In light of the issues described above, we have developed an automated synthesis flow for designs. Instead of all the
+          steps needed above, now we only need to describe one config file <i>per verilog module</i>, with support for
+          instantiating multiple designs with different parameter values using the same file. This new file is in the <span
+            class="code">yaml</span> format as it tends to be easier to look at, although our scripts support <span
+            class="code">json</span> as well.
+        </p>
+
+        <figure>
+          <img src="imgs/DesigningAndSynthesizingABetterFFT/image4.png"/>
+          <figcaption>A new configuration file</figcaption>
+        </figure>
+
+        <p>
+          In this one file, we specify three different FFT designs— an 8-point, 32-point and 128-point FFT. These designs also
+          have different target densities, and to shorten the configuration file as much as possible, we can nest designs and
+          have parameter definitions propagate from the top-level designs to more specific ones. Other than this, we specify a
+          single pin configuration file for our designs, and we are ready to synthesize.
+        </p>
+
+        <figure>
+          <img src="imgs/DesigningAndSynthesizingABetterFFT/image5.png"/>
+          <figcaption>An example <span class="code">pin_order.cfg</span></figcaption>
+        </figure>
+
+        <p>
+          To run synthesis, we type <span class="code">caravel src/fft/pease/fft.yml</span> and our designs are automatically
+          synthesized in parallel, and the results will be copied to a build directory once synthesis completes. This
+          streamlines our work process significantly, allowing us to push through the flow quickly and often, facilitating
+          design correctness and optimization.
+        </p>
+
+        <p>
+          The digital design process is characterized by many different incredibly powerful but difficult-to-master tools, and
+          one of our biggest goals is to simplify this process and lower the learning curve so we as students are able to
+          utilize these tools without needing years of experience in ASIC design and synthesis.
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>

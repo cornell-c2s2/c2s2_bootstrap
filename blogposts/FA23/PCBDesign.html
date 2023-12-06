@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>PCB Design: "There's Layers To It"</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>PCB Design: "There's Layers To It"</h1>
+          <h2>Chimdi Anude and Sherri Qazi</h2>
+          <h2 class="underline">December 3rd, 2023</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+        <p>
+          One of the main jobs of System Architecture is developing Printed Circuit Boards (PCBs) to host our silicon chips.
+          However, starting one is not as simple as opening up Altium Designer or any design software of your choice on your
+          laptop, placing parts and drawing wires. There are preliminary steps to be taken to ensure success and to make route
+          your board a lot easier. So we are going to show the "layers" on what goes on in PCB Design.
+        </p>
+
+        <p>
+          The biggest first step is knowing what components you want/need on your board and making a power tree for it. A power
+          tree is a diagram that shows the power distributed throughout the system. For the PCB that hosted the chip made from
+          the class our Faculty Advisor teaches (ECE 5745 Complex Digital ASIC Design), the integrated circuits (ICs) we had to
+          consider were a clock (10MHz to be exact), flash memory, a MCP module and a LED. Also the input and output (I/O) pins
+          of the chip itself. Checking the datasheet for these ICs are important because they rely on what the input voltage it
+          can handle.
+        </p>
+
+        <p>
+          We chose to use a USB module because it can deliver both power and data and delivers about 5V. So that is the root of
+          our power tree.From there, the most common input voltages ICs have are either 1.8V or 3.3V. We can step down the
+          voltage by using what is called a Low Dropout Regulator (LDO). We choose this to regulate our voltage because we are
+          focused on building a low power system and the voltage difference between the input and output are small. We draw two
+          arrows from the USB to the two LDOs. From there we can sort our ICs, to take either 1.8V, 3.3V or 5V. For this
+          particular board. As seen in the diagram below, the MCP is directly connected to the USB module, taking 5V as an
+          input, for 3.3V one of the LDO is connected to flash memory, the clock, LED and some of the I/O pins.. For 1.8V, the
+          other LDO has some of the other I/O pins of the chip as outputs.
+        </p>
+
+        <figure>
+          <img src="imgs/PCBDesign/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br>Power Distribution</figcaption>
+        </figure>
+
+        <p>
+          Another important aspect of PCB design is ensuring that components that you choose for your design are available by
+          the manufacturers of those components and that those components are from one supplier. By having one supplier for the
+          parts, in our case Digikey, we can standardize our board and make it more cohesive. Before placing any random
+          component on a schematic, you first have to look at the specifications of the component and make sure that they meet
+          voltage or current ratings for the surrounding electrical components in your circuit that you're building. For
+          example, when choosing capacitors for an LDO, you want to take note of the capacitor's capacitance, voltage rating,
+          ripple current rating, temperature, etc. The physical size of a capacitor depends on the capacitance value and the
+          voltage rating. Therefore, as the capacitance increases, the size becomes larger.
+        </p>
+
+        <figure>
+          <img src="imgs/PCBDesign/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>Component Package Sizes</figcaption>
+        </figure>
+
+        <p>
+          As you can see from the picture above, the package type number increases as the size of the capacitor increases.
+          Generally, we want to keep the package size of capacitors to be on the smaller end because it will give you more space
+          to fit more components on the PCB, have lower inductance, and will most likely be cheaper.
+        </p>
+
+        <p>
+          Another important factor when choosing components is to check if the item is in stock. It would be unfortunate to
+          design a PCB just for a part to not be available. In Altium, using the manufacturer part search panel, you can
+          directly search for a part and find what supplier has that particular component available in stock. If the part is low
+          in stock, the green icon below would be orange, and if the part is out of stock the part symbol would be red. You can
+          also look directly at the supplier's website and search for the part there.
+        </p>
+
+        <figure>
+          <img src="imgs/PCBDesign/image3.png"/>
+        </figure>
+
+        <p>
+          Once you have confirmed the part's stock and specifications, you can finally place the part on the schematic. PCB
+          design with careful planning can save you time and the hassle of replacing parts and altering your schematic in order
+          to have a functional board. That's why it's important to consider all possibilities or "layers" when designing your
+          board.
+        </p>
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
