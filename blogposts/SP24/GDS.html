@@ -16,7 +16,9 @@
   <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -91,10 +93,11 @@
     <section class="inner-page blog-post">
       <div class="container">
         <p><strong>
-          This blog post was inspired by jazvw and uses code from them! It can be found at <a
-            href="https://github.com/jazvw/chip_art">https://github.com/jazvw/chip_art</a> and all rights surrounding the code
-          belong to them.
-        </strong></p>
+            This blog post was inspired by jazvw and uses code from them! It can be found at <a
+              href="https://github.com/jazvw/chip_art">https://github.com/jazvw/chip_art</a> and all rights surrounding
+            the code
+            belong to them.
+          </strong></p>
 
         <h2>Intro</h2>
         <p>
@@ -124,7 +127,7 @@
         </p>
 
         <figure>
-          <img src="imgs/GDS/image1.png"/>
+          <img src="imgs/GDS/image1.png" />
         </figure>
 
         <p>
@@ -132,7 +135,7 @@
         </p>
 
         <figure>
-          <img src="imgs/GDS/image2.png"/>
+          <img src="imgs/GDS/image2.png" />
         </figure>
 
         <p>
@@ -194,10 +197,11 @@
 
         <p>
           The code involved in making this process possible is a little more complicated. We used jazvw's
-          code, which can be found <a href="https://github.com/jazvw/chip_art">here</a>, in order to transform our PNG into a GDS
+          code, which can be found <a href="https://github.com/jazvw/chip_art">here</a>, in order to transform our PNG
+          into a GDS
           file!
         </p>
-        
+
 
         <p>
           One thing to note: while we went through the process of exploring jazvw's code and using it in
@@ -219,6 +223,48 @@
           transformation, visually speaking; there are only two colors involved in our logo. And, sure
           enough, here's our final result!
         </p>
+
+        <figure>
+          <img src="imgs/GDS/image3.png" />
+        </figure>
+
+        <figure>
+          <img src="imgs/GDS/image4.png" />
+          <figcaption><i>Here are the layers for reference, color coded!</i></figcaption>
+        </figure>
+
+        <p>
+          Isn't this super cool???
+        </p>
+
+        <p>
+          Now, how did we open this file? GDS files aren't exactly <i>readable</i> on their own.
+        </p>
+
+        <h2>Opening a GDS File</h2>
+        <p>
+          We used <a href="https://www.klayout.de/">Klayout</a> in order to open our C2S2 logo, which seems to be the
+          most reliable and user-friendly open-source application capable of opening and viewing a GDS file!
+        </p>
+
+        <p>
+          Klayout allows you to draw your own layouts, view layouts (like we did for the logo), and handle GDS files in
+          a way that would otherwise be super, super difficult without exclusive industry tools like Calibre DESIGNRev.
+        </p>
+
+        <p>
+          Therels also <a href="https://heitzmann.github.io/gdstk/">Gdstk</a>, a C++ library that, in its own words, is
+          meant “for creation and manipulation of GDSII” files! It’s definitely worth checking out if you’re going for
+          further customization and creation of your own GDSII files.
+        </p>
+
+        <p>
+          Now you can try on your own!
+        </p>
+
+        <figure>
+          <img src="imgs/GDS/image5.png" />
+        </figure>
 
       </div>
     </section>
