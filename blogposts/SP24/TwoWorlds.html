@@ -16,7 +16,9 @@
   <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
@@ -118,7 +120,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image1.png"/>
+          <img src="imgs/TwoWorlds/image1.png" />
           <figcaption><strong>Figure 1</strong><br>Block Diagram of a First-Order Delta-Sigma ADC Modulator [1]
           </figcaption>
         </figure>
@@ -135,7 +137,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image2.png"/>
+          <img src="imgs/TwoWorlds/image2.png" />
           <figcaption><strong>Figure 2</strong><br>Waveforms of a Delta-Sigma Modulator [2]</figcaption>
         </figure>
 
@@ -151,14 +153,16 @@
           ADCs face a problem called &quot;quantization noise.&quot; Since analog signals are continuous
           in time, while digital signals are discrete, there will be instances in which the analog
           input differs from the digital approximation. This difference is referred to as &quot;noise.&quot; Due
-          to the oversampling rate of the Delta-Sigma, this noise is flattened across a greater frequency range, which is also
+          to the oversampling rate of the Delta-Sigma, this noise is flattened across a greater frequency range, which
+          is also
           pushed to higher frequencies by the high-pass filter
           effects on the noise. These effects can be visualized in Figure 3.
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image3.png"/>
-          <figcaption><strong>Figure 3</strong><br>Noise Profile of a Nyquist ADC (a), an ADC with Oversampling and Filtering (b), and a Delta-Sigma ADC (c). [3]</figcaption>
+          <img src="imgs/TwoWorlds/image3.png" />
+          <figcaption><strong>Figure 3</strong><br>Noise Profile of a Nyquist ADC (a), an ADC with Oversampling and
+            Filtering (b), and a Delta-Sigma ADC (c). [3]</figcaption>
         </figure>
 
         <p>
@@ -171,12 +175,13 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image4.png"/>
-          <figcaption><strong>Figure 4</strong><br>Signal Band of Interest (in yellow) and the Noise Profiles of Delta-Sigma ADCs of Various Orders. [4]</figcaption>
+          <img src="imgs/TwoWorlds/image4.png" />
+          <figcaption><strong>Figure 4</strong><br>Signal Band of Interest (in yellow) and the Noise Profiles of
+            Delta-Sigma ADCs of Various Orders. [4]</figcaption>
         </figure>
 
         <figure>
-          <img src="imgs/TwoWorlds/image5.png"/>
+          <img src="imgs/TwoWorlds/image5.png" />
           <figcaption><strong>Figure 5</strong><br>Schematic of C2S2 Second-Order Delta-Sigma Modulator.</figcaption>
         </figure>
 
@@ -193,7 +198,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image6.png"/>
+          <img src="imgs/TwoWorlds/image6.png" />
           <figcaption><strong>Figure 6</strong><br> Block Diagram of a Basic SAR ADC [5]</figcaption>
         </figure>
 
@@ -219,7 +224,7 @@
           differential current than the latter.
         </p>
 
-        <p> 
+        <p>
           Regarding the DAC, this block is typically implemented using a bank of capacitors that
           are binary-weighted in value (a N-bit SAR ADC will have N binary-weighted caps and an
           additional cap for the dummy LSB). Though the use of unit capacitors can help with
@@ -246,7 +251,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image7.png"/>
+          <img src="imgs/TwoWorlds/image7.png" />
           <figcaption><strong>Figure 7</strong><br>Block Diagram of a Basic Flash ADC [6]</figcaption>
         </figure>
 
@@ -269,7 +274,8 @@
           When CLK is low, the circuit pre-charges the output nodes (as well as various internal
           nodes to VDD). When CLK is high, the tail current transistor turns on; the differential
           pair generates a differential current; and the cross-coupled structures help pull the
-          outputs to opposing rails (regeneration). One important thing to note about the strongARM comparator is that the
+          outputs to opposing rails (regeneration). One important thing to note about the strongARM comparator is that
+          the
           threshold voltage of the input pair limits the full-scale
           voltage of the flash ADC. In other words, the common-mode voltage of the input signal
           lie above the input pair's threshold voltages since these devices must turn on in order to
@@ -277,7 +283,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image8.png"/>
+          <img src="imgs/TwoWorlds/image8.png" />
           <figcaption><strong>Figure 8</strong><br>A Basic strongARM Comparator</figcaption>
         </figure>
 
@@ -290,7 +296,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image9.png"/>
+          <img src="imgs/TwoWorlds/image9.png" />
           <figcaption><strong>Figure 9</strong><br> Kick-back from a strongARM Comparator</figcaption>
         </figure>
 
@@ -305,12 +311,12 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image10.png"/>
+          <img src="imgs/TwoWorlds/image10.png" />
           <figcaption><strong>Figure 10</strong><br>A Simple Pre-Amplifier</figcaption>
         </figure>
 
         <figure>
-          <img src="imgs/TwoWorlds/image11.png"/>
+          <img src="imgs/TwoWorlds/image11.png" />
           <figcaption><strong>Figure 11</strong><br>Pre-Amps Reduce Kick-Back</figcaption>
         </figure>
 
@@ -324,7 +330,7 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image12.png"/>
+          <img src="imgs/TwoWorlds/image12.png" />
           <figcaption><strong>Figure 12</strong><br>Kick-back Optimized Class AB Comparator</figcaption>
         </figure>
 
@@ -344,9 +350,10 @@
         </p>
 
         <figure>
-          <img src="imgs/TwoWorlds/image13.png"/>
-          <figcaption><strong>Figure 13</strong><br>From left to right, the flash ADC uses a resistive divider; kick-back optimized class AB comparators; buffers for
-          electrical isolation; RS latches, and a 16:4 priority encoder.</figcaption>
+          <img src="imgs/TwoWorlds/image13.png" />
+          <figcaption><strong>Figure 13</strong><br>From left to right, the flash ADC uses a resistive divider;
+            kick-back optimized class AB comparators; buffers for
+            electrical isolation; RS latches, and a 16:4 priority encoder.</figcaption>
         </figure>
 
         <h2>Conclusion:</h2>
@@ -364,19 +371,29 @@
 
         <div style="text-align: center;">
           <h3>References:</h3>
-        
+
           <div style="text-align: left; display: inline-block;">
-            <p>[1] Delta Sigma ADC Basics: Understanding the Delta Sigma Modulator</p>
-            <p>[2] Delta-Sigma ADC Tutorial</p>
-            <p>[3] Understanding and designing sigma-delta A/D converters</p>
-            <p>[4] How to plot noise-shaped spectrum of first-order incremental sigma-delta ADCs?</p>
-            <p>[5] Which ADC Architecture Is Right for Your Application? | Analog Devices</p>
-            <p>[6] BRSummer17FlashADC.pdf (ucla.edu)</p>
+            <p>[1] <a
+                href="https://e2e.ti.com/blogs_/archives/b/precisionhub/posts/delta-sigma-adc-basics-understanding-the-delta-sigma-modulator">Delta
+                Sigma ADC Basics: Understanding the Delta Sigma Modulator</a></p>
+            <p>[2] <a href="https://www.beis.de/Elektronik/DeltaSigma/DeltaSigma.html">Delta-Sigma ADC Tutorial</a></p>
+            <p>[3] <a href="https://www.embeddedrelated.com/showarticle/167.php">Understanding and designing sigma-delta
+                A/D converters</a></p>
+            <p>[4] <a
+                href="https://dsp.stackexchange.com/questions/54548/how-to-plot-noise-shaped-spectrum-of-first-order-incremental-sigma-delta-adcs-o">How
+                to plot noise-shaped spectrum of first-order incremental sigma-delta ADCs?</a></p>
+            <p>[5] <a
+                href="https://www.analog.com/en/resources/analog-dialogue/articles/the-right-adc-architecture.html">Which
+                ADC Architecture Is Right for Your Application? | Analog Devices</a></p>
+            <p>[6] <a
+                href="https://www.seas.ucla.edu/brweb/papers/Journals/BRSummer17FlashADC.pdf">BRSummer17FlashADC.pdf
+                (ucla.edu)</a></p>
+            <p>Thumbnail: <a href="https://en.m.wikipedia.org/wiki/File:ADC_Symbol.svg">Wikipedia</a></p>
           </div>
         </div>
-        
-        
-        </div>
+
+
+      </div>
     </section>
 
   </main><!-- End #main -->
