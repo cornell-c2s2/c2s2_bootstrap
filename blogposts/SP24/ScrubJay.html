@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog Post Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>How to Know a Scrub Jay is a Scrub Jay</h1>
+          <h2>Elias Castro</h2>
+          <h2 class="underline">March 29, 2024</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+        <p>
+          Have you ever wondered how to train a computer to listen to a certain sound amongst others? How could you classify it?
+          How could you do it on an embedded system that has limited space and power? These were all the questions we had to ask
+          ourselves when figuring out how to identify a Scrub Jay.
+        </p>
+
+        <p>
+          To give more context, when a tag is attached to a Scrub Jay there is a microphone on it. The purpose of this microphone
+          is to listen to the calls that a Scrub Jay makes. In a perfect world, this call would have no outside noise and one
+          could easily identify it. In reality, there will be noise at every possible moment, from the sounds of the wind and the
+          rain to the sounds of other birds and the Scrub Jay itself rustling through trees. So now comes the big question: if you
+          were a computer, how could you tell when a Scrub Jay is present?
+        </p>
+
+        <p>
+          For starters, a computer sadly can't hear, so it must rely on another piece of information: PCM data. PCM stands for
+          Pulse Code Modulation, which is a method used to digitally represent analog signals such as audio. The signal is
+          continuously sampled at regular intervals where the amplitude is then encoded as binary numbers. These values can then
+          be stored in an array where each index represents one sample and each value represents the signal's amplitude. Let's
+          take a look at one audio sample where the Scrub Jay is making a call and visualize it:
+        </p>
+
+        <figure>
+          <img src="imgs/ScrubJay/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br>PCM samples of a Scrub Jay with noise</figcaption>
+        </figure>
+
+        <p>
+          In this audio, the Scrub Jay is clicking, which explains the constant increase and decrease of the amplitude throughout
+          the figure. Next, notice the three large spikes that are out of place. This is the sound of another bird calling in the
+          background, which we would classify as noise since this is not the sound we are looking for. To compare, let's take a
+          look at another audio sample that has little to no noise. In this audio, the Scrub Jay is making the same clicking
+          noise:
+        </p>
+
+        <figure>
+          <img src="imgs/ScrubJay/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>PCM samples of a Scrub Jay with no noise</figcaption>
+        </figure>
+
+        <p>
+          Notice how the pattern is strikingly similar to Figure 1! The amplitude constantly increases and decreases throughout
+          the indexes. This is the pattern that we want to look for when we have noisy audio such as the previous one.
+        </p>
+
+        <p>
+          Great, we know the audio pattern that we have to look for! Now we tackle the next question: how can we classify a Scrub
+          Jay with our tag? Remember that our tag is an embedded system, meaning that there are physical, power, and memory
+          constraints that we must adhere to. Unfortunately, we cannot use something as powerful as a support vector machine (SVM)
+          to train data and then use it to classify other audio data. Something that uses less power and memory space is needed.
+          For this, we turn to the matched filter.
+        </p>
+
+        <p>
+          The matched filter operates on the principle of correlation. It correlates the incoming signal with a known reference
+          signal, also known as the template. For this instance, we will let Figure 1 be our incoming signal with noise and Figure
+          2 be known as the template. For this blog, let us create a template with a considerable size as an input for our filter
+          by using indices 75,000 through 80,000 from Figure 2. Remember, this is the pattern we will look for in Figure 1. The
+          template should be the expected shape of the signal we are interested in. Our template consists of 5,000 samples, which
+          should be more than enough. The incoming signal is then correlated with the reference signal. Mathematically, one could
+          think of this as computing the dot product between the incoming signal and the template at each point. This aims to
+          maximize the signal-to-noise ratio (SNR) as its output, meaning that the process enhances the desired signal and thus
+          improves detection in noisy environments. We now apply the matched filter algorithm using both audio samples and see the
+          output below:
+        </p>
+
+
+        <figure>
+          <img src="imgs/ScrubJay/image3.png"/>
+          <figcaption><strong>Figure 3</strong><br>The result of applying a matched filter using both audio signals</figcaption>
+        </figure>
+
+        <p>
+          Notice the changes within the two axes? The x-axis almost contains 350,000 indexes! The output of the matched filter has
+          N + M - 1 indexes where N is the length of the input signal and M is the length of the template. We now notice the
+          changes in magnitude, where some indexes have values over 1000, meaning that there is a strong correlation and our
+          signal must be a Scrub Jay. The output is strongest in the middle, which is expected because the Scrub Jay is making the
+          clicking noise that we are looking for!
+        </p>
+
+        <p>
+          However, our implementation of the matched filter isn't perfect as of late. The noise coming from the other bird in
+          Figure 1 has affected the shape of the output, which is seen by the largest spike having a value of over 2,000. Thus
+          there is a chance for false positives. We must ask ourselves how many false positives are we willing to have because
+          with each false positive we use up the battery in our tag and record void data. To combat this, we could apply
+          thresholding where we see if segments of the output go over a certain value, such as 1000. Perhaps another form of data
+          can be used besides PCM samples. Nonetheless, even with the refinement we must do, we are one step closer to recognizing
+          our beloved Scrub Jay from a tag!
+        </p>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
