@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Blog Post Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Over-the-Cloud Communication using the Particle Argon</h1>
+          <h2>Akshati Vaishnav and Kene Chukwuma-Orakwe</h2>
+          <h2 class="underline">April 21, 2024</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <p>
+          Over the last year, C2S2 has been developing a bird tag system for the Lab of Ornithology. Specifically, the System
+          Architecture subteam has been involved in determining the system required to successfully execute the project with the
+          Lab of Ornithology.
+        </p>
+
+        <figure>
+          <img src="imgs/OverCloud/image1.png"/>
+          <figcaption><strong>Figure 1</strong><br> System diagram for the Bird Tag</figcaption>
+        </figure>
+
+        <p>
+          One of the primary goals for the System Architecture subteam is to find a method of offloading data from the Bird Tag to
+          a docking station. We considered various methods of offloading data wirelessly to the cloud, ranging from WiFi to
+          Bluetooth to Radio-Frequency Communication.
+        </p>
+
+        <p>
+          In order to explore how over-the-cloud communication works, we decided to use a commercial Wifi-development kit, the
+          Particle Argon. The Particle Argon is a microcontroller board designed for IoT projects, with integrated WiFi
+          connectivity and a suite of features including onboard sensors, libraries, and cloud integration. This combination of
+          capabilities simplifies the development process for IoT applications. The built-in WiFi functionality of the Particle
+          Argon is particularly valuable for understanding how to transmit data from the Bird Tag to cloud-based platforms without
+          physical connections.
+        </p>
+
+        <p>
+          The Particle Board is a programmable device. In order to program it, there is a Web IDE which can be used and that
+          supports over-the-cloud flashing of programs. It supports programming in Arduino and C++. We added a Lithium polymer
+          battery to the board so we could use it wirelessly, and we also connected a Temperature and Humidity sensor to it.
+          Lastly, we enclosed the whole system in a box to allow for movement. Figure 2 shows the complete setup.
+        </p>
+
+        <figure>
+          <img src="imgs/OverCloud/image2.png"/>
+          <figcaption><strong>Figure 2</strong><br>The Particle Argon enclosed in a casing with its battery inside the box and the Temperature sensor attached on the lid of the box</figcaption>
+        </figure>
+
+        <p>
+          Over the course of our work so far, we created multiple programs to explore what we could do with the Particle board. In
+          this post, we hope to share three primary programs. First, we want to share our process of reading data from the
+          temperature sensor. Next, we'll discuss how we created a program to blink an LED through a phone. Lastly, we'll explain
+          the process of publish and subscribe, and how we used that to make two Particle boards interact with each other.
+        </p>
+
+        <p>
+          Our first program is designed to read temperature and humidity data from a Grove Temperature and Humidity Sensor
+          connected to the board. In order to use the sensors and the LEDs, we first set up the pins that they are connected to.
+          We continuously collect temperature and humidity values from the sensor, format them, and "publish" them to the Particle
+          Cloud every second. This code essentially retrieves sensor data and sends it to the cloud periodically, allowing for
+          remote monitoring and analysis of temperature and humidity levels.
+        </p>
+
+        <p>
+          Next is our over-the-cloud blinky program which is designed to control an LED using remote commands through the Particle
+          Cloud. The setup initializes the LED pin as an output and establishes a Particle function named "led" that triggers the
+          toggle() function. This function listens for commands like "on", "off", or "blink" sent through the Particle Cloud. When
+          the function receives a command, the toggle() function executes the corresponding action: turning the LED on (HIGH), off
+          (LOW), or making it blink for a few cycles. If an unrecognized command is received, the function returns an error code.
+          This setup demonstrates how to remotely control hardware using Particle Cloud functions, providing a simple interface to
+          interact with physical devices connected to the Particle Argon.
+        </p>
+
+        <p>
+          In our next program, our goal was to create a system in which pressing a physical button would trigger an event through
+          one Particle board, leading to a change in the state of an LED on another Particle board. In order to make this work,
+          both of the devices must be connected to the same WiFi network and they need to be added to the same account on the
+          Particle Sandbox. To program this functionality, we had to create two different files, one for each device. The first
+          file sets up one Particle board to detect a button press and publish a "toggle-led" message to the cloud when the button
+          is pressed. The second file sets up the other Particle board to perform an action when the "toggle-led" message is
+          received. Specifically, when the message is received, the LED on the second board toggles its state.
+        </p>
+
+        <p>
+          These are just a few of the programs that we have programmed on the particle board. Although simple, these programs are
+          the building blocks of our more recent work, in which we save the data collected from a sensor onto memory, so that we
+          can transfer files instead of continuous messages. We have been able to collect temperature and humidity sensor data and
+          store that onto a file. Our next goal is to collect data from an external microphone, save this data onto a file, and
+          then transfer it to a computer over the cloud. In doing so, we hope to replicate a small subset of what the whole bird
+          tag system is supposed to do.
+        </p>
+
+        <p>
+          Overall, our work with the particle board attempts to simulate the overall bird tag system. Specifically, we are hoping
+          to understand how over-the-cloud communication works and how we can implement some of the Particle board's functions
+          onto our software and PCB designs in the future.
+        </p>
+        
+
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>

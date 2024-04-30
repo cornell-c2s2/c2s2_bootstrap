@@ -9,6 +9,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+/*adele adding a font to use in code snippets in blog posts*/
+.courier-font {
+  font-family: 'Courier New', Courier, monospace;
+}
+/*----------------------------------------------------------------------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #2f0707;
