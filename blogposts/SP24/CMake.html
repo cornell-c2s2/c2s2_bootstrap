@@ -103,7 +103,7 @@
 
         <p>
           Makefiles are one of the first build systems to come around and are the backbone of many software programs. These are
-          run using the <span class="courier-font"><strong>make</strong></span> command, and their popularity is shown by the fact that this command is mandated by POSIX (a common
+          run using the <span class="code">make</span> command, and their popularity is shown by the fact that this command is mandated by POSIX (a common
           standard for operating systems, such as Linux and MacOS)
         </p>
 
@@ -112,7 +112,13 @@
           contains:
         </p>
 
-        <ul>
+        <!-- <ul>
+          <li>A target: The name of what you're trying to make</li>
+          <li>Any prerequisites: Things we need in order to make our target</li>
+          <li>A recipe: The list of commands that we need to run in order to make our target</li>
+        </ul> -->
+
+        <ul style="display: block; margin-top: 0; margin-bottom: 1rem;">
           <li>A target: The name of what you're trying to make</li>
           <li>Any prerequisites: Things we need in order to make our target</li>
           <li>A recipe: The list of commands that we need to run in order to make our target</li>
@@ -121,8 +127,8 @@
        
 
         <p>
-          For example, the following code is a rule to build the target <span class="courier-font"><strong>hello.c</strong></span> from a prerequisite source file named hello.c using
-          a recipe to compile using GCC:
+          For example, the following code is a rule to build the target <span class="code">hello</span>
+          from a prerequisite source file named <span class="code">hello.c</span>
         </p>
 
         <figure>
@@ -132,8 +138,8 @@
 
         <p>
           To see this actually in play, let's consider a "real-life" setup of a software project organization! The example below
-          might show how our folders are organized; we have our main code in <span class="courier-font"><strong>main.cpp</strong></span>, and then some source code in the <span class="courier-font"><strong>src</strong></span>
-          folder, which contains <span class="courier-font"><strong>src.hpp</strong></span> and  <span class="courier-font"><strong>src.cpp</strong></span> (don't worry too much if those file names aren't too familiar - we just want
+          might show how our folders are organized; we have our main code in <span class="code">main.cpp</span>, and then some source code in the <span class="code">src</span>
+          folder, which contains <span class="code">src.hpp</span> and  <span class="code">src.cpp</span> (don't worry too much if those file names aren't too familiar - we just want
           to understand how we might compile them)
         </p>
 
@@ -143,8 +149,8 @@
         </figure>
 
         <p>
-          If we're compiling these with Makefiles, we might have to have rules for how to compile both the code in the  <span class="courier-font"><strong>src</strong></span> folder
-          (for C++, this would compile to a  <span class="courier-font"><strong>src.o</strong></span>), as well as the main code (into a program named  <span class="courier-font"><strong>prog</strong></span>) using  <span class="courier-font"><strong>src.o</strong></span>:
+          If we're compiling these with Makefiles, we might have to have rules for how to compile both the code in the  <span class="code">src</span> folder
+          (for C++, this would compile to a  <span class="code">src.o</span>), as well as the main code (into a program named  <span class="code">prog</span>) using  <span class="code">src.o</span>:
         </p>
 
         <figure>
@@ -163,14 +169,14 @@
         </figure>
 
         <p>
-          Here, we specify that  <span class="courier-font"><strong>prog</strong></span> depends on all of the object files listed in <span class="courier-font"><strong>OBJECT_FILES</strong></span> (in this case, only <span class="courier-font"><strong>src.o</strong></span> ).
+          Here, we specify that  <span class="code">prog</span> depends on all of the object files listed in <span class="code">OBJECT_FILES</span> (in this case, only <span class="code">src.o</span> ).
           Additionally, we use the % wildcard to make a rule for how to make any .o file. This gives our Makefile a lot more
-          flexibility and avoids repeating rules. We could build our code using the command <span class="courier-font"><strong>make prog</strong></span> , which will run the recipe
-          for the <span class="courier-font"><strong>prog</strong></span>  command (building our program!)
+          flexibility and avoids repeating rules. We could build our code using the command <span class="code">make prog</span> , which will run the recipe
+          for the <span class="code">prog</span>  command (building our program!)
         </p>
 
         <p>
-          However, we still have to specify all of the source files currently in <span class="courier-font"><strong>OBJECT_FILES</strong></span>; while there are ways around this,
+          However, we still have to specify all of the source files currently in <span class="code">OBJECT_FILES</span>; while there are ways around this,
           they're often confusing and hard to understand. We also rely on a very specific organization structure (with all of the
           source files in the src folder); if we were to include other folder structures, such as when working with other
           projects, this may not work well.
@@ -185,7 +191,7 @@
         </p>
 
         <p>
-          We can demonstrate this by using the same folder structure as above. We begin by creating a file named <span class="courier-font"><strong>CMakeLists.txt</strong></span> in
+          We can demonstrate this by using the same folder structure as above. We begin by creating a file named <span class="code">CMakeLists.txt</span> in
           the root of the project. All of our CMake code will be written in this file. To start, we need to write some boilerplate
           code that will set the CMake version, name the current project, and specify the C++ version:
         </p>
@@ -196,18 +202,18 @@
         </figure>
 
         <p>
-          Next, we need to allow the CMake project to see the <span class="courier-font"><strong>src</strong></span> folder. To do this, we can create a new <span class="courier-font"><strong>CMakeLists.txt</strong></span> within
-          the src folder, which contains the line <span class="courier-font"><strong>add_library(src src.cpp)</strong></span>, to tell CMake that we have a library that our software
-          can use named src (including the code in <span class="courier-font"><strong>src.cpp</strong></span>) Now, we return to the <span class="courier-font"><strong>CMakeLists.txt</strong></span> file in the project root and add
-          the line <span class="courier-font"><strong>add_subdirectory(src)</strong></span> which as the name suggests allows the greater CMake project to see the src folder
-          (folders are sometimes called "directories") and include its files (namely the header file <span class="courier-font"><strong>src.hpp</strong></span>, as well as our src
+          Next, we need to allow the CMake project to see the <span class="code">src</span> folder. To do this, we can create a new <span class="code">CMakeLists.txt</span> within
+          the <span class="code">src</span> folder, which contains the line <span class="code">add_library(src src.cpp)</span>, to tell CMake that we have a library that our software
+          can use named src (including the code in <span class="code">src.cpp</span>) Now, we return to the <span class="code">CMakeLists.txt</span> file in the project root and add
+          the line <span class="code">add_subdirectory(src)</span> which as the name suggests allows the greater CMake project to see the <span class="code">src</span> folder
+          (folders are sometimes called "directories") and include its files (namely the header file <span class="code">src.hpp</span>, as well as our <span class="code">src</span>
           library code) when compiling.
         </p>
 
 
         <p>
-          Finally, we can get to creating the program <span class="courier-font"><strong>prog</strong></span> which will be used, as seen above, to actually run the code in
-          <span class="courier-font"><strong>main.cpp</strong></span>. To set this up, we have the following code:
+          Finally, we can get to creating the program <span class="code">prog</span> which will be used, as seen above, to actually run the code in
+          <span class="code">main.cpp</span>. To set this up, we have the following code:
         </p>
 
         <figure>
@@ -216,15 +222,15 @@
         </figure>
 
         <p>
-          The first thing that happens here is the creation of a new executable (another word for "program") called <span class="courier-font"><strong>prog</strong></span> which is
-          built from the main program in <span class="courier-font"><strong>main.cpp</strong></span>. We then link the <span class="courier-font"><strong>src</strong></span> library to this executable, so that it can use the code
-          contained in the <span class="courier-font"><strong>src</strong></span> folder.
+          The first thing that happens here is the creation of a new executable (another word for "program") called <span class="code">prog</span> which is
+          built from the main program in <span class="code">main.cpp</span>. We then link the <span class="code">src</span> library to this executable, so that it can use the code
+          contained in the <span class="code">src</span> folder.
         </p>
 
         <p>
-          Now that we have written our CMake code, we can actually build our project! First, we create a new folder called <span class="courier-font"><strong>build</strong></span>
-          in the main root of our project (CMake actually does not care where this <span class="courier-font"><strong>build</strong></span> folder is, but by convection, we put it
-          here). Now, we move into the <span class="courier-font"><strong>build</strong></span> folder and run the following commands:
+          Now that we have written our CMake code, we can actually build our project! First, we create a new folder called <span class="code">build</span>
+          in the main root of our project (CMake actually does not care where this <span class="code">build</span> folder is, but by convection, we put it
+          here). Now, we move into the <span class="code">build</span> folder and run the following commands:
         </p>
 
         <figure>
@@ -234,8 +240,8 @@
 
 
         <p>
-          The first command <span class="courier-font"><strong>(cmake ..)</strong></span> goes through our CMake files and generates supporting code to help build our project (under
-          the hood, it creates a super-complicated Makefile to build our code!). Then, <span class="courier-font"><strong>make prog</strong></span> will build the program using the
+          The first command <span class="code">(cmake ..)</span> goes through our CMake files and generates supporting code to help build our project (under
+          the hood, it creates a super-complicated Makefile to build our code!). Then, <span class="code">make prog</span> will build the program using the
           generated Makefile, similar to before. Now we're finally done, and can run our program, just the same as with Makefiles!
         </p>
 
