@@ -26,13 +26,11 @@
 }
 
 .centered-video {
-  width: 100%;
-  height: auto;
+  width: 800px; /* Set the width of the iframe */
+  height: 450px; /* Set the height of the iframe */
   display: block;
   margin: 0 auto; /* Center the video horizontally */
 }
-/* =============== */
-
 
 
 
