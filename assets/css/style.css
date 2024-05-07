@@ -16,6 +16,27 @@
 }
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
+
+/* =======Video Editing======== */
+
+.video-container {
+  position: relative;
+  max-width: 800px; /* Adjust the max-width as needed */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+.centered-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Center the video horizontally */
+}
+/* =============== */
+
+
+
+
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #2f0707;
@@ -1661,6 +1682,33 @@ section {
   border-top: 2px solid #b31b1b;
   text-align: center;
 }
+
+/* .small-figure img {
+  width: 30%;
+  max-width: 150px;
+} */
+
+.small-figure {
+  width: fit-content; /* Adjusts the width of the figure to fit its contents */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  border: 2px solid #b31b1b;
+  border-radius: 2rem;
+}
+
+.small-figure img {
+  width: 30%;
+  max-width: 150px;
+  display: block;
+  margin: auto; 
+}
+
+
+
 
 /*--------------------------------------------------------------
 # Posts
