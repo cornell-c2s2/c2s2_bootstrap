@@ -105,10 +105,10 @@
         <p>
           However, the Skywater 130nm process node that C2S2 uses is large enough that while the smallest of features cannot be
           seen with an optical microscope, larger components, such as resistors, capacitors, top level interconnects, and some
-          transistors, can be seen. This blog post discusses images taken of C2S2’s analog and digital tapeouts from last year.
+          transistors, can be seen. This blog post discusses images taken of C2S2's analog and digital tapeouts from last year.
           Additionally, we also imaged an Atmel Mega 1284, which uses a process node large enough that most features, even digital
           standard cells, can be seen optically. With regard to the speckling seen in the microscope images, it is due to a fault
-          in the microscope camera, and should be disregarded if possible. With that being said, let’s begin with a look at C2S2’s
+          in the microscope camera, and should be disregarded if possible. With that being said, let's begin with a look at C2S2's
           digital tapeout from last year.
         </p>
 
@@ -124,18 +124,18 @@
 
         <figure>
           <img src="imgs/ImgSilicon/image1.png"/>
-          <figcaption><strong>Figure 1</strong><br>Amoeba Plot of “Eagle” Digital IC (FA23 - SP24)</figcaption>
+          <figcaption><strong>Figure 1</strong><br>Amoeba Plot of "Eagle" Digital IC (FA23 - SP24)</figcaption>
         </figure>
 
         <p>
           Out of curiosity, we decided to explore how our design actually appears on silicon after fabrication with an optical
           microscope. By imaging the bare die, we discovered a few interesting easter eggs and features that are visible only
-          after fabrication. Shown below are images of the digital chip, codename “Eagle,” under a microscope.
+          after fabrication. Shown below are images of the digital chip, codename "Eagle,"" under a microscope.
         </p>
 
         <figure>
           <img src="imgs/ImgSilicon/image2.png"/>
-          <figcaption><strong>Figure 2</strong><br>Annotated Microscope Image (left) and Phone Camera Image (right) of Digital “Eagle” IC (FA23 - SP24)</figcaption>
+          <figcaption><strong>Figure 2</strong><br>Annotated Microscope Image (left) and Phone Camera Image (right) of Digital "Eagle" IC (FA23 - SP24)</figcaption>
         </figure>
 
         <p>
@@ -148,7 +148,7 @@
         <p>
           Fortunately, after careful inspection of the chip, some similarities between the amoeba plot and the manufactured die
           emerged. To capture these features, a color photo was taken with a phone camera using the microscope eyepiece, which was
-          then digitally enhanced. On the right, the green “blob” present in the color photo has considerable similarity to the
+          then digitally enhanced. On the right, the green "blob" present in the color photo has considerable similarity to the
           amoeba plot in Figure 1, indicating the locations of the gates. On the bottom of the chip we identified a RISC-V
           processor. This component was added by our manufacturer, Efabless, and facilitates pin assignments, serial interfacing,
           and other external and internal communication.
@@ -176,14 +176,14 @@
 
         <figure>
           <img src="imgs/ImgSilicon/image4.png"/>
-          <figcaption><strong>Figure 4</strong><br>Annotated Magic VLSI View (left) and Microscope Image (right) of Analog “Sparrow” IC (FA23 - SP24)</figcaption>
+          <figcaption><strong>Figure 4</strong><br>Annotated Magic VLSI View (left) and Microscope Image (right) of Analog "Sparrow" IC (FA23 - SP24)</figcaption>
         </figure>
 
         <p>
           The analog tapeout for last semester focused on the development of two types of operational amplifiers, fingered and
           multiplier. The fingered design utilizes MOSFETs with multiple passes of polysilicon over the diffusion, whereas the
           multiplier MOSFETs are simply several identical transistors, with metal connecting the diffusion contacts. However,
-          differentiating the two would require zooming further into the image – in this blog post the focus will be placed on the
+          differentiating the two would require zooming further into the image - in this blog post the focus will be placed on the
           top level image.
         </p>
 
@@ -194,7 +194,7 @@
         </p>
 
         <p>
-          Similarly to the digital chip, the analog chip, codename “Sparrow,” contains a RISC-V MPU, which can be seen when the
+          Similarly to the digital chip, the analog chip, codename "Sparrow," contains a RISC-V MPU, which can be seen when the
           die is viewed through the microscope. In the case of the analog chip, this MPU is mostly used to make IO assignments,
           which allows us to enable the analog MUX.
         </p>
@@ -216,7 +216,7 @@
 
 
         <p>
-          For fun, we (destructively, and with pliers) disassembled an ATMEGA 1284 microcontroller – our copy of which was
+          For fun, we (destructively, and with pliers) disassembled an ATMEGA 1284 microcontroller - our copy of which was
           produced in 2009. This microcontroller had three visibly distinct sections: analog, digital, and memory. The memory in
           the chip is split into 16 KB SRAM, 128KB Flash, and 4KB EEPROM3. However, since flash memory is densely packed, and very
           repetitive in its design, it is likely that the memory block shown in Figure 5 is Flash memory. Unsurprisingly, its
@@ -243,7 +243,7 @@
 
         <figure>
           <img src="imgs/ImgSilicon/image6.png"/>
-          <figcaption><strong>Figure 6</strong><br>Microscope Image of Atmel MEGA 1284 Microcontroller Analog Portion (left) and Digital “Sea of Gates” (right)
+          <figcaption><strong>Figure 6</strong><br>Microscope Image of Atmel MEGA 1284 Microcontroller Analog Portion (left) and Digital "Sea of Gates" (right)
           </figcaption>
         </figure>
 
@@ -251,11 +251,11 @@
 
         <p>
           While reading this blog post, some of the keen eyed among you may have spotted something interesting at the bottom of
-          both the digital and analog tapeouts. If you didn’t notice anything, scroll back and see if you can find it.
+          both the digital and analog tapeouts. If you didn't notice anything, scroll back and see if you can find it.
         </p>
 
         <p>
-          Chip design does not have to be limited strictly to engineering – it encompasses art4. Below are some examples of the
+          Chip design does not have to be limited strictly to engineering - it encompasses art4. Below are some examples of the
           silicon designs present on Eagle and Sparrow chips, which are only visible when viewing the chips with a microscope.
           More likely than not, there is a piece of silicon art on the processor that runs the device you are using right now. We
           hope that in the future, our tapeouts can also come to include chip art, connecting art and engineering, forever on
@@ -282,7 +282,7 @@
 
         <figure>
           <img src="imgs/ImgSilicon/image9.png"/>
-          <figcaption><strong>Figure 9</strong><br>Microscope Image of Analog Tapeout Chip Art (“Driving The Open Road)
+          <figcaption><strong>Figure 9</strong><br>Microscope Image of Analog Tapeout Chip Art ("Driving The Open Road)
           </figcaption>
         </figure>
 
