@@ -247,4 +247,13 @@
    */
   new PureCounter();
 
+
+
+  ////////////////////////////////Photo gallery testing
+
+
+
+
+
+
 })()
