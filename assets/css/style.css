@@ -33,6 +33,113 @@
 }
 
 
+/*________________________________*/
+
+
+/* =======Photo Gallery syntax======== */
+
+div.scroll-container {
+  background-color: rgb(249, 247, 248);
+  overflow-x: auto; /* Horizontal scrolling only */
+  white-space: nowrap;
+  padding: 10px;
+  border: 5px solid #eca4a4; /* Add outline */
+  border-radius: 10px; /* Add rounded corners */
+  width: 80%; /* Set the width of the scrollable section */
+  height: 500px; /* Set the height of the scrollable section */
+  margin: 0 auto; /* Center the scrollable section horizontally */
+
+  display: flex; /* Use flexbox for layout */
+  align-items: center;
+  justify-content: space-between; /* Distribute space between items */
+}
+
+
+.gallery {
+  max-width: auto; /* Set a fixed width for each image container */
+  max-height: auto; /* Set a fixed height for each image container */
+  width: auto;
+  height:400px;
+  
+  border-radius: 5px;  /*Add rounded corners */
+  margin: 10px; /* Add margin around each image container */
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center the image horizontally */
+  align-items: normal; /* Center the image vertically */
+  align-items: stretch; /* stretch the content vertically*/
+  flex-direction: column; /* Stack items vertically */
+
+  position: relative;
+  border: 3px solid #ebafaf; /* Add border around each image */
+  /*transition: border-color 0.3s;  Add transition effect for hover */
+  /*overflow: hidden;  Hide any overflow from images */
+
+}
+
+.gallery:hover {
+  border-color: #cf2020; /* Change border color on hover */
+}
+
+.gallery img {
+  max-width: none; /* Allow the image to retain its normal dimensions */
+  max-height: 300px; /* Ensure the image fits within the container */
+  height: auto; /* Let the height adjust based on width */
+  width: auto; 
+  
+}
+
+.desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  
+  padding: 15px;
+  text-align: center;
+
+  color: black;
+ 
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+  
+}
+
+.text {
+  position: fixed;
+  bottom: 0;
+  padding: 10px; /* Add padding around the text */
+  text-align: center; /* Center the text */
+  color: black;
+  font-size: 20px;
+  
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/*________________________________*/
+
 
 
 body {
