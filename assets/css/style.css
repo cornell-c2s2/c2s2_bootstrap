@@ -49,7 +49,7 @@ div.scroll-container {
   display: flex; /* Use flexbox for layout */
   align-items: center;
   justify-content: space-between; /* Distribute space between items */
-  gap: 7.5px;
+  gap: 20px;
 }
 
 .gallery {
