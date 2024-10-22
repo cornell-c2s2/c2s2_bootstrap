@@ -59,7 +59,6 @@ div.scroll-container {
   height: 400px;
 
   border-radius: 5px; /*Add rounded corners */
-  margin: 10px; /* Add margin around each image container */
   display: flex; /* Use flexbox for centering */
   justify-content: center; /* Center the image horizontally */
   align-items: normal; /* Center the image vertically */
