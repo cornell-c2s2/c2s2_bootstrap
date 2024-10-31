@@ -192,51 +192,126 @@
     </div> 
 
     <div class="scroll-container"> 
-      <div class="responsive">
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100">
         <div class="gallery">
-          <img src="assets/photos/ece5745-tapeout-die-photo.jpg">
-          <div class="desc">ECE 5745 Tapeout Die</div>
+          <img src="assets/photos/ece5745-tapeout-die-photo.jpg" id="pic1">
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld1" onclick="ld(1)"> [waiting on desc]
+            </span>
+            <div class="desc">
+              <h4 id="name1">ECE 5745 Tapeout Die</h4>
+              <span class="short-desc" id="sd1" onclick="sd(1)">click for more info
+              </span> 
+            </div>
+          </div>
+          
         </div>
       </div>
-      <div class="responsive">
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100">
         <div class="gallery">
-          <img src="assets/photos/ece5745-tapeout-manydie.jpg">
-          <div class="desc">ECE 5745 Tapeout, Many Die</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <img src="assets/photos/cnf_boat.png">
-          <div class="desc">CNF Chip Art</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <img src="assets/photos/Dove(ECE5745_Spring'22).JPG">
-          <div class="desc">Dove ECE 5745 Spring'22</div>
-        </div>
-      </div>
-
-      <div class="responsive">
-        <div class="gallery">
-          <img src="assets/photos/Eagle_Digital_Spring'23.JPG">
-          <div class="desc">Eagle Digital Spring'23</div>
+          <img src="assets/photos/ece5745-tapeout-manydie.jpg" id="pic2">
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld2" onclick="ld(2)">[waiting on desc]
+            </span>
+            <div class="desc">
+              <h4 id="name2">ECE 5745 Tapeout, Many Die</h4>
+              <span class="short-desc" id="sd2" onclick="sd(2)">click for more info
+              </span> 
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="responsive">
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100">
         <div class="gallery">
-          <img src="assets/photos/Sparrow_AnalogSpring'23.JPG">
-          <div class="desc">Sparrow Analog Spring'23</div>
+          <img src="assets/photos/cnf_boat.png" id="pic3">
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld3" onclick="ld(3)">Only visible when viewing the chip with a microscope, many processors include chip art, connecting art and engineering. This shows a microscopic image of a ship on one of our tapeouts. 
+            </span>
+            <div class="desc">
+              <h4 id="name3">CNF Chip Art</h4>
+              <span class="short-desc" id="sd3" onclick="sd(3)">click for more info
+              </span> 
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100">
+        <div class="gallery">
+          <img src="assets/photos/Dove(ECE5745_Spring'22).JPG" id="pic4">
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld4" onclick="ld(4)">This test chip, developed by the ECE 5745 class, is designed to explore the capabilities of Caravel and OpenLane. At its core, the chip features a RISC-V Litex SoC architecture, enabling flexible and efficient processing. It integrates four specialized hardware accelerators to enhance performance in various applications: Group 15: Wavelet Compression Accelerator, Group 16: SpMV Accelerator, Group 17: BNN Accelerator, Group 99: GCD Accelerator
+            </span>
+            <div class="desc">
+              <h4 id="name4">Dove ECE 5745 Spring'22</h4>
+              <span class="short-desc" id="sd4" onclick="sd(4)">click for more info
+              </span> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100">
+        <div class="gallery">
+          <img src="assets/photos/Eagle_Digital_Spring'23.JPG" id="pic5">
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld5" onclick="ld(5)">The 2023 C2S2 Digital Tapeout showcases a design centered around a RISC-V Litex System on Chip. This chip features a custom digital Cooley-Tukey Fast Fourier Transform (FFT) implementation, optimized for high-speed signal processing tasks. The RISC-V architecture provides a flexible and scalable processing platform, enabling efficient execution of complex algorithms and data manipulation.
+            </span>
+            <div class="desc">
+              <h4 id="name5">Eagle Digital Spring'23</h4>
+              <span class="short-desc" id="sd5" onclick="sd(5)">click for more info
+              </span> 
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="responsive" data-aos="zoom-in" data-aos-delay="100" style="margin-right: 10px;">     
+        <div class="gallery">
+          <img src="assets/photos/Sparrow_AnalogSpring'23.JPG" id="pic6">   
+          <div class="desc-info">
+            <span class="long-desc" style="visibility: hidden;" id="ld6" onclick="ld(6)">The 2023 C2S2 Analog Tapeout features an innovative hardware design centered around a RISC-V Litex System on Chip (SoC). This versatile chip incorporates multiple analog components to enhance its functionality: operational amplifiers – integrated to provide versatile analog signal processing capabilities, “fingers" implementation – allows for efficient interfacing and control in various analog scenarios, and “multiplier" implementation – facilitates analog multiplication processes for applications requiring signal modulation and other complex mathematical operations.
+            </span>
+            <div class="desc">
+              <h4 id="name6">Sparrow Analog Spring'23</h4>
+              <span class="short-desc" id="sd6" onclick="sd(6)">click for more info
+              </span> 
+            </div>
+          </div>
         </div>
       </div>
 
       
     </div>
+    <script>
+      // When the user clicks on <div>, open the popup
+      function sd(num) {
+        var longdesc = document.getElementById("ld"+num);
+        var shortdesc = document.getElementById("sd"+num);
+        var pic = document.getElementById("pic"+num);
+        var name = document.getElementById("name"+num);
+        longdesc.style.visibility = "visible";
+        shortdesc.style.visibility = "hidden";
+        pic.style.visibility = "hidden";
+        name.style.visibility = "hidden";
+      }
+      function ld(num) {
+        var longdesc = document.getElementById("ld"+num);
+        var shortdesc = document.getElementById("sd"+num);
+        var pic = document.getElementById("pic"+num);
+        var name = document.getElementById("name"+num);
+        longdesc.style.visibility = "hidden";
+        shortdesc.style.visibility = "visible";
+        pic.style.visibility = "visible";
+        name.style.visibility = "visible";
+      }
+      
+      </script>
     
   </section>   
+
 
      <!----====== end photo gallery section==== -->
 

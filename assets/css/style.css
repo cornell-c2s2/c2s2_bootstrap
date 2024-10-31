@@ -43,7 +43,7 @@ div.scroll-container {
   border: 5px solid #eca4a4; /* Add outline */
   border-radius: 10px; /* Add rounded corners */
   width: 80%; /* Set the width of the scrollable section */
-  height: 500px; /* Set the height of the scrollable section */
+  height: 350px; /* Set the height of the scrollable section */
   margin: 0 auto; /* Center the scrollable section horizontally */
 
   display: flex; /* Use flexbox for layout */
@@ -55,8 +55,8 @@ div.scroll-container {
 .gallery {
   max-width: auto; /* Set a fixed width for each image container */
   max-height: auto; /* Set a fixed height for each image container */
-  width: 240px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
 
   border-radius: 5px; /*Add rounded corners */
   display: flex; /* Use flexbox for centering */
@@ -76,9 +76,9 @@ div.scroll-container {
 }
 
 .gallery img {
-  max-width: none; /* Allow the image to retain its normal dimensions */
-  max-height: 300px; /* Ensure the image fits within the container */
-  height: auto; /* Let the height adjust based on width */
+  /*max-width: none;  Allow the image to retain its normal dimensions */
+  /*max-height: 300px;  Ensure the image fits within the container */
+  height: -webkit-fill-available;
   width: auto;
 }
 
@@ -94,10 +94,43 @@ div.scroll-container {
   color: black;
 }
 
+.long-desc{
+  white-space: normal;
+  margin: auto;
+  width: 100%;
+  height: 294px;
+  display: inline-flex;
+  align-items: center;
+  color: white;
+  font-size: 12px;
+  padding: 19px;
+  text-align: justify;
+  transition: bottom 0.4s;
+  animation: fadeIn 5s;
+}
+.long-desc:hover {
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.short-desc{
+  transition: bottom 0.4s;
+  animation: fadeIn 5s;
+}
+
+.short-desc:hover {
+  cursor: pointer;
+}
+
 .responsive {
-  padding: 0 6px;
+  padding: 0 10px;
   float: left;
-  width: 240px;
+  width: 300px;
+  height: 300px;
 }
 
 .text {
@@ -1070,7 +1103,25 @@ section {
   overflow: hidden;
 }
 
+.responsive .gallery {
+  text-align: center;
+  margin-bottom: 20px;
+  background: #343a40;
+  position: relative;
+  overflow: hidden;
+}
+
 .team .member .member-info {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.2s;
+}
+
+.responsive .gallery .desc-info {
   opacity: 0;
   position: absolute;
   bottom: 0;
@@ -1097,8 +1148,25 @@ section {
   bottom: 0;
   transition: bottom 0.4s;
 }
+.responsive .gallery .desc {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: bottom 0.4s;
+}
+
 
 .team .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.responsive .gallery h4 {
   font-weight: 700;
   margin-bottom: 2px;
   font-size: 18px;
@@ -1111,6 +1179,14 @@ section {
   font-size: 13px;
   color: #fff;
 }
+
+.responsive .gallery .desc span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: #fff;
+}
+
 
 .team .member .social {
   position: absolute;
@@ -1150,12 +1226,28 @@ section {
   transition: 0.4s;
 }
 
+.responsive .gallery:hover .desc-info {
+  background: linear-gradient(
+    0deg,
+    rgba(78, 64, 57, 0.95) 0%,
+    rgba(78, 64, 57, 0.95) 15%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  opacity: 1;
+  transition: 0.4s;
+}
+
 .team .member:hover .member-info-content {
   bottom: 30px;
   transition: bottom 0.4s;
 }
 
 .team .member:hover .member-info-content-no-social {
+  bottom: 30px;
+  transition: bottom 0.4s;
+}
+
+.responsive .gallery:hover .desc {
   bottom: 30px;
   transition: bottom 0.4s;
 }
