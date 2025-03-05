@@ -14,21 +14,27 @@
 .courier-font {
   font-family: "Courier New", Courier, monospace;
 }
+
 /*----------------------------------------------------------------------------------------------------------------------------*/
 
 /* =======Video Editing======== */
 
 .video-container {
   position: relative;
-  max-width: 800px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px;
+  /* Adjust the max-width as needed */
+  margin: 0 auto;
+  /* Center the container horizontally */
 }
 
 .centered-video {
-  width: 800px; /* Set the width of the iframe */
-  height: 450px; /* Set the height of the iframe */
+  width: 800px;
+  /* Set the width of the iframe */
+  height: 450px;
+  /* Set the height of the iframe */
   display: block;
-  margin: 0 auto; /* Center the video horizontally */
+  margin: 0 auto;
+  /* Center the video horizontally */
 }
 
 /*________________________________*/
@@ -37,42 +43,60 @@
 
 div.scroll-container {
   background-color: rgb(249, 247, 248);
-  overflow-x: auto; /* Horizontal scrolling only */
+  overflow-x: auto;
+  /* Horizontal scrolling only */
   white-space: nowrap;
   padding: 10px;
-  border: 5px solid #eca4a4; /* Add outline */
-  border-radius: 10px; /* Add rounded corners */
-  width: 80%; /* Set the width of the scrollable section */
-  height: 350px; /* Set the height of the scrollable section */
-  margin: 0 auto; /* Center the scrollable section horizontally */
+  border: 5px solid #eca4a4;
+  /* Add outline */
+  border-radius: 10px;
+  /* Add rounded corners */
+  width: 80%;
+  /* Set the width of the scrollable section */
+  height: 350px;
+  /* Set the height of the scrollable section */
+  margin: 0 auto;
+  /* Center the scrollable section horizontally */
 
-  display: flex; /* Use flexbox for layout */
+  display: flex;
+  /* Use flexbox for layout */
   align-items: center;
-  justify-content: space-between; /* Distribute space between items */
+  justify-content: space-between;
+  /* Distribute space between items */
   gap: 20px;
 }
 
 .gallery {
-  max-width: auto; /* Set a fixed width for each image container */
-  max-height: auto; /* Set a fixed height for each image container */
+  max-width: auto;
+  /* Set a fixed width for each image container */
+  max-height: auto;
+  /* Set a fixed height for each image container */
   width: 300px;
   height: 300px;
 
-  border-radius: 5px; /*Add rounded corners */
-  display: flex; /* Use flexbox for centering */
-  justify-content: center; /* Center the image horizontally */
-  align-items: normal; /* Center the image vertically */
-  align-items: stretch; /* stretch the content vertically*/
-  flex-direction: column; /* Stack items vertically */
+  border-radius: 5px;
+  /*Add rounded corners */
+  display: flex;
+  /* Use flexbox for centering */
+  justify-content: center;
+  /* Center the image horizontally */
+  align-items: normal;
+  /* Center the image vertically */
+  align-items: stretch;
+  /* stretch the content vertically*/
+  flex-direction: column;
+  /* Stack items vertically */
 
   position: relative;
-  border: 3px solid #ebafaf; /* Add border around each image */
+  border: 3px solid #ebafaf;
+  /* Add border around each image */
   /*transition: border-color 0.3s;  Add transition effect for hover */
   /*overflow: hidden;  Hide any overflow from images */
 }
 
 .gallery:hover {
-  border-color: #cf2020; /* Change border color on hover */
+  border-color: #cf2020;
+  /* Change border color on hover */
 }
 
 .gallery img {
@@ -94,7 +118,7 @@ div.scroll-container {
   color: black;
 }
 
-.long-desc{
+.long-desc {
   white-space: normal;
   margin: auto;
   width: 100%;
@@ -108,16 +132,22 @@ div.scroll-container {
   transition: bottom 0.4s;
   animation: fadeIn 5s;
 }
+
 .long-desc:hover {
   cursor: pointer;
 }
 
 @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-.short-desc{
+.short-desc {
   transition: bottom 0.4s;
   animation: fadeIn 5s;
 }
@@ -136,8 +166,10 @@ div.scroll-container {
 .text {
   position: fixed;
   bottom: 0;
-  padding: 10px; /* Add padding around the text */
-  text-align: center; /* Center the text */
+  padding: 10px;
+  /* Add padding around the text */
+  text-align: center;
+  /* Center the text */
   color: black;
   font-size: 20px;
 }
@@ -310,7 +342,7 @@ ul {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover > a {
+.navbar li:hover>a {
   color: #b31b1b;
   /* color: #eb5d1e; */
 }
@@ -361,11 +393,11 @@ ul {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover > a {
+.navbar .dropdown ul li:hover>a {
   color: #de2424;
 }
 
-.navbar .dropdown:hover > ul {
+.navbar .dropdown:hover>ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -377,7 +409,7 @@ ul {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover > ul {
+.navbar .dropdown .dropdown:hover>ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -389,7 +421,7 @@ ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover > ul {
+  .navbar .dropdown .dropdown:hover>ul {
     left: -100%;
   }
 }
@@ -459,7 +491,7 @@ ul {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover > a {
+.navbar-mobile li:hover>a {
   color: #b31b1b;
 }
 
@@ -496,11 +528,11 @@ ul {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover > a {
+.navbar-mobile .dropdown ul li:hover>a {
   color: #b31b1b;
 }
 
-.navbar-mobile .dropdown > .dropdown-active {
+.navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
 
@@ -700,11 +732,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li + li {
+.breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li + li::before {
+.breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -959,10 +991,7 @@ section {
   position: relative;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -970,10 +999,7 @@ section {
   border: 1px solid #eb5d1e;
 }
 
-.portfolio-details
-  .portfolio-details-slider
-  .swiper-pagination
-  .swiper-pagination-bullet-active {
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
   background-color: #eb5d1e;
 }
 
@@ -996,7 +1022,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li + li {
+.portfolio-details .portfolio-info ul li+li {
   margin-top: 10px;
 }
 
@@ -1148,6 +1174,7 @@ section {
   bottom: 0;
   transition: bottom 0.4s;
 }
+
 .responsive .gallery .desc {
   position: absolute;
   justify-content: center;
@@ -1216,23 +1243,19 @@ section {
 }
 
 .team .member:hover .member-info {
-  background: linear-gradient(
-    0deg,
-    rgba(78, 64, 57, 0.95) 0%,
-    rgba(78, 64, 57, 0.95) 15%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(78, 64, 57, 0.95) 0%,
+      rgba(78, 64, 57, 0.95) 15%,
+      rgba(255, 255, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s;
 }
 
 .responsive .gallery:hover .desc-info {
-  background: linear-gradient(
-    0deg,
-    rgba(78, 64, 57, 0.95) 0%,
-    rgba(78, 64, 57, 0.95) 15%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(78, 64, 57, 0.95) 0%,
+      rgba(78, 64, 57, 0.95) 15%,
+      rgba(255, 255, 255, 0) 100%);
   opacity: 1;
   transition: 0.4s;
 }
@@ -1384,7 +1407,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .php-email-form .error-message br+br {
   margin-top: 25px;
 }
 
@@ -1627,6 +1650,7 @@ section {
 }
 
 @media (max-width: 575px) {
+
   #footer .copyright,
   #footer .credits {
     float: none;
@@ -1871,7 +1895,8 @@ section {
 } */
 
 .small-figure {
-  width: fit-content; /* Adjusts the width of the figure to fit its contents */
+  width: fit-content;
+  /* Adjusts the width of the figure to fit its contents */
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 30px;
@@ -1943,12 +1968,10 @@ section {
 }
 
 .post:hover .post-info {
-  background: linear-gradient(
-    0deg,
-    rgba(78, 64, 57, 0.95) 0%,
-    rgba(78, 64, 57, 0.95) 15%,
-    rgba(78, 64, 57, 0.3) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(78, 64, 57, 0.95) 0%,
+      rgba(78, 64, 57, 0.95) 15%,
+      rgba(78, 64, 57, 0.3) 100%);
   opacity: 1;
   transition: 0.4s;
 }
@@ -1992,4 +2015,14 @@ section {
   padding: 1rem;
   margin: auto;
   display: block;
+}
+
+/* Team photo */
+.team-photo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.team-photo {
+  width: 500px;
 }

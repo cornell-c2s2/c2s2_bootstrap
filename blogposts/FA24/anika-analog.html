@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Blog Post Template</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+        rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+
+    <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center">
+        <div class="container d-flex align-items-center justify-content-between">
+
+            <div class="logo">
+                <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+                <!-- Uncomment below if you prefer to use an image logo -->
+                <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+            </div>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+                    <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+                    <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i
+                                class="bi bi-chevron-down"></i></a>
+                        <ul>
+                            <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+                            <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+                            <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+                            <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a>
+                            </li>
+                            <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+                    <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+                    <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs Section ======= -->
+        <section id="apply" class="breadcrumbs">
+            <div class="container">
+
+                <div class="section-title">
+                    <h1>The SAR ADC: Refining Digital Output Bit by Bit</h1>
+                    <h2>Anika Sukthankar</h2>
+                    <h2 class="underline">Dec 20, 2024</h2>
+                </div>
+
+            </div>
+        </section><!-- End Breadcrumbs Section -->
+
+        <section class="inner-page blog-post">
+            <div class="container">
+                <p>
+                    Hello! My name is Anika and I am on the project management subteam of C2S2. This semester, I
+                    expressed an interest in learning more about the analog subteam. More specifically, I learned
+                    extensively about the Successive Approximative Register Analog-to-Digital Converter, otherwise known
+                    as the SAR ADC. For reference, see Figure 1 below. A SAR ADC uses a binary search algorithm to
+                    approximate an input voltage.
+                </p>
+                <figure>
+                    <img src="imgs/anika/image1.png" />
+                    <figcaption><strong>Figure 1</strong><br>
+                    </figcaption>
+                </figure>
+                <p>
+                    The team transitioned to a SAR ADC circuit for several reasons. First, they had several process and
+                    constraint requirements. These include a 130 nm CMOS process, meaning that this required low power
+                    and a low voltage process (1 v8). Another reason was that the area complexity scales were
+                    proportional to the number of bits. On the other hand, a Flash ADC requires more comparators, is
+                    more costly, and consumes more power, which is highly impractical for our circuit. Moreover, SAR
+                    ADCs are more common, and provide higher resolution despite a lower area and lower power. As shown
+                    in Figure 1, the Analog subteam constructed a chart comparing the SAR ADC to the Flash ADC and
+                    Modulator from previous year, as well as their goal for the SAR.
+                </p>
+                <figure>
+                    <img src="imgs/anika/image2.png" />
+                    <figcaption><strong>Figure 2</strong><br>
+                    </figcaption>
+                </figure>
+                <p>
+                    For more guidance on SAR ADC and its functions, I spoke with Daniel Kaminski ‘27 and Caden Xu ‘27 to
+                    learn more. Caden Xu likened the SAR ADC to a scale, saying:
+                </p>
+                <p> <i>
+                        “It’s like having a standard mass on one side and paper clips on the other. As you keep adding
+                        paper
+                        clips, it will eventually balance out. Same thing with SAR ADC. It takes your input voltage and
+                        then
+                        guesses a voltage, and then compares the two. If it guesses a voltage that is too high, it
+                        lowers
+                        that voltage. It continues approximating until it reaches the final value that the input voltage
+                        is.”
+                    </i>
+                </p>
+                <p>
+                    The SAR ADC has several components: a Capacitive DAC (CDAC), a comparator, and analog switches.
+                    First, the Successive Approximation Register (SAR) utilizes a binary search function and flip bits
+                    from the most significant bit (MSB) to the least significant bit (LSB). After each flip, it checks
+                    how the DAC voltage compares to the input voltage. It then changes the DAC input accordingly.
+                </p>
+                <p>
+                    Next is the CDAC. Kaminiski tells us that the CDAC is used to convert a digital signal that is then
+                    provided into a voltage. The layout of the CDAC is shown in Figure 3 below. The CDAC has a binary,
+                    weighted 8 bit and differential configuration. This way, it reduces kickbacks (sudden, high spikes
+                    in voltage) and constraints on charge injection. The CDAC operates by switching capacitor
+                    connections. The layout of the CDAC is crucial for our circuit. First, the CDAC process variation
+                    and parasitics has a profound impact on the effective number of bits (ENOB). When designing the
+                    CDAC, the team had to keep their optimal layout for the overall SAR ADC in mind, as the CDAC had to
+                    be thoroughly tested before the layout was designed.
+
+                </p>
+                <figure>
+                    <img src="imgs/anika/image3.png" />
+                    <figcaption><strong>Figure 3: CDAC Layout</strong><br>
+                    </figcaption>
+                </figure>
+                <p>
+                    Another component is the comparator, which compares 2 signals together. It was designed so that it
+                    is both accurate and has a resolution. The Analog subteam designed a Triple Tail Latched comparator,
+                    as shown in the Figure 4 below. The Triple Comparator has several advantages, as it is a high speed
+                    application, generates little to no noise, and performs well with low power consumption. It consists
+                    of three stages: the preamplifier, the half-latch, and the latch. The preamplifier is responsible
+                    for amplifying the differences between input signals, which allows the other stages to detect
+                    differences in voltage. Next, the half-latch stage is the core of the comparator. It utilizes a
+                    differential amplifier circuit with transistors to amplify the voltage difference given by the
+                    preamplifier stage. Last is the latch stage, which provides a binary output based on the given
+                    voltage difference from the half-latch stage.
+                </p>
+                <figure>
+                    <img src="imgs/anika/image4.png" />
+                    <figcaption><strong>Figure 4</strong><br>
+                    </figcaption>
+                </figure>
+                <p>The last component is the analog switch, which switches the analog voltage to the capacitors. As
+                    shown in Figure 5, the Analog team decided to implement a bootstrapped analog switch. This allows
+                    for a selective switching between different analog signals. Furthermore, this design maintains a
+                    constant Vgs and a constant-on resistance, thus minimizing any distortion caused by the switch’s
+                    resistance changing with the input signal. Xu states that this lack of distortion is what makes it
+                    perfect for ADCs, where he says “precision is key."
+                </p>
+                <figure>
+                    <img src="imgs/anika/image5.png" />
+                    <figcaption><strong>Figure 5: Bootstrapped Analog Switch</strong><br>
+                    </figcaption>
+                </figure>
+                <p>After all of their hard work this semester, the Analog subteam has successfully implemented a
+                    function 4 bit SAR ADC, which has a latched output and easier digital interfacing. In addition, the
+                    high AMS simulation speed allows it to quickly iterate. This allows for a function simulation with
+                    Verilog and synthesized logic when testing for transistor levels. Moreover, the Analog team says
+                    that it is now possible to co-simulate this with the Digital Subteam, meaning that the full chip can
+                    now be tested.
+                </p>
+                <p>Overall, the Analog subteam has showcased incredible growth and a steep learning curve. Simple
+                    research of an interesting topic and the motivation to improve from previous designs has developed
+                    into a remarkable final product. The SAR ADC is proof of the Analog subteam’s dedication and passion
+                    for chip design, as they shape the future of chip design, one bit at a time.
+                </p>
+
+
+            </div>
+        </section>
+
+    </main><!-- End #main -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-md-6 footer-contact">
+                        <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+                        <p>
+                            <strong>Email:</strong> c2s2@cornell.edu<br>
+                        </p>
+                        <div class="social-links mt-3">
+                            <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                                    class="bx bxl-instagram"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                            <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+                            <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 footer-links">
+                        <h4>Useful Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                <!-- All the links in the footer should remain intact. -->
+                <!-- You can delete the links only if you purchased the pro version. -->
+                <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/aos/aos.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
