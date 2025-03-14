@@ -2021,8 +2021,15 @@ section {
 .team-photo-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  margin-top: 2rem;
+  /* Space from content above */
+  margin-bottom: 2rem;
+  /* Space from bottom of page */
 }
 
 .team-photo {
   width: 500px;
+  max-width: 100%;
+  /* Make it responsive */
 }
