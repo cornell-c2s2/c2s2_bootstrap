@@ -342,7 +342,7 @@ ul {
 .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
-.navbar li:hover>a {
+.navbar li:hover > a {
   color: #b31b1b;
   /* color: #eb5d1e; */
 }
@@ -393,11 +393,11 @@ ul {
 
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
+.navbar .dropdown ul li:hover > a {
   color: #de2424;
 }
 
-.navbar .dropdown:hover>ul {
+.navbar .dropdown:hover > ul {
   opacity: 1;
   top: 100%;
   visibility: visible;
@@ -409,7 +409,7 @@ ul {
   visibility: hidden;
 }
 
-.navbar .dropdown .dropdown:hover>ul {
+.navbar .dropdown .dropdown:hover > ul {
   opacity: 1;
   top: 0;
   left: 100%;
@@ -421,7 +421,7 @@ ul {
     left: -90%;
   }
 
-  .navbar .dropdown .dropdown:hover>ul {
+  .navbar .dropdown .dropdown:hover > ul {
     left: -100%;
   }
 }
@@ -491,7 +491,7 @@ ul {
 
 .navbar-mobile a:hover,
 .navbar-mobile .active,
-.navbar-mobile li:hover>a {
+.navbar-mobile li:hover > a {
   color: #b31b1b;
 }
 
@@ -528,11 +528,11 @@ ul {
 
 .navbar-mobile .dropdown ul a:hover,
 .navbar-mobile .dropdown ul .active:hover,
-.navbar-mobile .dropdown ul li:hover>a {
+.navbar-mobile .dropdown ul li:hover > a {
   color: #b31b1b;
 }
 
-.navbar-mobile .dropdown>.dropdown-active {
+.navbar-mobile .dropdown > .dropdown-active {
   display: block;
 }
 
@@ -732,11 +732,11 @@ section {
   font-size: 14px;
 }
 
-.breadcrumbs ol li+li {
+.breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.breadcrumbs ol li+li::before {
+.breadcrumbs ol li + li::before {
   display: inline-block;
   padding-right: 10px;
   color: #6c757d;
@@ -991,7 +991,10 @@ section {
   position: relative;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   background-color: #fff;
@@ -999,7 +1002,10 @@ section {
   border: 1px solid #eb5d1e;
 }
 
-.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+.portfolio-details
+  .portfolio-details-slider
+  .swiper-pagination
+  .swiper-pagination-bullet-active {
   background-color: #eb5d1e;
 }
 
@@ -1022,7 +1028,7 @@ section {
   font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li + li {
   margin-top: 10px;
 }
 
@@ -1185,7 +1191,6 @@ section {
   transition: bottom 0.4s;
 }
 
-
 .team .member h4 {
   font-weight: 700;
   margin-bottom: 2px;
@@ -1213,7 +1218,6 @@ section {
   font-size: 13px;
   color: #fff;
 }
-
 
 .team .member .social {
   position: absolute;
@@ -1243,19 +1247,23 @@ section {
 }
 
 .team .member:hover .member-info {
-  background: linear-gradient(0deg,
-      rgba(78, 64, 57, 0.95) 0%,
-      rgba(78, 64, 57, 0.95) 15%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(78, 64, 57, 0.95) 0%,
+    rgba(78, 64, 57, 0.95) 15%,
+    rgba(255, 255, 255, 0) 100%
+  );
   opacity: 1;
   transition: 0.4s;
 }
 
 .responsive .gallery:hover .desc-info {
-  background: linear-gradient(0deg,
-      rgba(78, 64, 57, 0.95) 0%,
-      rgba(78, 64, 57, 0.95) 15%,
-      rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(78, 64, 57, 0.95) 0%,
+    rgba(78, 64, 57, 0.95) 15%,
+    rgba(255, 255, 255, 0) 100%
+  );
   opacity: 1;
   transition: 0.4s;
 }
@@ -1407,7 +1415,7 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br+br {
+.contact .php-email-form .error-message br + br {
   margin-top: 25px;
 }
 
@@ -1634,13 +1642,13 @@ section {
 }
 
 #footer .copyright {
-  text-align: center;
+  text-align: left;
   float: left;
 }
 
 #footer .credits {
   float: right;
-  text-align: center;
+  text-align: right;
   font-size: 13px;
   color: #212529;
 }
@@ -1650,7 +1658,6 @@ section {
 }
 
 @media (max-width: 575px) {
-
   #footer .copyright,
   #footer .credits {
     float: none;
@@ -1968,10 +1975,12 @@ section {
 }
 
 .post:hover .post-info {
-  background: linear-gradient(0deg,
-      rgba(78, 64, 57, 0.95) 0%,
-      rgba(78, 64, 57, 0.95) 15%,
-      rgba(78, 64, 57, 0.3) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(78, 64, 57, 0.95) 0%,
+    rgba(78, 64, 57, 0.95) 15%,
+    rgba(78, 64, 57, 0.3) 100%
+  );
   opacity: 1;
   transition: 0.4s;
 }
@@ -2032,4 +2041,14 @@ section {
   width: 500px;
   max-width: 100%;
   /* Make it responsive */
+}
+
+.new-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.come-back-soon {
+  text-align: center;
 }
