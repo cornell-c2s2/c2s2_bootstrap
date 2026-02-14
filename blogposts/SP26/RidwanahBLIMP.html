@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Floating Point Integration in BLIMP</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Floating Point Integration in BLIMP</h1>
+          <h2>Ridwanah Haque</h2>
+          <h2 class="underline">February 13, 2026</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <h2>Introduction</h2>
+
+        <p>
+          Hello, my name is Ridwanah and I am a part of the business operations subteam on C2S2. This semester I wanted
+          to learn more about what members of the digital RTL subteam were working on. Specifically, members Sumaia and
+          Emily worked on integrating a floating point adder/subtracter to BLIMP, an integer processor designed by Aiden
+          McNay as his M.Eng project. Figure 1 below is a simplified representation of how BLIMP processes instructions.
+        </p>
+
+        <figure>
+          <img src="imgs/RidwanahBLIMP/ridwannahIMG1.png"/>
+          <figcaption><strong>Figure 1</strong><br>Simplified Representation of How BLIMP Processes Instructions</figcaption>
+        </figure>
+
+        <h2>What is BLIMP</h2>
+
+        <p>
+          At the beginning of the semester, the digital RTL team had to decide what kind of CPU and accelerator design
+          they would work with. They previously explored designs such as picorv32, VexRISCV and Berkeley&apos;s
+          Rocket/Boom. However, all these designs have downsides &mdash; they&apos;re either in Verilog, or have a
+          modular design, but not both. So the team turned to BLIMP, developed by the founder of C2S2 Aidan McNay. It
+          is a latency insensitive and modular processor in Verilog.
+        </p>
+
+        <p>
+          BLIMP is designed to be a highly modular processor. Instead of having one complicated, fixed design for a
+          processor, BLIMP breaks the processor down into smaller modules that can be swapped out for one another. This
+          processor already implements fixed-point arithmetic (integers without decimals). This semester, the goal was
+          to integrate floating point support. The members in charge are working on building and integrating the
+          arithmetic module that performs floating point addition and subtraction.
+        </p>
+
+        <p>
+          One of the biggest motivations in building and improving BLIMP is that RISC-V processors are often difficult
+          to use with no high-level modularity and an understanding of the entire design before any changes can be made.
+          BLIMP solves this problem, enabling intra-core modularity which basically allows individual units, like the
+          floating point execution unit, to be modified or replaced without affecting the rest of the structure.
+        </p>
+
+        <h2>How the Integration Works</h2>
+
+        <p>
+          In order to add the floating point arithmetic module, the members introduced a new execution unit called ALUF
+          (Arithmetic Logic Unit, F) which performs this function. The RISC-V &ldquo;F&rdquo; extension is used &mdash;
+          it allows for single-precision floating point &mdash; for two instructions:
+        </p>
+
+        <ul style="display: block; margin-top: 0; margin-bottom: 1rem;">
+          <li>OP_FADD (addition)</li>
+          <li>OP_FSUB (subtraction)</li>
+        </ul>
+
+        <p>
+          Each uses a 32-bit floating point operand.
+        </p>
+
+        <p>
+          The execution unit will be added between the DIU (decode/instruction) unit and the WCU (writeback control)
+          unit. The DIU unit reads instructions and decides which operation is needed for the function. It then sends
+          operands and the control signal to the execution module. ALUF performs the floating point addition or
+          subtraction and rounds to the nearest even digit (adds 3 extra bits for precision: guard, sticky, and round).
+          Finally, the result from the ALUF goes into the WCU which writes it back into the register. The register file
+          helps store data in order (like inputs and outputs), it has very fast CPU memory, and stores what the CPU is
+          computing currently.
+        </p>
+
+        <h2>Simulation (C++) vs. Hardware (Verilog)</h2>
+
+        <p>
+          BLIMP is written in Verilog, which is a hardware description language used to model how hardware is wired.
+          Verilog is used to implement the hardware that would execute the given instructions. It cannot simulate
+          floating point behavior which makes it difficult to test new instructions like floating point add and subtract.
+          Instead, the team used C++ simulations to model floating point addition and subtraction behavior. This allows
+          them to test edge cases and rounding behavior before integrating the execution unit into the rest of BLIMP.
+          Assembly is a low-level programming language used to represent machine instructions. Assembly was also used
+          to represent how instructions would be issued to the processor.
+        </p>
+
+        <p>
+          Adding the floating point execution unit is important because it allows for a larger range of numbers to be
+          processed which means there are more applications available like financial modeling, machine learning,
+          scientific simulations, etc.
+        </p>
+
+        <h2>Challenges Encountered</h2>
+
+        <p>
+          Some challenges in integrating floating point support stemmed from BLIMP originally being designed as an
+          integer-only processor. The team had difficulty with the register, specifically ensuring that floating point
+          results were correctly written back to the register file. Additionally, BLIMP does not yet include floating
+          point load and store instructions, which makes it difficult to move floating point values between memory and
+          registers. To address these challenges, the members focusing on BLIMP each took ownership of a specific issue,
+          allowing them to work in parallel on the register and the load/store functionality.
+        </p>
+
+        <h2>Future Plans</h2>
+
+        <p>
+          Future plans for BLIMP include expanding floating point support beyond addition and subtraction (V.9 currently
+          being worked on), as well as implementing floating point load and store instructions. As BLIMP continues to
+          expand, additional execution units may be added, further increasing the processor&apos;s capabilities.
+        </p>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
