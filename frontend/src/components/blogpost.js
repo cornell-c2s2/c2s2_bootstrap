@@ -56,6 +56,10 @@ import TechnicalPM from "../blogposts/SP24/TechnicalPM";
 import TwoWorlds from "../blogposts/SP24/TwoWorlds";
 import VerifyBetterFFT from "../blogposts/SP24/VerifyBetterFFT";
 
+// SP26
+import RidwanahBLIMP from "../blogposts/SP26/RidwanahBLIMP";
+import AmbilaIMU from "../blogposts/SP26/AmbilaIMU";
+
 // This component will render a single blog post
 function BlogPost() {
   const BlogComponents = {
@@ -99,6 +103,10 @@ function BlogPost() {
     SystemArchitectureProgressReport: SystemArchitectureProgressReport,
     TheProcessOfAcquiringSponsors: TheProcessOfAcquiringSponsors,
     TwoSidesOfACoin: TwoSidesOfACoin,
+
+    // SP26 Blog Posts
+    RidwanahBLIMP: RidwanahBLIMP,
+    AmbilaIMU: AmbilaIMU,
 
     // SP24 Blog Posts
     ASICDesignFlow: ASICDesignFlow,

@@ -1,5 +1,9 @@
 import React from "react";
 
+//thumbnails - SP26
+import RidwanahBLIMPThumbnail from "../blogposts/SP26/thumbnails/RidwanahBLIMP.png";
+import AmbilaIMUThumbnail from "../blogposts/SP26/thumbnails/AmbilaIMU.png";
+
 //thumbnails - FA24
 import image4 from "../blogposts/FA24/thumbnails/image4.png";
 import tanyaSoftware from "../blogposts/FA24/thumbnails/TanyaSoftware.png";
@@ -73,6 +77,48 @@ function BlogGallery() {
         style={{ padding: 0 }}
       >
         <div className="container">
+          <div className="section-title">
+            <p>Spring 2026</p>
+          </div>
+
+          <div className="row">
+            <div
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="post">
+                <a href="/blog/RidwanahBLIMP">
+                  <img src={RidwanahBLIMPThumbnail} className="img-fluid" alt="" />
+                  <div className="post-info">
+                    <div className="post-info-content">
+                      <h4>Floating Point Integration in BLIMP</h4>
+                      <span>Ridwanah Kibria</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="post">
+                <a href="/blog/AmbilaIMU">
+                  <img src={AmbilaIMUThumbnail} className="img-fluid" alt="" />
+                  <div className="post-info">
+                    <div className="post-info-content">
+                      <h4>Intelligence on a Chip: IMU Motion Classification</h4>
+                      <span>Ambila Sivabalan</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div className="section-title">
             <p>Fall 2024</p>
           </div>
