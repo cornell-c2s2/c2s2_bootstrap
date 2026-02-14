@@ -93,7 +93,7 @@ function BlogGallery() {
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Floating Point Integration in BLIMP</h4>
-                      <span>Ridwanah Kibria</span>
+                      <span>Ridwanah Haque</span>
                     </div>
                   </div>
                 </a>

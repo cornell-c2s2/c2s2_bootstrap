@@ -8,7 +8,7 @@ function RidwanahBLIMP() {
         <div className="container">
           <div className="section-title">
             <h1>Floating Point Integration in BLIMP</h1>
-            <h2>Ridwanah Kibria</h2>
+            <h2>Ridwanah Haque</h2>
             <h2 className="underline">February 13, 2026</h2>
           </div>
         </div>
