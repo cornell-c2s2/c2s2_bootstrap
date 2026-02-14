@@ -41,7 +41,7 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-6 order-1 order-lg-2 hero-img">
-                <img src={hero} className="img-fluid animated" alt="" />
+                <img src={hero} className="img-fluid animated" alt="" draggable="false" />
               </div>
             </div>
           </div>
