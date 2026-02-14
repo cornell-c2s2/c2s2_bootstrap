@@ -16,9 +16,7 @@ function Sponsors() {
 
       <section>
         <div className="container" data-aos="zoom-in" data-aos-delay="100">
-          <h2 className="section-title">About the Team</h2>
-          <h3>
-            {/* style="text-align: center" */}
+          <h3 style={{ textAlign: "center" }}>
             C2S2 would not be possible without its sponsors. Through their
             generous contributions, they have enabled the team and its members
             to push the boundaries of what is possible at the undergraduate
