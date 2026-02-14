@@ -17,25 +17,33 @@ import tesla from "../assets/img/aluminCompanies/tesla_logo.jpeg";
 import cadence from "../assets/img/aluminCompanies/cadence_logo.jpeg";
 import dell from "../assets/img/aluminCompanies/dell_logo.jpeg";
 import cisco from "../assets/img/aluminCompanies/cisco_logo.jpeg";
+import deepmind from "../assets/img/aluminCompanies/deepmind_logo.jpg";
+import apollo from "../assets/img/aluminCompanies/apollo_logo.jpg";
+import citadel from "../assets/img/aluminCompanies/citadel_logo.jpg";
+import millennium from "../assets/img/aluminCompanies/millennium_logo.png";
 
 const AlumniCompanies = () => {
   const companies = [
-    { name: "Nvidia", logo: nvidia },
-    { name: "SpaceX", logo: spacex },
-    { name: "GE Aerospace", logo: ge },
-    { name: "NASA", logo: nasa },
     { name: "Google", logo: google },
-    { name: "AMD", logo: amd },
-    { name: "Intel", logo: intel },
+    { name: "DeepMind", logo: deepmind },
     { name: "Apple", logo: apple },
-    { name: "EY", logo: ey },
-    { name: "Atlassian", logo: atlassian },
+    { name: "Nvidia", logo: nvidia },
+    { name: "NASA", logo: nasa },
+    { name: "SpaceX", logo: spacex },
+    { name: "Tesla", logo: tesla },
+    { name: "Intel", logo: intel },
+    { name: "AMD", logo: amd },
     { name: "AWS", logo: aws },
     { name: "ARM", logo: arm },
-    { name: "Tesla", logo: tesla },
     { name: "Cadence", logo: cadence },
-    { name: "Dell", logo: dell },
+    { name: "Citadel", logo: citadel },
+    { name: "Apollo", logo: apollo },
+    { name: "Millennium", logo: millennium },
+    { name: "GE Aerospace", logo: ge },
+    { name: "Atlassian", logo: atlassian },
     { name: "Cisco", logo: cisco },
+    { name: "Dell", logo: dell },
+    { name: "EY", logo: ey },
   ];
 
   return (
@@ -45,7 +53,7 @@ const AlumniCompanies = () => {
 
         <p className="c2s2-alumni-description">
           With skills developed through C2S2, our graduates have secured
-          positions at leading technology companies, aerospace firms, and
+          positions at leading technology companies and
           innovative organizations across various industries.
         </p>
 

@@ -51,6 +51,9 @@ import akshatiVaishnav from "../assets/img/team/Akshati Vaishnav_SOC.jpg";
 import taylorDo from "../assets/img/team/Taylor Do_RFIC.jpg";
 import jeffWilcox from "../assets/img/team/Jeff Wilcox_RFIC.jpg";
 import chrislonergan from "../assets/img/team/Chris Lonergan_RFIC.jpg";
+import javierChambilla from "../assets/img/team/Javier Chambilla_RFIC.jpg";
+import kateSanders from "../assets/img/team/Kate Sanders_RFIC.jpg";
+import shangXiang from "../assets/img/team/Shang Xiang_RFIC.jpg";
 
 //Project Management Subteam
 import jasonWang from "../assets/img/team/Jason Wang_PM.jpg";
@@ -445,6 +448,30 @@ function Team() {
               name="Chris Lonergan"
               role=""
               img={chrislonergan}
+              github=""
+              linkedin=""
+            />
+
+            <TeamMember
+              name="Javier Chambilla"
+              role=""
+              img={javierChambilla}
+              github=""
+              linkedin=""
+            />
+
+            <TeamMember
+              name="Kate Sanders"
+              role=""
+              img={kateSanders}
+              github=""
+              linkedin=""
+            />
+
+            <TeamMember
+              name="Shang Xiang"
+              role=""
+              img={shangXiang}
               github=""
               linkedin=""
             />

@@ -133,15 +133,27 @@ function Footer() {
       </div>
 
       <div className="container py-4">
-        <div className="copyright">
-          &copy; Copyright{" "}
-          <strong>
-            <span>Cornell Custom Silicon Systems</span>
-          </strong>
-          . All Rights Reserved
+        <div className="copyright" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+          <div>
+            &copy; Copyright{" "}
+            <strong>
+              <span>Cornell Custom Silicon Systems</span>
+            </strong>
+            . All Rights Reserved
+          </div>
+          <div>This organization is a registered student organization of Cornell University</div>
         </div>
         <div className="credits">
-          Made by <a href="/team#proj-man">PM Subteam &lt;3</a>
+          <div>Made by <a href="/team#proj-man">PM Subteam &lt;3</a></div>
+          <div>
+            <a
+              href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Equal Education and Employment
+            </a>
+          </div>
         </div>
       </div>
     </footer>

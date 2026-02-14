@@ -149,7 +149,7 @@ function About() {
               <div className="col-lg-3 col-md-6 d-md-flex align-items-md-center">
                 <div className="count-box">
                   <i className="bi bi-people"></i>
-                  <AnimatedCounter end={46} />
+                  <AnimatedCounter end={55} />
                   <p>
                     <strong>Team Members</strong>
                   </p>
@@ -158,7 +158,7 @@ function About() {
               <div className="col-lg-3 col-md-6 d-md-flex align-items-md-center">
                 <div className="count-box">
                   <i className="bi bi-diagram-2"></i>
-                  <AnimatedCounter end={5} />
+                  <AnimatedCounter end={8} />
                   <p>
                     <strong>Subteams</strong>
                   </p>
@@ -176,7 +176,7 @@ function About() {
               <div className="col-lg-3 col-md-6 d-md-flex align-items-md-stretch">
                 <div className="count-box">
                   <i className="bi bi-cpu"></i>
-                  <AnimatedCounter end={4} />
+                  <AnimatedCounter end={7} />
                   <p>
                     <strong>Taped-Out Chips</strong>
                   </p>
@@ -186,37 +186,7 @@ function About() {
           </div>
         </section>
 
-        <section>
-          <div className="container" data-aos="zoom-in" data-aos-delay="100">
-            <div className="section-title">
-              <p>Campus Partner</p>
-            </div>
-            The Cornell Lab of Ornithology is a world leader in advancing the
-            understanding, appreciation, and conservation of birds through
-            research, education, and citizen science. Their cutting-edge
-            research in bioacoustics and commitment to developing innovative
-            technologies for wildlife monitoring perfectly aligns with our
-            project goals. We extend our sincere gratitude to Christopher
-            Tarango and the entire Cornell Lab of Ornithology team for their
-            invaluable partnership and look forward to contributing to their
-            mission of creating a future where people live with birds in
-            harmony.
-          </div>
-          <div
-            className="row justify-content-center"
-            data-aos="zoom-in"
-            data-aos-delay="100"
-          >
-            <div className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center">
-              <div className="sponsor">
-                <a target="_blank" href="https://www.birds.cornell.edu/home/">
-                  {/* style="margin: 0.5rem 0.5rem 0.5rem 1.5rem"  */}
-                  <img src={labofO} className="img-fluid" alt="Lab of O" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
+        
       </main>
     </>
   );
