@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Intelligence on a Chip: IMU Motion Classification</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="../../assets/img/favicon_96x96.png" sizes="96x96">
+  <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="../../assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Ninestars
+  * Updated: Jul 27 2023 with Bootstrap v5.3.1
+  * Template URL: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+        <!-- <h1 class="text-light"><a href="index.html"><span>Cornell Custom Silicon Systems</span></a></h1> -->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <a href="../../"><img src="../../assets/img/logo.png" alt="C2S2 Logo" class="img-fluid"></a>
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto active" href="../../">Home</a></li>
+          <li><a class="nav-link scrollto" href="../../about">About Us</a></li>
+          <li class="dropdown"><a href="../../team"><span>Meet the Team</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a class="nav-link scrollto" href="../../team.html#digital">Digital</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#analog">Analog</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#software">Software</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#sys-arch">System Architecture</a></li>
+              <li><a class="nav-link scrollto" href="../../team.html#proj-man">Project Management</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="../../blog">Blog</a></li>
+          <li><a class="nav-link scrollto" href="../../sponsors">Sponsors</a></li>
+          <li><a class="getstarted scrollto" href="../../apply">Apply</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs Section ======= -->
+    <section id="apply" class="breadcrumbs">
+      <div class="container">
+
+        <div class="section-title">
+          <h1>Intelligence on a Chip: IMU Motion Classification</h1>
+          <h2>Ambila Sivabalan</h2>
+          <h2 class="underline">February 13, 2026</h2>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs Section -->
+
+    <section class="inner-page blog-post">
+      <div class="container">
+
+        <p>
+          A duck goes to the store and buys a loaf of bread. The cashier says &ldquo;cash or charge?&rdquo;.
+        </p>
+
+        <p>
+          &ldquo;Neither. Just put it on my bill.&rdquo;
+        </p>
+
+        <p>
+          But how do we tell what the duck was doing?
+        </p>
+
+        <p>
+          Hi, my name is Ambilu, and I am a member of the Project Management subteam of C2S2. This semester, I had the
+          opportunity to learn more about the work of the Software subteam, specifically their development of an Inertial
+          Measurement Unit (IMU) pipeline and motion classification model for a low power chip designed to be mounted on
+          birds. Their work focuses on transforming raw sensor data into meaningful behavioral insights within the strict
+          constraints of an embedded system.
+        </p>
+
+        <h2>Intelligence on a Chip</h2>
+
+        <p>
+          Tracking wildlife movement is not as simple as knowing where an animal is located. For researchers,
+          understanding how an animal moves can provide critical information about behavior, health, and interactions
+          with the environment. However, transmitting large amounts of raw sensor data from a small, battery powered chip
+          is impractical. Instead, intelligence must live directly on the chip itself. This is where the Software
+          subteam&apos;s work becomes essential.
+        </p>
+
+        <figure>
+          <img src="imgs/AmbilaIMU/ambiluIMG1.png"/>
+          <figcaption><strong>Figure 1</strong><br>Bird with Tag (to show size of current tags)</figcaption>
+        </figure>
+
+        <h2>From Motion to Meaning: What an IMU Does</h2>
+
+        <p>
+          An IMU is a sensor that measures motion using components such as accelerometers and gyroscopes. These sensors
+          generate continuous streams of numerical data that describe how the chip is moving in three dimensional space.
+          On their own, these numbers are difficult to interpret. The challenge is converting this raw data into
+          classifications that describe what kind of movement is occurring.
+        </p>
+
+        <p>
+          The Software subteam developed a pipeline that processes IMU data into a format suitable for machine learning.
+          This includes cleaning the data, organizing it into time windows, and extracting patterns that correspond to
+          different types of motion. At a high level, this allows the chip to answer a simple but important question:
+          what is the bird doing at a given moment?
+        </p>
+
+        <figure>
+          <img src="imgs/AmbilaIMU/ambiluIMG2.png"/>
+          <figcaption><strong>Figure 2</strong><br>IMU Data Stream</figcaption>
+        </figure>
+
+        <h2>Building and Training the Model</h2>
+
+        <p>
+          After establishing the data pipeline, the Software subteam focused on developing a model capable of
+          classifying movement. The model is trained offline using labeled IMU data, where specific motion patterns
+          correspond to known behaviors. Through training and validation, the model learns which features of the sensor
+          data are most useful for distinguishing between different types of movement.
+        </p>
+
+        <p>
+          An important consideration throughout this process is that accuracy alone is not sufficient. Larger and more
+          complex models may perform well during testing but are not practical for deployment on a chip with limited
+          resources. As a result, the team prioritized lightweight model architectures that achieve reliable
+          classification while remaining feasible for on chip inference.
+        </p>
+
+        <h2>Efficiency Under Constraint</h2>
+
+        <p>
+          Software designed for embedded systems faces strict limitations on memory, processing power, and energy
+          consumption. These constraints influenced every design decision made by the Software subteam.
+        </p>
+
+        <p>
+          To operate within these limits, the team focused on efficiency across the entire pipeline. This included
+          reducing model size, minimizing computational complexity during inference, and carefully selecting features
+          that provide the most information at the lowest cost. In this context, efficiency is what enables real world
+          deployment rather than just improved performance metrics. A technique used is quantization, which makes models
+          smaller and more efficient.
+        </p>
+
+        <figure>
+          <img src="imgs/AmbilaIMU/AmbiluIMG3.png"/>
+          <figcaption><strong>Figure 3</strong><br>Logic behind Quantization of Neural Networks</figcaption>
+        </figure>
+
+        <h2>Results and Impact</h2>
+
+        <p>
+          By the end of the semester, the Software subteam successfully implemented a functional IMU based motion
+          classification system capable of running directly on the chip. This system allows motion data to be
+          interpreted in real time, providing meaningful behavioral insights without the need to transmit large volumes
+          of raw sensor data. The modular design of the pipeline also supports integration with the work of other
+          subteams as part of the full chip.
+        </p>
+
+        <p>
+          Overall, the Software subteam demonstrated strong progress in bridging machine learning and embedded systems.
+          Their work shows how carefully designed software can transform raw sensor data into actionable information,
+          enabling low power chips to support real world wildlife research.
+        </p>
+
+      </div>
+    </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-6 col-md-6 footer-contact">
+            <h3>Cornell Custom Silicon Systems (C2S2)</h3>
+            <p>
+              <strong>Email:</strong> c2s2@cornell.edu<br>
+            </p>
+            <div class="social-links mt-3">
+              <a target="_blank" href="https://www.instagram.com/cornell.silicon/" class="instagram"><i
+                  class="bx bxl-instagram"></i></a>
+              <a target="_blank" href="https://www.linkedin.com/company/cornell-custom-silicon-systems/"
+                class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="mailto:c2s2@cornell.edu" class="gmail"><i class="bx bx-envelope"></i></a>
+              <a href="https://github.com/cornell-c2s2" class="github"><i class="bx bxl-github"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../about">About Us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../team">Meet the Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../blog">Blog</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../sponsors">Sponsors</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="../../apply">Apply</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </div>
+    </div>
+
+    <div class="container py-4">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Cornell Custom Silicon Systems</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/ninestars-free-bootstrap-3-theme-for-creative/ -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="../../assets/vendor/aos/aos.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../../assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
