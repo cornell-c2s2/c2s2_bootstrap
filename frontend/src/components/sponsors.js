@@ -1,7 +1,6 @@
 import React from "react";
 import cadence from "../assets/img/sponsors/cadence.png";
 import amd from "../assets/img/sponsors/amd.png";
-import sandia from "../assets/img/sponsors/snl.png";
 
 function Sponsors() {
   return (
@@ -52,51 +51,45 @@ function Sponsors() {
             <h1>Silicon Sponsors</h1>
           </div>
 
-          <div className="row justify-content-center">
+          <div className="row justify-content-center align-items-center" style={{ padding: "30px 0" }}>
             <div
-              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="sponsor">
                 <a target="_blank" href="https://cadence.com">
-                  {/* style="margin: 0.5rem 0.5rem 0.5rem 1.5rem"  */}
-                  <img
-                    src={cadence}
-                    className="img-fluid"
-                    alt="Cadence Design Systems"
-                  />
+                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                    <img src={cadence} alt="Cadence Design Systems" className="c2s2-alumni-company-logo" />
+                  </div>
                 </a>
               </div>
             </div>
 
             <div
-              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="sponsor">
                 <a target="_blank" href="https://amd.com">
-                  <img
-                    src={amd}
-                    className="img-fluid"
-                    alt="Advanced Micro Devices, Inc."
-                  />
+                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                    <img src={amd} alt="Advanced Micro Devices, Inc." className="c2s2-alumni-company-logo" />
+                  </div>
                 </a>
               </div>
             </div>
+
             <div
-              class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
-              <div class="sponsor">
+              <div className="sponsor">
                 <a target="_blank" href="https://sandia.gov/">
-                  <img
-                    src={sandia}
-                    class="img-fluid"
-                    alt="Sandia National Laboratories"
-                  />
+                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                    <img src="/sandia.svg" alt="Sandia National Laboratories" className="c2s2-alumni-company-logo" />
+                  </div>
                 </a>
               </div>
             </div>
