@@ -88,7 +88,7 @@ function Sponsors() {
               <div className="sponsor">
                 <a target="_blank" href="https://sandia.gov/">
                   <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
-                    <img src="/sandia.svg" alt="Sandia National Laboratories" className="c2s2-alumni-company-logo" />
+                    <img src="/SNL_Stacked_Black_Blue.jpg" alt="Sandia National Laboratories" className="c2s2-alumni-company-logo" />
                   </div>
                 </a>
               </div>
