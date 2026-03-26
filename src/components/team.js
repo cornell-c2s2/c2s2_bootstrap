@@ -739,7 +739,12 @@ function TeamMember(prop) {
       data-aos-delay="100"
     >
       <div className="member">
-        <img src={prop.img} className="img-fluid" alt="" />
+        <img
+          src={prop.img}
+          className="img-fluid"
+          alt=""
+          onLoad={(e) => e.target.classList.add("loaded")}
+        />
         <div className="member-info">
           <div
             className={

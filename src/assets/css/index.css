@@ -25,10 +25,12 @@
 }
 
 .centered-video {
-  width: 800px; /* Set the width of the iframe */
-  height: 450px; /* Set the height of the iframe */
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 16 / 9;
+  height: auto;
   display: block;
-  margin: 0 auto; /* Center the video horizontally */
+  margin: 0 auto;
 }
 
 /*________________________________*/
@@ -55,6 +57,7 @@ div.scroll-container {
 .gallery {
   max-width: auto; /* Set a fixed width for each image container */
   max-height: auto; /* Set a fixed height for each image container */
+  min-width: 250px;
   width: 300px;
   height: 300px;
 
@@ -1592,9 +1595,19 @@ section {
 .team .member {
   text-align: center;
   margin-bottom: 20px;
-  background: #343a40;
+  background: transparent;
   position: relative;
   overflow: hidden;
+}
+
+.team .member img {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.team .member img.loaded {
+  opacity: 1;
+  background: #343a40;
 }
 
 
@@ -2730,6 +2743,7 @@ Alumni Section
   border-radius: 0.5em;
   transition: 0.2s ease;
   max-height: 180px;
+  margin-bottom: 20px;
 }
 
 .sponsors .sponsor a {
@@ -2742,4 +2756,47 @@ Alumni Section
   padding: 1rem;
   margin: auto;
   display: block;
+}
+
+/*--------------------------------------------------------------
+# Mobile Responsive Fixes
+--------------------------------------------------------------*/
+@media (max-width: 576px) {
+  section {
+    padding: 30px 0;
+  }
+
+  .video-container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  div.scroll-container {
+    width: 95%;
+    height: 280px;
+  }
+
+  #hero {
+    height: auto;
+    padding: 60px 0 30px 0;
+  }
+
+  #hero h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  #hero h2 {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .team-photo-container {
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+
+  .team-photo-container h1 {
+    font-size: 1.5rem;
+  }
 }

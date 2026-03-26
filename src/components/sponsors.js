@@ -32,13 +32,13 @@ function Sponsors() {
 
           <div className="row justify-content-center align-items-center" style={{ padding: "30px 0" }}>
             <div
-              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
+              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="sponsor">
                 <a target="_blank" href="https://nordtech.com">
-                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
                     <img src={nordtech} alt="Nordtech" className="c2s2-alumni-company-logo" />
                   </div>
                 </a>
@@ -46,13 +46,13 @@ function Sponsors() {
             </div>
 
             <div
-              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
+              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="sponsor">
                 <a target="_blank" href="https://amd.com">
-                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
                     <img src={amd} alt="Advanced Micro Devices, Inc." className="c2s2-alumni-company-logo" />
                   </div>
                 </a>
@@ -60,13 +60,13 @@ function Sponsors() {
             </div>
 
             <div
-              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-flex justify-content-center align-items-center"
+              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
               <div className="sponsor">
                 <a target="_blank" href="https://sandia.gov/">
-                  <div className="c2s2-alumni-logo-container" style={{ width: "260px", height: "170px" }}>
+                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
                     <img src="/SNL_Stacked_Black_Blue.jpg" alt="Sandia National Laboratories" className="c2s2-alumni-company-logo" />
                   </div>
                 </a>
@@ -84,7 +84,7 @@ function Sponsors() {
 
           <div className="row">
             <div
-              className="col-md-6 col-lg-6 d-block align-items-center"
+              className="col-md-6 col-lg-6 col-sm-12 d-block align-items-center"
               data-aos="zoom-in"
               data-aos-delay="100"
             >
@@ -110,7 +110,7 @@ function Sponsors() {
             </div>
 
             <div
-              className="col-md-6 col-lg-6 d-block align-items-center"
+              className="col-md-6 col-lg-6 col-sm-12 d-block align-items-center"
               data-aos="zoom-in"
               data-aos-delay="200"
             >
