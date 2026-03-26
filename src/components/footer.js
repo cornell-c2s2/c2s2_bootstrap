@@ -55,10 +55,10 @@ function Footer() {
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href="/about">About Us</a>
                 </li>
-                <li>
+                {/* <li>
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href="/chip-gallery">Chip Gallery</a>
-                </li>
+                </li> */}
                 <li>
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href="/team">Meet the Team</a>
@@ -133,7 +133,14 @@ function Footer() {
       </div>
 
       <div className="container py-4">
-        <div className="copyright" style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+        <div
+          className="copyright"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
           <div>
             &copy; Copyright{" "}
             <strong>
@@ -141,10 +148,15 @@ function Footer() {
             </strong>
             . All Rights Reserved
           </div>
-          <div>This organization is a registered student organization of Cornell University</div>
+          <div>
+            This organization is a registered student organization of Cornell
+            University
+          </div>
         </div>
         <div className="credits">
-          <div>Made by <a href="/team#proj-man">PM Subteam &lt;3</a></div>
+          <div>
+            Made by <a href="/team#proj-man">PM Subteam &lt;3</a>
+          </div>
           <div>
             <a
               href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment"

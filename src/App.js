@@ -20,8 +20,8 @@ import Sponsors from "./components/sponsors.js";
 import Apply from "./components/apply.js";
 import Team from "./components/team.js";
 import Alumni from "./components/alumni.js";
-import ChipGallery from "./components/chipgallery.js";
-import Chip from "./components/chip.js";
+// import ChipGallery from "./components/chipgallery.js";
+// import Chip from "./components/chip.js";
 import BlogGallery from "./components/bloggallery.js";
 import BlogPost from "./components/blogpost.js";
 
@@ -38,8 +38,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
-        <Route path="/chip-gallery" element={<ChipGallery />} />
-        <Route path="/chip-gallery/:chip" element={<Chip />} />
+        {/* <Route path="/chip-gallery" element={<ChipGallery />} />
+        <Route path="/chip-gallery/:chip" element={<Chip />} /> */}
         <Route path="/about" element={<About />} />
         <Route path="/blog" element={<BlogGallery />} />
         <Route path="/blog/:blog" element={<BlogPost />} />
