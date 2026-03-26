@@ -44,9 +44,9 @@ function About() {
                   <iframe
                     src="https://www.youtube.com/embed/rS4QEqK-7Jc"
                     className="centered-video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                   {/* </video> */}
                 </div>
@@ -63,9 +63,9 @@ function About() {
                   <iframe
                     src="https://www.youtube.com/embed/zI07SVDQrj0"
                     className="centered-video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                   {/* </video> */}
                 </div>
@@ -82,9 +82,9 @@ function About() {
                   <iframe
                     src="https://www.youtube.com/embed/EhGAmz4xoGA"
                     className="centered-video"
-                    frameborder="0"
+                    frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                   {/* </video> */}
                 </div>

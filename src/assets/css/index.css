@@ -20,17 +20,20 @@
 
 .video-container {
   position: relative;
-  max-width: 800px; /* Adjust the max-width as needed */
-  margin: 0 auto; /* Center the container horizontally */
+  max-width: 800px;
+  margin: 0 auto;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
 }
 
 .centered-video {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  max-width: 800px;
-  aspect-ratio: 16 / 9;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  height: 100%;
+  border: 0;
 }
 
 /*________________________________*/
@@ -2733,6 +2736,48 @@ Alumni Section
   position: relative;
   font-weight: 400;
   color: #440a0a;
+}
+
+.sponsor-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 20px;
+  background: #fff;
+  border-radius: 0.5em;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 30px;
+}
+
+.sponsor-bar a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 10px;
+}
+
+.sponsor-bar img {
+  max-height: 80px;
+  width: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-bar img:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 576px) {
+  .sponsor-bar {
+    gap: 25px;
+  }
+
+  .sponsor-bar img {
+    max-height: 60px;
+    max-width: 140px;
+  }
 }
 
 .sponsors .sponsor {

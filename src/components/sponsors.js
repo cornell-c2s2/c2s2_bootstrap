@@ -1,6 +1,7 @@
 import React from "react";
 import nordtech from "../assets/img/sponsors/nordtech.png";
 import amd from "../assets/img/sponsors/amd.png";
+import cadence from "../assets/img/sponsors/cadence.png";
 
 function Sponsors() {
   return (
@@ -27,59 +28,30 @@ function Sponsors() {
       <section id="about" className="sponsors">
         <div className="container" data-aos="fade-up">
           <div className="section-title underline">
-            <h1>Current Sponsors</h1>
+            <h1>Recent Sponsors</h1>
           </div>
 
-          <div className="row justify-content-center align-items-center" style={{ padding: "30px 0" }}>
-            <div
-              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div className="sponsor">
-                <a target="_blank" href="https://nordtech.com">
-                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
-                    <img src={nordtech} alt="Nordtech" className="c2s2-alumni-company-logo" />
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div className="sponsor">
-                <a target="_blank" href="https://amd.com">
-                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
-                    <img src={amd} alt="Advanced Micro Devices, Inc." className="c2s2-alumni-company-logo" />
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div
-              className="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12 d-flex justify-content-center align-items-center"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div className="sponsor">
-                <a target="_blank" href="https://sandia.gov/">
-                  <div className="c2s2-alumni-logo-container" style={{ maxWidth: "260px", width: "100%", height: "auto", minHeight: "120px" }}>
-                    <img src="/SNL_Stacked_Black_Blue.jpg" alt="Sandia National Laboratories" className="c2s2-alumni-company-logo" />
-                  </div>
-                </a>
-              </div>
-            </div>
+          <div className="sponsor-bar" data-aos="zoom-in" data-aos-delay="100">
+            <a target="_blank" href="https://nordtech.com">
+              <img src={nordtech} alt="Nordtech" />
+            </a>
+            <a target="_blank" href="https://amd.com">
+              <img src={amd} alt="AMD" />
+            </a>
+            <a target="_blank" href="https://sandia.gov/">
+              <img src="/SNL_Stacked_Black_Blue.jpg" alt="Sandia National Laboratories" />
+            </a>
+            <a target="_blank" href="https://www.cadence.com/">
+              <img src={cadence} alt="Cadence" />
+            </a>
           </div>
         </div>
       </section>
 
       <section className="services section-bg">
         <div className="container" data-aos="fade-up">
-          <div className="section-title">
-            <p>Support C2S2</p>
+          <div className="section-title underline">
+            <h1>Support C2S2</h1>
           </div>
 
           <div className="row">
