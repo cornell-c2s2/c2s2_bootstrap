@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState } from "react";
 
 import nvidia from "../assets/img/aluminCompanies/nvidia_logo.jpeg";
 import spacex from "../assets/img/aluminCompanies/spacex_logo.jpeg";
@@ -46,6 +45,22 @@ const AlumniCompanies = () => {
     { name: "EY", logo: ey },
   ];
 
+  const midpoint = Math.ceil(companies.length / 2);
+  const firstRow = companies.slice(0, midpoint);
+  const secondRow = companies.slice(midpoint);
+
+  const renderLogoCard = (company, index, rowLabel) => (
+    <div className="c2s2-alumni-logo-item" key={`${rowLabel}-${company.name}-${index}`}>
+      <div className="c2s2-alumni-logo-container">
+        <img
+          src={company.logo}
+          alt={`${company.name} logo`}
+          className="c2s2-alumni-company-logo"
+        />
+      </div>
+    </div>
+  );
+
   return (
     <section className="c2s2-alumni-companies-section">
       <div className="c2s2-alumni-container">
@@ -56,19 +71,23 @@ const AlumniCompanies = () => {
           positions at leading technology companies and
           innovative organizations across various industries.
         </p>
+      </div>
 
-        <div className="c2s2-alumni-logo-grid">
-          {companies.map((company, index) => (
-            <div className="c2s2-alumni-logo-item" key={index}>
-              <div className="c2s2-alumni-logo-container">
-                <img
-                  src={company.logo}
-                  alt={`${company.name} logo`}
-                  className="c2s2-alumni-company-logo"
-                />
-              </div>
-            </div>
-          ))}
+      <div className="c2s2-alumni-marquee-wrapper">
+        <div className="c2s2-alumni-marquee c2s2-alumni-marquee-left">
+          <div className="c2s2-alumni-marquee-track">
+            {[...firstRow, ...firstRow, ...firstRow].map((company, index) =>
+              renderLogoCard(company, index, "left")
+            )}
+          </div>
+        </div>
+
+        <div className="c2s2-alumni-marquee c2s2-alumni-marquee-right">
+          <div className="c2s2-alumni-marquee-track">
+            {[...secondRow, ...secondRow, ...secondRow].map((company, index) =>
+              renderLogoCard(company, index, "right")
+            )}
+          </div>
         </div>
       </div>
     </section>
