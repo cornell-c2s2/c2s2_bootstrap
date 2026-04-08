@@ -149,9 +149,9 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Annalise Thompson"
-              role=""
-              img={annaliseThompson}
+              name="Daniel Kaminski"
+              role="Team Lead"
+              img={danielKaminski}
               github=""
               linkedin=""
 
@@ -159,7 +159,7 @@ function Team() {
 
             <TeamMember
               name="Caden Xu"
-              role=""
+              role="Subteam Lead"
               img={cadenXu}
               github=""
               linkedin=""
@@ -167,9 +167,9 @@ function Team() {
             />
 
             <TeamMember
-              name="Daniel Kaminski"
+              name="Annalise Thompson"
               role=""
-              img={danielKaminski}
+              img={annaliseThompson}
               github=""
               linkedin=""
 
@@ -218,14 +218,14 @@ function Team() {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <i className="bi bi-briefcase"></i>
-            <p>Business Operations</p>
+            <p>Business Operations Subteam</p>
           </div>
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Adi Prathapa"
-              role=""
-              img={adiPrathapa}
+              name="Ridwanah Haque"
+              role="Subteam Lead"
+              img={ridwanahHaque}
               github=""
               linkedin=""
 
@@ -241,9 +241,9 @@ function Team() {
             />
 
             <TeamMember
-              name="Ridwanah Haque"
+              name="Adi Prathapa"
               role=""
-              img={ridwanahHaque}
+              img={adiPrathapa}
               github=""
               linkedin=""
 
@@ -260,6 +260,15 @@ function Team() {
           </div>
 
           <div className="row justify-content-center">
+            <TeamMember
+              name="Simeon Turner"
+              role="Subteam Lead"
+              img={simeonTurner}
+              github=""
+              linkedin=""
+
+            />
+
             <TeamMember
               name="Anika Sukthankar"
               role=""
@@ -303,14 +312,6 @@ function Team() {
 
             />
 
-            <TeamMember
-              name="Simeon Turner"
-              role=""
-              img={simeonTurner}
-              github=""
-              linkedin=""
-
-            />
           </div>
         </div>
       </section>
@@ -371,7 +372,7 @@ function Team() {
           <div className="row justify-content-center">
             <TeamMember
               name="Demetrios Gavalas"
-              role=""
+              role="Subteam Lead"
               img={demetriosGavalas}
               github=""
               linkedin=""
@@ -435,6 +436,24 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
+              name="Joseph Wan"
+              role="Subteam Lead"
+              img={josephWan}
+              github=""
+              linkedin=""
+
+            />
+
+            <TeamMember
+              name="Rachael Godwin"
+              role="Subteam Lead"
+              img={rachaelGodwin}
+              github=""
+              linkedin=""
+
+            />
+
+            <TeamMember
               name="Alysa Xu"
               role=""
               img={alysaXu}
@@ -462,15 +481,6 @@ function Team() {
             />
 
             <TeamMember
-              name="Joseph Wan"
-              role=""
-              img={josephWan}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
               name="Michael Dierkes"
               role=""
               img={michaelDierkes}
@@ -483,15 +493,6 @@ function Team() {
               name="Mohamed Elmi"
               role=""
               img={mohamedElmi}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Rachael Godwin"
-              role=""
-              img={rachaelGodwin}
               github=""
               linkedin=""
 
@@ -518,20 +519,29 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Aditya Rao"
-              role=""
-              img={adityaRao}
+              name="Kate Sanders"
+              role="Subteam Lead"
+              img={kateSanders}
+              github=""
+              linkedin=""
+            />
+
+            <TeamMember
+              name="Taylor Do"
+              role="Subteam Lead"
+              img={taylorDo}
               github=""
               linkedin=""
 
             />
 
             <TeamMember
-              name="Kate Sanders"
+              name="Aditya Rao"
               role=""
-              img={kateSanders}
+              img={adityaRao}
               github=""
               linkedin=""
+
             />
 
             <TeamMember
@@ -562,15 +572,6 @@ function Team() {
             />
 
             <TeamMember
-              name="Taylor Do"
-              role=""
-              img={taylorDo}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
               name="Wali Afridi"
               role=""
               img={waliAfridi}
@@ -591,8 +592,8 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Anjelica Bian"
-              role=""
+              name="Angelica Bian"
+              role="Subteam Lead"
               img={anjelicaBian}
               github=""
               linkedin=""
@@ -655,17 +656,8 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Benjamin Nudelman"
-              role=""
-              img={benjaminNudelman}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
               name="Jack Frank"
-              role=""
+              role="Subteam Lead"
               img={jackFrank}
               github=""
               linkedin=""
@@ -674,8 +666,17 @@ function Team() {
 
             <TeamMember
               name="Joyce Shen"
-              role=""
+              role="Subteam Lead"
               img={joyceShen}
+              github=""
+              linkedin=""
+
+            />
+
+            <TeamMember
+              name="Benjamin Nudelman"
+              role=""
+              img={benjaminNudelman}
               github=""
               linkedin=""
 
