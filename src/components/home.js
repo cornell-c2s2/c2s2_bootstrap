@@ -24,6 +24,14 @@ function Home() {
                   </a>
                   <div>
                     <a
+                      href="https://community.cadence.com/cadence_blogs_8/b/can/posts/spotlight-cornell-custom-silicon-systems"
+                      class="btn-get-started scrollto"
+                    >
+                      Cadence Community Spotlight
+                    </a>
+                  </div>
+                  <div>
+                    <a
                       href="https://news.cornell.edu/stories/2024/05/students-revive-classic-microchip-fabrication-open-source-tools"
                       class="btn-get-started scrollto"
                     >
