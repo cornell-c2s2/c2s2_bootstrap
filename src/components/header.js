@@ -69,25 +69,31 @@ function Header() {
               </a>
               <ul>
                 <li>
-                  <a href="/team#digital">Digital</a>
-                </li>
-                <li>
                   <a href="/team#analog">Analog</a>
                 </li>
                 <li>
-                  <a href="/team#software">Software</a>
+                  <a href="/team#business-ops">Business Operations</a>
+                </li>
+                <li>
+                  <a href="/team#design-verification">Design Verification</a>
+                </li>
+                <li>
+                  <a href="/team#digital">Digital</a>
+                </li>
+                <li>
+                  <a href="/team#physical-design">Physical Design</a>
                 </li>
                 <li>
                   <a href="/team#platforms">Platforms</a>
                 </li>
                 <li>
-                  <a href="/team#soc">Mixed Signal SoC</a>
-                </li>
-                <li>
                   <a href="/team#rfic">RFIC</a>
                 </li>
                 <li>
-                  <a href="/team#proj-man">Project Management</a>
+                  <a href="/team#rtl-design">RTL Design</a>
+                </li>
+                <li>
+                  <a href="/team#software">Software</a>
                 </li>
                 <li>
                   <a href="https://www.c2s2.dev/alumni">Alumni</a>
