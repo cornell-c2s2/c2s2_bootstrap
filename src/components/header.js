@@ -89,6 +89,9 @@ function Header() {
                 <li>
                   <a href="/team#proj-man">Project Management</a>
                 </li>
+                <li>
+                  <a href="https://www.c2s2.dev/alumni">Alumni</a>
+                </li>
               </ul>
             </li>
             <li>

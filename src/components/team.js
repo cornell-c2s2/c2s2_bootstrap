@@ -320,7 +320,7 @@ function Team() {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <i className="bi bi-file-earmark-binary"></i>
-            <p>Digital Subteam</p>
+            <p>Digital Freshmen Subteam</p>
           </div>
 
           <div className="row justify-content-center">
