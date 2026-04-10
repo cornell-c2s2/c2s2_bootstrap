@@ -1,7 +1,7 @@
 import React from "react";
-import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
+// import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
 import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
-import puffin from "../assets/img/chips/eagle_digital_24.jpg";
+// import puffin from "../assets/img/chips/eagle_digital_24.jpg";
 import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
 
 function ChipGallery() {
@@ -16,7 +16,7 @@ function ChipGallery() {
       </section>
       <section className="py-5 bg-light">
         <div className="container chip-gallery-container">
-          <ChipComponent
+          {/* <ChipComponent
             img={puffin}
             name="Puffin Digital Chip"
             date="Spring 2024"
@@ -29,7 +29,7 @@ function ChipGallery() {
             date="Spring 2024"
             text=""
             link="chip-gallery/kiwi"
-          />
+          /> */}
           <ChipComponent
             img={eagle}
             name="Eagle Digital Chip"

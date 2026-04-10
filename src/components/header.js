@@ -46,7 +46,7 @@ function Header() {
                 About Us
               </a>
             </li>
-            {/* <li>
+            <li>
               <a
                 className={`nav-link scrollto ${
                   path == "/chip-gallery" ? "active" : ""
@@ -55,7 +55,7 @@ function Header() {
               >
                 Chip Gallery
               </a>
-            </li> */}
+            </li>
 
             <li className="dropdown">
               <a

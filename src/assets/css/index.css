@@ -1801,6 +1801,7 @@ Alumni Companies Section
 }
 
 .c2s2-alumni-marquee-wrapper {
+  --alumni-bg: #f8f9fa;
   position: relative;
   width: 100vw;
   margin-left: calc(50% - 50vw);
@@ -1809,6 +1810,7 @@ Alumni Companies Section
   display: flex;
   flex-direction: column;
   gap: 24px;
+  background-color: var(--alumni-bg);
 }
 
 .c2s2-alumni-marquee-wrapper::before,
@@ -1824,17 +1826,19 @@ Alumni Companies Section
 
 .c2s2-alumni-marquee-wrapper::before {
   left: 0;
-  background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+  background: linear-gradient(to right, var(--alumni-bg) 0%, rgba(248, 249, 250, 0) 100%);
 }
 
 .c2s2-alumni-marquee-wrapper::after {
   right: 0;
-  background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+  background: linear-gradient(to left, var(--alumni-bg) 0%, rgba(248, 249, 250, 0) 100%);
 }
 
 .c2s2-alumni-marquee {
-  overflow: hidden;
+  overflow: visible;
   width: 100%;
+  padding: 10px 0;
+  background-color: var(--alumni-bg);
 }
 
 .c2s2-alumni-marquee-track {
