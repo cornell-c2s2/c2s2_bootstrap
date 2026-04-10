@@ -136,6 +136,13 @@ function Team() {
               github="https://github.com/Aidan-McNay"
               linkedin="https://www.linkedin.com/in/aidan-mcnay-0ba928201/"
             />
+            <TeamMember
+              name="Daniel Kaminski"
+              role="Team Lead"
+              img={danielKaminski}
+              github=""
+              linkedin=""
+            />
           </div>
         </div>
       </section>
@@ -149,18 +156,18 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Daniel Kaminski"
-              role="Team Lead"
-              img={danielKaminski}
+              name="Caden Xu"
+              role="Subteam Lead"
+              img={cadenXu}
               github=""
               linkedin=""
 
             />
 
             <TeamMember
-              name="Caden Xu"
-              role="Subteam Lead"
-              img={cadenXu}
+              name="Daniel Kaminski"
+              role="Team Lead"
+              img={danielKaminski}
               github=""
               linkedin=""
 

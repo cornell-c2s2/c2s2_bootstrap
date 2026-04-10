@@ -1869,11 +1869,10 @@ Alumni Companies Section
   justify-content: center;
   width: 168px;
   height: 168px;
-  transition: all 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .c2s2-alumni-logo-container:hover {
-  transform: scale(1.05);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 }
 
@@ -1881,6 +1880,11 @@ Alumni Companies Section
   max-width: 95%;
   max-height: 90%;
   object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.c2s2-alumni-logo-container:hover .c2s2-alumni-company-logo {
+  transform: scale(1.08);
 }
 
 @keyframes c2s2-marquee-left {
