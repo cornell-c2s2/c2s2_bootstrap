@@ -78,7 +78,7 @@ function Header() {
                   <a href="/team#design-verification">Design Verification</a>
                 </li>
                 <li>
-                  <a href="/team#digital">Digital</a>
+                  <a href="/team#digital">Digital Freshmen</a>
                 </li>
                 <li>
                   <a href="/team#physical-design">Physical Design</a>
