@@ -20,6 +20,7 @@ import deepmind from "../assets/img/aluminCompanies/deepmind_logo.jpg";
 import apollo from "../assets/img/aluminCompanies/apollo_logo.jpg";
 import citadel from "../assets/img/aluminCompanies/citadel_logo.jpg";
 import millennium from "../assets/img/aluminCompanies/millennium_logo.png";
+import micron from "../assets/img/aluminCompanies/micron_logo.jpeg";
 
 const AlumniCompanies = () => {
   const companies = [
@@ -43,6 +44,7 @@ const AlumniCompanies = () => {
     { name: "Cisco", logo: cisco },
     { name: "Dell", logo: dell },
     { name: "EY", logo: ey },
+    { name: "Micron", logo: micron },
   ];
 
   const midpoint = Math.ceil(companies.length / 2);
