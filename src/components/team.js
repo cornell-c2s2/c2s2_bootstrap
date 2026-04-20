@@ -599,7 +599,7 @@ function Team() {
 
           <div className="row justify-content-center">
             <TeamMember
-              name="Angelica Bian"
+              name="Anjelica Bian"
               role="Subteam Lead"
               img={anjelicaBian}
               github=""
