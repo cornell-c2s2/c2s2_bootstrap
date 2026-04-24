@@ -124,19 +124,18 @@ function About() {
             </p>
 
             <p>
-              The Cornell Custom Silicon Systems (C2S2) Project Team is a new
-              project team funded through the{" "}
-              <strong>Shen Fund for Social Impact.</strong>
               We leverage this emerging open-source hardware ecosystem to enable
               undergraduate students to specify, design, implement, test,
               fabricate, and evaluate custom computer chips. The final outcome
               will be a custom computer chip integrated on a custom circuit
               board with a complete software stack targeting an important
-              application domain (we are currently partnered with the{" "}
-              <a target="_blank" href="https://www.birds.cornell.edu/home/">
-                Cornell Lab of Ornithology
-              </a>
-              ). This ambitious student-led team is likely unique across US
+              application domain 
+              {/* (we are currently partnered with the{' '} */}
+              {/* <a target="_blank" href="https://www.birds.cornell.edu/home/"> */}
+                {/* Cornell Lab of Ornithology */}
+              {/* </a> */}
+              {/* ) */}
+              . This ambitious student-led team is likely unique across US
               universities, and will hopefully inspire a new generation of
               computer system designers.
             </p>
