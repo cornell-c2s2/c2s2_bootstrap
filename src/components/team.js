@@ -461,7 +461,7 @@ function Team() {
             />
 
             <TeamMember
-              name="Alysa Xu"
+              name="Alyssa Xu"
               role=""
               img={alysaXu}
               github=""
