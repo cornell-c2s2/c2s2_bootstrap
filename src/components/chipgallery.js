@@ -1,7 +1,6 @@
 import React from "react";
-// import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
 import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
-// import puffin from "../assets/img/chips/eagle_digital_24.jpg";
+import puffin from "../assets/img/chips/eagle_digital_24.jpg";
 import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
 
 function ChipGallery() {
@@ -16,48 +15,27 @@ function ChipGallery() {
       </section>
       <section className="py-5 bg-light">
         <div className="container chip-gallery-container">
-          {/* <ChipComponent
+          <ChipComponent
             img={puffin}
             name="Puffin Digital Chip"
             date="Spring 2024"
-            text=""
-            link="chip-gallery/puffin"
+            text="The Spring 24 tapeout builds on top of the Spring 23 tapeout. This is our final iteration of the sound classifier, featuring a 16-bit fixed point (8 integer bits) 32-point Cooley Tukey FFT module, as well as a configurable classifier. Puffin bridges the RISC-V core and the digital classifier via a Wishbone Bus, yielding a more integrated SoC."
+            link="/chip-gallery/puffin"
           />
-          <ChipComponent
-            img={kiwi}
-            name="Kiwi Analog Chip"
-            date="Spring 2024"
-            text=""
-            link="chip-gallery/kiwi"
-          /> */}
           <ChipComponent
             img={eagle}
             name="Eagle Digital Chip"
             date="Spring 2023"
-            text="The 2023 C2S2 Digital Tapeout showcases a design centered around a RISC-V Litex System on Chip. This chip features a custom digital Cooley-Tukey Fast Fourier Transform (FFT) implementation, optimized for high-speed signal processing tasks. The RISC-V architecture provides a flexible and scalable processing platform, enabling efficient execution of complex algorithms and data manipulation"
-            link="chip-gallery/eagle"
+            text="The 2023 C2S2 Digital Tapeout showcases a design centered around a RISC-V Litex System on Chip. This chip features a custom digital Cooley-Tukey Fast Fourier Transform (FFT) implementation, optimized for high-speed signal processing tasks. The RISC-V architecture provides a flexible and scalable processing platform, enabling efficient execution of complex algorithms and data manipulation."
+            link="/chip-gallery/eagle"
           />
           <ChipComponent
             img={sparrow}
             name="Sparrow Analog Chip"
             date="Spring 2023"
-            text="The 2023 C2S2 Analog Tapeout features an innovative hardware design centered around a RISC-V Litex System on Chip (SoC). This versatile chip incorporates multiple analog components to enhance its functionality: operational amplifiers — integrated to provide versatile analog signal processing capabilities, 'fingers' implementation — allows for efficient interfacing and control in various analog scenarios, and 'multiplier' implementation — facilitates analog multiplication processes for applications requiring signal modulation and other complex mathematical operations."
-            link="chip-gallery/sparrow"
+            text="The 2023 C2S2 Analog Tapeout features an innovative hardware design centered around a RISC-V Litex System on Chip (SoC). This versatile chip incorporates multiple analog components to enhance its functionality: operational amplifiers, a 'fingers' implementation for efficient analog interfacing, and an analog multiplier for signal modulation applications."
+            link="/chip-gallery/sparrow"
           />
-          {/* <ChipComponent
-            img={dove}
-            name="Dove ECE 5745"
-            date="Spring 2022"
-            text="This test chip, developed by the ECE 5745 class, is designed to explore the capabilities of Caravel and OpenLane. At its core, the chip features a RISC-V Litex SoC architecture, enabling flexible and efficient processing. It integrates four specialized hardware accelerators to enhance performance in various applications: Group 15: Wavelet Compression Accelerator, Group 16: SpMV Accelerator, Group 17: BNN Accelerator, Group 99: GCD Accelerator"
-            link="chip-gallery/dove"
-          />
-          <ChipComponent
-            img={cnf}
-            name="CNF Chip Art"
-            date="Spring 2022"
-            text="Using CNF's optical microscopy, we can see a sailing ship design, that was added by our manufacturer Efabless, embedded in the metal layers of our digital chip, Eagle. Located among the standard cells and metal fill patterns, this microscopic artwork demonstrates how artistic elements can be integrated into functional IC layouts."
-            link="chip-gallery/cnf"
-          /> */}
         </div>
       </section>
     </main>

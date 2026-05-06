@@ -13,6 +13,7 @@ const images = {
   puffin,
   eagle,
   sparrow,
+  "rfic-2025": null,
 };
 
 function Chip() {
@@ -69,7 +70,7 @@ function Chip() {
   return (
     <main id="main" className="chip-page">
       {/* Image Modal */}
-      {imageModal && (
+      {imageModal && images[chip.id] && (
         <div className="chip-page__modal" onClick={toggleImageModal}>
           <div
             className="chip-page__modal-content"
@@ -101,17 +102,25 @@ function Chip() {
         <div className="container">
           <div className="chip-page__card">
             <div className="chip-page__image-container">
-              <img
-                src={images[chip.id]}
-                alt={`${chip.title} chip`}
-                className="chip-page__image"
-                onClick={toggleImageModal}
-              />
-              <div className="chip-page__image-overlay">
-                <span className="chip-page__image-zoom-text">
-                  Click to enlarge
-                </span>
-              </div>
+              {images[chip.id] ? (
+                <>
+                  <img
+                    src={images[chip.id]}
+                    alt={`${chip.title} chip`}
+                    className="chip-page__image"
+                    onClick={toggleImageModal}
+                  />
+                  <div className="chip-page__image-overlay">
+                    <span className="chip-page__image-zoom-text">
+                      Click to enlarge
+                    </span>
+                  </div>
+                </>
+              ) : (
+                <div className="chip-page__image-placeholder">
+                  <span>Image coming soon</span>
+                </div>
+              )}
             </div>
             <div className="chip-page__details">
               <div className="chip-page__description">

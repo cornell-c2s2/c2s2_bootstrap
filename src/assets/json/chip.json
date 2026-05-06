@@ -75,24 +75,48 @@
     "id": "puffin",
     "title": "Puffin Digital Chip",
     "date": "Spring 2024",
-    "text": "",
+    "text": "The Spring 24 tapeout builds on top of the Spring 23 tapeout. This is our final iteration of the sound classifier, featuring a 16-bit fixed point (8 integer bits) 32-point Cooley Tukey FFT module, as well as a configurable classifier.\n\nPreviously, the RISC-V core and the digital classifier were two isolated blocks on the same tapeout. Puffin is where we bridged the gap between the two blocks by interfacing them with a Wishbone Bus, yielding a more integrated SoC.",
     "img_url": "../assets/img/chips/c2s2-2023-digital.jpg",
     "specifications": {
-      "Architecture": "RISC-V Litex SoC with Analog Components",
-      "Process Technology": "Sky130",
-      "Die Size": "1.8mm × 1.8mm",
-      "Op-Amp Gain": ">60dB",
-      "Bandwidth": "10MHz",
-      "Multiplier Range": "±1.5V input",
-      "Chip Label": "A2"
+      "Architecture": "RISC-V SoC with Wishbone Bus Integration",
+      "Process Technology": "TSMC 180 nm",
+      "Die Size": "1.0mm × 1.5mm",
+      "Core Frequency": "125 MHz",
+      "Power Consumption": "~5 mW @ 1.8V",
+      "Chip Label": "C3"
     },
     "features": [
-      "Integrated operational amplifiers for analog signal processing",
-      "Custom 'fingers' implementation for efficient analog interfacing",
-      "Analog multiplier for signal modulation applications",
-      "Mixed-signal design combining digital processing with analog I/O",
-      "RISC-V Litex SoC for control and digital processing",
-      "Optimized for low-noise analog operations"
+      "16-bit fixed point (8 integer bits) 32-point Cooley-Tukey FFT module",
+      "Configurable sound classifier",
+      "RISC-V processor core",
+      "Wishbone Bus interface bridging RISC-V core and digital classifier",
+      "More integrated SoC design compared to previous tapeout",
+      "Final iteration of the sound classification pipeline"
+    ]
+  },
+  {
+    "id": "rfic-2025",
+    "title": "2025 RFIC Tapeout",
+    "date": "Spring 2025",
+    "text": "The 2025 C2S2 RFIC Tapeout presents a compact and fully integrated wireless transceiver designed for operation in the 915 MHz ISM band. Fabricated in a TSMC 180 nm process, this chip demonstrates a complete on-chip solution for On-Off Keying (OOK) communication, combining both transmit and receive paths within a single die.\n\nThe receiver chain features two low-noise amplifier (LNA) topologies—a resistive shunt-feedback LNA and an inductively degenerated LNA—enabling performance comparison and design flexibility. An integrated envelope detector follows the LNA stage, providing efficient demodulation of incoming OOK signals.\n\nOn the transmitter side, the design incorporates both a ring voltage-controlled oscillator (VCO) and an LC VCO, offering trade-offs between phase noise and power consumption. These oscillators drive an on-chip power amplifier (PA) to generate the outgoing RF signal.\n\nTogether, these components form a versatile RF front-end, enabling exploration of analog/RF building blocks and their interaction within a complete wireless communication system.",
+    "img_url": "",
+    "specifications": {
+      "Architecture": "915 MHz OOK RF Transceiver (Integrated RX/TX Signal Chain)",
+      "Process Technology": "TSMC 180 nm",
+      "Die Size": "1.5mm × 2.0mm",
+      "Receiver Path": "Resistive Shunt LNA / Inductively Degenerated LNA → Envelope Detector",
+      "Transmitter Path": "Ring VCO / LC VCO → Power Amplifier",
+      "Operating Frequency": "915 MHz ISM Band",
+      "Modulation Scheme": "On-Off Keying (OOK)"
+    },
+    "features": [
+      "Fully integrated RX and TX signal chains on a single die",
+      "Dual LNA topologies: resistive shunt-feedback and inductively degenerated",
+      "Integrated envelope detector for OOK demodulation",
+      "Ring VCO and LC VCO for transmit oscillator flexibility",
+      "On-chip power amplifier for RF signal generation",
+      "915 MHz ISM band operation",
+      "On-Off Keying (OOK) modulation scheme"
     ]
   }
 ]
