@@ -1,6 +1,9 @@
 import React from "react";
 
 const Apply = () => {
+  const applicationFormUrl =
+    "https://docs.google.com/forms/d/e/1FAIpQLSehuTjELRT6yKGaCuY0TXnjhR4eqpTaZeajI8UMLWceYO_0QA/viewform?usp=publish-editor";
+
   return (
     <>
       <main id="main">
@@ -29,7 +32,14 @@ const Apply = () => {
                     <i className="bx bx-file"></i>
                   </div>
                   <h4 className="title">Applications are not currently open!</h4>
-                  <p className="description">Check again soon.</p>
+                  <p className="description">
+                    Use the application form below.
+                  </p>
+                  <p className="description">
+                    <a href={applicationFormUrl} target="_blank" rel="noreferrer">
+                      Open application form
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
