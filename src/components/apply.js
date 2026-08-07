@@ -33,7 +33,7 @@ const Apply = () => {
                   </div>
                   <h4 className="title">Applications are not currently open!</h4>
                   <p className="description">
-                    Use the application form below.
+                    
                   </p>
                   <p className="description">
                     <a href={applicationFormUrl} target="_blank" rel="noreferrer">
