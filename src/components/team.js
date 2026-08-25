@@ -521,7 +521,7 @@ function Team() {
         <div className="container">
           <div className="section-title" data-aos="fade-up">
             <i className="bi bi-router"></i>
-            <p>RFIC Subteam</p>
+            <p>RF Subteam</p>
           </div>
 
           <div className="row justify-content-center">
