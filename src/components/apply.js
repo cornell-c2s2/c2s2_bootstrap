@@ -70,6 +70,47 @@ const Apply = () => {
                 </div>
               </div>
             </div>
+
+            <div className="row justify-content-center mt-4">
+              <div
+                className="col-12 d-block align-items-center"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div className="icon-box">
+                  <div className="icon">
+                    <i className="bx bx-calendar-event"></i>
+                  </div>
+                  <h4 className="title">Info Sessions</h4>
+
+                  <div className="row justify-content-center">
+                    <div className="col-md-6 text-center mb-4 mb-md-0">
+                      <h5 className="title" style={{ fontSize: "1.5rem" }}>
+                        Thursday, August 27th
+                      </h5>
+                      <p className="description" style={{ marginBottom: "0.5rem" }}>
+                        6:00–7:00 PM
+                      </p>
+                      <p className="description" style={{ marginBottom: 0 }}>
+                        Location: Rhodes 310
+                      </p>
+                    </div>
+
+                    <div className="col-md-6 text-center">
+                      <h5 className="title" style={{ fontSize: "1.5rem" }}>
+                        Tuesday, September 1st
+                      </h5>
+                      <p className="description" style={{ marginBottom: "0.5rem" }}>
+                        6:15–7:15 PM
+                      </p>
+                      <p className="description" style={{ marginBottom: 0 }}>
+                        Location: Rhodes 310
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </main>
