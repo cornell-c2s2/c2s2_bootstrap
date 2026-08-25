@@ -87,7 +87,7 @@ function Header() {
                   <a href="/team#platforms">Platforms</a>
                 </li>
                 <li>
-                  <a href="/team#rfic">RFIC</a>
+                  <a href="/team#rfic">RF</a>
                 </li>
                 <li>
                   <a href="/team#rtl-design">RTL Design</a>
