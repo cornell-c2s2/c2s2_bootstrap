@@ -60,8 +60,7 @@ function Home() {
           data-aos-delay="100"
         >
           <div className="container team-photo-container">
-            <h1>Team Photo</h1>
-            <img className="team-photo" src={teamPhoto} />
+            <img className="team-photo" src={teamPhoto} alt="C2S2 team" />
           </div>
         </section>
         <AlumniCompanies />

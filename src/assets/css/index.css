@@ -631,25 +631,6 @@ ul {
   padding: 0 2rem;
 }
 
-.team-photo-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #333;
-  font-weight: 600;
-  position: relative;
-}
-
-.team-photo-container h1::after {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background-color: #e64646; /* Using the red color from the team shirts */
-}
-
 .team-photo {
   width: 600px;
   max-width: 100%;
@@ -664,10 +645,6 @@ ul {
 }
 
 @media (max-width: 768px) {
-  .team-photo-container h1 {
-    font-size: 2rem;
-  }
-
   .team-photo {
     width: 100%;
   }
@@ -1876,10 +1853,6 @@ Alumni Companies Section
   transition: box-shadow 0.3s ease;
 }
 
-.c2s2-alumni-logo-container:hover {
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
 .c2s2-alumni-company-logo {
   max-width: 95%;
   max-height: 90%;
@@ -1887,8 +1860,23 @@ Alumni Companies Section
   transition: transform 0.3s ease;
 }
 
-.c2s2-alumni-logo-container:hover .c2s2-alumni-company-logo {
-  transform: scale(1.08);
+/* Hover effects are gated on a real pointer. Two reasons: on touch, :hover
+   sticks after a tap, and the browser only recomputes :hover when the pointer
+   moves, so a card sliding out from under a still cursor would stay enlarged.
+   Pausing the row keeps the hovered card under the cursor, which both fixes
+   that and makes the logo you reached for stay put long enough to look at. */
+@media (hover: hover) and (pointer: fine) {
+  .c2s2-alumni-marquee:hover .c2s2-alumni-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .c2s2-alumni-logo-container:hover {
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  }
+
+  .c2s2-alumni-logo-container:hover .c2s2-alumni-company-logo {
+    transform: scale(1.08);
+  }
 }
 
 @keyframes c2s2-marquee-left {
@@ -2957,9 +2945,5 @@ Alumni Section
   .team-photo-container {
     padding: 0 1rem;
     margin: 2rem auto;
-  }
-
-  .team-photo-container h1 {
-    font-size: 1.5rem;
   }
 }

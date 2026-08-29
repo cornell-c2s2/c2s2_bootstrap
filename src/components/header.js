@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/img/logo.png";
 
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function Header() {
@@ -69,34 +69,63 @@ function Header() {
               </a>
               <ul>
                 <li>
-                  <a href="/team#analog">Analog</a>
+                  <Link to="/team#analog" onClick={() => setMobile(false)}>
+                    Analog
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#business-ops">Business Operations</a>
+                  <Link
+                    to="/team#business-ops"
+                    onClick={() => setMobile(false)}
+                  >
+                    Business Operations
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#design-verification">Design Verification</a>
+                  <Link
+                    to="/team#design-verification"
+                    onClick={() => setMobile(false)}
+                  >
+                    Design Verification
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#digital">Digital Freshmen</a>
+                  <Link to="/team#digital" onClick={() => setMobile(false)}>
+                    Digital Freshmen
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#physical-design">Physical Design</a>
+                  <Link
+                    to="/team#physical-design"
+                    onClick={() => setMobile(false)}
+                  >
+                    Physical Design
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#platforms">Platforms</a>
+                  <Link to="/team#platforms" onClick={() => setMobile(false)}>
+                    Platforms
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#rfic">RF</a>
+                  <Link to="/team#rfic" onClick={() => setMobile(false)}>
+                    RF
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#rtl-design">RTL Design</a>
+                  <Link to="/team#rtl-design" onClick={() => setMobile(false)}>
+                    RTL Design
+                  </Link>
                 </li>
                 <li>
-                  <a href="/team#software">Software</a>
+                  <Link to="/team#software" onClick={() => setMobile(false)}>
+                    Software
+                  </Link>
                 </li>
                 <li>
-                  <a href="https://www.c2s2.dev/alumni">Alumni</a>
+                  <Link to="/alumni" onClick={() => setMobile(false)}>
+                    Alumni
+                  </Link>
                 </li>
               </ul>
             </li>

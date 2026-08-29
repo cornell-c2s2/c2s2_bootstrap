@@ -155,9 +155,6 @@ function Footer() {
         </div>
         <div className="credits">
           <div>
-            Made by <a href="/team#proj-man">PM Subteam &lt;3</a>
-          </div>
-          <div>
             <a
               href="https://hr.cornell.edu/about/workplace-rights/equal-education-and-employment"
               target="_blank"
