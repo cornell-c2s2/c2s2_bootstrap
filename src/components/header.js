@@ -90,11 +90,6 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/team#digital" onClick={() => setMobile(false)}>
-                    Digital Freshmen
-                  </Link>
-                </li>
-                <li>
                   <Link
                     to="/team#physical-design"
                     onClick={() => setMobile(false)}
@@ -108,7 +103,7 @@ function Header() {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/team#rfic" onClick={() => setMobile(false)}>
+                  <Link to="/team#rf" onClick={() => setMobile(false)}>
                     RF
                   </Link>
                 </li>
@@ -120,6 +115,14 @@ function Header() {
                 <li>
                   <Link to="/team#software" onClick={() => setMobile(false)}>
                     Software
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/team#senior-advisors"
+                    onClick={() => setMobile(false)}
+                  >
+                    Senior Advisors
                   </Link>
                 </li>
                 <li>

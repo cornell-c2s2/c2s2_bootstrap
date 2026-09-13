@@ -7,79 +7,148 @@ import mibrahim from "../assets/img/team/mibrahim.jpg";
 import akv45 from "../assets/img/team/akv45.jpg";
 import acm289 from "../assets/img/team/acm289.jpg";
 
-//Business Operations
+// Current team members
 import adiPrathapa from "../assets/img/team/Adi_Prathapa_agp96.JPG";
 import matteoBucci from "../assets/img/team/Matteo_Bucci_mrb357.JPG";
 import ridwanahHaque from "../assets/img/team/Ridwanah_Haque_rh736.JPG";
-
-//Digital Subteam
 import asherFred from "../assets/img/team/Asher_Fred_ajf273.JPG";
 import danielGabai from "../assets/img/team/Daniel_Gabai_dg779.JPG";
 import shehrozeKiani from "../assets/img/team/Shehroze_Kiani_szk7.JPG";
 import teresaChen from "../assets/img/team/Teresa_Chen_yc2877.JPG";
-
-//RTL Design Subteam
 import arjunSaini from "../assets/img/team/Arjun_Saini_ars437.JPG";
-import anjelicaBian from "../assets/img/team/Anjelica_Bian_yb265.JPG";
-import emilyLan from "../assets/img/team/Emily Lan_Digital.jpg";
 import sumaiaJewena from "../assets/img/team/Sumaia_Jewena_saj93.JPG";
-import teanLai from "../assets/img/team/Tean_Lai_tml95.JPG";
 import yifeiYan from "../assets/img/team/Yifei_Yan_yy2323.JPG";
-
-//Analog Subteam
-import annaliseThompson from "../assets/img/team/Annalise_Thompson_art227.JPG";
 import cadenXu from "../assets/img/team/Caden_Xu_cx237.JPG";
 import danielKaminski from "../assets/img/team/Daniel_Kaminski_dgk64.JPG";
 import kaiImani from "../assets/img/team/Kai_Imani_kti3.JPG";
-import lenaAraujo from "../assets/img/team/Lena_Conde_Araujo_lc2257.JPG";
-import mattCan from "../assets/img/team/Matt_Can_mmc347.JPG";
 import tiffanyLi from "../assets/img/team/Tiffany_Li.JPG";
-
-//Software Subteam
-import benjaminNudelman from "../assets/img/team/Benjamin_Nudelman_bn278.JPG";
-import jackFrank from "../assets/img/team/Jack_Frank_jf679.JPG";
-import joyceShen from "../assets/img/team/Joyce_Shen_js3696.JPG";
 import majorZangari from "../assets/img/team/Major_Zangari_maz76.JPG";
 import olesiaKuzdrovska from "../assets/img/team/Olesia_Kuzdrovska_ok98.JPG";
-
-//Platforms Subteam
 import alysaXu from "../assets/img/team/Alysa_Xu_ax52.JPG";
 import chelseaZhang from "../assets/img/team/Chelsea_Zhang_eyl47.JPG";
 import joanneChen from "../assets/img/team/Joanne_Chen_jc3658.JPG";
 import josephWan from "../assets/img/team/Joseph_Wan_jgw227.JPG";
 import michaelDierkes from "../assets/img/team/Michael_Dierkes_mwd59.JPG";
 import mohamedElmi from "../assets/img/team/Mohamed_Elmi_mae227.JPG";
-import rachaelGodwin from "../assets/img/team/Rachael_Godwin_rcg232.JPG";
-import tanyaDatta from "../assets/img/team/Tanya_Datta_td423.JPG";
-
-//Design Verification Subteam
-import anikaSukthankar from "../assets/img/team/Anika Sukthankar_PM.jpg";
-import danielPenasVarela from "../assets/img/team/Daniel_Penas_Varela_dp665.JPG";
 import jimingChen from "../assets/img/team/Jiming Chen_Digital.jpg";
 import linhAnhNguyen from "../assets/img/team/Linh Anh Nguyen.JPG";
 import rohanKalluraya from "../assets/img/team/Rohan_Kalluraya_rak298.JPG";
-import simeonTurner from "../assets/img/team/Simeon_Turner_smt259.JPG";
-
-//Physical Design Subteam
-import demetriosGavalas from "../assets/img/team/Demetrios_Gavalas_deg273.JPG";
+import danielPenasVarela from "../assets/img/team/Daniel_Penas_Varela_dp665.JPG";
 import edwinChen from "../assets/img/team/Edwin_Chen_ec769.JPG";
 import ivanMokeyev from "../assets/img/team/Ivan_Mokeyev_ism27.JPG";
 import josephJuniorMensah from "../assets/img/team/Joseph_Junior_Mensah_jjm536.JPG";
 import tyroneChen from "../assets/img/team/Tyrone_Chen_tc724.JPG";
-import vinayIvaturi from "../assets/img/team/Vinay_Ivaturi_vi42.JPG";
-
-//RFIC Subteam
+import anikaSukthankar from "../assets/img/team/Anika Sukthankar_PM.jpg";
 import adityaRao from "../assets/img/team/Aditya_Rao_agr92.JPG";
-
 import kateSanders from "../assets/img/team/Kate Sanders_RFIC.jpg";
-import samuelFertal from "../assets/img/team/Samuel_Fertal_sf626.JPG";
 import seanWhelan from "../assets/img/team/Sean_Whelan_sgw49.JPG";
-import shangXiang from "../assets/img/team/Shang_Xiang_sx277.JPG";
 import taylorDo from "../assets/img/team/Taylor_Do_txd3.JPG";
 import waliAfridi from "../assets/img/team/Wali_Afridi_wua3.JPG";
 
 //Alumni
 import AlumniInfo from "../assets/json/alumni8.json";
+
+const seniorAdvisors = [
+  { name: "Edwin Chen", role: "PD", img: edwinChen },
+  { name: "Caden Xu", role: "Analog", img: cadenXu },
+  { name: "Daniel Kaminski", role: "Analog", img: danielKaminski },
+  { name: "Taylor Do", role: "RFIC", img: taylorDo },
+  { name: "Wali Afridi", role: "RFIC", img: waliAfridi },
+  { name: "Anika Sukthankar", role: "DV", img: anikaSukthankar },
+];
+
+const subteams = [
+  {
+    id: "analog",
+    name: "Analog Subteam",
+    icon: "bi-speedometer2",
+    members: [
+      { name: "Kai Imani", role: "Subteam Lead", img: kaiImani },
+      { name: "Tiffany Li", img: tiffanyLi },
+    ],
+  },
+  {
+    id: "business-ops",
+    name: "Business Operations Subteam",
+    icon: "bi-briefcase",
+    members: [
+      { name: "Ridwanah Haque", role: "Subteam Lead", img: ridwanahHaque },
+      { name: "Adi Prathapa", img: adiPrathapa },
+      { name: "Matteo Bucci", img: matteoBucci },
+    ],
+  },
+  {
+    id: "design-verification",
+    name: "Design Verification Subteam",
+    icon: "bi-shield-check",
+    members: [
+      {
+        name: "Daniel Penas Varela",
+        role: "Subteam Lead",
+        img: danielPenasVarela,
+      },
+      { name: "Rohan Kalluraya", role: "Subteam Lead", img: rohanKalluraya },
+      { name: "Jiming Chen", img: jimingChen },
+      { name: "Linh Anh Nguyen", img: linhAnhNguyen },
+    ],
+  },
+  {
+    id: "physical-design",
+    name: "Physical Design Subteam",
+    icon: "bi-layers",
+    members: [
+      { name: "Ivan Mokeyev", role: "Subteam Lead", img: ivanMokeyev },
+      { name: "Joseph Junior Mensah", img: josephJuniorMensah },
+      { name: "Tyrone Chen", img: tyroneChen },
+      { name: "Daniel Gabai", img: danielGabai },
+    ],
+  },
+  {
+    id: "platforms",
+    name: "Platforms Subteam",
+    icon: "bi-motherboard",
+    members: [
+      { name: "Joanne Chen", role: "Subteam Lead", img: joanneChen },
+      { name: "Mohamed Elmi", role: "Subteam Lead", img: mohamedElmi },
+      { name: "Michael Dierkes", img: michaelDierkes },
+      { name: "Chelsea Zhang", img: chelseaZhang },
+      { name: "Alyssa Xu", img: alysaXu },
+    ],
+  },
+  {
+    id: "rf",
+    name: "RF Subteam",
+    icon: "bi-router",
+    members: [
+      { name: "Kate Sanders", role: "Subteam Lead", img: kateSanders },
+      { name: "Aditya Rao", role: "Subteam Lead", img: adityaRao },
+      { name: "Sean Whelan", role: "Subteam Lead", img: seanWhelan },
+    ],
+  },
+  {
+    id: "rtl-design",
+    name: "RTL Design Subteam",
+    icon: "bi-cpu",
+    members: [
+      { name: "Ethan (Yifei) Yan", role: "Subteam Lead", img: yifeiYan },
+      { name: "Sumaia Jewena", role: "Subteam Lead", img: sumaiaJewena },
+      { name: "Arjun Saini", img: arjunSaini },
+      { name: "Teresa Chen", img: teresaChen },
+      { name: "Shehroze Kiani", img: shehrozeKiani },
+      { name: "Asher Fred", img: asherFred },
+      { name: "Joseph Wan", img: josephWan },
+    ],
+  },
+  {
+    id: "software",
+    name: "Software Subteam",
+    icon: "bi-code-slash",
+    members: [
+      { name: "Major Zangari", role: "Subteam Lead", img: majorZangari },
+      { name: "Olesia Kuzdrovska", img: olesiaKuzdrovska },
+    ],
+  },
+];
 
 function Team() {
   return (
@@ -138,574 +207,51 @@ function Team() {
             />
             <TeamMember
               name="Daniel Kaminski"
-              role="Team Lead"
+              role="Former Team Lead"
               img={danielKaminski}
               github=""
               linkedin=""
             />
-          </div>
-        </div>
-      </section>
-
-      <section id="analog" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-speedometer2"></i>
-            <p>Analog Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Caden Xu"
-              role="Subteam Lead"
-              img={cadenXu}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Daniel Kaminski"
-              role="Team Lead"
-              img={danielKaminski}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Annalise Thompson"
-              role=""
-              img={annaliseThompson}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Kai Imani"
-              role=""
-              img={kaiImani}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Lena Conde Araujo"
-              role=""
-              img={lenaAraujo}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Matt Can"
-              role=""
-              img={mattCan}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Tiffany Li"
-              role=""
-              img={tiffanyLi}
-              github=""
-              linkedin=""
-
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="business-ops" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-briefcase"></i>
-            <p>Business Operations Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Ridwanah Haque"
-              role="Subteam Lead"
-              img={ridwanahHaque}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Matteo Bucci"
-              role=""
-              img={matteoBucci}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Adi Prathapa"
-              role=""
-              img={adiPrathapa}
-              github=""
-              linkedin=""
-
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="design-verification" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-shield-check"></i>
-            <p>Design Verification Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Simeon Turner"
-              role="Subteam Lead"
-              img={simeonTurner}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Anika Sukthankar"
-              role=""
-              img={anikaSukthankar}
-              github=""
-              linkedin=""
-            />
-
-            <TeamMember
-              name="Daniel Penas Varela"
-              role=""
-              img={danielPenasVarela}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Jiming Chen"
-              role=""
-              img={jimingChen}
-              github=""
-              linkedin=""
-            />
-
-            <TeamMember
-              name="Linh Anh Nguyen"
-              role=""
-              img={linhAnhNguyen}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Rohan Kalluraya"
-              role=""
-              img={rohanKalluraya}
-              github=""
-              linkedin=""
-
-            />
-
-          </div>
-        </div>
-      </section>
-
-      <section id="digital" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-file-earmark-binary"></i>
-            <p>Digital Freshmen</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Asher Fred"
-              role=""
-              img={asherFred}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Daniel Gabai"
-              role=""
-              img={danielGabai}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Shehroze Kiani"
-              role=""
-              img={shehrozeKiani}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Teresa Chen"
-              role=""
-              img={teresaChen}
-              github=""
-              linkedin=""
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="physical-design" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-layers"></i>
-            <p>Physical Design Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Demetrios Gavalas"
-              role="Subteam Lead"
-              img={demetriosGavalas}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Edwin Chen"
-              role=""
-              img={edwinChen}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Ivan Mokeyev"
-              role=""
-              img={ivanMokeyev}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Joseph Junior Mensah"
-              role=""
-              img={josephJuniorMensah}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Tyrone Chen"
-              role=""
-              img={tyroneChen}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Vinay Ivaturi"
-              role=""
-              img={vinayIvaturi}
-              github=""
-              linkedin=""
-
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="platforms" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-motherboard"></i>
-            <p>Platforms Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Joseph Wan"
-              role="Subteam Lead"
-              img={josephWan}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Rachael Godwin"
-              role="Subteam Lead"
-              img={rachaelGodwin}
-              github=""
-              linkedin=""
-
-            />
-
             <TeamMember
               name="Alyssa Xu"
-              role=""
+              role="Team Lead"
               img={alysaXu}
               github=""
               linkedin=""
-
             />
-
             <TeamMember
-              name="Chelsea Zhang"
-              role=""
-              img={chelseaZhang}
+              name="Joseph Wan"
+              role="Team Lead"
+              img={josephWan}
               github=""
               linkedin=""
-
-            />
-
-            <TeamMember
-              name="Joanne Chen"
-              role=""
-              img={joanneChen}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Michael Dierkes"
-              role=""
-              img={michaelDierkes}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Mohamed Elmi"
-              role=""
-              img={mohamedElmi}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Tanya Datta"
-              role=""
-              img={tanyaDatta}
-              github=""
-              linkedin=""
-
             />
           </div>
         </div>
       </section>
 
-      <section id="rfic" className="team">
+      {subteams.map((subteam) => (
+        <SubteamSection key={subteam.id} {...subteam} />
+      ))}
+
+      <section id="senior-advisors" className="team">
         <div className="container">
           <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-router"></i>
-            <p>RF Subteam</p>
+            <i className="bi bi-mortarboard"></i>
+            <p>Senior Advisors</p>
           </div>
 
           <div className="row justify-content-center">
-            <TeamMember
-              name="Kate Sanders"
-              role="Subteam Lead"
-              img={kateSanders}
-              github=""
-              linkedin=""
-            />
-
-            <TeamMember
-              name="Taylor Do"
-              role="Subteam Lead"
-              img={taylorDo}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Aditya Rao"
-              role=""
-              img={adityaRao}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Samuel Fertal"
-              role=""
-              img={samuelFertal}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Sean Whelan"
-              role=""
-              img={seanWhelan}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Shang Xiang"
-              role=""
-              img={shangXiang}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Wali Afridi"
-              role=""
-              img={waliAfridi}
-              github=""
-              linkedin=""
-
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="rtl-design" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-cpu"></i>
-            <p>RTL Design Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Anjelica Bian"
-              role="Subteam Lead"
-              img={anjelicaBian}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Arjun Saini"
-              role=""
-              img={arjunSaini}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Emily Lan"
-              role=""
-              img={emilyLan}
-              github=""
-              linkedin=""
-            />
-
-            <TeamMember
-              name="Sumaia Jewena"
-              role=""
-              img={sumaiaJewena}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Tean Lai"
-              role=""
-              img={teanLai}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Yifei Yan"
-              role=""
-              img={yifeiYan}
-              github=""
-              linkedin=""
-
-            />
-          </div>
-        </div>
-      </section>
-
-      <section id="software" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-code-slash"></i>
-            <p>Software Subteam</p>
-          </div>
-
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Jack Frank"
-              role="Subteam Lead"
-              img={jackFrank}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Joyce Shen"
-              role="Subteam Lead"
-              img={joyceShen}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Benjamin Nudelman"
-              role=""
-              img={benjaminNudelman}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Major Zangari"
-              role=""
-              img={majorZangari}
-              github=""
-              linkedin=""
-
-            />
-
-            <TeamMember
-              name="Olesia Kuzdrovska"
-              role=""
-              img={olesiaKuzdrovska}
-              github=""
-              linkedin=""
-
-            />
+            {seniorAdvisors.map((advisor) => (
+              <TeamMember
+                key={advisor.name}
+                name={advisor.name}
+                role={advisor.role}
+                img={advisor.img}
+                github=""
+                linkedin=""
+              />
+            ))}
           </div>
         </div>
       </section>
@@ -739,6 +285,32 @@ function Team() {
 
 export default Team;
 
+function SubteamSection({ id, name, icon, members }) {
+  return (
+    <section id={id} className="team">
+      <div className="container">
+        <div className="section-title" data-aos="fade-up">
+          <i className={`bi ${icon}`}></i>
+          <p>{name}</p>
+        </div>
+
+        <div className="row justify-content-center">
+          {members.map((member) => (
+            <TeamMember
+              key={member.name}
+              name={member.name}
+              role={member.role || ""}
+              img={member.img}
+              github=""
+              linkedin=""
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function TeamMember(prop) {
   return (
     <div
@@ -750,7 +322,7 @@ function TeamMember(prop) {
         <img
           src={prop.img}
           className="img-fluid"
-          alt=""
+          alt={prop.name}
           onLoad={(e) => e.target.classList.add("loaded")}
         />
         <div className="member-info">
