@@ -43,7 +43,7 @@ function ABlinkIntoSiliconsPotential() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>Breadboard Outline</figcaption>
           </figure>
 
@@ -92,7 +92,7 @@ function ABlinkIntoSiliconsPotential() {
           </p>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>Caravel GPIO Channel Structure</figcaption>
           </figure>
 

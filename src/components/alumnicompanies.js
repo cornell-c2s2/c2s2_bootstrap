@@ -8,6 +8,7 @@ import google from "../assets/img/aluminCompanies/google_logo.jpeg";
 import amd from "../assets/img/aluminCompanies/amd_logo.jpeg";
 import intel from "../assets/img/aluminCompanies/intel_logo.jpeg";
 import apple from "../assets/img/aluminCompanies/apple_logo.jpeg";
+import bloomberg from "../assets/img/aluminCompanies/bloomberg_logo.webp";
 import ey from "../assets/img/aluminCompanies/ey_logo.jpeg";
 import atlassian from "../assets/img/aluminCompanies/atlassian_logo.jpeg";
 import aws from "../assets/img/aluminCompanies/aws_logo.jpeg";
@@ -27,6 +28,7 @@ const AlumniCompanies = () => {
     { name: "Google", logo: google },
     { name: "DeepMind", logo: deepmind },
     { name: "Apple", logo: apple },
+    { name: "Bloomberg", logo: bloomberg },
     { name: "Nvidia", logo: nvidia },
     { name: "NASA", logo: nasa },
     { name: "SpaceX", logo: spacex },
@@ -54,7 +56,7 @@ const AlumniCompanies = () => {
   const renderLogoCard = (company, index, rowLabel) => (
     <div className="c2s2-alumni-logo-item" key={`${rowLabel}-${company.name}-${index}`}>
       <div className="c2s2-alumni-logo-container">
-        <img
+        <img loading="lazy" decoding="async"
           src={company.logo}
           alt={`${company.name} logo`}
           className="c2s2-alumni-company-logo"

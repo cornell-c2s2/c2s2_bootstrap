@@ -48,7 +48,7 @@ function ChipComponent({ img, name, date, text, link }) {
       <div className="chip-gallery-card">
         <div className="row g-0">
           <div className="col-md-4 chip-image-container">
-            <img src={img} className="chip-image" alt={name} />
+            <img loading="lazy" decoding="async" src={img} className="chip-image" alt={name} />
           </div>
           <div className="col-md-8">
             <div className="chip-desc">

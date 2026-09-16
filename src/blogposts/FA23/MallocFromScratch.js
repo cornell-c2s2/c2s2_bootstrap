@@ -43,7 +43,7 @@ function MallocFromScratch() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
           </figure>
 
           <h2>How does a Bare Metal Malloc work?</h2>
@@ -87,7 +87,7 @@ function MallocFromScratch() {
           </p>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
           </figure>
 
           <p>

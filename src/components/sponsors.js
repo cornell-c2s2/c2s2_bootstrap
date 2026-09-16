@@ -33,16 +33,16 @@ function Sponsors() {
 
           <div className="sponsor-bar" data-aos="zoom-in" data-aos-delay="100">
             <a className="sponsor-link-nordtech" target="_blank" href="https://nordtech.com">
-              <img className="sponsor-logo-nordtech" src={nordtech} alt="Nordtech" />
+              <img loading="lazy" decoding="async" className="sponsor-logo-nordtech" src={nordtech} alt="Nordtech" />
             </a>
             <a target="_blank" href="https://amd.com">
-              <img src={amd} alt="AMD" />
+              <img loading="lazy" decoding="async" src={amd} alt="AMD" />
             </a>
             <a target="_blank" href="https://sandia.gov/">
-              <img src="/SNL_Stacked_Black_Blue.png" alt="Sandia National Laboratories" />
+              <img loading="lazy" decoding="async" src="/SNL_Stacked_Black_Blue.png" alt="Sandia National Laboratories" />
             </a>
             <a target="_blank" href="https://www.cadence.com/">
-              <img src={cadence} alt="Cadence" />
+              <img loading="lazy" decoding="async" src={cadence} alt="Cadence" />
             </a>
           </div>
         </div>

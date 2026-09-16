@@ -41,7 +41,7 @@ function Magic() {
                 <div className="container">
 
                     <figure>
-                        <img src={image1} />
+                        <img loading="lazy" decoding="async" src={image1} />
                         <figcaption><strong>Figure 1</strong><br /></figcaption>
                     </figure>
 
@@ -57,7 +57,7 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image2} />
+                        <img loading="lazy" decoding="async" src={image2} />
                         <figcaption><strong>Figure 2</strong><br /></figcaption>
                     </figure>
 
@@ -69,7 +69,7 @@ function Magic() {
 
 
                     <figure>
-                        <img src={image3} />
+                        <img loading="lazy" decoding="async" src={image3} />
                         <figcaption><strong>Figure 3</strong><br /></figcaption>
                     </figure>
 
@@ -95,12 +95,12 @@ function Magic() {
 
 
                     <figure>
-                        <img src={image4} />
+                        <img loading="lazy" decoding="async" src={image4} />
                         <figcaption><strong>Figure 4</strong><br /></figcaption>
                     </figure>
 
                     <figure>
-                        <img src={image5} />
+                        <img loading="lazy" decoding="async" src={image5} />
                         <figcaption><strong>Figure 5</strong><br /></figcaption>
                     </figure>
 
@@ -115,7 +115,7 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image6} />
+                        <img loading="lazy" decoding="async" src={image6} />
                         <figcaption><strong>Figure 6</strong><br /></figcaption>
                     </figure>
 
@@ -126,7 +126,7 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image7} />
+                        <img loading="lazy" decoding="async" src={image7} />
                         <figcaption><strong>Figure 7</strong><br /></figcaption>
                     </figure>
 
@@ -143,12 +143,12 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image8} />
+                        <img loading="lazy" decoding="async" src={image8} />
                         <figcaption><strong>Figure 8</strong><br /></figcaption>
                     </figure>
 
                     <figure>
-                        <img src={image9} />
+                        <img loading="lazy" decoding="async" src={image9} />
                         <figcaption><strong>Figure 9</strong><br /></figcaption>
                     </figure>
 
@@ -164,12 +164,12 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image10} />
+                        <img loading="lazy" decoding="async" src={image10} />
                         <figcaption><strong>Figure 10</strong><br /></figcaption>
                     </figure>
 
                     <figure>
-                        <img src={image11} />
+                        <img loading="lazy" decoding="async" src={image11} />
                         <figcaption><strong>Figure 11</strong><br /></figcaption>
                     </figure>
 
@@ -185,12 +185,12 @@ function Magic() {
                     </p>
 
                     <figure className="small-figure">
-                        <img src={image12} />
+                        <img loading="lazy" decoding="async" src={image12} />
                         <figcaption><strong>Figure 12</strong><br /></figcaption>
                     </figure>
 
                     <figure>
-                        <img src={image13} />
+                        <img loading="lazy" decoding="async" src={image13} />
                         <figcaption><strong>Figure 13</strong><br /></figcaption>
                     </figure>
 
@@ -208,12 +208,12 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image14} />
+                        <img loading="lazy" decoding="async" src={image14} />
                         <figcaption><strong>Figure 14</strong><br /></figcaption>
                     </figure>
 
                     <figure>
-                        <img src={image15} />
+                        <img loading="lazy" decoding="async" src={image15} />
                         <figcaption><strong>Figure 15</strong><br /></figcaption>
                     </figure>
 
@@ -223,7 +223,7 @@ function Magic() {
                     </p>
 
                     <figure>
-                        <img src={image16} />
+                        <img loading="lazy" decoding="async" src={image16} />
                         <figcaption><strong>Figure 16</strong><br /></figcaption>
                     </figure>
 
@@ -240,7 +240,7 @@ function Magic() {
 
 
                     <figure>
-                        <img src={image17} />
+                        <img loading="lazy" decoding="async" src={image17} />
                         <figcaption><strong>Figure 17</strong><br /></figcaption>
                     </figure>
 
@@ -255,7 +255,7 @@ function Magic() {
 
 
                     <figure>
-                        <img src={image18} />
+                        <img loading="lazy" decoding="async" src={image18} />
                         <figcaption><strong>Figure 18</strong><br /></figcaption>
                     </figure>
 

@@ -51,7 +51,7 @@ function SPIMinionAdapterPythonTools() {
           </p>
 
           <figure>
-            <img src={image1} alt="SPI Minion Design from BRGTC5" />
+            <img loading="lazy" decoding="async" src={image1} alt="SPI Minion Design from BRGTC5" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -78,7 +78,7 @@ function SPIMinionAdapterPythonTools() {
           </p>
 
           <figure>
-            <img src={image2} alt="SPI Minion Adapter Design from BRGTC5" />
+            <img loading="lazy" decoding="async" src={image2} alt="SPI Minion Adapter Design from BRGTC5" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -119,7 +119,7 @@ function SPIMinionAdapterPythonTools() {
           </p>
 
           <figure>
-            <img src={image3} alt="Minion-to-Minion Setup" />
+            <img loading="lazy" decoding="async" src={image3} alt="Minion-to-Minion Setup" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -130,7 +130,7 @@ function SPIMinionAdapterPythonTools() {
           <h4>Tape-in #1 High-level Connection</h4>
 
           <figure>
-            <img src={image4} alt="Tape-in #1 RTL Modules Connection" />
+            <img loading="lazy" decoding="async" src={image4} alt="Tape-in #1 RTL Modules Connection" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -179,7 +179,7 @@ function SPIMinionAdapterPythonTools() {
           </p>
 
           <figure>
-            <img src={image5} alt="Block diagram for Tape-In #2" />
+            <img loading="lazy" decoding="async" src={image5} alt="Block diagram for Tape-In #2" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />
@@ -188,7 +188,7 @@ function SPIMinionAdapterPythonTools() {
           </figure>
 
           <figure>
-            <img src={image6} alt="Test Cases Passing for Top-Level Model" />
+            <img loading="lazy" decoding="async" src={image6} alt="Test Cases Passing for Top-Level Model" />
             <figcaption>
               <strong>Figure 6</strong>
               <br />

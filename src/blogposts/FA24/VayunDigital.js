@@ -105,7 +105,7 @@ function VayunDigital() {
           </p>
 
           <figure>
-            <img src={image1} alt="4 Layer Wallace Tree Multiplier" />
+            <img loading="lazy" decoding="async" src={image1} alt="4 Layer Wallace Tree Multiplier" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />4 Layer Wallace Tree Multiplier. Using 15 half adders (two

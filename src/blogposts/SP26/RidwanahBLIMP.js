@@ -28,7 +28,7 @@ function RidwanahBLIMP() {
           </p>
 
           <figure>
-            <img src={figure1} alt="Simplified representation of how BLIMP processes instructions" />
+            <img loading="lazy" decoding="async" src={figure1} alt="Simplified representation of how BLIMP processes instructions" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />Simplified Representation of How BLIMP Processes Instructions

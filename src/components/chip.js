@@ -79,7 +79,7 @@ function Chip() {
             <span className="chip-page__modal-close" onClick={toggleImageModal}>
               &times;
             </span>
-            <img
+            <img loading="lazy" decoding="async"
               src={images[chip.id]}
               alt={`${chip.title} chip (enlarged)`}
               className="chip-page__modal-image"
@@ -104,7 +104,7 @@ function Chip() {
             <div className="chip-page__image-container">
               {images[chip.id] ? (
                 <>
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={images[chip.id]}
                     alt={`${chip.title} chip`}
                     className="chip-page__image"

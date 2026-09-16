@@ -49,7 +49,15 @@ function Home() {
                 </div>
               </div>
               <div className="col-lg-6 order-1 order-lg-2 hero-img">
-                <img src={hero} className="img-fluid animated" alt="" draggable="false" />
+                <img
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                  src={hero}
+                  className="img-fluid animated"
+                  alt=""
+                  draggable="false"
+                />
               </div>
             </div>
           </div>
@@ -60,7 +68,7 @@ function Home() {
           data-aos-delay="100"
         >
           <div className="container team-photo-container">
-            <img className="team-photo" src={teamPhoto} alt="C2S2 team" />
+            <img loading="lazy" decoding="async" className="team-photo" src={teamPhoto} alt="C2S2 team" />
           </div>
         </section>
         <AlumniCompanies />

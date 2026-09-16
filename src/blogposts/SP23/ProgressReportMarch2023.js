@@ -47,7 +47,7 @@ function ProgressReportMarch2023() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Early Functioning Iteration of the Fixed Point Iterative Multiplier"
             />
@@ -74,7 +74,7 @@ function ProgressReportMarch2023() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image2}
               alt="New Iteration of the Fixed Point Iterative Multiplier"
             />
@@ -117,7 +117,7 @@ function ProgressReportMarch2023() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image3}
               alt="C2S2 Tutorial - Implementing a Simple Register Counter"
             />

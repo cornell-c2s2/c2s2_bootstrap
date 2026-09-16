@@ -38,7 +38,7 @@ function ChippingAwayAtChallenges() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -78,7 +78,7 @@ function ChippingAwayAtChallenges() {
           </p>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>
               <strong>Figure 2</strong>
               <br />

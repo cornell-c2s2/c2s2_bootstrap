@@ -30,7 +30,7 @@ function AnikaAnalog() {
             input voltage.
           </p>
           <figure>
-            <img src={image1} alt="SAR ADC diagram" />
+            <img loading="lazy" decoding="async" src={image1} alt="SAR ADC diagram" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -51,7 +51,7 @@ function AnikaAnalog() {
             goal for the SAR.
           </p>
           <figure>
-            <img src={image2} alt="Comparison chart of ADC types" />
+            <img loading="lazy" decoding="async" src={image2} alt="Comparison chart of ADC types" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -97,7 +97,7 @@ function AnikaAnalog() {
             layout was designed.
           </p>
           <figure>
-            <img src={image3} alt="CDAC Layout" />
+            <img loading="lazy" decoding="async" src={image3} alt="CDAC Layout" />
             <figcaption>
               <strong>Figure 3: CDAC Layout</strong>
               <br />
@@ -121,7 +121,7 @@ function AnikaAnalog() {
             stage.
           </p>
           <figure>
-            <img src={image4} alt="Triple Tail Latched comparator" />
+            <img loading="lazy" decoding="async" src={image4} alt="Triple Tail Latched comparator" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -139,7 +139,7 @@ function AnikaAnalog() {
             "precision is key."
           </p>
           <figure>
-            <img src={image5} alt="Bootstrapped Analog Switch" />
+            <img loading="lazy" decoding="async" src={image5} alt="Bootstrapped Analog Switch" />
             <figcaption>
               <strong>Figure 5: Bootstrapped Analog Switch</strong>
               <br />

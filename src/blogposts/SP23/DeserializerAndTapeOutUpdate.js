@@ -65,7 +65,7 @@ function DeserializerAndTapeOutUpdate() {
           </p>
 
           <figure>
-            <img src={image1} alt="Block Diagram of the Deserializer" />
+            <img loading="lazy" decoding="async" src={image1} alt="Block Diagram of the Deserializer" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -96,7 +96,7 @@ function DeserializerAndTapeOutUpdate() {
           </p>
 
           <figure>
-            <img src={image2} alt="Deserializer Components and Connections" />
+            <img loading="lazy" decoding="async" src={image2} alt="Deserializer Components and Connections" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -121,7 +121,7 @@ function DeserializerAndTapeOutUpdate() {
           </p>
 
           <figure>
-            <img src={image3} alt="Example Test Case for Deserializer" />
+            <img loading="lazy" decoding="async" src={image3} alt="Example Test Case for Deserializer" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />

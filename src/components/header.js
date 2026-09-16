@@ -22,7 +22,13 @@ function Header() {
       <div className="container d-flex align-items-center justify-content-between">
         <div className="logo">
           <a href="/">
-            <img src={logo} alt="C2S2 Logo" className="img-fluid" />
+            <img
+              loading="eager"
+              decoding="async"
+              src={logo}
+              alt="C2S2 Logo"
+              className="img-fluid"
+            />
           </a>
         </div>
 

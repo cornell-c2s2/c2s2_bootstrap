@@ -48,7 +48,7 @@ function SystemArchitectureProgressReport() {
           </p>
 
           <figure>
-            <img src={image1} alt="Sensor Shield PCB 3D Render" />
+            <img loading="lazy" decoding="async" src={image1} alt="Sensor Shield PCB 3D Render" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -123,7 +123,7 @@ function SystemArchitectureProgressReport() {
           </p>
 
           <figure>
-            <img src={image2} alt="Voltage Sweep in Python" />
+            <img loading="lazy" decoding="async" src={image2} alt="Voltage Sweep in Python" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -139,7 +139,7 @@ function SystemArchitectureProgressReport() {
           </p>
 
           <figure>
-            <img src={image3} alt="Test Data Graph" />
+            <img loading="lazy" decoding="async" src={image3} alt="Test Data Graph" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />

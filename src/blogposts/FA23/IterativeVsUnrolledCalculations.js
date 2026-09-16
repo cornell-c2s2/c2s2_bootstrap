@@ -72,7 +72,7 @@ function IterativeVsUnrolledCalculations() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
           </figure>
 
           <p>
@@ -111,7 +111,7 @@ function IterativeVsUnrolledCalculations() {
           </p>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>Iterative Multiplication Datapath</figcaption>
           </figure>
 
@@ -125,14 +125,14 @@ function IterativeVsUnrolledCalculations() {
           </p>
 
           <figure>
-            <img src={image3} />
+            <img loading="lazy" decoding="async" src={image3} />
             <figcaption>
               <i>MulUnit</i> Datapath
             </figcaption>
           </figure>
 
           <figure>
-            <img src={image4} />
+            <img loading="lazy" decoding="async" src={image4} />
             <figcaption>Unrolled Multiplication Datapath</figcaption>
           </figure>
 
@@ -157,7 +157,7 @@ function IterativeVsUnrolledCalculations() {
           </p>
 
           <figure>
-            <img src={image5} />
+            <img loading="lazy" decoding="async" src={image5} />
             <figcaption>Hardened Iterative and Unrolled Multipliers</figcaption>
           </figure>
 
@@ -211,7 +211,7 @@ function IterativeVsUnrolledCalculations() {
           </p>
 
           <figure>
-            <img src={image6} />
+            <img loading="lazy" decoding="async" src={image6} />
             <figcaption>Square Root Calculator Datapath</figcaption>
           </figure>
 

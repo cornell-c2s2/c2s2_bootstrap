@@ -45,7 +45,7 @@ function ChipChatter() {
                     </p>
 
                     <figure>
-                        <img src={image1} />
+                        <img loading="lazy" decoding="async" src={image1} />
                         <figcaption><strong>Figure 1</strong><br />Updated Systems Diagram by the System Architecture Subteam</figcaption>
                     </figure>
 
@@ -70,7 +70,7 @@ function ChipChatter() {
                     </p>
 
                     <figure>
-                        <img src={image2} />
+                        <img loading="lazy" decoding="async" src={image2} />
                         <figcaption><strong>Figure 2</strong><br />Scrub Jay. Photo taken by Christopher Tarango</figcaption>
                     </figure>
 
@@ -88,7 +88,7 @@ function ChipChatter() {
                     </p>
 
                     <figure>
-                        <img src={image3} />
+                        <img loading="lazy" decoding="async" src={image3} />
                         <figcaption><strong>Figure 3</strong><br />Spectrogram of Rattle Call from <br /> Christopher Tarango</figcaption>
                     </figure>
 

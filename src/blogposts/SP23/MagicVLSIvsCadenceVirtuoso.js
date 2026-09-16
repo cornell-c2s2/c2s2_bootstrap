@@ -33,7 +33,7 @@ function MagicVLSIvsCadenceVirtuoso() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Schematic of a NAND gate in Cadence Virtuoso"
             />
@@ -68,7 +68,7 @@ function MagicVLSIvsCadenceVirtuoso() {
           </p>
 
           <figure>
-            <img src={image2} alt="Layout of a NAND gate in Cadence Virtuoso" />
+            <img loading="lazy" decoding="async" src={image2} alt="Layout of a NAND gate in Cadence Virtuoso" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -103,7 +103,7 @@ function MagicVLSIvsCadenceVirtuoso() {
           </p>
 
           <figure>
-            <img src={image3} alt="Schematic of a NAND gate in Magic VLSI" />
+            <img loading="lazy" decoding="async" src={image3} alt="Schematic of a NAND gate in Magic VLSI" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -129,7 +129,7 @@ function MagicVLSIvsCadenceVirtuoso() {
           </p>
 
           <figure>
-            <img src={image4} alt="Layout of a NAND gate in Magic VLSI" />
+            <img loading="lazy" decoding="async" src={image4} alt="Layout of a NAND gate in Magic VLSI" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -157,7 +157,7 @@ function MagicVLSIvsCadenceVirtuoso() {
           </p>
 
           <figure>
-            <img src={image5} alt="Comparison of netlists using Netgen" />
+            <img loading="lazy" decoding="async" src={image5} alt="Comparison of netlists using Netgen" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />

@@ -77,7 +77,7 @@ function NotEasy() {
                         their controllability and observability.
                     </p>
                     <figure>
-                        <img src={image1} />
+                        <img loading="lazy" decoding="async" src={image1} />
                         <figcaption><a href="https://www.electronics-tutorial.net/vlsi-design-for-testability/Partial-Scan.html">Source</a></figcaption>
                     </figure>
                     <p>
@@ -95,7 +95,7 @@ function NotEasy() {
                     <h2>Digital System Overview</h2>
 
                     <figure>
-                        <img src={image2} />
+                        <img loading="lazy" decoding="async" src={image2} />
                         <figcaption><a href="https://www.electronics-tutorial.net/vlsi-design-for-testability/Partial-Scan.html">Source</a></figcaption>
                     </figure>
 

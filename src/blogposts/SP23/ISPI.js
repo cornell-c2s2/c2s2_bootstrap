@@ -75,7 +75,7 @@ function ISPI() {
           </p>
 
           <figure>
-            <img src={image1} alt="SPI Master FSM for Frequency Division" />
+            <img loading="lazy" decoding="async" src={image1} alt="SPI Master FSM for Frequency Division" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -103,7 +103,7 @@ function ISPI() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image2}
               alt="SPI Master Block Diagram with Frequency Division and All SPI Modes"
             />
@@ -143,7 +143,7 @@ function ISPI() {
           </p>
 
           <figure>
-            <img src={image3} alt="One of the Many Wafers We Saw" />
+            <img loading="lazy" decoding="async" src={image3} alt="One of the Many Wafers We Saw" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -152,7 +152,7 @@ function ISPI() {
           </figure>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image4}
               alt="One of the Few Fabrication Machines that We Could Take Pictures Of"
             />
@@ -164,7 +164,7 @@ function ISPI() {
           </figure>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image5}
               alt="Group Picture of C2S2 at SUNY Poly Nanofab"
             />

@@ -81,7 +81,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Overview of the Fast Fourier Transform (FFT) System Architecture"
             />
@@ -107,7 +107,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img src={image2} alt="Overview of FFT Accelerator" />
+            <img loading="lazy" decoding="async" src={image2} alt="Overview of FFT Accelerator" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -131,7 +131,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img src={image3} alt="Overview of Faux Tape-Out Design" />
+            <img loading="lazy" decoding="async" src={image3} alt="Overview of Faux Tape-Out Design" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -147,7 +147,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img src={image4} alt="Amoeba Plot of Tape-In Accelerator" />
+            <img loading="lazy" decoding="async" src={image4} alt="Amoeba Plot of Tape-In Accelerator" />
             <figcaption>
               <strong>Image 1</strong>
               <br />
@@ -193,7 +193,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img src={image5} alt="Fourier Transform of Frog's Ribbit" />
+            <img loading="lazy" decoding="async" src={image5} alt="Fourier Transform of Frog's Ribbit" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -210,7 +210,7 @@ function ProgressReport() {
           </p>
 
           <figure>
-            <img src={image6} alt="Example Test Cases" />
+            <img loading="lazy" decoding="async" src={image6} alt="Example Test Cases" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />

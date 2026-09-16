@@ -89,7 +89,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/RidwanahBLIMP">
-                  <img src={RidwanahBLIMPThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={RidwanahBLIMPThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Floating Point Integration in BLIMP</h4>
@@ -107,7 +107,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/AmbilaIMU">
-                  <img src={AmbilaIMUThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={AmbilaIMUThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Intelligence on a Chip: IMU Motion Classification</h4>
@@ -131,7 +131,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/anikaanalog">
-                  <img src={image4} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={image4} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>The SAR ADC: Refining Digital Output Bit by Bit</h4>
@@ -149,7 +149,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/tanyasoftware">
-                  <img src={tanyaSoftware} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={tanyaSoftware} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Sound classNameification Using an IIR Filter</h4>
@@ -167,7 +167,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/VayunDigital">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={vayunDigitalThumbnail}
                     className="img-fluid"
                     alt=""
@@ -189,7 +189,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/groundUp">
-                  <img src={groundUpThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={groundUpThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>
@@ -210,7 +210,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/unboxing">
-                  <img src={unboxingThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={unboxingThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Unboxing C2S2's 2024 Spring Tape Outs! </h4>
@@ -234,7 +234,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TechnicalPM">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={TechnicalPMThumbnail}
                     className="img-fluid"
                     alt=""
@@ -256,7 +256,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/VerifyBetterFFT">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={VerifyBetterFFTThumbnail}
                     className="img-fluid"
                     alt=""
@@ -278,7 +278,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ASICDesignFlow">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ASICDesignFlowThumbnail}
                     className="img-fluid"
                     alt=""
@@ -300,7 +300,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ImgSilicon">
-                  <img src={ImgSiliconThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={ImgSiliconThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Room at the Bottom: Imaging Silicon</h4>
@@ -318,7 +318,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/Magic">
-                  <img src={MagicThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={MagicThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Doing Magic in Magic VLSI </h4>
@@ -336,7 +336,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/CMake">
-                  <img src={CMakeThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={CMakeThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>C-Making a Build System</h4>
@@ -354,7 +354,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/OverCloud">
-                  <img src={OverCloudThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={OverCloudThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>
@@ -374,7 +374,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ChipChatter">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ChipChatterThumbnail}
                     className="img-fluid"
                     alt=""
@@ -396,7 +396,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ScrubJay">
-                  <img src={ScrubJayThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={ScrubJayThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>How to Know a Scrub Jay is a Scrub Jay</h4>
@@ -414,7 +414,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TwoWorlds">
-                  <img src={TwoWorldsThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={TwoWorldsThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Bridging Two Worlds: Analog-to-Digital Converters</h4>
@@ -432,7 +432,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/GDS">
-                  <img src={GDSThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={GDSThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>GDS Chip Art</h4>
@@ -450,7 +450,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/chooseFighter">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={chooseFighterThumbnail}
                     className="img-fluid"
                     alt=""
@@ -472,7 +472,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/NotEasy">
-                  <img src={NotEasyThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={NotEasyThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Making Chips is NOT Easy</h4>
@@ -496,7 +496,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/PCBDesign">
-                  <img src={PCBDesignThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={PCBDesignThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>PCB Design: "There's Layers To It"</h4>
@@ -514,7 +514,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/DesigningAndSynthesizingABetterFFT">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={DesigningAndSynthesizingABetterFFTThumbnail}
                     className="img-fluid"
                     alt=""
@@ -536,7 +536,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TestAndValOfPCBs">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={TestAndValOfPCBThumbnails}
                     className="img-fluid"
                     alt=""
@@ -558,7 +558,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ChippingAwayAtChallenges">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ChippingAwayAtChallengesThumbnail}
                     className="img-fluid"
                     alt=""
@@ -580,7 +580,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ElectronicDesignAutomation">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ElectronicDesignAutomationThumbnail}
                     className="img-fluid"
                     alt=""
@@ -605,7 +605,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/UnravelingBirdSoundsWithSpectrograms">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={UnravelingBirdSoundsWithSpectrogramsThumbnail}
                     className="img-fluid"
                     alt=""
@@ -627,7 +627,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/IterativeVsUnrolledCalculations">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={IterativeVsUnrolledCalculationsThumbnail}
                     className="img-fluid"
                     alt=""
@@ -649,7 +649,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/DigitalArt">
-                  <img src={DigitalArtThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={DigitalArtThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>Digital Art: Principles Of Digital Circuit Design</h4>
@@ -667,7 +667,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/HelloWorld">
-                  <img src={HelloWorldThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={HelloWorldThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>
@@ -688,7 +688,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/MallocFromScratch">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={MallocFromScratchThumbnail}
                     className="img-fluid"
                     alt=""
@@ -712,7 +712,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/FromSandToSilicon">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={FromSandToSiliconThumbnail}
                     className="img-fluid"
                     alt=""
@@ -734,7 +734,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ABlinkIntoSiliconsPotential">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ABlinkSiliconsPotentialThumbnail}
                     className="img-fluid"
                     alt=""
@@ -756,7 +756,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/RepresentingNumbersInHardware">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={RepresentingNumbersInHardwareThumbnail}
                     className="img-fluid"
                     alt=""
@@ -778,7 +778,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TheAnalogSubteamProcessFlow">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={TheAnalogSubteamProcessFlowThumbnail}
                     className="img-fluid"
                     alt=""
@@ -806,7 +806,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/SystemArchitectureBlogPost">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={SystemArchitectureBlogPostThumbnail}
                     className="img-fluid"
                     alt=""
@@ -828,7 +828,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/DeserializerAndTapeOutUpdate">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={DeserializerAndTapeOutUpdateThumbnail}
                     className="img-fluid"
                     alt=""
@@ -850,7 +850,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TwoSidesOfACoin">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={TwoSidesOfACoinThumbnail}
                     className="img-fluid"
                     alt=""
@@ -874,7 +874,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/MagicVLSIvsCadenceVirtuoso">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={MagicVLSIvsCadenceVirtuosoThumbnail}
                     className="img-fluid"
                     alt=""
@@ -896,7 +896,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ProgressReport4_23_23">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ProgressReport4_23_23Thumbnail}
                     className="img-fluid"
                     alt=""
@@ -918,7 +918,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/SoftwareAndRelativePositionEstimator">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={SoftwareAndRelativePositionEstimatorThumbnail}
                     className="img-fluid"
                     alt=""
@@ -940,7 +940,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/SPIMinionAdapterPythonTools">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={SPIMinionAdapterPythonToolsThumbnail}
                     className="img-fluid"
                     alt=""
@@ -962,7 +962,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/SiliconForScrubJays">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={SiliconForScrubJaysThumbnail}
                     className="img-fluid"
                     alt=""
@@ -984,7 +984,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/AnalogMultiplexer">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={AnalogMultiplexerThumbnail}
                     className="img-fluid"
                     alt=""
@@ -1006,7 +1006,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ISPI">
-                  <img src={ISPIThumbnail} className="img-fluid" alt="" />
+                  <img loading="lazy" decoding="async" src={ISPIThumbnail} className="img-fluid" alt="" />
                   <div className="post-info">
                     <div className="post-info-content">
                       <h4>I SPI</h4>
@@ -1024,7 +1024,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/CrashDetectorsAndCalculators">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={CrashDetectorsCalculatorsThumbnail}
                     className="img-fluid"
                     alt=""
@@ -1046,7 +1046,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/SystemArchitectureProgressReport">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={SystemArchitectureProgressReportThumbnail}
                     className="img-fluid"
                     alt=""
@@ -1068,7 +1068,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ProgressReportMarch2023">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ProgressReportMarch2023Thumbnail}
                     className="img-fluid"
                     alt=""
@@ -1090,7 +1090,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/TheProcessOfAcquiringSponsors">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={TheProcessOfAcquiringSponsorsThumbnail}
                     className="img-fluid"
                     alt=""
@@ -1112,7 +1112,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ProgressReport">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ProgressReportThumbnail}
                     className="img-fluid"
                     alt=""
@@ -1134,7 +1134,7 @@ function BlogGallery() {
             >
               <div className="post">
                 <a href="/blog/ConstantGmCurrentReferenceTapeIn">
-                  <img
+                  <img loading="lazy" decoding="async"
                     src={ConstantGmCurrentReferenceTapeInThumbnail}
                     className="img-fluid"
                     alt=""

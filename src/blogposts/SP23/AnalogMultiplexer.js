@@ -35,7 +35,7 @@ function AnalogMultiplexer() {
           </p>
 
           <figure>
-            <img src={image1} alt="2-to-1 Digital Multiplexer" />
+            <img loading="lazy" decoding="async" src={image1} alt="2-to-1 Digital Multiplexer" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -60,7 +60,7 @@ function AnalogMultiplexer() {
           </p>
 
           <figure style={{ maxWidth: "100%" }}>
-            <img src={image2} alt="4-to-16 Digital Decoder" />
+            <img loading="lazy" decoding="async" src={image2} alt="4-to-16 Digital Decoder" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -82,7 +82,7 @@ function AnalogMultiplexer() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image3}
               alt="Analog switch made from a complementary MOSFET pair"
             />
@@ -95,7 +95,7 @@ function AnalogMultiplexer() {
           </figure>
 
           <figure style={{ maxWidth: "100%" }}>
-            <img src={image4} alt="16 Analog Switches with Connected Drains" />
+            <img loading="lazy" decoding="async" src={image4} alt="16 Analog Switches with Connected Drains" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -134,7 +134,7 @@ function AnalogMultiplexer() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image5}
               alt="Analog Mux from the Decoder and 16 signal Analog Switch"
             />
@@ -146,7 +146,7 @@ function AnalogMultiplexer() {
           </figure>
 
           <figure>
-            <img src={image6} alt="Top-level Symbol of the Analog MUX" />
+            <img loading="lazy" decoding="async" src={image6} alt="Top-level Symbol of the Analog MUX" />
             <figcaption>
               <strong>Figure 6</strong>
               <br />

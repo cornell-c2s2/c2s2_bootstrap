@@ -1,49 +1,50 @@
 import React from "react";
+import LazyImage from "./lazyimage.js";
 
 //Advisors
-import cb535 from "../assets/img/team/cb535.jpg";
-import vha3 from "../assets/img/team/vha3.jpg";
-import mibrahim from "../assets/img/team/mibrahim.jpg";
-import akv45 from "../assets/img/team/akv45.jpg";
-import acm289 from "../assets/img/team/acm289.jpg";
+import cb535 from "../assets/img/team/optimized/cb535.webp";
+import vha3 from "../assets/img/team/optimized/vha3.webp";
+import mibrahim from "../assets/img/team/optimized/mibrahim.webp";
+import akv45 from "../assets/img/team/optimized/akv45.webp";
+import acm289 from "../assets/img/team/optimized/acm289.webp";
 
 // Current team members
-import adiPrathapa from "../assets/img/team/Adi_Prathapa_agp96.JPG";
-import matteoBucci from "../assets/img/team/Matteo_Bucci_mrb357.JPG";
-import ridwanahHaque from "../assets/img/team/Ridwanah_Haque_rh736.JPG";
-import asherFred from "../assets/img/team/Asher_Fred_ajf273.JPG";
-import danielGabai from "../assets/img/team/Daniel_Gabai_dg779.JPG";
-import shehrozeKiani from "../assets/img/team/Shehroze_Kiani_szk7.JPG";
-import teresaChen from "../assets/img/team/Teresa_Chen_yc2877.JPG";
-import arjunSaini from "../assets/img/team/Arjun_Saini_ars437.JPG";
-import sumaiaJewena from "../assets/img/team/Sumaia_Jewena_saj93.JPG";
-import yifeiYan from "../assets/img/team/Yifei_Yan_yy2323.JPG";
-import cadenXu from "../assets/img/team/Caden_Xu_cx237.JPG";
-import danielKaminski from "../assets/img/team/Daniel_Kaminski_dgk64.JPG";
-import kaiImani from "../assets/img/team/Kai_Imani_kti3.JPG";
-import tiffanyLi from "../assets/img/team/Tiffany_Li.JPG";
-import majorZangari from "../assets/img/team/Major_Zangari_maz76.JPG";
-import olesiaKuzdrovska from "../assets/img/team/Olesia_Kuzdrovska_ok98.JPG";
-import alysaXu from "../assets/img/team/Alysa_Xu_ax52.JPG";
-import chelseaZhang from "../assets/img/team/Chelsea_Zhang_eyl47.JPG";
-import joanneChen from "../assets/img/team/Joanne_Chen_jc3658.JPG";
-import josephWan from "../assets/img/team/Joseph_Wan_jgw227.JPG";
-import michaelDierkes from "../assets/img/team/Michael_Dierkes_mwd59.JPG";
-import mohamedElmi from "../assets/img/team/Mohamed_Elmi_mae227.JPG";
-import jimingChen from "../assets/img/team/Jiming Chen_Digital.jpg";
-import linhAnhNguyen from "../assets/img/team/Linh Anh Nguyen.JPG";
-import rohanKalluraya from "../assets/img/team/Rohan_Kalluraya_rak298.JPG";
-import danielPenasVarela from "../assets/img/team/Daniel_Penas_Varela_dp665.JPG";
-import edwinChen from "../assets/img/team/Edwin_Chen_ec769.JPG";
-import ivanMokeyev from "../assets/img/team/Ivan_Mokeyev_ism27.JPG";
-import josephJuniorMensah from "../assets/img/team/Joseph_Junior_Mensah_jjm536.JPG";
-import tyroneChen from "../assets/img/team/Tyrone_Chen_tc724.JPG";
-import anikaSukthankar from "../assets/img/team/Anika Sukthankar_PM.jpg";
-import adityaRao from "../assets/img/team/Aditya_Rao_agr92.JPG";
-import kateSanders from "../assets/img/team/Kate Sanders_RFIC.jpg";
-import seanWhelan from "../assets/img/team/Sean_Whelan_sgw49.JPG";
-import taylorDo from "../assets/img/team/Taylor_Do_txd3.JPG";
-import waliAfridi from "../assets/img/team/Wali_Afridi_wua3.JPG";
+import adiPrathapa from "../assets/img/team/optimized/Adi_Prathapa_agp96.webp";
+import matteoBucci from "../assets/img/team/optimized/Matteo_Bucci_mrb357.webp";
+import ridwanahHaque from "../assets/img/team/optimized/Ridwanah_Haque_rh736.webp";
+import asherFred from "../assets/img/team/optimized/Asher_Fred_ajf273.webp";
+import danielGabai from "../assets/img/team/optimized/Daniel_Gabai_dg779.webp";
+import shehrozeKiani from "../assets/img/team/optimized/Shehroze_Kiani_szk7.webp";
+import teresaChen from "../assets/img/team/optimized/Teresa_Chen_yc2877.webp";
+import arjunSaini from "../assets/img/team/optimized/Arjun_Saini_ars437.webp";
+import sumaiaJewena from "../assets/img/team/optimized/Sumaia_Jewena_saj93.webp";
+import yifeiYan from "../assets/img/team/optimized/Yifei_Yan_yy2323.webp";
+import cadenXu from "../assets/img/team/optimized/Caden_Xu_cx237.webp";
+import danielKaminski from "../assets/img/team/optimized/Daniel_Kaminski_dgk64.webp";
+import kaiImani from "../assets/img/team/optimized/Kai_Imani_kti3.webp";
+import tiffanyLi from "../assets/img/team/optimized/Tiffany_Li.webp";
+import majorZangari from "../assets/img/team/optimized/Major_Zangari_maz76.webp";
+import olesiaKuzdrovska from "../assets/img/team/optimized/Olesia_Kuzdrovska_ok98.webp";
+import alysaXu from "../assets/img/team/optimized/Alysa_Xu_ax52.webp";
+import chelseaZhang from "../assets/img/team/optimized/Chelsea_Zhang_eyl47.webp";
+import joanneChen from "../assets/img/team/optimized/Joanne_Chen_jc3658.webp";
+import josephWan from "../assets/img/team/optimized/Joseph_Wan_jgw227.webp";
+import michaelDierkes from "../assets/img/team/optimized/Michael_Dierkes_mwd59.webp";
+import mohamedElmi from "../assets/img/team/optimized/Mohamed_Elmi_mae227.webp";
+import jimingChen from "../assets/img/team/optimized/Jiming Chen_Digital.webp";
+import linhAnhNguyen from "../assets/img/team/optimized/Linh Anh Nguyen.webp";
+import rohanKalluraya from "../assets/img/team/optimized/Rohan_Kalluraya_rak298.webp";
+import danielPenasVarela from "../assets/img/team/optimized/Daniel_Penas_Varela_dp665.webp";
+import edwinChen from "../assets/img/team/optimized/Edwin_Chen_ec769.webp";
+import ivanMokeyev from "../assets/img/team/optimized/Ivan_Mokeyev_ism27.webp";
+import josephJuniorMensah from "../assets/img/team/optimized/Joseph_Junior_Mensah_jjm536.webp";
+import tyroneChen from "../assets/img/team/optimized/Tyrone_Chen_tc724.webp";
+import anikaSukthankar from "../assets/img/team/optimized/Anika Sukthankar_PM.webp";
+import adityaRao from "../assets/img/team/optimized/Aditya_Rao_agr92.webp";
+import kateSanders from "../assets/img/team/optimized/Kate Sanders_RFIC.webp";
+import seanWhelan from "../assets/img/team/optimized/Sean_Whelan_sgw49.webp";
+import taylorDo from "../assets/img/team/optimized/Taylor_Do_txd3.webp";
+import waliAfridi from "../assets/img/team/optimized/Wali_Afridi_wua3.webp";
 
 //Alumni
 import AlumniInfo from "../assets/json/alumni8.json";
@@ -319,7 +320,7 @@ function TeamMember(prop) {
       data-aos-delay="100"
     >
       <div className="member">
-        <img
+        <LazyImage
           src={prop.img}
           className="img-fluid"
           alt={prop.name}

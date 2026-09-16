@@ -40,12 +40,12 @@ function TestAndValOfPCBs() {
           </p>
 
           <figure>
-            <img src={image1} alt="PCB Design for the ATMEGA MCU" />
+            <img loading="lazy" decoding="async" src={image1} alt="PCB Design for the ATMEGA MCU" />
             <figcaption>PCB Design for the ATMEGA MCU</figcaption>
           </figure>
 
           <figure>
-            <img src={image2} alt="PCB design of our Sensor Shield" />
+            <img loading="lazy" decoding="async" src={image2} alt="PCB design of our Sensor Shield" />
             <figcaption>PCB design of our Sensor Shield</figcaption>
           </figure>
 
@@ -82,7 +82,7 @@ function TestAndValOfPCBs() {
           </p>
 
           <figure>
-            <img src={image3} alt="Continuity testing for the MCU PCB" />
+            <img loading="lazy" decoding="async" src={image3} alt="Continuity testing for the MCU PCB" />
             <figcaption>Continuity testing for the MCU PCB</figcaption>
           </figure>
 
@@ -189,8 +189,8 @@ function TestAndValOfPCBs() {
           </p>
 
           <figure>
-            <img src={image4} alt="Testing Validation Table 1" />
-            <img src={image5} alt="Testing Validation Table 2" />
+            <img loading="lazy" decoding="async" src={image4} alt="Testing Validation Table 1" />
+            <img loading="lazy" decoding="async" src={image5} alt="Testing Validation Table 2" />
             <figcaption>Testing Validation Tables (MCU)</figcaption>
           </figure>
 

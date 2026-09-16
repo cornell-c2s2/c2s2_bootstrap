@@ -44,7 +44,7 @@ function TanyaSoftware() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Spectrogram of scrub jay calls frequency over time"
             />
@@ -92,7 +92,7 @@ function TanyaSoftware() {
           </p>
 
           <figure>
-            <img src={image2} alt="Classifier output" />
+            <img loading="lazy" decoding="async" src={image2} alt="Classifier output" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />

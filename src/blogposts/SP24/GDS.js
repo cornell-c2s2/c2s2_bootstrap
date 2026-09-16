@@ -65,14 +65,14 @@ function GDS() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>
               We want to connect these two metals together. We use a Via.
             </figcaption>
           </figure>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>
               We don't want to connect these two metals together. They reside on
               separate layers and won't touch.
@@ -176,11 +176,11 @@ function GDS() {
           </p>
 
           <figure>
-            <img src={image3} />
+            <img loading="lazy" decoding="async" src={image3} />
           </figure>
 
           <figure>
-            <img src={image4} />
+            <img loading="lazy" decoding="async" src={image4} />
             <figcaption>
               <i>Here are the layers for reference, color coded!</i>
             </figcaption>
@@ -219,7 +219,7 @@ function GDS() {
           <p>Now you can try on your own!</p>
 
           <figure>
-            <img src={image5} />
+            <img loading="lazy" decoding="async" src={image5} />
           </figure>
         </div>
       </section>

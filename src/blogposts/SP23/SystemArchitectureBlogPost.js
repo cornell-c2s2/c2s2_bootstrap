@@ -75,7 +75,7 @@ function SystemArchitectureBlogPost() {
           </p>
 
           <figure>
-            <img src={image1} alt="Rappole-Style Harness" />
+            <img loading="lazy" decoding="async" src={image1} alt="Rappole-Style Harness" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />

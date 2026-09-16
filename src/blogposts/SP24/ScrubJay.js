@@ -47,7 +47,7 @@ function ScrubJay() {
                     </p>
 
                     <figure>
-                        <img src={image1} />
+                        <img loading="lazy" decoding="async" src={image1} />
                         <figcaption><strong>Figure 1</strong><br />PCM samples of a Scrub Jay with noise</figcaption>
                     </figure>
 
@@ -60,7 +60,7 @@ function ScrubJay() {
                     </p>
 
                     <figure>
-                        <img src={image2} />
+                        <img loading="lazy" decoding="async" src={image2} />
                         <figcaption><strong>Figure 2</strong><br />PCM samples of a Scrub Jay with no noise</figcaption>
                     </figure>
 
@@ -92,7 +92,7 @@ function ScrubJay() {
 
 
                     <figure>
-                        <img src={image3} />
+                        <img loading="lazy" decoding="async" src={image3} />
                         <figcaption><strong>Figure 3</strong><br />The result of applying a matched filter using both audio signals</figcaption>
                     </figure>
 

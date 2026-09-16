@@ -44,7 +44,7 @@ function RepresentingNumbersInHardware() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>Visualization of Base 2</figcaption>
           </figure>
 
@@ -67,7 +67,7 @@ function RepresentingNumbersInHardware() {
           </p>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>Visualization of Fixed Point</figcaption>
           </figure>
 
@@ -118,7 +118,7 @@ function RepresentingNumbersInHardware() {
           </p>
 
           <figure>
-            <img src={image3} />
+            <img loading="lazy" decoding="async" src={image3} />
             <figcaption>Relation to Scientific Notation</figcaption>
           </figure>
 
@@ -134,12 +134,12 @@ function RepresentingNumbersInHardware() {
           </p>
 
           <figure>
-            <img src={image4} />
+            <img loading="lazy" decoding="async" src={image4} />
             <figcaption>IEEE Specification</figcaption>
           </figure>
 
           <figure>
-            <img src={image5} />
+            <img loading="lazy" decoding="async" src={image5} />
             <figcaption>Conversion to Floating Point</figcaption>
           </figure>
 

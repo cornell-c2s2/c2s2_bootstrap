@@ -50,7 +50,7 @@ function TwoSidesOfACoin() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Common Source Amplifier with Current Mirror"
             />
@@ -84,7 +84,7 @@ function TwoSidesOfACoin() {
           </p>
 
           <figure>
-            <img src={image2} alt="Crossbar Block Diagram" />
+            <img loading="lazy" decoding="async" src={image2} alt="Crossbar Block Diagram" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -143,7 +143,7 @@ function TwoSidesOfACoin() {
           </p>
 
           <figure>
-            <img src={image3} alt="Wishbone Interface" />
+            <img loading="lazy" decoding="async" src={image3} alt="Wishbone Interface" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -181,7 +181,7 @@ function TwoSidesOfACoin() {
           </p>
 
           <figure>
-            <img src={image4} alt="Block Diagram of Wishbone Block" />
+            <img loading="lazy" decoding="async" src={image4} alt="Block Diagram of Wishbone Block" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />

@@ -46,7 +46,7 @@ function AmbilaIMU() {
           </p>
 
           <figure>
-            <img src={figure1} alt="Bird with Tag" />
+            <img loading="lazy" decoding="async" src={figure1} alt="Bird with Tag" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />Bird with Tag (to show size of current tags)
@@ -70,7 +70,7 @@ function AmbilaIMU() {
           </p>
 
           <figure>
-            <img src={figure2} alt="IMU Data Stream" />
+            <img loading="lazy" decoding="async" src={figure2} alt="IMU Data Stream" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />IMU Data Stream
@@ -109,7 +109,7 @@ function AmbilaIMU() {
           </p>
 
           <figure>
-            <img src={figure3} alt="Logic behind Quantization of Neural Networks" />
+            <img loading="lazy" decoding="async" src={figure3} alt="Logic behind Quantization of Neural Networks" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />Logic behind Quantization of Neural Networks

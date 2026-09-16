@@ -53,7 +53,7 @@ function Unboxing() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Block Diagram of the Spring 2024 Digital Chip"
             />
@@ -80,7 +80,7 @@ function Unboxing() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image2}
               alt="Rendering Photos of the Spring 2024 Analog Chip"
             />
@@ -103,7 +103,7 @@ function Unboxing() {
           </p>
 
           <figure>
-            <img src={image3} alt="Unboxing the Efabless package" />
+            <img loading="lazy" decoding="async" src={image3} alt="Unboxing the Efabless package" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -126,7 +126,7 @@ function Unboxing() {
           </p>
 
           <figure>
-            <img src={image4} alt="Digital Chip Testing Setup" />
+            <img loading="lazy" decoding="async" src={image4} alt="Digital Chip Testing Setup" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -135,7 +135,7 @@ function Unboxing() {
           </figure>
 
           <figure>
-            <img src={image5} alt="Digital Chip Tests Ongoing" />
+            <img loading="lazy" decoding="async" src={image5} alt="Digital Chip Tests Ongoing" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />
@@ -154,7 +154,7 @@ function Unboxing() {
           </p>
 
           <figure>
-            <img src={image6} alt="Delta Sigma Modulator Testing" />
+            <img loading="lazy" decoding="async" src={image6} alt="Delta Sigma Modulator Testing" />
             <figcaption>
               <strong>Figure 6</strong>
               <br />
@@ -163,7 +163,7 @@ function Unboxing() {
           </figure>
 
           <figure>
-            <img src={image7} alt="Flash ADC Testing" />
+            <img loading="lazy" decoding="async" src={image7} alt="Flash ADC Testing" />
             <figcaption>
               <strong>Figure 7</strong>
               <br />

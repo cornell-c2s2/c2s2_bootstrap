@@ -86,7 +86,7 @@ const Apply = () => {
                   
                   <div className="row justify-content-center mt-4">
                     <div className="col-10 col-md-6 text-center">
-                      <img
+                      <img loading="lazy" decoding="async"
                         src="/join-flyer.png"
                         alt="Join C2S2 Flyer"
                         className="img-fluid"

@@ -42,6 +42,7 @@ function About() {
               <div className="col-lg-12">
                 <div className="video-container">
                   <iframe
+                    loading="lazy"
                     src="https://www.youtube.com/embed/rS4QEqK-7Jc"
                     className="centered-video"
                     frameBorder="0"
@@ -61,6 +62,7 @@ function About() {
               <div className="col-lg-12">
                 <div className="video-container">
                   <iframe
+                    loading="lazy"
                     src="https://www.youtube.com/embed/zI07SVDQrj0"
                     className="centered-video"
                     frameBorder="0"
@@ -80,6 +82,7 @@ function About() {
               <div className="col-lg-12">
                 <div className="video-container">
                   <iframe
+                    loading="lazy"
                     src="https://www.youtube.com/embed/EhGAmz4xoGA"
                     className="centered-video"
                     frameBorder="0"

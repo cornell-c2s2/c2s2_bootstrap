@@ -67,7 +67,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Schematic for Two-stage OTA with On-Chip Current Reference"
             />
@@ -79,7 +79,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </figure>
 
           <figure>
-            <img src={image2} alt="Schematic for Constant-gm Current Source" />
+            <img loading="lazy" decoding="async" src={image2} alt="Schematic for Constant-gm Current Source" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -157,7 +157,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image3}
               alt="NMOS Gate Voltage Over Time (left), PMOS Gate Voltage Over Time (right)"
             />
@@ -170,7 +170,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </figure>
 
           <figure>
-            <img src={image4} alt="Current Through M13 Over Time" />
+            <img loading="lazy" decoding="async" src={image4} alt="Current Through M13 Over Time" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -191,7 +191,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </p>
 
           <figure>
-            <img src={image5} alt="Constant-gm Layout" />
+            <img loading="lazy" decoding="async" src={image5} alt="Constant-gm Layout" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />
@@ -246,7 +246,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image6}
               alt="Post-Extraction Simulation Results of Constant-gm Circuit Connected to the Pad Ring"
             />
@@ -259,7 +259,7 @@ function ConstantGmCurrentReferenceTapeIn() {
           </figure>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image7}
               alt="Constant-gm Current as a Function of Supply Voltage (left), NMOS Gate Voltage as a Function of Supply Voltage (right)"
             />

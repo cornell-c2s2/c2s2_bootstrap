@@ -57,7 +57,7 @@ function GroundUp() {
           </p>
 
           <figure>
-            <img src={image1} alt="MCP73834-NVIUN charger" />
+            <img loading="lazy" decoding="async" src={image1} alt="MCP73834-NVIUN charger" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -94,7 +94,7 @@ function GroundUp() {
           </p>
 
           <figure>
-            <img src={image2} alt="Agnostic Board Routing" />
+            <img loading="lazy" decoding="async" src={image2} alt="Agnostic Board Routing" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />

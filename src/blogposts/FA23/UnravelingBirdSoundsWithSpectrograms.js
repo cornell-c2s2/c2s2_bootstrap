@@ -57,7 +57,7 @@ function UnravelingBirdSoundsWithSpectrograms() {
           </p>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image1}
               alt="Spectrogram of violin sounds showing harmonics"
             />
@@ -106,7 +106,7 @@ function UnravelingBirdSoundsWithSpectrograms() {
             </li>
 
             <figure>
-              <img src={image2} alt="Audio Spectrogram Representation" />
+              <img loading="lazy" decoding="async" src={image2} alt="Audio Spectrogram Representation" />
               <figcaption>
                 <strong>Audio Spectrogram Representation</strong> - The raw
                 audio signal is transformed using the Fourier Transform into a
@@ -126,7 +126,7 @@ function UnravelingBirdSoundsWithSpectrograms() {
           </ol>
 
           <figure>
-            <img
+            <img loading="lazy" decoding="async"
               src={image3}
               alt="Bird Sounds Recognition using Spectrograms"
             />

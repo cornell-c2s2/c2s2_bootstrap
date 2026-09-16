@@ -31,7 +31,7 @@ function OverCloud() {
                     </p>
 
                     <figure>
-                        <img src={image1} />
+                        <img loading="lazy" decoding="async" src={image1} />
                         <figcaption><strong>Figure 1</strong><br /> System diagram for the Bird Tag</figcaption>
                     </figure>
 
@@ -58,7 +58,7 @@ function OverCloud() {
                     </p>
 
                     <figure>
-                        <img src={image2} />
+                        <img loading="lazy" decoding="async" src={image2} />
                         <figcaption><strong>Figure 2</strong><br />The Particle Argon enclosed in a casing with its battery inside the box and the Temperature sensor attached on the lid of the box</figcaption>
                     </figure>
 

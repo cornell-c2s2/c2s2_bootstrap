@@ -15,7 +15,7 @@ Total entries: 32.
 | Angela Cui | Space X | Digital Lead | 2022-2024 | BS'25 in ECE | [Profile](https://www.linkedin.com/in/angela-cui-575702214/) |
 | Edmund Lam | NASA JPL | Digital Lead | 2022-2024 | BA'24 in CS | [Profile](https://www.linkedin.com/in/lam-edmund/) |
 | Akanksha Sarkar | Google DeepMind | Software Co-Lead | 2022-2024 | Math + CS, 2025 | [Profile](https://www.linkedin.com/in/akanksha-sarkar/) |
-| Sana Chawla | Cisco | Software | 2023-2024 | CS, 2025 | [Profile](https://www.linkedin.com/in/sanachawla/) |
+| Sana Chawla | Bloomberg | Software | 2023-2024 | CS, 2025 | [Profile](https://www.linkedin.com/in/sanachawla/) |
 | Steven Sun | Dell Technologies | Digital | 2022-2024 | ECE, 2025 | [Profile](https://www.linkedin.com/in/stevensun203/) |
 | Jon Ho | Space X | Analog Subteam Lead | 2022-2023 | BS'24 in ECE | [Profile](https://www.linkedin.com/in/jon-ho-656156140/) |
 | Ena Jovanovic | NUS | Analog | 2023-2023 | BS'26 in ECE | [Profile](https://www.linkedin.com/in/ena-jovanovi%C4%87-2356a4311/) |

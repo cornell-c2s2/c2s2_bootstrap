@@ -46,7 +46,7 @@ function TheProcessOfAcquiringSponsors() {
           </p>
 
           <figure>
-            <img src={image1} alt="Who We Are page" />
+            <img loading="lazy" decoding="async" src={image1} alt="Who We Are page" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -63,7 +63,7 @@ function TheProcessOfAcquiringSponsors() {
           </p>
 
           <figure>
-            <img src={image2} alt="Example Subteam Page" />
+            <img loading="lazy" decoding="async" src={image2} alt="Example Subteam Page" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />

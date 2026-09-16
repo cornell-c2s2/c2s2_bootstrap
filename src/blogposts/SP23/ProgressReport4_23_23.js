@@ -29,7 +29,7 @@ function ProgressReport4_23_23() {
           </p>
 
           <figure>
-            <img src={image1} alt="FFT System Architecture Block Diagram" />
+            <img loading="lazy" decoding="async" src={image1} alt="FFT System Architecture Block Diagram" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -61,7 +61,7 @@ function ProgressReport4_23_23() {
           </p>
 
           <figure>
-            <img src={image2} alt="A Simple FFT Test Case" />
+            <img loading="lazy" decoding="async" src={image2} alt="A Simple FFT Test Case" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />A Simple FFT Test Case
@@ -142,7 +142,7 @@ function ProgressReport4_23_23() {
           </p>
 
           <figure>
-            <img src={image3} alt="HLS Example - Bit Reversal Module" />
+            <img loading="lazy" decoding="async" src={image3} alt="HLS Example - Bit Reversal Module" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />

@@ -41,7 +41,7 @@ function ElectronicDesignAutomation() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>
               <strong>Zilog Z80 8-bit Microprocessor</strong>
               <br />
@@ -52,7 +52,7 @@ function ElectronicDesignAutomation() {
           </figure>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>
               <strong>NVIDIA GH200 Grace Hopper Superchip</strong>
               <br />
@@ -91,21 +91,21 @@ function ElectronicDesignAutomation() {
           </p>
 
           <figure>
-            <img src={image3} />
+            <img loading="lazy" decoding="async" src={image3} />
             <figcaption>
               <strong>1.</strong> RTL Representation to Logic Description
             </figcaption>
           </figure>
 
           <figure>
-            <img src={image4} />
+            <img loading="lazy" decoding="async" src={image4} />
             <figcaption>
               <strong>2.</strong> Logic Gate Symbol to Transistor Schematic
             </figcaption>
           </figure>
 
           <figure>
-            <img src={image5} />
+            <img loading="lazy" decoding="async" src={image5} />
             <figcaption>
               <strong>3.</strong> Transistor Level Schematic to Geometrical
               Representation
@@ -142,7 +142,7 @@ function ElectronicDesignAutomation() {
           </p>
 
           <figure>
-            <img src={image6} />
+            <img loading="lazy" decoding="async" src={image6} />
             <figcaption>XLS Stack Diagram</figcaption>
           </figure>
 
@@ -265,7 +265,7 @@ function ElectronicDesignAutomation() {
           </p>
 
           <figure>
-            <img src={image7} />
+            <img loading="lazy" decoding="async" src={image7} />
             <figcaption>
               Example of a two-cycle multiply and single-cycle add before and
               after pipeline split

@@ -73,7 +73,7 @@ function CrashDetectorsCalculators() {
           </p>
 
           <figure>
-            <img src={image1} alt="The UNO R3 microcontroller" />
+            <img loading="lazy" decoding="async" src={image1} alt="The UNO R3 microcontroller" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />

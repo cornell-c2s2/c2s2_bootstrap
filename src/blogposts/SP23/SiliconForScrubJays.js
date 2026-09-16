@@ -77,7 +77,7 @@ function SiliconForScrubJays() {
           </p>
 
           <figure>
-            <img src={image1} alt="Scrub Jay" />
+            <img loading="lazy" decoding="async" src={image1} alt="Scrub Jay" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />

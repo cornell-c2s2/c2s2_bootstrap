@@ -40,7 +40,7 @@ function TheAnalogSubteamProcessFlow() {
           </p>
 
           <figure>
-            <img src={image1} alt="The Analog Subteam's Process Flow" />
+            <img loading="lazy" decoding="async" src={image1} alt="The Analog Subteam's Process Flow" />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -51,7 +51,7 @@ function TheAnalogSubteamProcessFlow() {
           <p>To begin, we start with creating the circuit through XSCHEM.</p>
 
           <figure>
-            <img src={image2} alt="Schematic of the Inverter" />
+            <img loading="lazy" decoding="async" src={image2} alt="Schematic of the Inverter" />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -75,7 +75,7 @@ function TheAnalogSubteamProcessFlow() {
           <p>Below are some simulations:</p>
 
           <figure>
-            <img src={image3} alt="DC Voltage Stepping" />
+            <img loading="lazy" decoding="async" src={image3} alt="DC Voltage Stepping" />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -84,7 +84,7 @@ function TheAnalogSubteamProcessFlow() {
           </figure>
 
           <figure>
-            <img src={image4} alt="Transient of a Square Wave Input" />
+            <img loading="lazy" decoding="async" src={image4} alt="Transient of a Square Wave Input" />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -108,7 +108,7 @@ function TheAnalogSubteamProcessFlow() {
           </p>
 
           <figure>
-            <img src={image5} alt="Layout of the Inverter in Magic" />
+            <img loading="lazy" decoding="async" src={image5} alt="Layout of the Inverter in Magic" />
             <figcaption>
               <strong>Figure 5</strong>
               <br />
@@ -141,7 +141,7 @@ function TheAnalogSubteamProcessFlow() {
           </p>
 
           <figure>
-            <img src={image6} alt="Netgen Output of LVS Test" />
+            <img loading="lazy" decoding="async" src={image6} alt="Netgen Output of LVS Test" />
             <figcaption>
               <strong>Figure 6</strong>
               <br />
@@ -166,7 +166,7 @@ function TheAnalogSubteamProcessFlow() {
           </p>
 
           <figure>
-            <img src={image7} alt="Extracted Circuit in XSCHEM" />
+            <img loading="lazy" decoding="async" src={image7} alt="Extracted Circuit in XSCHEM" />
             <figcaption>
               <strong>Figure 7</strong>
               <br />
@@ -175,7 +175,7 @@ function TheAnalogSubteamProcessFlow() {
           </figure>
 
           <figure>
-            <img src={image8} alt="Extracted DC Sweep" />
+            <img loading="lazy" decoding="async" src={image8} alt="Extracted DC Sweep" />
             <figcaption>
               <strong>Figure 8</strong>
               <br />
@@ -184,7 +184,7 @@ function TheAnalogSubteamProcessFlow() {
           </figure>
 
           <figure>
-            <img src={image9} alt="Extracted Transient" />
+            <img loading="lazy" decoding="async" src={image9} alt="Extracted Transient" />
             <figcaption>
               <strong>Figure 9</strong>
               <br />

@@ -59,7 +59,7 @@ function TechnicalPM() {
           </p>
 
           <figure>
-            <img src={image1} />
+            <img loading="lazy" decoding="async" src={image1} />
             <figcaption>
               <strong>Figure 1</strong>
               <br />
@@ -68,7 +68,7 @@ function TechnicalPM() {
           </figure>
 
           <figure>
-            <img src={image2} />
+            <img loading="lazy" decoding="async" src={image2} />
             <figcaption>
               <strong>Figure 2</strong>
               <br />
@@ -95,7 +95,7 @@ function TechnicalPM() {
           </p>
 
           <figure>
-            <img src={image3} />
+            <img loading="lazy" decoding="async" src={image3} />
             <figcaption>
               <strong>Figure 3</strong>
               <br />
@@ -117,7 +117,7 @@ function TechnicalPM() {
           </p>
 
           <figure>
-            <img src={image4} />
+            <img loading="lazy" decoding="async" src={image4} />
             <figcaption>
               <strong>Figure 4</strong>
               <br />
@@ -152,7 +152,7 @@ function TechnicalPM() {
           </p>
 
           <figure>
-            <img src={image5} />
+            <img loading="lazy" decoding="async" src={image5} />
             <figcaption>
               <strong>Figure 5</strong>
               <br />
@@ -174,7 +174,7 @@ function TechnicalPM() {
           </p>
 
           <figure>
-            <img src={image6} />
+            <img loading="lazy" decoding="async" src={image6} />
             <figcaption>
               <strong>Figure 6</strong>
               <br />
