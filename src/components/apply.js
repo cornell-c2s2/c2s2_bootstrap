@@ -1,9 +1,7 @@
 import React from "react";
 
 const Apply = () => {
-  const upperclassmenFormUrl =
-    "https://docs.google.com/forms/d/e/1FAIpQLSfOtUdHIxSDMXAi9Sor3kFOB2UwRepmBt7YxTGUKBilWGz3nQ/viewform?usp=dialog";
-  const firstYearTransferFormUrl =
+  const underclassmenFormUrl =
     "https://docs.google.com/forms/d/e/1FAIpQLScJM43tTYX9PDSqFV5Y_KXmL_Jm8z4jTIwN4YJHQwDHLbMGKw/viewform?usp=dialog";
 
   return (
@@ -27,19 +25,22 @@ const Apply = () => {
               </div>
             </div>
 
-            <div className="row">
+            <div className="row justify-content-center g-4 align-items-stretch">
               <div
-                className="col-md-6 col-lg-6 col-sm-12 d-block align-items-center"
+                className="col-12 col-md-6 d-flex"
                 data-aos="zoom-in"
                 data-aos-delay="100"
               >
-                <div className="icon-box">
+                <div className="icon-box w-100 h-100">
                   <div className="icon">
                     <i className="bx bx-file"></i>
                   </div>
-                  <h4 className="title">Upperclassmen Application</h4>
+                  <h4 className="title">Underclassmen Application</h4>
+                  <p className="description">
+                    For first-year and transfer students.
+                  </p>
                   <a
-                    href={upperclassmenFormUrl}
+                    href={underclassmenFormUrl}
                     target="_blank"
                     rel="noreferrer"
                     className="application-btn"
@@ -50,50 +51,19 @@ const Apply = () => {
               </div>
 
               <div
-                className="col-md-6 col-lg-6 col-sm-12 d-block align-items-center"
+                className="col-12 col-md-6 d-flex"
                 data-aos="zoom-in"
                 data-aos-delay="200"
               >
-                <div className="icon-box">
-                  <div className="icon">
-                    <i className="bx bx-file"></i>
-                  </div>
-                  <h4 className="title">First Year & Transfer Application</h4>
-                  <a
-                    href={firstYearTransferFormUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="application-btn"
-                  >
-                    Open Application Form
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <div className="row justify-content-center mt-4">
-              <div
-                className="col-12 d-block align-items-center"
-                data-aos="zoom-in"
-                data-aos-delay="300"
-              >
-                <div className="icon-box">
+                <div className="icon-box w-100 h-100">
                   <div className="icon">
                     <i className="bx bx-calendar-event"></i>
                   </div>
-                  <h4 className="title">Info Sessions</h4>
-
-                  
-                  <div className="row justify-content-center mt-4">
-                    <div className="col-10 col-md-6 text-center">
-                      <img loading="lazy" decoding="async"
-                        src="/join-flyer.png"
-                        alt="Join C2S2 Flyer"
-                        className="img-fluid"
-                        style={{ borderRadius: "4px" }}
-                      />
-                    </div>
-                  </div>
+                  <h4 className="title">Upcoming Info Session</h4>
+                  <p className="description mb-1">
+                    Monday, September 28th, from 5–6 PM
+                  </p>
+                  <p className="description mb-0">Rhodes Hall 571</p>
                 </div>
               </div>
             </div>
