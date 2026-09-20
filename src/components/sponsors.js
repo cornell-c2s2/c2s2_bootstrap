@@ -1,9 +1,10 @@
 import React from "react";
-import nordtech from "../assets/img/sponsors/nordtech.png";
-import amd from "../assets/img/sponsors/amd.png";
-import cadence from "../assets/img/sponsors/cadence.png";
+import nordtech from "../assets/img/sponsors/nordtech.webp";
+import amd from "../assets/img/sponsors/amd.webp";
+import cadence from "../assets/img/sponsors/cadence.webp";
 import marvell from "../assets/img/sponsors/marvell.webp";
 import aws from "../assets/img/sponsors/aws.webp";
+import sandia from "../assets/img/sponsors/sandia.webp";
 
 function Sponsors() {
   return (
@@ -51,7 +52,7 @@ function Sponsors() {
                 loading="lazy"
                 decoding="async"
                 className="sponsor-logo-sandia"
-                src="/SNL_Stacked_Black_Blue.png"
+                src={sandia}
                 alt="Sandia National Laboratories"
               />
             </a>
