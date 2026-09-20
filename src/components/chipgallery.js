@@ -2,6 +2,7 @@ import React from "react";
 import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
 import puffin from "../assets/img/chips/eagle_digital_24.jpg";
 import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
+import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
 import kestrel from "../assets/img/chips/c2s2-2025-analog.png";
 import goose from "../assets/img/chips/c2s2-2025-digital.png";
 import rfic25 from "../assets/img/chips/c2s2-2025-rfic.png";
@@ -69,6 +70,13 @@ function ChipGallery() {
             date="Spring 2024"
             text="The Spring 24 tapeout builds on top of the Spring 23 tapeout. This is our final iteration of the sound classifier, featuring a 16-bit fixed point (8 integer bits) 32-point Cooley Tukey FFT module, as well as a configurable classifier. Puffin bridges the RISC-V core and the digital classifier via a Wishbone Bus, yielding a more integrated SoC."
             link="/chip-gallery/puffin"
+          />
+          <ChipComponent
+            img={kiwi}
+            name="Kiwi Analog Chip"
+            date="Spring 2024"
+            text="Details coming soon!"
+            link="/chip-gallery/kiwi"
           />
           <ChipComponent
             img={eagle}
