@@ -2824,15 +2824,10 @@ Alumni Section
 }
 
 .sponsor-bar {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 28px;
-  padding: 20px 0;
-  background: transparent;
-  border-radius: 0;
-  box-shadow: none;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  padding: 20px 0 48px;
   margin-top: 30px;
 }
 
@@ -2840,54 +2835,96 @@ Alumni Section
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 1;
-  padding: 10px;
-}
-
-.sponsor-bar a.sponsor-link-nordtech {
-  flex: 1.25;
+  overflow: hidden;
+  min-height: 150px;
+  padding: 28px 34px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid rgba(179, 27, 27, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(68, 10, 10, 0.06);
+  transition: transform 0.25s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .sponsor-bar img {
-  max-height: 80px;
-  width: 100%;
+  display: block;
+  width: auto;
+  max-width: 240px;
+  max-height: 72px;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: transform 0.25s ease;
 }
 
-.sponsor-bar img.sponsor-logo-nordtech {
-  max-height: 166px;
+.sponsor-bar img.sponsor-logo-sandia {
+  max-width: 190px;
+  max-height: 82px;
 }
 
-.sponsor-bar img:hover {
-  transform: scale(1.05);
+.sponsor-bar img.sponsor-logo-aws {
+  max-width: 145px;
+  max-height: 88px;
+}
+
+.sponsor-bar a:focus-visible {
+  border-color: rgba(179, 27, 27, 0.24);
+  box-shadow: 0 14px 34px rgba(68, 10, 10, 0.1);
+  transform: translateY(-4px);
+}
+
+.sponsor-bar a:focus-visible {
+  outline: 3px solid rgba(179, 27, 27, 0.3);
+  outline-offset: 3px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .sponsor-bar a:hover {
+    border-color: rgba(179, 27, 27, 0.24);
+    box-shadow: 0 14px 34px rgba(68, 10, 10, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .sponsor-bar a:hover img {
+    transform: scale(1.025);
+  }
+}
+
+@media (max-width: 991px) {
+  .sponsor-bar {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 576px) {
   .sponsor-bar {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 16px;
+    gap: 12px;
+    padding-bottom: 32px;
+    margin-top: 18px;
   }
 
   .sponsor-bar a {
-    width: calc(50% - 8px);
-    flex: 0 0 calc(50% - 8px);
-  }
-
-  .sponsor-bar a.sponsor-link-nordtech {
-    width: calc(50% - 8px);
-    flex: 0 0 calc(50% - 8px);
+    min-height: 112px;
+    padding: 20px 16px;
+    border-radius: 12px;
   }
 
   .sponsor-bar img {
-    max-height: 60px;
-    max-width: 140px;
+    max-width: 135px;
+    max-height: 56px;
   }
 
-  .sponsor-bar img.sponsor-logo-nordtech {
-    max-height: 103px;
+  .sponsor-bar img.sponsor-logo-wide {
+    max-width: 112px;
+    max-height: 48px;
+  }
+
+  .sponsor-bar img.sponsor-logo-sandia {
+    max-width: 120px;
+    max-height: 62px;
+  }
+
+  .sponsor-bar img.sponsor-logo-aws {
+    max-width: 86px;
+    max-height: 64px;
   }
 }
 

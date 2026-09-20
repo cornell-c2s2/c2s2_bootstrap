@@ -2,6 +2,8 @@ import React from "react";
 import nordtech from "../assets/img/sponsors/nordtech.png";
 import amd from "../assets/img/sponsors/amd.png";
 import cadence from "../assets/img/sponsors/cadence.png";
+import marvell from "../assets/img/sponsors/marvell.webp";
+import aws from "../assets/img/sponsors/aws.webp";
 
 function Sponsors() {
   return (
@@ -32,17 +34,53 @@ function Sponsors() {
           </div>
 
           <div className="sponsor-bar" data-aos="zoom-in" data-aos-delay="100">
-            <a className="sponsor-link-nordtech" target="_blank" href="https://nordtech.com">
-              <img loading="lazy" decoding="async" className="sponsor-logo-nordtech" src={nordtech} alt="Nordtech" />
+            <a target="_blank" rel="noreferrer" href="https://nordtech.com">
+              <img loading="lazy" decoding="async" src={nordtech} alt="NORDTECH" />
             </a>
-            <a target="_blank" href="https://amd.com">
-              <img loading="lazy" decoding="async" src={amd} alt="AMD" />
+            <a target="_blank" rel="noreferrer" href="https://amd.com">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-wide"
+                src={amd}
+                alt="AMD"
+              />
             </a>
-            <a target="_blank" href="https://sandia.gov/">
-              <img loading="lazy" decoding="async" src="/SNL_Stacked_Black_Blue.png" alt="Sandia National Laboratories" />
+            <a target="_blank" rel="noreferrer" href="https://sandia.gov/">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-sandia"
+                src="/SNL_Stacked_Black_Blue.png"
+                alt="Sandia National Laboratories"
+              />
             </a>
-            <a target="_blank" href="https://www.cadence.com/">
-              <img loading="lazy" decoding="async" src={cadence} alt="Cadence" />
+            <a target="_blank" rel="noreferrer" href="https://www.cadence.com/">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-wide"
+                src={cadence}
+                alt="Cadence"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://www.marvell.com/">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-wide"
+                src={marvell}
+                alt="Marvell"
+              />
+            </a>
+            <a target="_blank" rel="noreferrer" href="https://aws.amazon.com/">
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-aws"
+                src={aws}
+                alt="Amazon Web Services"
+              />
             </a>
           </div>
         </div>
