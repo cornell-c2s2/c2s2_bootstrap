@@ -7,13 +7,24 @@ import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
 import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
 import puffin from "../assets/img/chips/eagle_digital_24.jpg";
 import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
+import analog25 from "../assets/img/chips/c2s2-2025-analog.png";
+import goose from "../assets/img/chips/c2s2-2025-digital.png";
+import rfic25 from "../assets/img/chips/c2s2-2025-rfic.png";
+import kakapo from "../assets/img/chips/c2s2-2026-analog.png";
+import digital26 from "../assets/img/chips/c2s2-2026-digital.png";
+import rfic26 from "../assets/img/chips/c2s2-2026-rfic.png";
 
 const images = {
   kiwi,
   puffin,
   eagle,
   sparrow,
-  "rfic-2025": null,
+  "analog-2025": analog25,
+  goose,
+  "rfic-2025": rfic25,
+  kakapo,
+  "digital-2026": digital26,
+  "rfic-2026": rfic26,
 };
 
 function Chip() {

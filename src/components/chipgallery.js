@@ -2,6 +2,12 @@ import React from "react";
 import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
 import puffin from "../assets/img/chips/eagle_digital_24.jpg";
 import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
+import kestrel from "../assets/img/chips/c2s2-2025-analog.png";
+import goose from "../assets/img/chips/c2s2-2025-digital.png";
+import rfic25 from "../assets/img/chips/c2s2-2025-rfic.png";
+import kakapo from "../assets/img/chips/c2s2-2026-analog.png";
+import digital26 from "../assets/img/chips/c2s2-2026-digital.png";
+import rfic26 from "../assets/img/chips/c2s2-2026-rfic.png";
 
 function ChipGallery() {
   return (
@@ -15,6 +21,48 @@ function ChipGallery() {
       </section>
       <section className="py-5 bg-light">
         <div className="container chip-gallery-container">
+          <ChipComponent
+            img={digital26}
+            name="Digital SoC"
+            date="Spring 2026"
+            text="RISC-V 32IM CPU + on-chip SRAM + systolic array. Details coming soon!"
+            link="/chip-gallery/digital-2026"
+          />
+          <ChipComponent
+            img={rfic26}
+            name="2.4 GHz OOK Transceiver"
+            date="Spring 2026"
+            text="Details coming soon!"
+            link="/chip-gallery/rfic-2026"
+          />
+          <ChipComponent
+            img={kakapo}
+            name="Kakapo Analog Chip"
+            date="Spring 2026"
+            text="Asynchronous SAR ADC, Adiabatic comparator and flash ADC. Details coming soon!"
+            link="/chip-gallery/kakapo"
+          />
+          <ChipComponent
+            img={goose}
+            name="Goose Digital Chip"
+            date="Spring 2025"
+            text="FFT Accelerator and Sound classifier. Details coming soon!"
+            link="/chip-gallery/goose"
+          />
+          <ChipComponent
+            img={rfic25}
+            name="915 MHz OOK Transceiver"
+            date="Spring 2025"
+            text="First RFIC Chip. Details coming soon!"
+            link="/chip-gallery/rfic-2025"
+          />
+          <ChipComponent
+            img={kestrel}
+            name="Kestrel Analog Chip"
+            date="Spring 2025"
+            text="Mixed signal synchronous SAR ADC. Details coming soon!"
+            link="/chip-gallery/analog-2025"
+          />
           <ChipComponent
             img={puffin}
             name="Puffin Digital Chip"
