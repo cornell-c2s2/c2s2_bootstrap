@@ -1,64 +1,64 @@
 import React from "react";
 
 //thumbnails - SP26
-import RidwanahBLIMPThumbnail from "../blogposts/SP26/thumbnails/RidwanahBLIMP.png";
-import AmbilaIMUThumbnail from "../blogposts/SP26/thumbnails/AmbilaIMU.png";
+import RidwanahBLIMPThumbnail from "../blogposts/SP26/thumbnails/RidwanahBLIMP.webp";
+import AmbilaIMUThumbnail from "../blogposts/SP26/thumbnails/AmbilaIMU.webp";
 
 //thumbnails - FA24
-import image4 from "../blogposts/FA24/thumbnails/image4.png";
-import tanyaSoftware from "../blogposts/FA24/thumbnails/TanyaSoftware.png";
-import vayunDigitalThumbnail from "../blogposts/FA24/thumbnails/VayunDigital.png";
-import unboxingThumbnail from "../blogposts/FA24/thumbnails/unboxing.png";
-import groundUpThumbnail from "../blogposts/FA24/thumbnails/groundUp.png";
+import image4 from "../blogposts/FA24/thumbnails/image4.webp";
+import tanyaSoftware from "../blogposts/FA24/thumbnails/TanyaSoftware.webp";
+import vayunDigitalThumbnail from "../blogposts/FA24/thumbnails/VayunDigital.webp";
+import unboxingThumbnail from "../blogposts/FA24/thumbnails/unboxing.webp";
+import groundUpThumbnail from "../blogposts/FA24/thumbnails/groundUp.webp";
 
 //thumbnails - SP24
-import ASICDesignFlowThumbnail from "../blogposts/SP24/thumbnails/ASICDesignFlow.png";
-import ChipChatterThumbnail from "../blogposts/SP24/thumbnails/ChipChatter.png";
-import chooseFighterThumbnail from "../blogposts/SP24/thumbnails/chooseFighter.png";
-import CMakeThumbnail from "../blogposts/SP24/thumbnails/CMake.png";
-import GDSThumbnail from "../blogposts/SP24/thumbnails/GDS.png";
-import ImgSiliconThumbnail from "../blogposts/SP24/thumbnails/ImgSilicon.png";
-import MagicThumbnail from "../blogposts/SP24/thumbnails/Magic.png";
-import NotEasyThumbnail from "../blogposts/SP24/thumbnails/NotEasy.png";
-import OverCloudThumbnail from "../blogposts/SP24/thumbnails/OverCloud.png";
-import ScrubJayThumbnail from "../blogposts/SP24/thumbnails/ScrubJay.png";
-import TechnicalPMThumbnail from "../blogposts/SP24/thumbnails/TechnicalPM.png";
-import TwoWorldsThumbnail from "../blogposts/SP24/thumbnails/TwoWorlds.png";
-import VerifyBetterFFTThumbnail from "../blogposts/SP24/thumbnails/VerifyBetterFFT.png";
+import ASICDesignFlowThumbnail from "../blogposts/SP24/thumbnails/ASICDesignFlow.webp";
+import ChipChatterThumbnail from "../blogposts/SP24/thumbnails/ChipChatter.webp";
+import chooseFighterThumbnail from "../blogposts/SP24/thumbnails/chooseFighter.webp";
+import CMakeThumbnail from "../blogposts/SP24/thumbnails/CMake.webp";
+import GDSThumbnail from "../blogposts/SP24/thumbnails/GDS.webp";
+import ImgSiliconThumbnail from "../blogposts/SP24/thumbnails/ImgSilicon.webp";
+import MagicThumbnail from "../blogposts/SP24/thumbnails/Magic.webp";
+import NotEasyThumbnail from "../blogposts/SP24/thumbnails/NotEasy.webp";
+import OverCloudThumbnail from "../blogposts/SP24/thumbnails/OverCloud.webp";
+import ScrubJayThumbnail from "../blogposts/SP24/thumbnails/ScrubJay.webp";
+import TechnicalPMThumbnail from "../blogposts/SP24/thumbnails/TechnicalPM.webp";
+import TwoWorldsThumbnail from "../blogposts/SP24/thumbnails/TwoWorlds.webp";
+import VerifyBetterFFTThumbnail from "../blogposts/SP24/thumbnails/VerifyBetterFFT.webp";
 
 //thumbnails - FA23
-import ABlinkSiliconsPotentialThumbnail from "../blogposts/FA23/thumbnails/ABlinkIntoSiliconsPotential.png";
-import ChippingAwayAtChallengesThumbnail from "../blogposts/FA23/thumbnails/ChippingAwayAtChallenges.png";
-import DesigningAndSynthesizingABetterFFTThumbnail from "../blogposts/FA23/thumbnails/DesigningAndSynthesizingABetterFFT.png";
-import DigitalArtThumbnail from "../blogposts/FA23/thumbnails/DigitalArt.png";
-import ElectronicDesignAutomationThumbnail from "../blogposts/FA23/thumbnails/ElectronicDesignAutomation.png";
-import FromSandToSiliconThumbnail from "../blogposts/FA23/thumbnails/FromSandToSilicon.png";
-import HelloWorldThumbnail from "../blogposts/FA23/thumbnails/HelloWorld.png";
-import IterativeVsUnrolledCalculationsThumbnail from "../blogposts/FA23/thumbnails/IterativeVsUnrolledCalculations.png";
-import MallocFromScratchThumbnail from "../blogposts/FA23/thumbnails/MallocFromScratch.png";
-import PCBDesignThumbnail from "../blogposts/FA23/thumbnails/PCBDesign.png";
-import RepresentingNumbersInHardwareThumbnail from "../blogposts/FA23/thumbnails/RepresentingNumbersInHardware.png";
-import TestAndValOfPCBThumbnails from "../blogposts/FA23/thumbnails/TestAndValOfPCBs.png";
-import TheAnalogSubteamProcessFlowThumbnail from "../blogposts/FA23/thumbnails/TheAnalogSubteamProcessFlow.png";
-import UnravelingBirdSoundsWithSpectrogramsThumbnail from "../blogposts/FA23/thumbnails/UnravelingBirdSoundsWithSpectrograms.png";
+import ABlinkSiliconsPotentialThumbnail from "../blogposts/FA23/thumbnails/ABlinkIntoSiliconsPotential.webp";
+import ChippingAwayAtChallengesThumbnail from "../blogposts/FA23/thumbnails/ChippingAwayAtChallenges.webp";
+import DesigningAndSynthesizingABetterFFTThumbnail from "../blogposts/FA23/thumbnails/DesigningAndSynthesizingABetterFFT.webp";
+import DigitalArtThumbnail from "../blogposts/FA23/thumbnails/DigitalArt.webp";
+import ElectronicDesignAutomationThumbnail from "../blogposts/FA23/thumbnails/ElectronicDesignAutomation.webp";
+import FromSandToSiliconThumbnail from "../blogposts/FA23/thumbnails/FromSandToSilicon.webp";
+import HelloWorldThumbnail from "../blogposts/FA23/thumbnails/HelloWorld.webp";
+import IterativeVsUnrolledCalculationsThumbnail from "../blogposts/FA23/thumbnails/IterativeVsUnrolledCalculations.webp";
+import MallocFromScratchThumbnail from "../blogposts/FA23/thumbnails/MallocFromScratch.webp";
+import PCBDesignThumbnail from "../blogposts/FA23/thumbnails/PCBDesign.webp";
+import RepresentingNumbersInHardwareThumbnail from "../blogposts/FA23/thumbnails/RepresentingNumbersInHardware.webp";
+import TestAndValOfPCBThumbnails from "../blogposts/FA23/thumbnails/TestAndValOfPCBs.webp";
+import TheAnalogSubteamProcessFlowThumbnail from "../blogposts/FA23/thumbnails/TheAnalogSubteamProcessFlow.webp";
+import UnravelingBirdSoundsWithSpectrogramsThumbnail from "../blogposts/FA23/thumbnails/UnravelingBirdSoundsWithSpectrograms.webp";
 
 //thumbnails - SP23
-import AnalogMultiplexerThumbnail from "../blogposts/SP23/thumbnails/AnalogMultiplexer.png";
-import ConstantGmCurrentReferenceTapeInThumbnail from "../blogposts/SP23/thumbnails/ConstantGmCurrentReferenceTapeIn.png";
-import CrashDetectorsCalculatorsThumbnail from "../blogposts/SP23/thumbnails/CrashDetectorsCalculators.png";
-import DeserializerAndTapeOutUpdateThumbnail from "../blogposts/SP23/thumbnails/DeserializerAndTapeOutUpdate.png";
-import ISPIThumbnail from "../blogposts/SP23/thumbnails/ISPI.png";
-import MagicVLSIvsCadenceVirtuosoThumbnail from "../blogposts/SP23/thumbnails/MagicVLSIvsCadenceVirtuoso.png";
-import ProgressReportThumbnail from "../blogposts/SP23/thumbnails/ProgressReport.png";
-import ProgressReport4_23_23Thumbnail from "../blogposts/SP23/thumbnails/ProgressReport4_23_23.png";
-import ProgressReportMarch2023Thumbnail from "../blogposts/SP23/thumbnails/ProgressReportMarch2023.png";
-import SiliconForScrubJaysThumbnail from "../blogposts/SP23/thumbnails/SiliconForScrubJays.png";
-import SoftwareAndRelativePositionEstimatorThumbnail from "../blogposts/SP23/thumbnails/SoftwareAndRelativePositionEstimator.png";
-import SPIMinionAdapterPythonToolsThumbnail from "../blogposts/SP23/thumbnails/SPIMinion-Adapter-PythonTools.png";
-import SystemArchitectureBlogPostThumbnail from "../blogposts/SP23/thumbnails/SystemArchitectureBlogPost.png";
-import SystemArchitectureProgressReportThumbnail from "../blogposts/SP23/thumbnails/SystemArchitectureProgressReport.png";
-import TheProcessOfAcquiringSponsorsThumbnail from "../blogposts/SP23/thumbnails/TheProcessOfAcquiringSponsors.png";
-import TwoSidesOfACoinThumbnail from "../blogposts/SP23/thumbnails/TwoSidesOfACoin.png";
+import AnalogMultiplexerThumbnail from "../blogposts/SP23/thumbnails/AnalogMultiplexer.webp";
+import ConstantGmCurrentReferenceTapeInThumbnail from "../blogposts/SP23/thumbnails/ConstantGmCurrentReferenceTapeIn.webp";
+import CrashDetectorsCalculatorsThumbnail from "../blogposts/SP23/thumbnails/CrashDetectorsCalculators.webp";
+import DeserializerAndTapeOutUpdateThumbnail from "../blogposts/SP23/thumbnails/DeserializerAndTapeOutUpdate.webp";
+import ISPIThumbnail from "../blogposts/SP23/thumbnails/ISPI.webp";
+import MagicVLSIvsCadenceVirtuosoThumbnail from "../blogposts/SP23/thumbnails/MagicVLSIvsCadenceVirtuoso.webp";
+import ProgressReportThumbnail from "../blogposts/SP23/thumbnails/ProgressReport.webp";
+import ProgressReport4_23_23Thumbnail from "../blogposts/SP23/thumbnails/ProgressReport4_23_23.webp";
+import ProgressReportMarch2023Thumbnail from "../blogposts/SP23/thumbnails/ProgressReportMarch2023.webp";
+import SiliconForScrubJaysThumbnail from "../blogposts/SP23/thumbnails/SiliconForScrubJays.webp";
+import SoftwareAndRelativePositionEstimatorThumbnail from "../blogposts/SP23/thumbnails/SoftwareAndRelativePositionEstimator.webp";
+import SPIMinionAdapterPythonToolsThumbnail from "../blogposts/SP23/thumbnails/SPIMinion-Adapter-PythonTools.webp";
+import SystemArchitectureBlogPostThumbnail from "../blogposts/SP23/thumbnails/SystemArchitectureBlogPost.webp";
+import SystemArchitectureProgressReportThumbnail from "../blogposts/SP23/thumbnails/SystemArchitectureProgressReport.webp";
+import TheProcessOfAcquiringSponsorsThumbnail from "../blogposts/SP23/thumbnails/TheProcessOfAcquiringSponsors.webp";
+import TwoSidesOfACoinThumbnail from "../blogposts/SP23/thumbnails/TwoSidesOfACoin.webp";
 
 function BlogGallery() {
   return (
