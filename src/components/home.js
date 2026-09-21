@@ -52,7 +52,7 @@ function Home() {
                 <img
                   loading="eager"
                   decoding="async"
-                  fetchPriority="high"
+                  fetchpriority="high"
                   src={hero}
                   className="img-fluid animated"
                   alt=""
