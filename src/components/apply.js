@@ -1,4 +1,5 @@
 import React from "react";
+import recruitmentFlyer from "../assets/img/apply/recruitment-flyer.webp";
 
 const Apply = () => {
   const underclassmenFormUrl =
@@ -36,9 +37,10 @@ const Apply = () => {
                     <i className="bx bx-file"></i>
                   </div>
                   <h4 className="title">Underclassmen Application</h4>
-                  <p className="description">
+                  <p className="description mb-1">
                     For first-year and transfer students.
                   </p>
+                  <p className="description">Due Thursday, October 15th</p>
                   <a
                     href={underclassmenFormUrl}
                     target="_blank"
@@ -67,6 +69,21 @@ const Apply = () => {
                 </div>
               </div>
             </div>
+
+            <figure
+              className="application-flyer"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <img
+                src={recruitmentFlyer}
+                alt="C2S2 recruitment flyer: applications for first-year and transfer students are due Thursday, October 15th, with an info session on Monday, September 28th."
+                width="1545"
+                height="1999"
+                loading="lazy"
+                decoding="async"
+              />
+            </figure>
           </div>
         </section>
       </main>

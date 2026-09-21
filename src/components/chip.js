@@ -1,66 +1,50 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
-import chipData from "../assets/json/chip.json";
-import kiwi from "../assets/img/chips/c2s2-2024-analog.jpg";
-import eagle from "../assets/img/chips/c2s2-2023-digital.jpg";
-import puffin from "../assets/img/chips/eagle_digital_24.jpg";
-import sparrow from "../assets/img/chips/Sparrow_AnalogSpring'23.JPG";
-import analog25 from "../assets/img/chips/c2s2-2025-analog.png";
-import goose from "../assets/img/chips/c2s2-2025-digital.png";
-import rfic25 from "../assets/img/chips/c2s2-2025-rfic.png";
-import kakapo from "../assets/img/chips/c2s2-2026-analog.png";
-import digital26 from "../assets/img/chips/c2s2-2026-digital.png";
-import rfic26 from "../assets/img/chips/c2s2-2026-rfic.png";
-
-const images = {
-  kiwi,
-  puffin,
-  eagle,
-  sparrow,
-  "analog-2025": analog25,
-  goose,
-  "rfic-2025": rfic25,
-  kakapo,
-  "digital-2026": digital26,
-  "rfic-2026": rfic26,
-};
+import { chipImages, chips } from "../data/chips.js";
 
 function Chip() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [chip, setChip] = useState(null);
   const [loading, setLoading] = useState(true);
   const [imageModal, setImageModal] = useState(false);
+  const enlargeRef = useRef(null);
+  const closeRef = useRef(null);
 
   useEffect(() => {
     // Extract URL details whenever the location changes
     const pathId = location.pathname.split("/").pop();
 
     // Get chip data from imported JSON
-    const selectedChip = chipData.find((item) => item.id === pathId);
+    const selectedChip = chips.find((item) => item.id === pathId);
     setChip(selectedChip);
     setLoading(false);
   }, [location]);
 
-  // Function to toggle the image modal
-  const toggleImageModal = () => {
-    setImageModal(!imageModal);
-  };
+  const openImageModal = () => setImageModal(true);
 
-  // Close modal if user presses escape key
+  // Closing hands focus back to the control that opened the modal, so a keyboard
+  // visitor doesn't get dropped at the top of the document.
+  const closeImageModal = useCallback(() => {
+    setImageModal(false);
+    enlargeRef.current?.focus();
+  }, []);
+
+  // Move focus into the modal when it opens, and close it on escape.
   useEffect(() => {
+    if (!imageModal) return;
+
+    closeRef.current?.focus();
+
     const handleEsc = (event) => {
-      if (event.key === "Escape") {
-        setImageModal(false);
-      }
+      if (event.key === "Escape") closeImageModal();
     };
     window.addEventListener("keydown", handleEsc);
 
-    return () => {
-      window.removeEventListener("keydown", handleEsc);
-    };
-  }, []);
+    return () => window.removeEventListener("keydown", handleEsc);
+  }, [imageModal, closeImageModal]);
 
   if (loading) {
     return (
@@ -78,20 +62,58 @@ function Chip() {
     );
   }
 
+  const detailedText = chip.text?.trim();
+  const description =
+    detailedText && detailedText.toLowerCase() !== "coming soon."
+      ? detailedText
+      : chip.summary;
+
+  // Arriving from the gallery, going back is a real history back: it returns to
+  // the gallery's own history entry, which keeps the category filter and the
+  // scroll position the visitor left it at. Arriving any other way (a shared
+  // link, a search result) there is nothing to go back to, so link instead.
+  const backToGallery = location.state?.fromGallery ? (
+    <button
+      type="button"
+      className="chip-page__back"
+      onClick={() => navigate(-1)}
+    >
+      <i className="bi bi-arrow-left" aria-hidden="true"></i>
+      Back to Chip Gallery
+    </button>
+  ) : (
+    <Link className="chip-page__back" to="/chip-gallery">
+      <i className="bi bi-arrow-left" aria-hidden="true"></i>
+      Back to Chip Gallery
+    </Link>
+  );
+
   return (
     <main id="main" className="chip-page">
       {/* Image Modal */}
-      {imageModal && images[chip.id] && (
-        <div className="chip-page__modal" onClick={toggleImageModal}>
+      {imageModal && chipImages[chip.id] && (
+        <div
+          className="chip-page__modal"
+          role="dialog"
+          aria-modal="true"
+          aria-label={`${chip.title} chip, enlarged`}
+          onClick={closeImageModal}
+        >
           <div
             className="chip-page__modal-content"
             onClick={(e) => e.stopPropagation()}
           >
-            <span className="chip-page__modal-close" onClick={toggleImageModal}>
+            <button
+              type="button"
+              ref={closeRef}
+              className="chip-page__modal-close"
+              onClick={closeImageModal}
+              aria-label="Close enlarged image"
+            >
               &times;
-            </span>
+            </button>
             <img loading="lazy" decoding="async"
-              src={images[chip.id]}
+              src={chipImages[chip.id]}
               alt={`${chip.title} chip (enlarged)`}
               className="chip-page__modal-image"
             />
@@ -102,8 +124,9 @@ function Chip() {
 
       <section className="chip-page__header">
         <div className="container">
+          {backToGallery}
           <div className="chip-page__title-container">
-            <h1 className="chip-page__title">{chip.title}</h1>
+            <h1 className="chip-page__title" tabIndex="-1">{chip.title}</h1>
             <div className="chip-page__date">{chip.date}</div>
           </div>
         </div>
@@ -113,20 +136,20 @@ function Chip() {
         <div className="container">
           <div className="chip-page__card">
             <div className="chip-page__image-container">
-              {images[chip.id] ? (
-                <>
-                  <img loading="lazy" decoding="async"
-                    src={images[chip.id]}
+              {chipImages[chip.id] ? (
+                <button
+                  type="button"
+                  ref={enlargeRef}
+                  className="chip-page__image-button"
+                  onClick={openImageModal}
+                  aria-label={`Enlarge the ${chip.title} chip image`}
+                >
+                  <img loading="eager" decoding="async" fetchpriority="high"
+                    src={chipImages[chip.id]}
                     alt={`${chip.title} chip`}
                     className="chip-page__image"
-                    onClick={toggleImageModal}
                   />
-                  <div className="chip-page__image-overlay">
-                    <span className="chip-page__image-zoom-text">
-                      Click to enlarge
-                    </span>
-                  </div>
-                </>
+                </button>
               ) : (
                 <div className="chip-page__image-placeholder">
                   <span>Image coming soon</span>
@@ -134,10 +157,12 @@ function Chip() {
               )}
             </div>
             <div className="chip-page__details">
-              <div className="chip-page__description">
-                <h2 className="chip-page__subtitle">Description</h2>
-                <p>{chip.text}</p>
-              </div>
+              {description && (
+                <div className="chip-page__description">
+                  <h2 className="chip-page__subtitle">Description</h2>
+                  <p>{description}</p>
+                </div>
+              )}
 
               {chip.specifications && (
                 <div className="chip-page__specs">
@@ -165,16 +190,6 @@ function Chip() {
                   </ul>
                 </div>
               )} */}
-
-              <div className="chip-page__more-info">
-                <h3 className="chip-page__more-info-title">
-                  Technical Documentation
-                </h3>
-                <p className="chip-page__more-info-text">
-                  Additional technical information and documentation coming
-                  soon.
-                </p>
-              </div>
             </div>
           </div>
         </div>

@@ -3,6 +3,8 @@
     "id": "eagle",
     "title": "Eagle Digital Chip",
     "date": "Spring 2023",
+    "category": "Digital",
+    "summary": "RISC-V LiteX SoC with a custom Cooley-Tukey FFT accelerator.",
     "text": "The 2023 C2S2 Digital Tapeout showcases a design centered around a RISC-V Litex System on Chip. This chip features a custom digital Cooley-Tukey Fast Fourier Transform (FFT) implementation, optimized for high-speed signal processing tasks. The RISC-V architecture provides a flexible and scalable processing platform, enabling efficient execution of complex algorithms and data manipulation.",
     "img_url": "../assets/img/chips/Eagle_Digital_Spring'23.JPG",
     "specifications": {
@@ -27,6 +29,8 @@
     "id": "sparrow",
     "title": "Sparrow Analog Chip",
     "date": "Spring 2023",
+    "category": "Analog",
+    "summary": "Mixed-signal SoC integrating op-amps, analog interfaces, and a multiplier.",
     "text": "The 2023 C2S2 Analog Tapeout features an innovative hardware design centered around a RISC-V Litex System on Chip (SoC). This versatile chip incorporates multiple analog components to enhance its functionality: operational amplifiers – integrated to provide versatile analog signal processing capabilities, 'fingers' implementation – allows for efficient interfacing and control in various analog scenarios, and 'multiplier' implementation – facilitates analog multiplication processes for applications requiring signal modulation and other complex mathematical operations.",
     "img_url": "../assets/img/chips/Sparrow_AnalogSpring'23.JPG",
     "specifications": {
@@ -51,30 +55,22 @@
     "id": "kiwi",
     "title": "Kiwi Analog Chip",
     "date": "Spring 2024",
-    "text": "",
+    "category": "Analog",
+    "summary": "A 4-bit Flash ADC and an 8-bit delta-sigma modulator for analog-to-digital conversion.",
+    "text": "The 2024 C2S2 Analog Tapeout, codename Kiwi, contains a 4-bit Flash ADC and an 8-bit delta-sigma modulator. Both are techniques for discretizing analog signals, such as sound, into digital signals for processing. However, they differ greatly in speed and resolution and therefore target different end-use scenarios. The 4-bit Flash ADC was designed for a speed of 40 MS/s, making it suitable for rapidly converting analog signals at reduced precision. The 8-bit delta-sigma modulator is more suitable for converting lower-speed analog signals into higher-precision digital signals. The delta-sigma modulator did not include a digital demodulator, which made it more difficult to interface with. This issue was addressed in the 2025 ADC.",
     "img_url": "../assets/img/chips/c2s2-2024-analog.jpg",
     "specifications": {
-      "Architecture": "RISC-V Litex SoC with Analog Components",
-      "Process Technology": "Sky130",
-      "Die Size": "1.8mm × 1.8mm",
-      "Op-Amp Gain": ">60dB",
-      "Bandwidth": "10MHz",
-      "Multiplier Range": "±1.5V input",
-      "Chip Label": "A2"
-    },
-    "features": [
-      "Integrated operational amplifiers for analog signal processing",
-      "Custom 'fingers' implementation for efficient analog interfacing",
-      "Analog multiplier for signal modulation applications",
-      "Mixed-signal design combining digital processing with analog I/O",
-      "RISC-V Litex SoC for control and digital processing",
-      "Optimized for low-noise analog operations"
-    ]
+      "Flash ADC": "4-bit resolution, 40 MS/s",
+      "Delta-Sigma Modulator": "8-bit resolution",
+      "Digital Demodulator": "Not included on chip"
+    }
   },
   {
     "id": "puffin",
     "title": "Puffin Digital Chip",
     "date": "Spring 2024",
+    "category": "Digital",
+    "summary": "RISC-V SoC connecting an FFT sound classifier through a Wishbone bus.",
     "text": "The Spring 24 tapeout builds on top of the Spring 23 tapeout. This is our final iteration of the sound classifier, featuring a 16-bit fixed point (8 integer bits) 32-point Cooley Tukey FFT module, as well as a configurable classifier.\n\nPreviously, the RISC-V core and the digital classifier were two isolated blocks on the same tapeout. Puffin is where we bridged the gap between the two blocks by interfacing them with a Wishbone Bus, yielding a more integrated SoC.",
     "img_url": "../assets/img/chips/c2s2-2023-digital.jpg",
     "specifications": {
@@ -96,22 +92,35 @@
   },
   {
     "id": "rfic-2025",
-    "title": "2025 RFIC Chip",
+    "title": "915 MHz OOK Transceiver",
     "date": "Spring 2025",
+    "category": "RFIC",
+    "summary": "C2S2's first RFIC tapeout, centered on a 915 MHz OOK transceiver.",
     "text": "Coming soon.",
     "img_url": "../assets/img/chips/c2s2-2025-rfic.png"
   },
   {
     "id": "analog-2025",
-    "title": "2025 Analog Chip",
+    "title": "Kestrel Analog Chip",
     "date": "Spring 2025",
-    "text": "Coming soon.",
-    "img_url": "../assets/img/chips/c2s2-2025-analog.png"
+    "category": "Analog",
+    "summary": "An 8-bit SAR ADC optimized for resolution, power, and straightforward digital interfacing.",
+    "text": "The 2025 C2S2 Analog Tapeout, codename Kestrel, contains an 8-bit SAR ADC (successive-approximation analog-to-digital converter) and several test structures. Similar to the 2024 Kiwi ADC, it converts continuous analog signals, such as audio, temperature, and motion, into discrete digital values for further processing by the digital tapeout. Although it serves a similar purpose, this SAR ADC is more highly optimized for resolution, power, and ease of digital interfacing, targeting battery-powered audio-sampling use cases. The ADC can also be used for medium-speed applications, sampling at 5 MS/s. Its straightforward digital interface gives the ADC IP future potential for integration with a digital chip with little added complexity, enabling higher levels of system integration. Real-world test data confirms that the ADC is fully functional and draws power on the order of microwatts.",
+    "img_url": "../assets/img/chips/c2s2-2025-analog.png",
+    "specifications": {
+      "Converter": "8-bit SAR ADC",
+      "Sample Rate": "5 MS/s",
+      "Target Applications": "Battery-powered audio sampling and medium-speed sensing",
+      "Measured Status": "Fully functional",
+      "Power": "On the order of microwatts"
+    }
   },
   {
     "id": "goose",
     "title": "Goose Digital Chip",
     "date": "Spring 2025",
+    "category": "Digital",
+    "summary": "FFT accelerator and hardware sound classifier.",
     "text": "Coming soon.",
     "img_url": "../assets/img/chips/c2s2-2025-digital.png"
   },
@@ -119,20 +128,26 @@
     "id": "kakapo",
     "title": "Kakapo Analog Chip",
     "date": "Spring 2026",
+    "category": "Analog",
+    "summary": "Asynchronous SAR ADC, adiabatic comparator, and flash ADC.",
     "text": "Coming soon.",
     "img_url": "../assets/img/chips/c2s2-2026-analog.png"
   },
   {
     "id": "digital-2026",
-    "title": "2026 Digital Chip",
+    "title": "Digital SoC",
     "date": "Spring 2026",
+    "category": "Digital",
+    "summary": "RISC-V 32IM CPU with on-chip SRAM and a systolic array.",
     "text": "Coming soon.",
     "img_url": "../assets/img/chips/c2s2-2026-digital.png"
   },
   {
     "id": "rfic-2026",
-    "title": "2026 RFIC Chip",
+    "title": "2.4 GHz OOK Transceiver",
     "date": "Spring 2026",
+    "category": "RFIC",
+    "summary": "A 2.4 GHz on-off keying transceiver.",
     "text": "Coming soon.",
     "img_url": "../assets/img/chips/c2s2-2026-rfic.png"
   }

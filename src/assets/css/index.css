@@ -770,75 +770,247 @@ section {
 # Chip Gallery
 --------------------------------------------------------------*/
 
-/* Main container styling */
-.chip-gallery-container {
-  /* background-color: white !important; */
-  max-width: 1200px;
-  margin: 0 auto;
+.chip-gallery-page {
+  background: #fff;
 }
 
-/* Individual chip item styling */
-.chip-gallery-item {
-  margin-bottom: 2.5rem;
+.chip-gallery-featured,
+.chip-gallery-archive {
+  padding: 50px 0;
 }
 
-.chip-gallery-card {
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.chip-gallery-featured {
+  background: #fff;
 }
 
-.chip-gallery-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.chip-gallery-archive {
+  background: #fef7f7;
 }
 
-/* Image container and styling */
-.chip-image-container {
+.chip-gallery-heading {
+  text-align: center;
+  padding-bottom: 0;
+  margin-bottom: 24px;
+}
+
+.chip-gallery-heading h2 {
+  margin: 0;
+  padding-bottom: 0;
+  color: #440a0a;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.chip-feature-grid,
+.chip-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.chip-card {
   display: flex;
+  min-width: 0;
+  overflow: hidden;
+  flex-direction: column;
+  color: #2f0707;
+  background: #fff;
+  border: 1px solid rgba(68, 10, 10, 0.09);
+  border-radius: 14px;
+  box-shadow: 0 6px 20px rgba(68, 10, 10, 0.045);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.chip-card:hover {
+  color: #2f0707;
+}
+
+.chip-card--featured {
+  border-color: rgba(179, 27, 27, 0.11);
+  box-shadow: 0 14px 38px rgba(68, 10, 10, 0.08);
+}
+
+.chip-card__media {
+  display: flex;
+  aspect-ratio: 4 / 5;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  background-color: white;
-  border-right: 1px solid #eee;
+  overflow: hidden;
+  padding: 18px;
+  background: #fef7f7;
 }
 
-.chip-image {
+.chip-card__media img {
   width: 100%;
-  max-width: 250px;
-  height: auto;
-  object-fit: contain;
-}
-
-/* Description area styling */
-.chip-desc {
-  padding: 1.5rem;
   height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 18px rgba(47, 7, 7, 0.15));
+  transition: transform 0.35s ease;
+}
+
+.chip-card__body {
   display: flex;
+  flex: 1;
   flex-direction: column;
+  padding: 24px;
 }
 
-.chip-title {
-  color: #b31b1b;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-  font-size: 1.5rem;
-}
-
-.chip-date {
+.chip-card__meta {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 7px;
   color: #6c757d;
-  font-weight: 500;
-  margin-bottom: 1rem;
-  font-size: 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
 }
 
-.chip-text {
-  flex-grow: 1;
-  margin-bottom: 1.5rem;
-  color: #495057;
+.chip-card h3 {
+  margin: 0;
+  color: #440a0a;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.chip-card p {
+  flex: 1;
+  margin: 11px 0 0;
+  color: #5a6570;
+  font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.chip-card:focus-visible {
+  outline: 3px solid rgba(179, 27, 27, 0.35);
+  outline-offset: 4px;
+}
+
+.chip-gallery-toolbar {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.chip-gallery-filters {
+  display: flex;
+  gap: 6px;
+}
+
+.chip-filter {
+  min-height: 44px;
+  padding: 9px 16px;
+  color: #6c757d;
+  background: transparent;
+  border: 0;
+  border-radius: 9px;
+  font-size: 0.9rem;
+  font-weight: 650;
+  transition: color 0.2s ease, background-color 0.2s ease;
+}
+
+.chip-filter:hover,
+.chip-filter:focus-visible {
+  color: #8f1515;
+  background: #fef7f7;
+}
+
+.chip-filter:focus-visible {
+  outline: 2px solid rgba(179, 27, 27, 0.35);
+  outline-offset: 2px;
+}
+
+.chip-filter--active,
+.chip-filter--active:hover {
+  color: #fff;
+  background: #b31b1b;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .chip-card:hover {
+    border-color: rgba(179, 27, 27, 0.24);
+    box-shadow: 0 18px 44px rgba(68, 10, 10, 0.12);
+    transform: translateY(-5px);
+  }
+
+  .chip-card:hover .chip-card__media img {
+    transform: scale(1.035);
+  }
+
+}
+
+@media (max-width: 991px) {
+  .chip-feature-grid,
+  .chip-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 767px) {
+  .chip-gallery-featured,
+  .chip-gallery-archive {
+    padding: 40px 0;
+  }
+
+  .chip-feature-grid,
+  .chip-archive-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .chip-gallery-toolbar {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    margin-bottom: 22px;
+  }
+
+  .chip-gallery-filters {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .chip-filter {
+    min-width: 0;
+    padding-inline: 12px;
+  }
+
+  .chip-card__media {
+    aspect-ratio: 1;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chip-card__body {
+    padding: 21px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chip-card,
+  .chip-card__media img,
+  .chip-filter {
+    transition: none;
+  }
+
+  .chip-card:hover,
+  .chip-card:hover .chip-card__media img {
+    transform: none;
+  }
 }
 
 /* Original Button styling */
@@ -862,27 +1034,6 @@ section {
   color: white;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .chip-image-container {
-    border-right: none;
-    border-bottom: 1px solid #eee;
-    padding: 1rem;
-  }
-
-  .chip-image {
-    max-width: 200px;
-  }
-
-  .chip-desc {
-    padding: 1.25rem;
-  }
-
-  .chip-title {
-    font-size: 1.3rem;
-  }
-}
-
 .bg-light {
   background-color: white !important;
 }
@@ -897,89 +1048,32 @@ section {
   padding-bottom: 3rem;
 }
 
-/* Grid system */
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
-.chip-gallery-container .g-0 {
-  margin-right: 0;
-  margin-left: 0;
-}
-
-.chip-gallery-container .g-0 > .col-md-4,
-.chip-gallery-container .g-0 > .col-md-8 {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-.chip-gallery-container .col-md-4 {
-  flex: 0 0 33.333333%;
-  max-width: 33.333333%;
-}
-
-.chip-gallery-container .col-md-8 {
-  flex: 0 0 66.666667%;
-  max-width: 66.666667%;
-}
-
-@media (max-width: 768px) {
-  .chip-gallery-container .col-md-4,
-  .chip-gallery-container .col-md-8 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-
-  .chip-gallery-container .row {
-    flex-direction: column;
-  }
-}
 .chip-page .chip-page__image-container {
   position: relative;
   cursor: pointer;
   overflow: hidden;
 }
 
+.chip-page .chip-page__image-button {
+  display: block;
+  padding: 0;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+.chip-page .chip-page__image-button:focus-visible {
+  outline: 3px solid rgba(179, 27, 27, 0.35);
+  outline-offset: 4px;
+}
+
 .chip-page .chip-page__image {
+  display: block;
   transition: transform 0.3s ease;
 }
 
 .chip-page .chip-page__image-container:hover .chip-page__image {
   transform: scale(1.05);
-}
-
-/* Overlay with zoom text */
-.chip-page .chip-page__image-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  /* background-color: rgba(
-    177,
-    74,
-    48,
-    0.8
-  ); Adjust color to match your site's theme */
-  overflow: hidden;
-  width: 100%;
-  height: 0;
-  transition: 0.5s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.chip-page .chip-page__image-container:hover .chip-page__image-overlay {
-  height: 40px;
-}
-
-.chip-page .chip-page__image-zoom-text {
-  color: white;
-  font-size: 14px;
-  font-weight: 500;
 }
 
 /* Modal styles */
@@ -1009,18 +1103,38 @@ section {
 }
 
 .chip-page .chip-page__modal-close {
+  /* Sits over the die photo, which can be anywhere from near-black to pale
+     pink, so the glyph carries its own dark disc. */
+  display: flex;
   position: absolute;
-  top: 20px;
-  right: 40px;
-  color: white;
-  font-size: 35px;
+  top: 16px;
+  right: 16px;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  color: #fff;
+  background: rgba(47, 7, 7, 0.72);
+  border: 0;
+  border-radius: 50%;
+  font-family: inherit;
+  font-size: 30px;
+  line-height: 1;
   font-weight: bold;
   cursor: pointer;
+  transition: background-color 0.2s ease;
   z-index: 1001;
 }
 
-.chip-page .chip-page__modal-close:hover {
-  color: white;
+.chip-page .chip-page__modal-close:hover,
+.chip-page .chip-page__modal-close:focus-visible {
+  color: #fff;
+  background: rgba(47, 7, 7, 0.9);
+}
+
+.chip-page .chip-page__modal-close:focus-visible {
+  outline: 3px solid rgba(255, 255, 255, 0.85);
+  outline-offset: 2px;
 }
 
 .chip-page .chip-page__modal-image {
@@ -1062,6 +1176,28 @@ section {
 
 .chip-page__title-container {
   text-align: center;
+}
+
+.chip-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  color: #b31b1b;
+  background: transparent;
+  border: 0;
+  font: inherit;
+  font-weight: 600;
+}
+
+.chip-page__back:hover,
+.chip-page__back:focus-visible {
+  color: #440a0a;
+}
+
+.chip-page__back:focus-visible {
+  outline: 2px solid rgba(179, 27, 27, 0.35);
+  outline-offset: 4px;
 }
 
 .chip-page__title {
@@ -1131,6 +1267,10 @@ section {
 
 .chip-page__specs-list,
 .chip-page__features-list {
+  /* The template's global `ul { display: inline-block }` shrinks the list to its
+     widest row, leaving the divider under each spec ending in a ragged edge
+     partway across the column. */
+  display: block;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1159,23 +1299,6 @@ section {
   left: 0;
   color: var(--primary-color);
   font-weight: bold;
-}
-
-.chip-page__more-info {
-  background-color: var(--light-bg);
-  padding: 1.5rem;
-  border-radius: 8px;
-  border-left: 4px solid var(--primary-color);
-}
-
-.chip-page__more-info-title {
-  margin-top: 0;
-  color: var(--primary-color);
-  font-size: 1.3rem;
-}
-
-.chip-page__more-info-text {
-  margin-bottom: 0;
 }
 
 .chip-page__loading,
@@ -2631,6 +2754,29 @@ Alumni Section
 .application-btn:hover {
   color: #fff;
   background: #de2424;
+}
+
+.application-flyer {
+  max-width: 680px;
+  overflow: hidden;
+  margin: 48px auto 0;
+  background: #000;
+  border: 1px solid rgba(68, 10, 10, 0.1);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(68, 10, 10, 0.08);
+}
+
+.application-flyer img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767px) {
+  .application-flyer {
+    margin-top: 32px;
+    border-radius: 12px;
+  }
 }
 
 /*--------------------------------------------------------------
