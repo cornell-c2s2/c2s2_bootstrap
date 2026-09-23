@@ -3007,8 +3007,9 @@ Alumni Section
 }
 
 .sponsor-bar img.sponsor-logo-aws {
-  max-width: 145px;
-  max-height: 88px;
+  width: 132px;
+  max-width: none;
+  max-height: none;
 }
 
 .sponsor-bar a:focus-visible {
@@ -3069,8 +3070,9 @@ Alumni Section
   }
 
   .sponsor-bar img.sponsor-logo-aws {
-    max-width: 86px;
-    max-height: 64px;
+    width: 108px;
+    max-width: none;
+    max-height: none;
   }
 }
 

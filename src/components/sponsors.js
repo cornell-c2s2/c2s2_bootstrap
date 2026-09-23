@@ -2,8 +2,8 @@ import React from "react";
 import nordtech from "../assets/img/sponsors/nordtech.webp";
 import amd from "../assets/img/sponsors/amd.webp";
 import cadence from "../assets/img/sponsors/cadence.webp";
-import marvell from "../assets/img/sponsors/marvell.webp";
-import aws from "../assets/img/sponsors/aws.webp";
+import marvell from "../assets/img/sponsors/marvell-logo.png";
+import aws from "../assets/img/sponsors/aws-logo.png";
 import sandia from "../assets/img/sponsors/sandia.webp";
 
 function Sponsors() {
@@ -74,7 +74,11 @@ function Sponsors() {
                 alt="Marvell"
               />
             </a>
-            <a target="_blank" rel="noreferrer" href="https://aws.amazon.com/">
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://aws.amazon.com/what-is-cloud-computing"
+            >
               <img
                 loading="lazy"
                 decoding="async"
