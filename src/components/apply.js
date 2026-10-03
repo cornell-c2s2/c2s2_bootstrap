@@ -77,12 +77,31 @@ const Apply = () => {
             >
               <img
                 src={recruitmentFlyer}
-                alt="C2S2 recruitment flyer: applications for first-year and transfer students are due Thursday, October 15th, with an info session on Monday, September 28th."
+                alt="C2S2 recruitment flyer: applications for first-year and transfer students are due Thursday, October 15th, with office hours on Wednesday, October 7th from 5–6 PM in Rhodes Hall 571."
                 width="1545"
                 height="1999"
                 loading="lazy"
                 decoding="async"
               />
+              <svg
+                className="application-flyer-event-update"
+                viewBox="0 0 1545 1999"
+                preserveAspectRatio="xMidYMid meet"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="825" y="930" width="700" height="255" fill="#000" />
+                <text x="1170" y="996" className="application-flyer-event-heading">
+                  OFFICE HOURS:
+                </text>
+                <rect x="860" y="1020" width="620" height="156" fill="#c90000" />
+                <text x="1170" y="1087" className="application-flyer-event-date">
+                  WEDNESDAY, OCT. 7
+                </text>
+                <text x="1170" y="1143" className="application-flyer-event-time">
+                  FROM 5–6 PM
+                </text>
+              </svg>
             </figure>
           </div>
         </section>
