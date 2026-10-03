@@ -61,9 +61,9 @@ const Apply = () => {
                   <div className="icon">
                     <i className="bx bx-calendar-event"></i>
                   </div>
-                  <h4 className="title">Upcoming Info Session</h4>
+                  <h4 className="title">Upcoming Office Hours</h4>
                   <p className="description mb-1">
-                    Monday, September 28th, from 5–6 PM
+                    Wednesday, October 7th, from 5–6 PM
                   </p>
                   <p className="description mb-0">Rhodes Hall 571</p>
                 </div>
