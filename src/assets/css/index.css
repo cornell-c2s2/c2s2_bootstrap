@@ -3038,12 +3038,6 @@ Alumni Section
   max-height: 82px;
 }
 
-.sponsor-bar img.sponsor-logo-aws {
-  width: 132px;
-  max-width: none;
-  max-height: none;
-}
-
 .sponsor-bar a:focus-visible {
   border-color: rgba(179, 27, 27, 0.24);
   box-shadow: 0 14px 34px rgba(68, 10, 10, 0.1);
@@ -3101,11 +3095,6 @@ Alumni Section
     max-height: 62px;
   }
 
-  .sponsor-bar img.sponsor-logo-aws {
-    width: 108px;
-    max-width: none;
-    max-height: none;
-  }
 }
 
 .sponsors .sponsor {

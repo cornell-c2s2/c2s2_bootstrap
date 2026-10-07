@@ -3,7 +3,7 @@ import nordtech from "../assets/img/sponsors/nordtech.webp";
 import amd from "../assets/img/sponsors/amd.webp";
 import cadence from "../assets/img/sponsors/cadence.webp";
 import marvell from "../assets/img/sponsors/marvell-logo.png";
-import aws from "../assets/img/sponsors/aws-logo.png";
+import annapurnaLabs from "../assets/img/sponsors/annapurna-labs.png";
 import sandia from "../assets/img/sponsors/sandia.webp";
 
 function Sponsors() {
@@ -77,14 +77,14 @@ function Sponsors() {
             <a
               target="_blank"
               rel="noreferrer"
-              href="https://aws.amazon.com/what-is-cloud-computing"
+              href="https://amazon.jobs/content/en/teams/amazon-web-services/annapurna-labs"
             >
               <img
                 loading="lazy"
                 decoding="async"
-                className="sponsor-logo-aws"
-                src={aws}
-                alt="Amazon Web Services"
+                className="sponsor-logo-wide"
+                src={annapurnaLabs}
+                alt="Annapurna Labs"
               />
             </a>
           </div>
