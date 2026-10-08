@@ -1695,6 +1695,38 @@ section {
   color: #de2424;
 }
 
+.team.leadership-section {
+  padding-top: 52px;
+}
+
+.breadcrumbs .section-title .team-page-intro {
+  max-width: 760px;
+  padding: 0;
+  margin: 14px auto 0;
+  color: #777;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.breadcrumbs .section-title .team-page-intro::after {
+  content: none;
+}
+
+.leadership-group {
+  margin-bottom: 34px;
+}
+
+@media (max-width: 575px) {
+  .team.leadership-section {
+    padding-top: 40px;
+  }
+
+  .breadcrumbs .section-title .team-page-intro {
+    font-size: 16px;
+  }
+}
+
 .team .member {
   text-align: center;
   margin-bottom: 20px;

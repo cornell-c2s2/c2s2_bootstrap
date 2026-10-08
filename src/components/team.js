@@ -158,75 +158,87 @@ function Team() {
         <div className="container">
           <div className="section-title">
             <h1>Meet the Team</h1>
+            <p className="team-page-intro">
+              C2S2 would not be possible without all of the amazing people that
+              contribute to its success.
+            </p>
           </div>
         </div>
       </section>
-      <section id="team" className="team">
+      <section id="team" className="team leadership-section">
         <div className="container">
-          <div className="inner-page" data-aos="fade-up">
-            <p>
-              C2S2 would not be possible without all of the amazing people that
-              contribute to its success
-            </p>
+          <div className="leadership-group" data-aos="fade-up">
+            <div className="section-title">
+              <i className="bi bi-mortarboard"></i>
+              <p>Faculty Advisors</p>
+            </div>
+            <div className="row justify-content-center">
+              <TeamMember
+                name="Prof. Christopher Batten"
+                role="Faculty Advisor"
+                img={cb535}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Prof. Hunter Adams"
+                role="Faculty Advisor"
+                img={vha3}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Prof. Mohamed I. Ibrahim"
+                role="Faculty Advisor"
+                img={mibrahim}
+                github=""
+                linkedin=""
+              />
+            </div>
           </div>
 
-          <div className="row justify-content-center">
-            <TeamMember
-              name="Prof. Christopher Batten"
-              role="Faculty Advisor"
-              img={cb535}
-              github=""
-              linkedin=""
-            />
-            <TeamMember
-              name="Prof. Hunter Adams"
-              role="Faculty Advisor"
-              img={vha3}
-              github=""
-              linkedin=""
-            />
-            <TeamMember
-              name="Prof. Mohamed I. Ibrahim"
-              role="Faculty Advisor"
-              img={mibrahim}
-              github=""
-              linkedin=""
-            />
-            <TeamMember
-              name="Abigail Varghese"
-              role="Former Team Lead"
-              img={akv45}
-              github=""
-              linkedin="https://www.linkedin.com/in/abigail-varghese-589b49244/"
-            />
-            <TeamMember
-              name="Aidan McNay"
-              role="Former Team Lead"
-              img={acm289}
-              github="https://github.com/Aidan-McNay"
-              linkedin="https://www.linkedin.com/in/aidan-mcnay-0ba928201/"
-            />
-            <TeamMember
-              name="Daniel Kaminski"
-              role="Former Team Lead"
-              img={danielKaminski}
-              github=""
-              linkedin=""
-            />
-            <TeamMember
-              name="Alyssa Xu"
-              role="Team Lead"
-              img={alysaXu}
-              github=""
-              linkedin=""
-            />
-            <TeamMember
-              name="Joseph Wan"
-              role="Team Lead"
-              img={josephWan}
-              github=""
-              linkedin=""
-            />
+          <div className="leadership-group" data-aos="fade-up">
+            <div className="section-title">
+              <i className="bi bi-people"></i>
+              <p>Team Leads</p>
+            </div>
+            <div className="row justify-content-center">
+              <TeamMember
+                name="Alyssa Xu"
+                role="Team Lead"
+                img={alysaXu}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Joseph Wan"
+                role="Team Lead"
+                img={josephWan}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Daniel Kaminski"
+                role="Former Team Lead"
+                img={danielKaminski}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Abigail Varghese"
+                role="Former Team Lead"
+                img={akv45}
+                github=""
+                linkedin="https://www.linkedin.com/in/abigail-varghese-589b49244/"
+              />
+              <TeamMember
+                name="Aidan McNay"
+                role="Former Team Lead"
+                img={acm289}
+                github="https://github.com/Aidan-McNay"
+                linkedin="https://www.linkedin.com/in/aidan-mcnay-0ba928201/"
+              />
+            </div>
           </div>
         </div>
       </section>
