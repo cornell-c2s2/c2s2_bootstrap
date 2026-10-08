@@ -39,7 +39,7 @@ import edwinChen from "../assets/img/team/optimized/Edwin_Chen_ec769.webp";
 import ivanMokeyev from "../assets/img/team/optimized/Ivan_Mokeyev_ism27.webp";
 import josephJuniorMensah from "../assets/img/team/optimized/Joseph_Junior_Mensah_jjm536.webp";
 import tyroneChen from "../assets/img/team/optimized/Tyrone_Chen_tc724.webp";
-import anikaSukthankar from "../assets/img/team/optimized/Anika Sukthankar_PM.webp";
+import anikaSukthankar from "../assets/img/team/optimized/Anika Sukthankar.webp";
 import adityaRao from "../assets/img/team/optimized/Aditya_Rao_agr92.webp";
 import kateSanders from "../assets/img/team/optimized/Kate Sanders_RFIC.webp";
 import seanWhelan from "../assets/img/team/optimized/Sean_Whelan_sgw49.webp";
