@@ -5,8 +5,6 @@ import LazyImage from "./lazyimage.js";
 import cb535 from "../assets/img/team/optimized/cb535.webp";
 import vha3 from "../assets/img/team/optimized/vha3.webp";
 import mibrahim from "../assets/img/team/optimized/mibrahim.webp";
-import akv45 from "../assets/img/team/optimized/akv45.webp";
-import acm289 from "../assets/img/team/optimized/acm289.webp";
 
 // Current team members
 import adiPrathapa from "../assets/img/team/optimized/Adi_Prathapa_agp96.webp";
@@ -196,7 +194,6 @@ function Team() {
               />
             </div>
           </div>
-
           <div className="leadership-group" data-aos="fade-up">
             <div className="section-title">
               <i className="bi bi-people"></i>
@@ -216,27 +213,6 @@ function Team() {
                 img={josephWan}
                 github=""
                 linkedin=""
-              />
-              <TeamMember
-                name="Daniel Kaminski"
-                role="Former Team Lead"
-                img={danielKaminski}
-                github=""
-                linkedin=""
-              />
-              <TeamMember
-                name="Abigail Varghese"
-                role="Former Team Lead"
-                img={akv45}
-                github=""
-                linkedin="https://www.linkedin.com/in/abigail-varghese-589b49244/"
-              />
-              <TeamMember
-                name="Aidan McNay"
-                role="Former Team Lead"
-                img={acm289}
-                github="https://github.com/Aidan-McNay"
-                linkedin="https://www.linkedin.com/in/aidan-mcnay-0ba928201/"
               />
             </div>
           </div>

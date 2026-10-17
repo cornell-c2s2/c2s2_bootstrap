@@ -1802,6 +1802,11 @@ section {
   color: #de2424;
 }
 
+.team .section-title p::after,
+.alumni-section .section-title p::after {
+  content: none;
+}
+
 .team.leadership-section {
   padding-top: 52px;
 }
@@ -2040,8 +2045,8 @@ Alumni Companies Section
   max-width: 800px;
   margin: 0 auto 60px;
   font-size: var(--body-copy-size);
-  line-height: 1.6;
-  color: #555;
+  line-height: 1.75;
+  color: #5a6570;
 }
 
 .c2s2-alumni-marquee-wrapper {
@@ -2215,7 +2220,7 @@ Alumni Companies Section
   }
 
   .c2s2-alumni-description {
-    font-size: 1rem;
+    font-size: var(--body-copy-size);
   }
 
   .c2s2-alumni-marquee-track {
@@ -2950,15 +2955,18 @@ Alumni Section
 
 @media (max-width: 767px) {
   .applications-closed-content {
+    margin: 0 auto;
     padding: 56px 0;
+    text-align: center;
   }
 
   .applications-closed h1 {
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     font-size: 40px;
   }
 
   .applications-closed p {
+    margin: 0 auto;
     font-size: 19px;
   }
 }
@@ -3275,29 +3283,29 @@ Alumni Section
   }
 
   .sponsor-bar {
-    grid-template-columns: 1fr;
-    gap: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
 
   .sponsor-bar a {
-    min-height: 112px;
-    padding: 20px 16px;
+    min-height: 96px;
+    padding: 16px 12px;
     border-radius: 12px;
   }
 
   .sponsor-bar img {
-    max-width: 135px;
-    max-height: 56px;
+    max-width: min(120px, 100%);
+    max-height: 52px;
   }
 
   .sponsor-bar img.sponsor-logo-wide {
-    max-width: 112px;
-    max-height: 48px;
+    max-width: min(104px, 100%);
+    max-height: 44px;
   }
 
   .sponsor-bar img.sponsor-logo-sandia {
-    max-width: 120px;
-    max-height: 62px;
+    max-width: min(108px, 100%);
+    max-height: 56px;
   }
 
 }
