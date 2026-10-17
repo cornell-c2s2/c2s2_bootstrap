@@ -1802,11 +1802,6 @@ section {
   color: #de2424;
 }
 
-.team .section-title p::after,
-.alumni-section .section-title p::after {
-  content: none;
-}
-
 .team.leadership-section {
   padding-top: 52px;
 }
