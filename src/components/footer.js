@@ -51,10 +51,6 @@ function Footer() {
                 <li>
                   <i className="bx bx-chevron-right"></i> <a href="/">Home</a>
                 </li>
-                <li>
-                  <i className="bx bx-chevron-right"></i>{" "}
-                  <a href="/about">About Us</a>
-                </li>
                 {/* <li>
                   <i className="bx bx-chevron-right"></i>{" "}
                   <a href="/chip-gallery">Chip Gallery</a>

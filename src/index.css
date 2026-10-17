@@ -1,8 +1,30 @@
+html,
 body {
   margin: 0;
+  background-color: #fef7f7;
   font-family: "Raleway", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+html:has(#hero),
+body:has(#hero) {
+  background-color: #f8e9e9;
+}
+
+html:has(.applications-closed),
+body:has(.applications-closed) {
+  background-color: #f8eeee;
+}
+
+html:has(.sponsors-page),
+body:has(.sponsors-page) {
+  background-color: #fffafa;
+}
+
+#root {
+  min-height: 100vh;
+  background-color: #fff;
 }
 
 code {

@@ -8,31 +8,18 @@ import sandia from "../assets/img/sponsors/sandia.webp";
 
 function Sponsors() {
   return (
-    <main id="main">
-      <section id="about" className="breadcrumbs">
+    <main id="main" className="sponsors-page">
+      <section className="sponsors sponsors-showcase">
         <div className="container">
-          <div className="section-title">
+          <header className="sponsors-intro" data-aos="fade-up">
             <h1>Sponsors</h1>
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <div className="container" data-aos="zoom-in" data-aos-delay="100">
-          <h3 style={{ textAlign: "center" }}>
-            C2S2 would not be possible without its sponsors. Through their
-            generous contributions, they have enabled the team and its members
-            to push the boundaries of what is possible at the undergraduate
-            level for silicon and system design.
-          </h3>
-        </div>
-      </section>
-
-      <section id="about" className="sponsors">
-        <div className="container" data-aos="fade-up">
-          <div className="section-title underline">
-            <h1>Recent Sponsors</h1>
-          </div>
+            <p>
+              C2S2 would not be possible without its sponsors. Through their
+              generous contributions, they have enabled the team and its
+              members to push the boundaries of what is possible at the
+              undergraduate level for silicon and system design.
+            </p>
+          </header>
 
           <div className="sponsor-bar" data-aos="zoom-in" data-aos-delay="100">
             <a target="_blank" rel="noreferrer" href="https://nordtech.com">

@@ -9,13 +9,11 @@ import "./assets/css/index.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import { Routes } from "react-router-dom";
-import { Route } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { useEffect } from "react";
 
 import Layout from "./components/layout.js";
 import Home from "./components/home.js";
-import About from "./components/about.js";
 import Sponsors from "./components/sponsors.js";
 import Apply from "./components/apply.js";
 import Team from "./components/team.js";
@@ -29,8 +27,10 @@ function App() {
   useEffect(() => {
     // Initialize AOS
     AOS.init({
-      duration: 750, // Animation duration
-      once: true, // Whether animation should happen only once
+      duration: 400,
+      easing: "ease-out",
+      offset: 40,
+      once: true,
     });
   }, []);
 
@@ -40,7 +40,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="/chip-gallery" element={<ChipGallery />} />
         <Route path="/chip-gallery/:chip" element={<Chip />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Navigate to="/" replace />} />
         <Route path="/blog" element={<BlogGallery />} />
         <Route path="/blog/:blog" element={<BlogPost />} />
         <Route path="/sponsors" element={<Sponsors />} />

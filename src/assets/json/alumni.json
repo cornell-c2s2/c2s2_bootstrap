@@ -286,5 +286,149 @@
     "years": "2022",
     "major": "CS, 2022",
     "employer": "SpaceX"
+  },
+  {
+    "first": "Matteo",
+    "last": "Bucci",
+    "linkedin": "",
+    "position": "",
+    "years": "Class of 2029",
+    "major": "Hotel Administration",
+    "employer": ""
+  },
+  {
+    "first": "Chris",
+    "last": "Lonergan",
+    "linkedin": "https://www.linkedin.com/in/christopher-lonergan-71a521237/",
+    "position": "RFIC",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "Apple"
+  },
+  {
+    "first": "Barry",
+    "last": "Lu",
+    "linkedin": "",
+    "position": "Digital",
+    "years": "Class of 2025",
+    "major": "Computer Science",
+    "employer": "University of Michigan"
+  },
+  {
+    "first": "Johnny",
+    "last": "Martinez",
+    "linkedin": "https://www.linkedin.com/in/johnny-martinez469/",
+    "position": "Digital Subteam Lead",
+    "years": "Class of 2025",
+    "major": "ECE",
+    "employer": "AMD"
+  },
+  {
+    "first": "Natalia",
+    "last": "Pope",
+    "linkedin": "https://www.linkedin.com/in/natalia-pope-957922229/",
+    "position": "Digital",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "NVIDIA"
+  },
+  {
+    "first": "Nathan",
+    "last": "Rakhlin",
+    "linkedin": "https://www.linkedin.com/in/nathan-rakhlin/",
+    "position": "Digital",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "SpaceX"
+  },
+  {
+    "first": "Akshati",
+    "last": "Vaishnav",
+    "linkedin": "",
+    "position": "Mixed Signal SoC",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "Georgia Tech"
+  },
+  {
+    "first": "Abigail",
+    "last": "Varghese",
+    "linkedin": "https://www.linkedin.com/in/abigail-varghese-589b49244/",
+    "position": "Project Management",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "AMD"
+  },
+  {
+    "first": "Jeff",
+    "last": "Wilcox",
+    "linkedin": "https://www.linkedin.com/in/jeffrey-wilcox-2303/",
+    "position": "RFIC",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "Astranis Space Technologies"
+  },
+  {
+    "first": "Vayun",
+    "last": "Tiwari",
+    "linkedin": "https://www.linkedin.com/in/vayun-tiwari-vt252/",
+    "position": "Project Management + Digital",
+    "years": "Class of 2025",
+    "major": "Electrical and Computer Engineering",
+    "employer": "NVIDIA"
+  },
+  {
+    "first": "Lena",
+    "last": "Conde Araujo",
+    "linkedin": "https://www.linkedin.com/in/lena-conde-araujo/",
+    "position": "Analog",
+    "years": "Class of 2028",
+    "major": "ECE",
+    "employer": ""
+  },
+  {
+    "first": "Daniel",
+    "last": "Kaminski",
+    "linkedin": "https://www.linkedin.com/in/daniel-kaminski-447785234",
+    "position": "Analog, Full Team Lead",
+    "years": "Class of 2027",
+    "major": "ECE",
+    "employer": "AMD"
+  },
+  {
+    "first": "Tean",
+    "last": "Lai",
+    "linkedin": "https://www.linkedin.com/in/tean-lai/",
+    "position": "RTL",
+    "years": "Class of 2026",
+    "major": "Computer Science",
+    "employer": "Semgrep"
+  },
+  {
+    "first": "Demetrios",
+    "last": "Gavalas",
+    "linkedin": "https://www.linkedin.com/in/demetrios-gavalas",
+    "position": "Physical Design Subteam Lead",
+    "years": "Class of 2027",
+    "major": "ECE",
+    "employer": "Citadel Securities"
+  },
+  {
+    "first": "Anjelica",
+    "last": "Bian",
+    "linkedin": "https://www.linkedin.com/in/anjelica-bian/",
+    "position": "Digital RTL Subteam Lead",
+    "years": "Class of 2026",
+    "major": "ECE",
+    "employer": "Apple"
+  },
+  {
+    "first": "Javier",
+    "last": "Chambilla",
+    "linkedin": "https://www.linkedin.com/in/javier-chambilla",
+    "position": "RFIC",
+    "years": "Class of 2026",
+    "major": "Electrical and Computer Engineering",
+    "employer": "Analog Devices"
   }
 ]

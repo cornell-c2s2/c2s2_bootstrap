@@ -25,7 +25,7 @@ function Home() {
                   <div>
                     <a
                       href="https://community.cadence.com/cadence_blogs_8/b/can/posts/spotlight-cornell-custom-silicon-systems"
-                      class="btn-get-started scrollto"
+                      className="btn-get-started scrollto"
                     >
                       Cadence Community Spotlight
                     </a>
@@ -33,7 +33,7 @@ function Home() {
                   <div>
                     <a
                       href="https://news.cornell.edu/stories/2024/05/students-revive-classic-microchip-fabrication-open-source-tools"
-                      class="btn-get-started scrollto"
+                      className="btn-get-started scrollto"
                     >
                       Cornell Chronicle - Micro Chip
                     </a>
@@ -41,7 +41,7 @@ function Home() {
                   <div>
                     <a
                       href="https://news.cornell.edu/stories/2024/11/cornell-microchip-designers-inspire-students-fox-hunt"
-                      class="btn-get-started scrollto"
+                      className="btn-get-started scrollto"
                     >
                       Cornell Chronicle - Fox Hunt Event
                     </a>
@@ -62,13 +62,56 @@ function Home() {
             </div>
           </div>
         </section>
-        <section
-          style={{ marginTop: "50px" }}
-          data-aos="zoom-in"
-          data-aos-delay="100"
-        >
-          <div className="container team-photo-container">
-            <img loading="lazy" decoding="async" className="team-photo" src={teamPhoto} alt="C2S2 team" />
+        <section className="about about-overview">
+          <div className="container">
+            <div className="row align-items-start gy-5">
+              <div
+                className="col-lg-5 about-img"
+                data-aos="fade-right"
+                data-aos-delay="100"
+              >
+                <img
+                  loading="lazy"
+                  decoding="async"
+                  src={teamPhoto}
+                  className="img-fluid"
+                  alt="C2S2 team members"
+                />
+              </div>
+
+              <div
+                className="col-lg-7 about-copy"
+                data-aos="fade-left"
+                data-aos-delay="100"
+              >
+                <h2>About Us</h2>
+                <p>
+                  Silicon CMOS chips are at the heart of every modern computing
+                  device, from the smallest Internet-of-Things device to the
+                  largest supercomputer. Yet undergraduate students rarely have
+                  the opportunity to fully specify, design, implement, test,
+                  fabricate, and evaluate a computer chip. Until recently, there
+                  was no realistic hands-on way for students to experience the
+                  complete chip-design process.
+                </p>
+
+                <p>
+                  Open-source chip-design tools, implementations, process design
+                  kits, and low-cost fabrication services are changing that.
+                  Just as open-source software democratized software design,
+                  open-source hardware is poised to democratize hardware design.
+                </p>
+
+                <p>
+                  C2S2 uses this emerging ecosystem to enable undergraduate
+                  students to design, fabricate, and evaluate custom chips. Our
+                  work brings together custom silicon, circuit boards, and
+                  complete software stacks for meaningful applications, giving
+                  students experience that is rare across universities and
+                  inspiring a new generation of computer-system designers.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
         <AlumniCompanies />
