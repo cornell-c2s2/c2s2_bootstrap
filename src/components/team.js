@@ -47,6 +47,60 @@ import waliAfridi from "../assets/img/team/optimized/Wali_Afridi_wua3.webp";
 //Alumni
 import AlumniInfo from "../assets/json/alumni8.json";
 
+const memberSocials = {
+  "Stella Zhou": {
+    linkedin: "https://www.linkedin.com/in/stella-zhou-578811332",
+    github: "https://github.com/StellarLyyd",
+  },
+  "Jonathan Song": {
+    linkedin: "https://www.linkedin.com/in/jonathan-s-song",
+    github: "https://github.com/lontans",
+  },
+  "Ahrar Sameeo": {
+    linkedin: "https://www.linkedin.com/in/ahrar-sameeo-8ab18a2a6",
+  },
+  "Adi Prathapa": {
+    linkedin: "https://www.linkedin.com/in/adi-prathapa",
+    github: "https://github.com/adiprathapa",
+  },
+  "Matteo Bucci": {
+    linkedin: "https://www.linkedin.com/in/matteorbucci",
+  },
+  "Michael Dierkes": {
+    linkedin: "https://www.linkedin.com/in/michael-dierkes",
+  },
+  "Alina Lee": {
+    linkedin: "https://www.linkedin.com/in/alinalee8",
+  },
+  "Jiming Chen": {
+    linkedin: "https://www.linkedin.com/in/jiming-chen",
+    github: "https://github.com/jjc256",
+  },
+  "Ritika Roy": {
+    linkedin: "https://www.linkedin.com/in/ritika-roy-72083a282",
+    github: "https://github.com/RitikaRoy72",
+  },
+  "Leo Qian": {
+    linkedin: "https://www.linkedin.com/in/leoqian28",
+    github: "https://github.com/Runxin0503",
+  },
+  "Winnie Chen": {
+    linkedin: "https://www.linkedin.com/in/winnie-chen-81a072385",
+  },
+  "Sean Whelan": {
+    linkedin: "https://www.linkedin.com/in/seanwhelan10",
+  },
+  "Alyssa Xu": {
+    linkedin: "https://www.linkedin.com/in/xualyssa",
+  },
+  "Kate Xue": {
+    linkedin: "https://www.linkedin.com/in/kate-xue",
+  },
+  "Svetlana Gupta": {
+    linkedin: "https://www.linkedin.com/in/svetlana-gupta-288419395",
+  },
+};
+
 const seniorAdvisors = [
   { name: "Edwin Chen", role: "PD", img: edwinChen },
   { name: "Caden Xu", role: "Analog", img: cadenXu },
@@ -204,8 +258,8 @@ function Team() {
                 name="Alyssa Xu"
                 role="Team Lead"
                 img={alysaXu}
-                github=""
-                linkedin=""
+                github={memberSocials["Alyssa Xu"].github || ""}
+                linkedin={memberSocials["Alyssa Xu"].linkedin || ""}
               />
               <TeamMember
                 name="Joseph Wan"
@@ -284,16 +338,20 @@ function SubteamSection({ id, name, icon, members }) {
         </div>
 
         <div className="row justify-content-center">
-          {members.map((member) => (
-            <TeamMember
-              key={member.name}
-              name={member.name}
-              role={member.role || ""}
-              img={member.img}
-              github=""
-              linkedin=""
-            />
-          ))}
+          {members.map((member) => {
+            const socials = memberSocials[member.name] || {};
+
+            return (
+              <TeamMember
+                key={member.name}
+                name={member.name}
+                role={member.role || ""}
+                img={member.img}
+                github={socials.github || ""}
+                linkedin={socials.linkedin || ""}
+              />
+            );
+          })}
         </div>
       </div>
     </section>
@@ -332,14 +390,22 @@ function TeamMember(prop) {
               {prop.github == "" ? (
                 ""
               ) : (
-                <a target="_blank" href={prop.github}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={prop.github}
+                >
                   <i className="bi bi-github"></i>
                 </a>
               )}
               {prop.linkedin == "" ? (
                 ""
               ) : (
-                <a target="_blank" href={prop.linkedin}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={prop.linkedin}
+                >
                   <i className="bi bi-linkedin"></i>
                 </a>
               )}
