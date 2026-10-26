@@ -2015,7 +2015,16 @@ section {
 # Team atlas
 --------------------------------------------------------------*/
 .team-page {
+  --team-headshot-size: 124px;
   background: #fff;
+}
+
+.team-page-header {
+  padding: 30px 0;
+}
+
+.team-page-header .section-title h1 {
+  margin-bottom: 0;
 }
 
 .team-hero {
@@ -2188,16 +2197,19 @@ section {
 }
 
 .leadership-panel__people {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 16px;
 }
 
 .leadership-panel__people--faculty {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  justify-content: center;
 }
 
 .person-card {
+  width: var(--team-headshot-size);
+  flex: 0 0 var(--team-headshot-size);
   min-width: 0;
 }
 
@@ -2350,13 +2362,14 @@ section {
 }
 
 .subteam-card__members {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(108px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
 }
 
 .subteam-card--wide .subteam-card__members {
-  grid-template-columns: repeat(auto-fit, minmax(118px, 1fr));
+  justify-content: center;
 }
 
 .person-card--compact .person-card__info h4 {
@@ -2368,9 +2381,10 @@ section {
 }
 
 .senior-advisors__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -2483,6 +2497,10 @@ section {
 }
 
 @media (max-width: 991px) {
+  .team-page {
+    --team-headshot-size: 112px;
+  }
+
   .team-hero {
     padding: 84px 0 80px;
   }
@@ -2505,10 +2523,6 @@ section {
 
   .subteam-card--wide {
     grid-column: auto;
-  }
-
-  .senior-advisors__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .team-alumni-cta {
@@ -2558,27 +2572,8 @@ section {
     border-radius: 15px;
   }
 
-  .leadership-panel__people--faculty {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .leadership-panel__people--faculty .person-card:last-child {
-    grid-column: 1 / -1;
-    width: calc(50% - 8px);
-    justify-self: center;
-  }
-
-  .subteam-card__members,
-  .subteam-card--wide .subteam-card__members {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .subteam-card__description {
     min-height: 0;
-  }
-
-  .senior-advisors__grid {
-    grid-template-columns: 1fr;
   }
 
   .team-alumni-cta {

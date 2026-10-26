@@ -230,21 +230,14 @@ function Team() {
 
   return (
     <main id="main" className="team-page">
-      <section id="team" className="team-hero">
+      <section id="team" className="breadcrumbs team-page-header">
         <div className="container">
-          <div className="team-hero__content" data-aos="fade-up">
-            <span className="team-hero__eyebrow">People behind the silicon</span>
+          <div className="section-title" data-aos="fade-up">
             <h1>Meet the Team</h1>
-            <p>
-              We are a multidisciplinary group of Cornell students and mentors
-              designing complete computer systems—from first concept to
-              fabricated chip.
+            <p className="team-page-intro">
+              C2S2 would not be possible without the amazing people who
+              contribute to its success.
             </p>
-            <div className="team-hero__meta" aria-label="Team overview">
-              <span><strong>8</strong> specialized subteams</span>
-              <span className="team-hero__divider" aria-hidden="true"></span>
-              <span><strong>1</strong> shared mission</span>
-            </div>
           </div>
         </div>
       </section>
@@ -303,7 +296,7 @@ function Team() {
           </div>
           <div className="senior-advisors__grid" data-aos="fade-up">
             {seniorAdvisors.map((advisor) => (
-              <CompactPerson key={advisor.name} {...advisor} />
+              <PersonCard key={advisor.name} {...advisor} />
             ))}
           </div>
         </div>
@@ -412,23 +405,6 @@ function PersonCard({ name, role = "", img, compact = false }) {
       <div className="person-card__info">
         <h4>{name}</h4>
         {role && <span>{role}</span>}
-      </div>
-    </div>
-  );
-}
-
-function CompactPerson({ name, role, img }) {
-  return (
-    <div className="compact-person">
-      <LazyImage
-        src={img}
-        className="compact-person__image"
-        alt={name}
-        onLoad={(event) => event.target.classList.add("loaded")}
-      />
-      <div>
-        <h3>{name}</h3>
-        <span>{role}</span>
       </div>
     </div>
   );
