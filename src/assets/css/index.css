@@ -2201,12 +2201,8 @@ section {
 .leadership-panel__people {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   gap: 16px;
-}
-
-.leadership-panel__people--faculty {
-  justify-content: center;
 }
 
 .person-card {
@@ -2639,6 +2635,10 @@ section {
 
   .leadership-layout {
     grid-template-columns: 1fr;
+  }
+
+  .leadership-panel__people {
+    justify-content: center;
   }
 
   .subteam-card--5 .subteam-card__members,
