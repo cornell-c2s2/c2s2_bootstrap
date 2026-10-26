@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LazyImage from "./lazyimage.js";
 
 //Advisors
@@ -43,9 +44,6 @@ import kateSanders from "../assets/img/team/optimized/Kate Sanders_RFIC.webp";
 import seanWhelan from "../assets/img/team/optimized/Sean_Whelan_sgw49.webp";
 import taylorDo from "../assets/img/team/optimized/Taylor_Do_txd3.webp";
 import waliAfridi from "../assets/img/team/optimized/Wali_Afridi_wua3.webp";
-
-//Alumni
-import AlumniInfo from "../assets/json/alumni8.json";
 
 const memberSocials = {
   "Stella Zhou": {
@@ -115,6 +113,8 @@ const subteams = [
     id: "analog",
     name: "Analog Subteam",
     icon: "bi-speedometer2",
+    description:
+      "Building the analog interfaces that connect our chips to the physical world.",
     members: [
       { name: "Kai Imani", role: "Subteam Lead", img: kaiImani },
       { name: "Tiffany Li", img: tiffanyLi },
@@ -124,6 +124,8 @@ const subteams = [
     id: "business-ops",
     name: "Business Operations Subteam",
     icon: "bi-briefcase",
+    description:
+      "Keeping the team funded, connected, organized, and ready for what comes next.",
     members: [
       { name: "Ridwanah Haque", role: "Subteam Lead", img: ridwanahHaque },
       { name: "Adi Prathapa", img: adiPrathapa },
@@ -134,6 +136,8 @@ const subteams = [
     id: "design-verification",
     name: "Design Verification Subteam",
     icon: "bi-shield-check",
+    description:
+      "Proving our designs behave as intended before they become silicon.",
     members: [
       {
         name: "Daniel Penas Varela",
@@ -149,6 +153,8 @@ const subteams = [
     id: "physical-design",
     name: "Physical Design Subteam",
     icon: "bi-layers",
+    description:
+      "Turning logical designs into layouts that are ready for fabrication.",
     members: [
       { name: "Ivan Mokeyev", role: "Subteam Lead", img: ivanMokeyev },
       { name: "Joseph Junior Mensah", img: josephJuniorMensah },
@@ -160,6 +166,8 @@ const subteams = [
     id: "platforms",
     name: "Platforms Subteam",
     icon: "bi-motherboard",
+    description:
+      "Creating the boards, tools, and systems that bring our chips to life.",
     members: [
       { name: "Joanne Chen", role: "Subteam Lead", img: joanneChen },
       { name: "Mohamed Elmi", role: "Subteam Lead", img: mohamedElmi },
@@ -172,6 +180,8 @@ const subteams = [
     id: "rf",
     name: "RF Subteam",
     icon: "bi-router",
+    description:
+      "Designing high-frequency circuits for sensing and wireless communication.",
     members: [
       { name: "Kate Sanders", role: "Subteam Lead", img: kateSanders },
       { name: "Aditya Rao", role: "Subteam Lead", img: adityaRao },
@@ -182,6 +192,8 @@ const subteams = [
     id: "rtl-design",
     name: "RTL Design Subteam",
     icon: "bi-cpu",
+    description:
+      "Describing and architecting the digital hardware at the heart of our chips.",
     members: [
       { name: "Ethan (Yifei) Yan", role: "Subteam Lead", img: yifeiYan },
       { name: "Sumaia Jewena", role: "Subteam Lead", img: sumaiaJewena },
@@ -196,6 +208,8 @@ const subteams = [
     id: "software",
     name: "Software Subteam",
     icon: "bi-code-slash",
+    description:
+      "Building the software stack that makes our custom hardware useful.",
     members: [
       { name: "Major Zangari", role: "Subteam Lead", img: majorZangari },
       { name: "Olesia Kuzdrovska", img: olesiaKuzdrovska },
@@ -204,253 +218,217 @@ const subteams = [
 ];
 
 function Team() {
+  const facultyAdvisors = [
+    { name: "Prof. Christopher Batten", role: "Faculty Advisor", img: cb535 },
+    { name: "Prof. Hunter Adams", role: "Faculty Advisor", img: vha3 },
+    { name: "Prof. Mohamed I. Ibrahim", role: "Faculty Advisor", img: mibrahim },
+  ];
+  const teamLeads = [
+    { name: "Alyssa Xu", role: "Team Lead", img: alysaXu },
+    { name: "Joseph Wan", role: "Team Lead", img: josephWan },
+  ];
+
   return (
-    <main id="main">
-      <section id="team" className="breadcrumbs">
+    <main id="main" className="team-page">
+      <section id="team" className="team-hero">
         <div className="container">
-          <div className="section-title">
+          <div className="team-hero__content" data-aos="fade-up">
+            <span className="team-hero__eyebrow">People behind the silicon</span>
             <h1>Meet the Team</h1>
-            <p className="team-page-intro">
-              C2S2 would not be possible without all of the amazing people that
-              contribute to its success.
+            <p>
+              We are a multidisciplinary group of Cornell students and mentors
+              designing complete computer systems—from first concept to
+              fabricated chip.
+            </p>
+            <div className="team-hero__meta" aria-label="Team overview">
+              <span><strong>8</strong> specialized subteams</span>
+              <span className="team-hero__divider" aria-hidden="true"></span>
+              <span><strong>1</strong> shared mission</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="team-leadership" aria-labelledby="leadership-title">
+        <div className="container">
+          <div className="team-section-heading" data-aos="fade-up">
+            <span>Guiding C2S2</span>
+            <h2 id="leadership-title">Leadership</h2>
+          </div>
+          <div className="leadership-layout">
+            <LeadershipPanel
+              eyebrow="Mentorship"
+              title="Faculty Advisors"
+              icon="bi-mortarboard"
+              people={facultyAdvisors}
+              faculty
+            />
+            <LeadershipPanel
+              eyebrow="Direction"
+              title="Team Leads"
+              icon="bi-people"
+              people={teamLeads}
+            />
+          </div>
+        </div>
+      </section>
+
+      <section className="team-atlas" aria-labelledby="subteams-title">
+        <div className="container">
+          <div className="team-section-heading" data-aos="fade-up">
+            <span>How we work</span>
+            <h2 id="subteams-title">Explore our subteams</h2>
+            <p>
+              Different disciplines, one tapeout. Each subteam owns a critical
+              part of the journey from idea to working silicon.
             </p>
           </div>
-        </div>
-      </section>
-      <section id="team" className="team leadership-section">
-        <div className="container">
-          <div className="leadership-group" data-aos="fade-up">
-            <div className="section-title">
-              <i className="bi bi-mortarboard"></i>
-              <p>Faculty Advisors</p>
-            </div>
-            <div className="row justify-content-center">
-              <TeamMember
-                name="Prof. Christopher Batten"
-                role="Faculty Advisor"
-                img={cb535}
-                github=""
-                linkedin=""
-              />
-              <TeamMember
-                name="Prof. Hunter Adams"
-                role="Faculty Advisor"
-                img={vha3}
-                github=""
-                linkedin=""
-              />
-              <TeamMember
-                name="Prof. Mohamed I. Ibrahim"
-                role="Faculty Advisor"
-                img={mibrahim}
-                github=""
-                linkedin=""
-              />
-            </div>
-          </div>
-          <div className="leadership-group" data-aos="fade-up">
-            <div className="section-title">
-              <i className="bi bi-people"></i>
-              <p>Team Leads</p>
-            </div>
-            <div className="row justify-content-center">
-              <TeamMember
-                name="Alyssa Xu"
-                role="Team Lead"
-                img={alysaXu}
-                github={memberSocials["Alyssa Xu"].github || ""}
-                linkedin={memberSocials["Alyssa Xu"].linkedin || ""}
-              />
-              <TeamMember
-                name="Joseph Wan"
-                role="Team Lead"
-                img={josephWan}
-                github=""
-                linkedin=""
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {subteams.map((subteam) => (
-        <SubteamSection key={subteam.id} {...subteam} />
-      ))}
-
-      <section id="senior-advisors" className="team">
-        <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <i className="bi bi-mortarboard"></i>
-            <p>Senior Advisors</p>
-          </div>
-
-          <div className="row justify-content-center">
-            {seniorAdvisors.map((advisor) => (
-              <TeamMember
-                key={advisor.name}
-                name={advisor.name}
-                role={advisor.role}
-                img={advisor.img}
-                github=""
-                linkedin=""
-              />
+          <div className="team-atlas__grid">
+            {subteams.map((subteam, index) => (
+              <SubteamCard key={subteam.id} index={index} {...subteam} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="alumni-section">
+      <section
+        id="senior-advisors"
+        className="senior-advisors"
+        aria-labelledby="senior-advisors-title"
+      >
         <div className="container">
-          <div className="section-title" data-aos="fade-up">
-            <p>Alumni</p>
+          <div className="team-section-heading team-section-heading--centered" data-aos="fade-up">
+            <span>Experience that carries forward</span>
+            <h2 id="senior-advisors-title">Senior Advisors</h2>
           </div>
-          <div className="inner-page" data-aos="fade-up">
-            <p>Thanks to our amazing Alumni who continue to support us!</p>
-          </div>
-
-          <div className="alumni-grid">
-            {AlumniInfo.map((alumni, index) => {
-              return <AlumniCard key={index} {...alumni} />;
-            })}
-          </div>
-          <div className="alumni-button-container">
-            <a href="/alumni" className="btn-get-started scrollto">
-              View All Alumni
-            </a>
+          <div className="senior-advisors__grid" data-aos="fade-up">
+            {seniorAdvisors.map((advisor) => (
+              <CompactPerson key={advisor.name} {...advisor} />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* <AlumniCompanies /> */}
+      <section className="team-alumni-cta">
+        <div className="container">
+          <div className="team-alumni-cta__card" data-aos="fade-up">
+            <div>
+              <span className="team-alumni-cta__eyebrow">Part of the C2S2 story</span>
+              <h2>Built by generations of students</h2>
+              <p>
+                Meet the alumni whose work and mentorship continue to shape our team.
+              </p>
+            </div>
+            <Link to="/alumni" className="team-alumni-cta__link">
+              Explore our alumni
+              <i className="bi bi-arrow-right" aria-hidden="true"></i>
+            </Link>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
 
 export default Team;
 
-function SubteamSection({ id, name, icon, members }) {
+function LeadershipPanel({ eyebrow, title, icon, people, faculty = false }) {
   return (
-    <section id={id} className="team">
-      <div className="container">
-        <div className="section-title" data-aos="fade-up">
-          <i className={`bi ${icon}`}></i>
-          <p>{name}</p>
-        </div>
-
-        <div className="row justify-content-center">
-          {members.map((member) => {
-            const socials = memberSocials[member.name] || {};
-
-            return (
-              <TeamMember
-                key={member.name}
-                name={member.name}
-                role={member.role || ""}
-                img={member.img}
-                github={socials.github || ""}
-                linkedin={socials.linkedin || ""}
-              />
-            );
-          })}
+    <div className="leadership-panel" data-aos="fade-up">
+      <div className="leadership-panel__heading">
+        <i className={`bi ${icon}`} aria-hidden="true"></i>
+        <div>
+          <span>{eyebrow}</span>
+          <h3>{title}</h3>
         </div>
       </div>
-    </section>
-  );
-}
-
-function TeamMember(prop) {
-  return (
-    <div
-      className="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"
-      data-aos="zoom-in"
-      data-aos-delay="100"
-    >
-      <div className="member">
-        <LazyImage
-          src={prop.img}
-          className="img-fluid"
-          alt={prop.name}
-          onLoad={(e) => e.target.classList.add("loaded")}
-        />
-        <div className="member-info">
-          <div
-            className={
-              prop.github == "" && prop.linkedin == ""
-                ? "member-info-content-no-social"
-                : "member-info-content"
-            }
-          >
-            <h4>{prop.name}</h4>
-            {prop.role == "" ? "" : <span>{prop.role}</span>}
-          </div>
-          {prop.github == "" && prop.linkedin == "" ? (
-            ""
-          ) : (
-            <div className="social">
-              {prop.github == "" ? (
-                ""
-              ) : (
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={prop.github}
-                >
-                  <i className="bi bi-github"></i>
-                </a>
-              )}
-              {prop.linkedin == "" ? (
-                ""
-              ) : (
-                <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={prop.linkedin}
-                >
-                  <i className="bi bi-linkedin"></i>
-                </a>
-              )}
-            </div>
-          )}
-        </div>
+      <div className={`leadership-panel__people${faculty ? " leadership-panel__people--faculty" : ""}`}>
+        {people.map((member) => (
+          <PersonCard key={member.name} {...member} />
+        ))}
       </div>
     </div>
   );
 }
 
-function AlumniCard(prop) {
+function SubteamCard({ id, name, icon, description, members, index }) {
+  const isWide = members.length >= 5;
+
   return (
-    <div className="alumni-card" data-aos="zoom-in" data-aos-delay="100">
-      <div className="name">{prop.first + " " + prop.last}</div>
+    <article
+      id={id}
+      className={`subteam-card${isWide ? " subteam-card--wide" : ""}`}
+      data-aos="fade-up"
+    >
+      <div className="subteam-card__header">
+        <div className="subteam-card__icon">
+          <i className={`bi ${icon}`} aria-hidden="true"></i>
+        </div>
+        <div>
+          <span>{members.length} team members</span>
+          <h3>{name.replace(" Subteam", "")}</h3>
+        </div>
+        <span className="subteam-card__number" aria-hidden="true">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
+      <p className="subteam-card__description">{description}</p>
+      <div className="subteam-card__members">
+        {members.map((member) => (
+          <PersonCard key={member.name} {...member} compact />
+        ))}
+      </div>
+    </article>
+  );
+}
 
-      {prop.position && <div className="position">{prop.position}</div>}
+function PersonCard({ name, role = "", img, compact = false }) {
+  const socials = memberSocials[name] || {};
 
-      {prop.years && <div className="years">{prop.years}</div>}
-
-      {prop.major && <div className="major">{prop.major}</div>}
-
-      {prop.employer && <div className="employer">{prop.employer}</div>}
-
-      <div className="linkedin-container">
-        {prop.linkedin === "" ? (
-          <span className="no-linkedin">No LinkedIn profile</span>
-        ) : (
-          <a
-            href={prop.linkedin}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="linkedin-link"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="linkedin-icon"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
-            </svg>
-            <span>LinkedIn</span>
-          </a>
+  return (
+    <div className={`person-card${compact ? " person-card--compact" : ""}`}>
+      <div className="person-card__image-wrap">
+        <LazyImage
+          src={img}
+          className="person-card__image"
+          alt={name}
+          onLoad={(event) => event.target.classList.add("loaded")}
+        />
+        {(socials.github || socials.linkedin) && (
+          <div className="person-card__socials">
+            {socials.github && (
+              <a href={socials.github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}>
+                <i className="bi bi-github" aria-hidden="true"></i>
+              </a>
+            )}
+            {socials.linkedin && (
+              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`}>
+                <i className="bi bi-linkedin" aria-hidden="true"></i>
+              </a>
+            )}
+          </div>
         )}
+      </div>
+      <div className="person-card__info">
+        <h4>{name}</h4>
+        {role && <span>{role}</span>}
+      </div>
+    </div>
+  );
+}
+
+function CompactPerson({ name, role, img }) {
+  return (
+    <div className="compact-person">
+      <LazyImage
+        src={img}
+        className="compact-person__image"
+        alt={name}
+        onLoad={(event) => event.target.classList.add("loaded")}
+      />
+      <div>
+        <h3>{name}</h3>
+        <span>{role}</span>
       </div>
     </div>
   );
