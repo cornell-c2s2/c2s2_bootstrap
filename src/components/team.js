@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import LazyImage from "./lazyimage.js";
 
 //Advisors
@@ -201,16 +201,9 @@ const subteams = [
   },
 ];
 
-const subteamRows = [
-  ["analog", "software"],
-  ["business-ops", "rf"],
-  ["design-verification"],
-  ["physical-design"],
-  ["platforms"],
-  ["rtl-design"],
-];
-
 function Team() {
+  const location = useLocation();
+  const [activeSubteam, setActiveSubteam] = useState("all");
   const facultyAdvisors = [
     { name: "Prof. Christopher Batten", role: "Faculty Advisor", img: cb535 },
     { name: "Prof. Hunter Adams", role: "Faculty Advisor", img: vha3 },
@@ -220,6 +213,24 @@ function Team() {
     { name: "Alyssa Xu", role: "Team Lead", img: alysaXu },
     { name: "Joseph Wan", role: "Team Lead", img: josephWan },
   ];
+  const teamMembers = subteams.flatMap((subteam) =>
+    subteam.members.map((member) => ({
+      ...member,
+      subteamId: subteam.id,
+      subteam: subteam.name.replace(" Subteam", ""),
+    })),
+  );
+  const visibleMembers =
+    activeSubteam === "all"
+      ? teamMembers
+      : teamMembers.filter((member) => member.subteamId === activeSubteam);
+
+  useEffect(() => {
+    const requestedSubteam = location.hash.replace("#", "");
+    if (subteams.some((subteam) => subteam.id === requestedSubteam)) {
+      setActiveSubteam(requestedSubteam);
+    }
+  }, [location.hash]);
 
   return (
     <main id="main" className="team-page">
@@ -256,19 +267,41 @@ function Team() {
         </div>
       </section>
 
-      <section className="team-atlas" aria-labelledby="subteams-title">
+      <section className="team-atlas team-directory" aria-labelledby="team-members-title">
         <div className="container">
           <div className="team-section-heading" data-aos="fade-up">
-            <h2 id="subteams-title">Subteams</h2>
+            <h2 id="team-members-title">Team Members</h2>
           </div>
-          <div className="team-atlas__grid">
-            {subteamRows.map((row) => (
-              <div className="team-atlas__row" key={row.join("-")}>
-                {row.map((id) => {
-                  const subteam = subteams.find((team) => team.id === id);
-                  return <SubteamCard key={subteam.id} {...subteam} />;
-                })}
-              </div>
+          <div className="team-directory__toolbar" data-aos="fade-up">
+            <div className="chip-gallery-filters" role="group" aria-label="Filter team members by subteam">
+              <button
+                type="button"
+                className={activeSubteam === "all" ? "chip-filter chip-filter--active" : "chip-filter"}
+                aria-pressed={activeSubteam === "all"}
+                onClick={() => setActiveSubteam("all")}
+              >
+                All
+              </button>
+              {subteams.map((subteam) => (
+                <button
+                  key={subteam.id}
+                  id={subteam.id}
+                  type="button"
+                  className={activeSubteam === subteam.id ? "chip-filter chip-filter--active" : "chip-filter"}
+                  aria-pressed={activeSubteam === subteam.id}
+                  onClick={() => setActiveSubteam(subteam.id)}
+                >
+                  {subteam.name.replace(" Subteam", "")}
+                </button>
+              ))}
+            </div>
+            <span className="visually-hidden" role="status" aria-live="polite">
+              Showing {visibleMembers.length} team {visibleMembers.length === 1 ? "member" : "members"}.
+            </span>
+          </div>
+          <div className="team-directory__grid">
+            {visibleMembers.map((member) => (
+              <PersonCard key={`${member.subteamId}-${member.name}`} {...member} />
             ))}
           </div>
         </div>
@@ -331,32 +364,9 @@ function LeadershipPanel({ title, icon, people, faculty = false }) {
   );
 }
 
-function SubteamCard({ id, name, icon, members }) {
-  return (
-    <article
-      id={id}
-      className={`subteam-card subteam-card--${members.length}`}
-      data-aos="fade-up"
-    >
-      <div className="subteam-card__header">
-        <div className="subteam-card__icon">
-          <i className={`bi ${icon}`} aria-hidden="true"></i>
-        </div>
-        <div>
-          <h3>{name.replace(" Subteam", "")}</h3>
-        </div>
-      </div>
-      <div className="subteam-card__members">
-        {members.map((member) => (
-          <PersonCard key={member.name} {...member} compact />
-        ))}
-      </div>
-    </article>
-  );
-}
-
-function PersonCard({ name, role = "", img, compact = false }) {
+function PersonCard({ name, role = "", subteam = "", img, compact = false }) {
   const socials = memberSocials[name] || {};
+  const detail = [role, subteam].filter(Boolean).join(" · ");
 
   return (
     <div className={`person-card${compact ? " person-card--compact" : ""}`}>
@@ -384,7 +394,7 @@ function PersonCard({ name, role = "", img, compact = false }) {
       </div>
       <div className="person-card__info">
         <h4>{name}</h4>
-        {role && <span>{role}</span>}
+        {detail && <span>{detail}</span>}
       </div>
     </div>
   );

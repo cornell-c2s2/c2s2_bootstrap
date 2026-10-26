@@ -2015,7 +2015,7 @@ section {
 # Team atlas
 --------------------------------------------------------------*/
 .team-page {
-  --team-headshot-size: 160px;
+  --team-headshot-size: 180px;
   background: #fff;
 }
 
@@ -2307,6 +2307,33 @@ section {
   border-bottom: 1px solid rgba(179, 27, 27, 0.08);
 }
 
+.team-directory__toolbar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.team-directory__toolbar .chip-gallery-filters {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-directory__toolbar .chip-filter[id] {
+  scroll-margin-top: 92px;
+}
+
+.team-directory__grid {
+  display: grid;
+  grid-template-columns: repeat(5, var(--team-headshot-size));
+  justify-content: center;
+  gap: 30px 22px;
+}
+
+.team-directory__grid .person-card {
+  width: var(--team-headshot-size);
+  flex-basis: var(--team-headshot-size);
+}
+
 .team-atlas__grid {
   display: flex;
   flex-direction: column;
@@ -2417,7 +2444,7 @@ section {
   flex-wrap: wrap;
   justify-content: center;
   gap: 12px;
-  max-width: 1080px;
+  max-width: 1140px;
   margin: 0 auto;
 }
 
@@ -2528,6 +2555,14 @@ section {
 }
 
 @media (max-width: 1199px) {
+  .team-page {
+    --team-headshot-size: 150px;
+  }
+
+  .team-directory__grid {
+    grid-template-columns: repeat(4, var(--team-headshot-size));
+  }
+
   .team-atlas__row {
     flex-direction: column;
   }
@@ -2582,6 +2617,10 @@ section {
   .subteam-card--4 .subteam-card__members,
   .subteam-card--5 .subteam-card__members,
   .subteam-card--7 .subteam-card__members {
+    grid-template-columns: repeat(3, var(--team-headshot-size));
+  }
+
+  .team-directory__grid {
     grid-template-columns: repeat(3, var(--team-headshot-size));
   }
 }
@@ -2641,6 +2680,11 @@ section {
   .subteam-card--5 .subteam-card__members,
   .subteam-card--7 .subteam-card__members {
     grid-template-columns: repeat(2, var(--team-headshot-size));
+  }
+
+  .team-directory__grid {
+    grid-template-columns: repeat(2, var(--team-headshot-size));
+    gap: 24px 16px;
   }
 
   .team-alumni-cta__card {
