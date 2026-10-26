@@ -2344,13 +2344,14 @@ section {
 
 .team-directory__grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(5, var(--team-headshot-size));
+  justify-content: center;
   gap: 30px 22px;
 }
 
 .team-directory__grid .person-card {
-  width: 100%;
-  flex-basis: auto;
+  width: var(--team-headshot-size);
+  flex-basis: var(--team-headshot-size);
 }
 
 .team-atlas__grid {
@@ -2598,7 +2599,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, var(--team-headshot-size));
   }
 
   .team-atlas__row {
@@ -2659,7 +2660,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, var(--team-headshot-size));
   }
 
   .leadership-panel {
@@ -2733,7 +2734,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, var(--team-headshot-size));
     gap: 24px 16px;
   }
 
