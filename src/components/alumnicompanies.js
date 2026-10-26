@@ -19,7 +19,8 @@ import dell from "../assets/img/aluminCompanies/dell_logo.jpeg";
 import cisco from "../assets/img/aluminCompanies/cisco_logo.jpeg";
 import deepmind from "../assets/img/aluminCompanies/deepmind_logo.jpg";
 import apollo from "../assets/img/aluminCompanies/apollo_logo.jpg";
-import citadel from "../assets/img/aluminCompanies/citadel_logo.jpg";
+import citadelSecurities from "../assets/img/aluminCompanies/citadel_logo.jpg";
+import citadel from "../assets/img/aluminCompanies/citadel_fund_logo.png";
 import millennium from "../assets/img/aluminCompanies/millennium_logo.png";
 import micron from "../assets/img/aluminCompanies/micron_logo.jpeg";
 import hrt from "../assets/img/aluminCompanies/hrt_logo.png";
@@ -39,6 +40,7 @@ const AlumniCompanies = () => {
     { name: "AWS", logo: aws },
     { name: "ARM", logo: arm },
     { name: "Cadence", logo: cadence },
+    { name: "Citadel Securities", logo: citadelSecurities },
     { name: "Citadel", logo: citadel },
     { name: "HRT", logo: hrt },
     { name: "Apollo", logo: apollo },
@@ -55,15 +57,27 @@ const AlumniCompanies = () => {
   const firstRow = companies.slice(0, midpoint);
   const secondRow = companies.slice(midpoint);
 
-  const renderLogoCard = (company, index, rowLabel) => (
-    <div className="c2s2-alumni-logo-item" key={`${rowLabel}-${company.name}-${index}`}>
+  const renderLogoCard = (company, index) => (
+    <div className="c2s2-alumni-logo-item" key={`${company.name}-${index}`}>
       <div className="c2s2-alumni-logo-container">
-        <img loading="lazy" decoding="async"
+        <img
+          loading="lazy"
+          decoding="async"
           src={company.logo}
           alt={`${company.name} logo`}
           className="c2s2-alumni-company-logo"
         />
       </div>
+    </div>
+  );
+
+  const renderLogoGroup = (companies, rowLabel, repetition) => (
+    <div
+      className="c2s2-alumni-logo-group"
+      key={`${rowLabel}-${repetition}`}
+      aria-hidden={repetition === 0 ? undefined : true}
+    >
+      {companies.map((company, index) => renderLogoCard(company, index))}
     </div>
   );
 
@@ -82,16 +96,16 @@ const AlumniCompanies = () => {
       <div className="c2s2-alumni-marquee-wrapper">
         <div className="c2s2-alumni-marquee c2s2-alumni-marquee-left">
           <div className="c2s2-alumni-marquee-track">
-            {[...firstRow, ...firstRow, ...firstRow].map((company, index) =>
-              renderLogoCard(company, index, "left")
+            {[0, 1, 2].map((repetition) =>
+              renderLogoGroup(firstRow, "left", repetition)
             )}
           </div>
         </div>
 
         <div className="c2s2-alumni-marquee c2s2-alumni-marquee-right">
           <div className="c2s2-alumni-marquee-track">
-            {[...secondRow, ...secondRow, ...secondRow].map((company, index) =>
-              renderLogoCard(company, index, "right")
+            {[0, 1, 2].map((repetition) =>
+              renderLogoGroup(secondRow, "right", repetition)
             )}
           </div>
         </div>

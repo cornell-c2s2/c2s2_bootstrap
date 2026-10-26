@@ -2088,11 +2088,20 @@ Alumni Companies Section
 .c2s2-alumni-marquee-track {
   width: max-content;
   display: flex;
-  gap: 24px;
   align-items: center;
   will-change: transform;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
+}
+
+/* Each repeated group includes its trailing gap, so every group has exactly
+   the same width. Translating by one third of the three-group track can then
+   loop without the small gap-sized snap that a flat list creates. */
+.c2s2-alumni-logo-group {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding-right: 24px;
 }
 
 .c2s2-alumni-marquee-left .c2s2-alumni-marquee-track {
@@ -2175,8 +2184,9 @@ Alumni Companies Section
     width: 80px;
   }
 
-  .c2s2-alumni-marquee-track {
+  .c2s2-alumni-logo-group {
     gap: 20px;
+    padding-right: 20px;
   }
 
   .c2s2-alumni-marquee-wrapper {
@@ -2218,8 +2228,9 @@ Alumni Companies Section
     font-size: var(--body-copy-size);
   }
 
-  .c2s2-alumni-marquee-track {
+  .c2s2-alumni-logo-group {
     gap: 14px;
+    padding-right: 14px;
   }
 
   .c2s2-alumni-logo-container {
