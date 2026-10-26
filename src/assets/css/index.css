@@ -2159,14 +2159,12 @@ section {
 
 .leadership-layout {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 20px;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 24px;
 }
 
 .leadership-panel {
-  display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
-  align-items: center;
+  display: block;
   padding: 28px;
   background: #fff;
   border: 1px solid rgba(68, 10, 10, 0.1);
@@ -2178,7 +2176,7 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 0;
+  margin-bottom: 24px;
 }
 
 .leadership-panel__heading > i {
@@ -2346,14 +2344,13 @@ section {
 
 .team-directory__grid {
   display: grid;
-  grid-template-columns: repeat(5, var(--team-headshot-size));
-  justify-content: center;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 30px 22px;
 }
 
 .team-directory__grid .person-card {
-  width: var(--team-headshot-size);
-  flex-basis: var(--team-headshot-size);
+  width: 100%;
+  flex-basis: auto;
 }
 
 .team-atlas__grid {
@@ -2601,7 +2598,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(4, var(--team-headshot-size));
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 
   .team-atlas__row {
@@ -2662,7 +2659,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(3, var(--team-headshot-size));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .leadership-panel {
@@ -2736,7 +2733,7 @@ section {
   }
 
   .team-directory__grid {
-    grid-template-columns: repeat(2, var(--team-headshot-size));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 24px 16px;
   }
 
