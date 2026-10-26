@@ -2094,9 +2094,9 @@ Alumni Companies Section
   backface-visibility: hidden;
 }
 
-/* Each repeated group includes its trailing gap, so every group has exactly
-   the same width. Translating by one third of the three-group track can then
-   loop without the small gap-sized snap that a flat list creates. */
+/* Each repeated group includes its trailing gap, so both groups have exactly
+   the same width. The exact 50% translation avoids the subpixel rounding hitch
+   that a repeating one-third percentage can produce on mobile compositors. */
 .c2s2-alumni-logo-group {
   display: flex;
   align-items: center;
@@ -2160,13 +2160,13 @@ Alumni Companies Section
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-33.333333%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 @keyframes c2s2-marquee-right {
   0% {
-    transform: translate3d(-33.333333%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);

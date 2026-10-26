@@ -96,7 +96,7 @@ const AlumniCompanies = () => {
       <div className="c2s2-alumni-marquee-wrapper">
         <div className="c2s2-alumni-marquee c2s2-alumni-marquee-left">
           <div className="c2s2-alumni-marquee-track">
-            {[0, 1, 2].map((repetition) =>
+            {[0, 1].map((repetition) =>
               renderLogoGroup(firstRow, "left", repetition)
             )}
           </div>
@@ -104,7 +104,7 @@ const AlumniCompanies = () => {
 
         <div className="c2s2-alumni-marquee c2s2-alumni-marquee-right">
           <div className="c2s2-alumni-marquee-track">
-            {[0, 1, 2].map((repetition) =>
+            {[0, 1].map((repetition) =>
               renderLogoGroup(secondRow, "right", repetition)
             )}
           </div>
