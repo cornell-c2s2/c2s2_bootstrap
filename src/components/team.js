@@ -202,10 +202,12 @@ const subteams = [
 ];
 
 const subteamRows = [
+  ["analog", "software"],
+  ["business-ops", "rf"],
+  ["design-verification"],
+  ["physical-design"],
+  ["platforms"],
   ["rtl-design"],
-  ["platforms", "analog"],
-  ["design-verification", "physical-design"],
-  ["business-ops", "rf", "software"],
 ];
 
 function Team() {
@@ -333,8 +335,7 @@ function SubteamCard({ id, name, icon, members }) {
   return (
     <article
       id={id}
-      className="subteam-card"
-      style={{ "--member-count": members.length }}
+      className={`subteam-card subteam-card--${members.length}`}
       data-aos="fade-up"
     >
       <div className="subteam-card__header">
