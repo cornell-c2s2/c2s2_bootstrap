@@ -201,16 +201,12 @@ const subteams = [
   },
 ];
 
-const subteamLayout = {
-  "rtl-design": { order: 0, size: "full" },
-  platforms: { order: 1, size: "two-thirds" },
-  analog: { order: 2, size: "one-third" },
-  "design-verification": { order: 3, size: "half" },
-  "physical-design": { order: 4, size: "half" },
-  "business-ops": { order: 5, size: "third" },
-  rf: { order: 6, size: "third" },
-  software: { order: 7, size: "third" },
-};
+const subteamRows = [
+  ["rtl-design"],
+  ["platforms", "analog"],
+  ["design-verification", "physical-design"],
+  ["business-ops", "rf", "software"],
+];
 
 function Team() {
   const facultyAdvisors = [
@@ -264,18 +260,14 @@ function Team() {
             <h2 id="subteams-title">Subteams</h2>
           </div>
           <div className="team-atlas__grid">
-            {[...subteams]
-              .sort(
-                (a, b) =>
-                  subteamLayout[a.id].order - subteamLayout[b.id].order,
-              )
-              .map((subteam) => (
-                <SubteamCard
-                  key={subteam.id}
-                  layout={subteamLayout[subteam.id].size}
-                  {...subteam}
-                />
-              ))}
+            {subteamRows.map((row) => (
+              <div className="team-atlas__row" key={row.join("-")}>
+                {row.map((id) => {
+                  const subteam = subteams.find((team) => team.id === id);
+                  return <SubteamCard key={subteam.id} {...subteam} />;
+                })}
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -337,11 +329,12 @@ function LeadershipPanel({ title, icon, people, faculty = false }) {
   );
 }
 
-function SubteamCard({ id, name, icon, members, layout }) {
+function SubteamCard({ id, name, icon, members }) {
   return (
     <article
       id={id}
-      className={`subteam-card subteam-card--${layout}`}
+      className="subteam-card"
+      style={{ "--member-count": members.length }}
       data-aos="fade-up"
     >
       <div className="subteam-card__header">
