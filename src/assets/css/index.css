@@ -2248,8 +2248,27 @@ section {
   transition: opacity 0.2s ease, transform 0.2s ease;
 }
 
+.person-card__hover-role {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  padding: 6px 8px;
+  color: #fff;
+  background: rgba(68, 10, 10, 0.82);
+  border-radius: 7px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  backdrop-filter: blur(8px);
+}
+
 .person-card:hover .person-card__socials,
-.person-card:focus-within .person-card__socials {
+.person-card:focus-within .person-card__socials,
+.person-card:hover .person-card__hover-role,
+.person-card:focus-within .person-card__hover-role {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0);
@@ -2547,7 +2566,8 @@ section {
 }
 
 @media (hover: none), (pointer: coarse) {
-  .person-card__socials {
+  .person-card__socials,
+  .person-card__hover-role {
     opacity: 1;
     pointer-events: auto;
     transform: none;

@@ -301,7 +301,11 @@ function Team() {
           </div>
           <div className="team-directory__grid">
             {visibleMembers.map((member) => (
-              <PersonCard key={`${member.subteamId}-${member.name}`} {...member} />
+              <PersonCard
+                key={`${member.subteamId}-${member.name}`}
+                {...member}
+                hoverRole
+              />
             ))}
           </div>
         </div>
@@ -364,9 +368,16 @@ function LeadershipPanel({ title, icon, people, faculty = false }) {
   );
 }
 
-function PersonCard({ name, role = "", subteam = "", img, compact = false }) {
+function PersonCard({
+  name,
+  role = "",
+  subteam = "",
+  img,
+  compact = false,
+  hoverRole = false,
+}) {
   const socials = memberSocials[name] || {};
-  const detail = [role, subteam].filter(Boolean).join(" · ");
+  const detail = [hoverRole ? "" : role, subteam].filter(Boolean).join(" · ");
 
   return (
     <div className={`person-card${compact ? " person-card--compact" : ""}`}>
@@ -377,6 +388,9 @@ function PersonCard({ name, role = "", subteam = "", img, compact = false }) {
           alt={name}
           onLoad={(event) => event.target.classList.add("loaded")}
         />
+        {hoverRole && role && (
+          <span className="person-card__hover-role">{role}</span>
+        )}
         {(socials.github || socials.linkedin) && (
           <div className="person-card__socials">
             {socials.github && (
