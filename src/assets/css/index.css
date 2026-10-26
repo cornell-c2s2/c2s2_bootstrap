@@ -2161,6 +2161,8 @@ section {
   display: grid;
   grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
   gap: 24px;
+  max-width: 1084px;
+  margin: 0 auto;
 }
 
 .leadership-panel {
@@ -2459,8 +2461,8 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 12px;
-  max-width: 1140px;
+  gap: 22px;
+  max-width: 1084px;
   margin: 0 auto;
 }
 
