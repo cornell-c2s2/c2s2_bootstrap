@@ -2205,6 +2205,11 @@ section {
   gap: 16px;
 }
 
+.leadership-panel__people--faculty {
+  justify-content: center;
+  column-gap: 54px;
+}
+
 .person-card {
   width: var(--team-headshot-size);
   flex: 0 0 var(--team-headshot-size);
@@ -2589,6 +2594,12 @@ section {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1399px) {
+  .leadership-panel__people--faculty {
+    column-gap: 24px;
+  }
+}
+
 @media (max-width: 1199px) {
   .team-page {
     --team-headshot-size: 150px;
@@ -2720,6 +2731,10 @@ section {
   .team-atlas__row {
     padding: 20px;
     border-radius: 15px;
+  }
+
+  .leadership-panel__people--faculty {
+    column-gap: 16px;
   }
 
   .subteam-card__description {
