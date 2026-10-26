@@ -44,6 +44,7 @@ import kateSanders from "../assets/img/team/optimized/Kate Sanders_RFIC.webp";
 import seanWhelan from "../assets/img/team/optimized/Sean_Whelan_sgw49.webp";
 import taylorDo from "../assets/img/team/optimized/Taylor_Do_txd3.webp";
 import waliAfridi from "../assets/img/team/optimized/Wali_Afridi_wua3.webp";
+import AlumniInfo from "../assets/json/alumni8.json";
 
 const memberSocials = {
   "Stella Zhou": {
@@ -336,6 +337,14 @@ function Team() {
               <p>
                 Thanks to our amazing alumni who continue to support us!
               </p>
+              <div className="team-alumni-preview">
+                {AlumniInfo.slice(0, 4).map((alumni) => (
+                  <AlumniPreviewCard
+                    key={`${alumni.first}-${alumni.last}`}
+                    {...alumni}
+                  />
+                ))}
+              </div>
             </div>
             <Link to="/alumni" className="team-alumni-cta__link">
               View all alumni
@@ -409,6 +418,41 @@ function PersonCard({
       <div className="person-card__info">
         <h4>{name}</h4>
         {detail && <span>{detail}</span>}
+      </div>
+    </div>
+  );
+}
+
+function AlumniPreviewCard({
+  first,
+  last,
+  position,
+  years,
+  major,
+  employer,
+  linkedin,
+}) {
+  return (
+    <div className="alumni-card">
+      <div className="name">{`${first} ${last}`}</div>
+      {position && <div className="position">{position}</div>}
+      {years && <div className="years">{years}</div>}
+      {major && <div className="major">{major}</div>}
+      {employer && <div className="employer">{employer}</div>}
+      <div className="linkedin-container">
+        {linkedin ? (
+          <a
+            href={linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="linkedin-link"
+          >
+            <i className="bi bi-linkedin" aria-hidden="true"></i>
+            <span>LinkedIn</span>
+          </a>
+        ) : (
+          <span className="no-linkedin">No LinkedIn profile</span>
+        )}
       </div>
     </div>
   );
