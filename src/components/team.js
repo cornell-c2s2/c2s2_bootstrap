@@ -338,7 +338,7 @@ function Team() {
                 Thanks to our amazing alumni who continue to support us!
               </p>
               <div className="team-alumni-preview">
-                {AlumniInfo.slice(0, 4).map((alumni) => (
+                {AlumniInfo.slice(0, 12).map((alumni) => (
                   <AlumniPreviewCard
                     key={`${alumni.first}-${alumni.last}`}
                     {...alumni}
