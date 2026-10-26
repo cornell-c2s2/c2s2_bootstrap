@@ -113,8 +113,6 @@ const subteams = [
     id: "analog",
     name: "Analog Subteam",
     icon: "bi-speedometer2",
-    description:
-      "Building the analog interfaces that connect our chips to the physical world.",
     members: [
       { name: "Kai Imani", role: "Subteam Lead", img: kaiImani },
       { name: "Tiffany Li", img: tiffanyLi },
@@ -124,8 +122,6 @@ const subteams = [
     id: "business-ops",
     name: "Business Operations Subteam",
     icon: "bi-briefcase",
-    description:
-      "Keeping the team funded, connected, organized, and ready for what comes next.",
     members: [
       { name: "Ridwanah Haque", role: "Subteam Lead", img: ridwanahHaque },
       { name: "Adi Prathapa", img: adiPrathapa },
@@ -136,8 +132,6 @@ const subteams = [
     id: "design-verification",
     name: "Design Verification Subteam",
     icon: "bi-shield-check",
-    description:
-      "Proving our designs behave as intended before they become silicon.",
     members: [
       {
         name: "Daniel Penas Varela",
@@ -153,8 +147,6 @@ const subteams = [
     id: "physical-design",
     name: "Physical Design Subteam",
     icon: "bi-layers",
-    description:
-      "Turning logical designs into layouts that are ready for fabrication.",
     members: [
       { name: "Ivan Mokeyev", role: "Subteam Lead", img: ivanMokeyev },
       { name: "Joseph Junior Mensah", img: josephJuniorMensah },
@@ -166,8 +158,6 @@ const subteams = [
     id: "platforms",
     name: "Platforms Subteam",
     icon: "bi-motherboard",
-    description:
-      "Creating the boards, tools, and systems that bring our chips to life.",
     members: [
       { name: "Joanne Chen", role: "Subteam Lead", img: joanneChen },
       { name: "Mohamed Elmi", role: "Subteam Lead", img: mohamedElmi },
@@ -180,8 +170,6 @@ const subteams = [
     id: "rf",
     name: "RF Subteam",
     icon: "bi-router",
-    description:
-      "Designing high-frequency circuits for sensing and wireless communication.",
     members: [
       { name: "Kate Sanders", role: "Subteam Lead", img: kateSanders },
       { name: "Aditya Rao", role: "Subteam Lead", img: adityaRao },
@@ -192,8 +180,6 @@ const subteams = [
     id: "rtl-design",
     name: "RTL Design Subteam",
     icon: "bi-cpu",
-    description:
-      "Describing and architecting the digital hardware at the heart of our chips.",
     members: [
       { name: "Ethan (Yifei) Yan", role: "Subteam Lead", img: yifeiYan },
       { name: "Sumaia Jewena", role: "Subteam Lead", img: sumaiaJewena },
@@ -208,8 +194,6 @@ const subteams = [
     id: "software",
     name: "Software Subteam",
     icon: "bi-code-slash",
-    description:
-      "Building the software stack that makes our custom hardware useful.",
     members: [
       { name: "Major Zangari", role: "Subteam Lead", img: majorZangari },
       { name: "Olesia Kuzdrovska", img: olesiaKuzdrovska },
@@ -245,19 +229,16 @@ function Team() {
       <section className="team-leadership" aria-labelledby="leadership-title">
         <div className="container">
           <div className="team-section-heading" data-aos="fade-up">
-            <span>Guiding C2S2</span>
             <h2 id="leadership-title">Leadership</h2>
           </div>
           <div className="leadership-layout">
             <LeadershipPanel
-              eyebrow="Mentorship"
               title="Faculty Advisors"
               icon="bi-mortarboard"
               people={facultyAdvisors}
               faculty
             />
             <LeadershipPanel
-              eyebrow="Direction"
               title="Team Leads"
               icon="bi-people"
               people={teamLeads}
@@ -269,16 +250,11 @@ function Team() {
       <section className="team-atlas" aria-labelledby="subteams-title">
         <div className="container">
           <div className="team-section-heading" data-aos="fade-up">
-            <span>How we work</span>
-            <h2 id="subteams-title">Explore our subteams</h2>
-            <p>
-              Different disciplines, one tapeout. Each subteam owns a critical
-              part of the journey from idea to working silicon.
-            </p>
+            <h2 id="subteams-title">Subteams</h2>
           </div>
           <div className="team-atlas__grid">
-            {subteams.map((subteam, index) => (
-              <SubteamCard key={subteam.id} index={index} {...subteam} />
+            {subteams.map((subteam) => (
+              <SubteamCard key={subteam.id} {...subteam} />
             ))}
           </div>
         </div>
@@ -291,7 +267,6 @@ function Team() {
       >
         <div className="container">
           <div className="team-section-heading team-section-heading--centered" data-aos="fade-up">
-            <span>Experience that carries forward</span>
             <h2 id="senior-advisors-title">Senior Advisors</h2>
           </div>
           <div className="senior-advisors__grid" data-aos="fade-up">
@@ -306,14 +281,13 @@ function Team() {
         <div className="container">
           <div className="team-alumni-cta__card" data-aos="fade-up">
             <div>
-              <span className="team-alumni-cta__eyebrow">Part of the C2S2 story</span>
-              <h2>Built by generations of students</h2>
+              <h2>Alumni</h2>
               <p>
-                Meet the alumni whose work and mentorship continue to shape our team.
+                Thanks to our amazing alumni who continue to support us!
               </p>
             </div>
             <Link to="/alumni" className="team-alumni-cta__link">
-              Explore our alumni
+              View all alumni
               <i className="bi bi-arrow-right" aria-hidden="true"></i>
             </Link>
           </div>
@@ -325,13 +299,12 @@ function Team() {
 
 export default Team;
 
-function LeadershipPanel({ eyebrow, title, icon, people, faculty = false }) {
+function LeadershipPanel({ title, icon, people, faculty = false }) {
   return (
     <div className="leadership-panel" data-aos="fade-up">
       <div className="leadership-panel__heading">
         <i className={`bi ${icon}`} aria-hidden="true"></i>
         <div>
-          <span>{eyebrow}</span>
           <h3>{title}</h3>
         </div>
       </div>
@@ -344,7 +317,7 @@ function LeadershipPanel({ eyebrow, title, icon, people, faculty = false }) {
   );
 }
 
-function SubteamCard({ id, name, icon, description, members, index }) {
+function SubteamCard({ id, name, icon, members }) {
   const isWide = members.length >= 5;
 
   return (
@@ -358,14 +331,9 @@ function SubteamCard({ id, name, icon, description, members, index }) {
           <i className={`bi ${icon}`} aria-hidden="true"></i>
         </div>
         <div>
-          <span>{members.length} team members</span>
           <h3>{name.replace(" Subteam", "")}</h3>
         </div>
-        <span className="subteam-card__number" aria-hidden="true">
-          {String(index + 1).padStart(2, "0")}
-        </span>
       </div>
-      <p className="subteam-card__description">{description}</p>
       <div className="subteam-card__members">
         {members.map((member) => (
           <PersonCard key={member.name} {...member} compact />
