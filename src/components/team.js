@@ -201,6 +201,17 @@ const subteams = [
   },
 ];
 
+const subteamLayout = {
+  "rtl-design": { order: 0, size: "full" },
+  platforms: { order: 1, size: "two-thirds" },
+  analog: { order: 2, size: "one-third" },
+  "design-verification": { order: 3, size: "half" },
+  "physical-design": { order: 4, size: "half" },
+  "business-ops": { order: 5, size: "third" },
+  rf: { order: 6, size: "third" },
+  software: { order: 7, size: "third" },
+};
+
 function Team() {
   const facultyAdvisors = [
     { name: "Prof. Christopher Batten", role: "Faculty Advisor", img: cb535 },
@@ -253,9 +264,18 @@ function Team() {
             <h2 id="subteams-title">Subteams</h2>
           </div>
           <div className="team-atlas__grid">
-            {subteams.map((subteam) => (
-              <SubteamCard key={subteam.id} {...subteam} />
-            ))}
+            {[...subteams]
+              .sort(
+                (a, b) =>
+                  subteamLayout[a.id].order - subteamLayout[b.id].order,
+              )
+              .map((subteam) => (
+                <SubteamCard
+                  key={subteam.id}
+                  layout={subteamLayout[subteam.id].size}
+                  {...subteam}
+                />
+              ))}
           </div>
         </div>
       </section>
@@ -317,13 +337,11 @@ function LeadershipPanel({ title, icon, people, faculty = false }) {
   );
 }
 
-function SubteamCard({ id, name, icon, members }) {
-  const isWide = members.length >= 5;
-
+function SubteamCard({ id, name, icon, members, layout }) {
   return (
     <article
       id={id}
-      className={`subteam-card${isWide ? " subteam-card--wide" : ""}`}
+      className={`subteam-card subteam-card--${layout}`}
       data-aos="fade-up"
     >
       <div className="subteam-card__header">

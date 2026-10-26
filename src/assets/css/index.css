@@ -2015,7 +2015,7 @@ section {
 # Team atlas
 --------------------------------------------------------------*/
 .team-page {
-  --team-headshot-size: 124px;
+  --team-headshot-size: 100px;
   background: #fff;
 }
 
@@ -2242,6 +2242,17 @@ section {
   bottom: 8px;
   display: flex;
   gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.person-card:hover .person-card__socials,
+.person-card:focus-within .person-card__socials {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 .person-card__socials a {
@@ -2298,7 +2309,7 @@ section {
 
 .team-atlas__grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 24px;
   align-items: start;
 }
@@ -2312,8 +2323,30 @@ section {
   box-shadow: 0 10px 30px rgba(68, 10, 10, 0.055);
 }
 
-.subteam-card--wide {
+.subteam-card--full {
   grid-column: 1 / -1;
+}
+
+.subteam-card--two-thirds {
+  grid-column: span 8;
+}
+
+.subteam-card--one-third,
+.subteam-card--third {
+  grid-column: span 4;
+}
+
+.subteam-card--third {
+  padding-right: 24px;
+  padding-left: 24px;
+}
+
+.subteam-card--third .subteam-card__members {
+  gap: 6px;
+}
+
+.subteam-card--half {
+  grid-column: span 6;
 }
 
 .subteam-card__header {
@@ -2367,10 +2400,10 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 14px;
+  gap: 10px;
 }
 
-.subteam-card--wide .subteam-card__members {
+.subteam-card--full .subteam-card__members {
   justify-content: center;
 }
 
@@ -2489,9 +2522,31 @@ section {
   }
 }
 
+@media (hover: none), (pointer: coarse) {
+  .person-card__socials {
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+@media (max-width: 1199px) {
+  .team-atlas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .subteam-card--full,
+  .subteam-card--two-thirds,
+  .subteam-card--one-third,
+  .subteam-card--half,
+  .subteam-card--third {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 991px) {
   .team-page {
-    --team-headshot-size: 112px;
+    --team-headshot-size: 100px;
   }
 
   .team-hero {
@@ -2514,8 +2569,12 @@ section {
     grid-template-columns: 1fr;
   }
 
-  .subteam-card--wide {
-    grid-column: auto;
+  .subteam-card--full,
+  .subteam-card--two-thirds,
+  .subteam-card--one-third,
+  .subteam-card--half,
+  .subteam-card--third {
+    grid-column: 1 / -1;
   }
 
 }
