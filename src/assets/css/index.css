@@ -2159,11 +2159,14 @@ section {
 
 .leadership-layout {
   display: grid;
-  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
-  gap: 24px;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
 
 .leadership-panel {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  align-items: center;
   padding: 28px;
   background: #fff;
   border: 1px solid rgba(68, 10, 10, 0.1);
@@ -2175,7 +2178,7 @@ section {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 0;
 }
 
 .leadership-panel__heading > i {
@@ -2642,6 +2645,14 @@ section {
 
   .team-directory__grid {
     grid-template-columns: repeat(3, var(--team-headshot-size));
+  }
+
+  .leadership-panel {
+    display: block;
+  }
+
+  .leadership-panel__heading {
+    margin-bottom: 24px;
   }
 }
 
