@@ -22,6 +22,7 @@ import apollo from "../assets/img/aluminCompanies/apollo_logo.jpg";
 import citadel from "../assets/img/aluminCompanies/citadel_logo.jpg";
 import millennium from "../assets/img/aluminCompanies/millennium_logo.png";
 import micron from "../assets/img/aluminCompanies/micron_logo.jpeg";
+import hrt from "../assets/img/aluminCompanies/hrt_logo.png";
 
 const AlumniCompanies = () => {
   const companies = [
@@ -39,6 +40,7 @@ const AlumniCompanies = () => {
     { name: "ARM", logo: arm },
     { name: "Cadence", logo: cadence },
     { name: "Citadel", logo: citadel },
+    { name: "HRT", logo: hrt },
     { name: "Apollo", logo: apollo },
     { name: "Millennium", logo: millennium },
     { name: "GE Aerospace", logo: ge },
