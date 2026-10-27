@@ -130,7 +130,7 @@
     "date": "Spring 2026",
     "category": "Analog",
     "summary": "Asynchronous SAR ADC, adiabatic comparator, and flash ADC.",
-    "text": "Coming soon.",
+    "text": "The 2026 C2S2 Analog Tapeout (codename Kakapo) contains a 3-bit 40 MS/s \"Adiabatic\" Flash ADC and an 8-bit 4.4 MS/s Asynchronous SAR ADC. The Flash ADC aims to mitigate the relatively high power draw of the Flash topology by leveraging the principles of adiabatic (i.e. reversible) compute for both its analog and digital circuits. This enables extraordinarily low power draw, on the order of several microwatts, while maintaining a relatively high sampling rate. This was the team's first foray into the world of reversible compute. The 8-bit SAR ADC improves upon the SAR ADC from Kestrel, utilizing self-timing to remove time segments in the ADC's convergence process that would otherwise remain unused. This required a digital logic redesign, as well as the addition of a variable delay line to enable self-timing. Importantly, this asynchronous ADC enables a faster sampling rate than the previous SAR without requiring a redesign of every major component. The tapeout also includes chip art of a kākāpō bird (the chip's namesake), the names of the analog subteam members who designed the chip, and the logos of the team and its sponsors.",
     "img_url": "../assets/img/chips/c2s2-2026-analog.png"
   },
   {
@@ -144,11 +144,20 @@
   },
   {
     "id": "rfic-2026",
-    "title": "2.4 GHz OOK Transceiver",
+    "title": "Seneca-1 RFIC Transceiver",
     "date": "Spring 2026",
     "category": "RFIC",
     "summary": "A 2.4 GHz on-off keying transceiver.",
-    "text": "Coming soon.",
-    "img_url": "../assets/img/chips/c2s2-2026-rfic.png"
+    "text": "Seneca-1 is C2S2’s Spring 2026 RFIC tapeout and the team’s first transceiver at 2.4 GHz, moving up from previous RFIC designs at 915 MHz. It implements a simple half-duplex on-off keying (OOK) radio in TSMC 180 nm, meaning it sends and receives data by switching a 2.4 GHz carrier on and off. The transmitter is a differential Class-F power amplifier. Class-F was chosen because OOK does not require a linear amplifier, so the design could prioritize efficiency instead; it is designed to support both a low-power mode for OOK and a higher-power mode. The receiver chain consists of a low-noise amplifier, a cascode pre-amplifier, an envelope detector, and a comparator, which together take a weak incoming signal and convert it directly into digital bits. The chip also includes a temperature-compensated current reference to keep each RF block biased consistently as temperature changes. The higher-power transmit mode was designed with constant-envelope modulation in mind, which ties directly into this year’s 2.4 GHz FSK transceiver. Seneca-1 has been fabricated, and testing is currently underway.",
+    "img_url": "../assets/img/chips/c2s2-2026-rfic.png",
+    "specifications": {
+      "Process": "TSMC 180 nm",
+      "Frequency Band": "2.4 GHz",
+      "Modulation": "OOK half-duplex",
+      "Transmitter": "Differential Class-F power amplifier",
+      "Receiver": "Low-noise amplifier, cascode pre-amplifier, envelope detector, comparator",
+      "Biasing": "Temperature-compensated current reference",
+      "Status": "Fabricated, testing in progress"
+    }
   }
 ]
