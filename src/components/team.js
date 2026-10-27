@@ -368,7 +368,7 @@ function LeadershipPanel({ title, icon, people, faculty = false }) {
           <h3>{title}</h3>
         </div>
       </div>
-      <div className={`leadership-panel__people${faculty ? " leadership-panel__people--faculty" : ""}`}>
+      <div className={`leadership-panel__people leadership-panel__people--${faculty ? "faculty" : "leads"}`}>
         {people.map((member) => (
           <PersonCard key={member.name} {...member} />
         ))}

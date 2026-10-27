@@ -2206,8 +2206,14 @@ section {
 }
 
 .leadership-panel__people--faculty {
-  justify-content: center;
+  justify-content: flex-end;
   column-gap: 54px;
+}
+
+.leadership-panel__people--leads {
+  justify-content: flex-start;
+  column-gap: 54px;
+  margin-left: -24px;
 }
 
 .person-card {
@@ -2596,7 +2602,14 @@ section {
 
 @media (min-width: 992px) and (max-width: 1399px) {
   .leadership-panel__people--faculty {
+    justify-content: center;
     column-gap: 24px;
+  }
+
+  .leadership-panel__people--leads {
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-left: 0;
   }
 }
 
@@ -2650,6 +2663,11 @@ section {
 
   .leadership-panel__people {
     justify-content: center;
+  }
+
+  .leadership-panel__people--leads {
+    column-gap: 16px;
+    margin-left: 0;
   }
 
   .subteam-card--5 .subteam-card__members,
