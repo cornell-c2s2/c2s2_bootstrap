@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React from "react";
 import LazyImage from "./lazyimage.js";
 
 //Advisors
@@ -44,6 +43,8 @@ import kateSanders from "../assets/img/team/optimized/Kate Sanders_RFIC.webp";
 import seanWhelan from "../assets/img/team/optimized/Sean_Whelan_sgw49.webp";
 import taylorDo from "../assets/img/team/optimized/Taylor_Do_txd3.webp";
 import waliAfridi from "../assets/img/team/optimized/Wali_Afridi_wua3.webp";
+
+//Alumni
 import AlumniInfo from "../assets/json/alumni8.json";
 
 const memberSocials = {
@@ -203,255 +204,252 @@ const subteams = [
 ];
 
 function Team() {
-  const location = useLocation();
-  const [activeSubteam, setActiveSubteam] = useState("all");
-  const facultyAdvisors = [
-    { name: "Prof. Christopher Batten", role: "Faculty Advisor", img: cb535 },
-    { name: "Prof. Hunter Adams", role: "Faculty Advisor", img: vha3 },
-    { name: "Prof. Mohamed I. Ibrahim", role: "Faculty Advisor", img: mibrahim },
-  ];
-  const teamLeads = [
-    { name: "Alyssa Xu", role: "Team Lead", img: alysaXu },
-    { name: "Joseph Wan", role: "Team Lead", img: josephWan },
-  ];
-  const teamMembers = subteams.flatMap((subteam) =>
-    subteam.members.map((member) => ({
-      ...member,
-      subteamId: subteam.id,
-      subteam: subteam.name.replace(" Subteam", ""),
-    })),
-  );
-  const visibleMembers =
-    activeSubteam === "all"
-      ? teamMembers
-      : teamMembers.filter((member) => member.subteamId === activeSubteam);
-
-  useEffect(() => {
-    const requestedSubteam = location.hash.replace("#", "");
-    if (subteams.some((subteam) => subteam.id === requestedSubteam)) {
-      setActiveSubteam(requestedSubteam);
-    }
-  }, [location.hash]);
-
   return (
-    <main id="main" className="team-page">
-      <section id="team" className="breadcrumbs team-page-header">
+    <main id="main">
+      <section id="team" className="breadcrumbs">
         <div className="container">
-          <div className="section-title" data-aos="fade-up">
+          <div className="section-title">
             <h1>Meet the Team</h1>
             <p className="team-page-intro">
-              C2S2 would not be possible without the amazing people who
+              C2S2 would not be possible without all of the amazing people that
               contribute to its success.
             </p>
           </div>
         </div>
       </section>
-
-      <section className="team-leadership" aria-labelledby="leadership-title">
+      <section id="team" className="team leadership-section">
         <div className="container">
-          <div className="team-section-heading" data-aos="fade-up">
-            <h2 id="leadership-title">Leadership</h2>
+          <div className="leadership-group" data-aos="fade-up">
+            <div className="section-title">
+              <i className="bi bi-mortarboard"></i>
+              <p>Faculty Advisors</p>
+            </div>
+            <div className="row justify-content-center">
+              <TeamMember
+                name="Prof. Christopher Batten"
+                role="Faculty Advisor"
+                img={cb535}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Prof. Hunter Adams"
+                role="Faculty Advisor"
+                img={vha3}
+                github=""
+                linkedin=""
+              />
+              <TeamMember
+                name="Prof. Mohamed I. Ibrahim"
+                role="Faculty Advisor"
+                img={mibrahim}
+                github=""
+                linkedin=""
+              />
+            </div>
           </div>
-          <div className="leadership-layout">
-            <LeadershipPanel
-              title="Faculty Advisors"
-              icon="bi-mortarboard"
-              people={facultyAdvisors}
-              faculty
-            />
-            <LeadershipPanel
-              title="Team Leads"
-              icon="bi-people"
-              people={teamLeads}
-            />
+          <div className="leadership-group" data-aos="fade-up">
+            <div className="section-title">
+              <i className="bi bi-people"></i>
+              <p>Team Leads</p>
+            </div>
+            <div className="row justify-content-center">
+              <TeamMember
+                name="Alyssa Xu"
+                role="Team Lead"
+                img={alysaXu}
+                github={memberSocials["Alyssa Xu"].github || ""}
+                linkedin={memberSocials["Alyssa Xu"].linkedin || ""}
+              />
+              <TeamMember
+                name="Joseph Wan"
+                role="Team Lead"
+                img={josephWan}
+                github=""
+                linkedin=""
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="team-atlas team-directory" aria-labelledby="team-members-title">
+      {subteams.map((subteam) => (
+        <SubteamSection key={subteam.id} {...subteam} />
+      ))}
+
+      <section id="senior-advisors" className="team">
         <div className="container">
-          <div className="team-section-heading" data-aos="fade-up">
-            <h2 id="team-members-title">Team Members</h2>
+          <div className="section-title" data-aos="fade-up">
+            <i className="bi bi-mortarboard"></i>
+            <p>Senior Advisors</p>
           </div>
-          <div className="team-directory__toolbar" data-aos="fade-up">
-            <div className="chip-gallery-filters" role="group" aria-label="Filter team members by subteam">
-              <button
-                type="button"
-                className={activeSubteam === "all" ? "chip-filter chip-filter--active" : "chip-filter"}
-                aria-pressed={activeSubteam === "all"}
-                onClick={() => setActiveSubteam("all")}
-              >
-                All
-              </button>
-              {subteams.map((subteam) => (
-                <button
-                  key={subteam.id}
-                  id={subteam.id}
-                  type="button"
-                  className={activeSubteam === subteam.id ? "chip-filter chip-filter--active" : "chip-filter"}
-                  aria-pressed={activeSubteam === subteam.id}
-                  onClick={() => setActiveSubteam(subteam.id)}
-                >
-                  {subteam.name.replace(" Subteam", "")}
-                </button>
-              ))}
-            </div>
-            <span className="visually-hidden" role="status" aria-live="polite">
-              Showing {visibleMembers.length} team {visibleMembers.length === 1 ? "member" : "members"}.
-            </span>
-          </div>
-          <div className="team-directory__grid">
-            {visibleMembers.map((member) => (
-              <PersonCard
-                key={`${member.subteamId}-${member.name}`}
-                {...member}
-                hoverRole
+
+          <div className="row justify-content-center">
+            {seniorAdvisors.map((advisor) => (
+              <TeamMember
+                key={advisor.name}
+                name={advisor.name}
+                role={advisor.role}
+                img={advisor.img}
+                github=""
+                linkedin=""
               />
             ))}
           </div>
         </div>
       </section>
 
-      <section
-        id="senior-advisors"
-        className="senior-advisors"
-        aria-labelledby="senior-advisors-title"
-      >
+      <section className="alumni-section">
         <div className="container">
-          <div className="team-section-heading team-section-heading--centered" data-aos="fade-up">
-            <h2 id="senior-advisors-title">Senior Advisors</h2>
+          <div className="section-title" data-aos="fade-up">
+            <p>Alumni</p>
           </div>
-          <div className="senior-advisors__grid" data-aos="fade-up">
-            {seniorAdvisors.map((advisor) => (
-              <PersonCard key={advisor.name} {...advisor} />
-            ))}
+          <div className="inner-page" data-aos="fade-up">
+            <p>Thanks to our amazing Alumni who continue to support us!</p>
+          </div>
+
+          <div className="alumni-grid">
+            {AlumniInfo.map((alumni, index) => {
+              return <AlumniCard key={index} {...alumni} />;
+            })}
+          </div>
+          <div className="alumni-button-container">
+            <a href="/alumni" className="btn-get-started scrollto">
+              View All Alumni
+            </a>
           </div>
         </div>
       </section>
 
-      <section className="team-alumni-cta">
-        <div className="container">
-          <div className="team-alumni-cta__card" data-aos="fade-up">
-            <div>
-              <h2>Alumni</h2>
-              <p>
-                Thanks to our amazing alumni who continue to support us!
-              </p>
-              <div className="team-alumni-preview">
-                {AlumniInfo.slice(0, 12).map((alumni) => (
-                  <AlumniPreviewCard
-                    key={`${alumni.first}-${alumni.last}`}
-                    {...alumni}
-                  />
-                ))}
-              </div>
-            </div>
-            <Link to="/alumni" className="team-alumni-cta__link">
-              View all alumni
-              <i className="bi bi-arrow-right" aria-hidden="true"></i>
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* <AlumniCompanies /> */}
     </main>
   );
 }
 
 export default Team;
 
-function LeadershipPanel({ title, icon, people, faculty = false }) {
+function SubteamSection({ id, name, icon, members }) {
   return (
-    <div className="leadership-panel" data-aos="fade-up">
-      <div className="leadership-panel__heading">
-        <i className={`bi ${icon}`} aria-hidden="true"></i>
-        <div>
-          <h3>{title}</h3>
+    <section id={id} className="team">
+      <div className="container">
+        <div className="section-title" data-aos="fade-up">
+          <i className={`bi ${icon}`}></i>
+          <p>{name}</p>
+        </div>
+
+        <div className="row justify-content-center">
+          {members.map((member) => {
+            const socials = memberSocials[member.name] || {};
+
+            return (
+              <TeamMember
+                key={member.name}
+                name={member.name}
+                role={member.role || ""}
+                img={member.img}
+                github={socials.github || ""}
+                linkedin={socials.linkedin || ""}
+              />
+            );
+          })}
         </div>
       </div>
-      <div className={`leadership-panel__people leadership-panel__people--${faculty ? "faculty" : "leads"}`}>
-        {people.map((member) => (
-          <PersonCard key={member.name} {...member} />
-        ))}
-      </div>
-    </div>
+    </section>
   );
 }
 
-function PersonCard({
-  name,
-  role = "",
-  subteam = "",
-  img,
-  compact = false,
-  hoverRole = false,
-}) {
-  const socials = memberSocials[name] || {};
-  const detail = [hoverRole ? "" : role, subteam].filter(Boolean).join(" · ");
-
+function TeamMember(prop) {
   return (
-    <div className={`person-card${compact ? " person-card--compact" : ""}`}>
-      <div className="person-card__image-wrap">
+    <div
+      className="col-xl-2 col-lg-3 col-md-4 col-sm-4 col-6"
+      data-aos="zoom-in"
+      data-aos-delay="100"
+    >
+      <div className="member">
         <LazyImage
-          src={img}
-          className="person-card__image"
-          alt={name}
-          onLoad={(event) => event.target.classList.add("loaded")}
+          src={prop.img}
+          className="img-fluid"
+          alt={prop.name}
+          onLoad={(e) => e.target.classList.add("loaded")}
         />
-        {hoverRole && role && (
-          <span className="person-card__hover-role">{role}</span>
-        )}
-        {(socials.github || socials.linkedin) && (
-          <div className="person-card__socials">
-            {socials.github && (
-              <a href={socials.github} target="_blank" rel="noopener noreferrer" aria-label={`${name} on GitHub`}>
-                <i className="bi bi-github" aria-hidden="true"></i>
-              </a>
-            )}
-            {socials.linkedin && (
-              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" aria-label={`${name} on LinkedIn`}>
-                <i className="bi bi-linkedin" aria-hidden="true"></i>
-              </a>
-            )}
+        <div className="member-info">
+          <div
+            className={
+              prop.github == "" && prop.linkedin == ""
+                ? "member-info-content-no-social"
+                : "member-info-content"
+            }
+          >
+            <h4>{prop.name}</h4>
+            {prop.role == "" ? "" : <span>{prop.role}</span>}
           </div>
-        )}
-      </div>
-      <div className="person-card__info">
-        <h4>{name}</h4>
-        {detail && <span>{detail}</span>}
+          {prop.github == "" && prop.linkedin == "" ? (
+            ""
+          ) : (
+            <div className="social">
+              {prop.github == "" ? (
+                ""
+              ) : (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={prop.github}
+                >
+                  <i className="bi bi-github"></i>
+                </a>
+              )}
+              {prop.linkedin == "" ? (
+                ""
+              ) : (
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={prop.linkedin}
+                >
+                  <i className="bi bi-linkedin"></i>
+                </a>
+              )}
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
 }
 
-function AlumniPreviewCard({
-  first,
-  last,
-  position,
-  years,
-  major,
-  employer,
-  linkedin,
-}) {
+function AlumniCard(prop) {
   return (
-    <div className="alumni-card">
-      <div className="name">{`${first} ${last}`}</div>
-      {position && <div className="position">{position}</div>}
-      {years && <div className="years">{years}</div>}
-      {major && <div className="major">{major}</div>}
-      {employer && <div className="employer">{employer}</div>}
+    <div className="alumni-card" data-aos="zoom-in" data-aos-delay="100">
+      <div className="name">{prop.first + " " + prop.last}</div>
+
+      {prop.position && <div className="position">{prop.position}</div>}
+
+      {prop.years && <div className="years">{prop.years}</div>}
+
+      {prop.major && <div className="major">{prop.major}</div>}
+
+      {prop.employer && <div className="employer">{prop.employer}</div>}
+
       <div className="linkedin-container">
-        {linkedin ? (
+        {prop.linkedin === "" ? (
+          <span className="no-linkedin">No LinkedIn profile</span>
+        ) : (
           <a
-            href={linkedin}
+            href={prop.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="linkedin-link"
           >
-            <i className="bi bi-linkedin" aria-hidden="true"></i>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="linkedin-icon"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path>
+            </svg>
             <span>LinkedIn</span>
           </a>
-        ) : (
-          <span className="no-linkedin">No LinkedIn profile</span>
         )}
       </div>
     </div>
