@@ -5,6 +5,7 @@ import cadence from "../assets/img/sponsors/cadence.webp";
 import marvell from "../assets/img/sponsors/marvell-logo.png";
 import annapurnaLabs from "../assets/img/sponsors/annapurna-labs.png";
 import sandia from "../assets/img/sponsors/sandia.webp";
+import diode from "../assets/img/sponsors/diode.png";
 
 function Sponsors() {
   return (
@@ -72,6 +73,19 @@ function Sponsors() {
                 className="sponsor-logo-wide"
                 src={annapurnaLabs}
                 alt="Annapurna Labs"
+              />
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.diode.computer/"
+            >
+              <img
+                loading="lazy"
+                decoding="async"
+                className="sponsor-logo-diode"
+                src={diode}
+                alt="Diode Computers"
               />
             </a>
           </div>

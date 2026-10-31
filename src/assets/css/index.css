@@ -3211,7 +3211,7 @@ Alumni Section
 
 .sponsor-bar {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
   padding: 0;
   margin: 0;
@@ -3246,6 +3246,11 @@ Alumni Section
   max-height: 82px;
 }
 
+.sponsor-bar img.sponsor-logo-diode {
+  max-width: 142px;
+  max-height: 82px;
+}
+
 .sponsor-bar a:focus-visible {
   border-color: rgba(179, 27, 27, 0.24);
   box-shadow: 0 14px 34px rgba(68, 10, 10, 0.1);
@@ -3277,6 +3282,7 @@ Alumni Section
   .sponsor-bar {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
 }
 
 @media (max-width: 576px) {
@@ -3312,6 +3318,11 @@ Alumni Section
   .sponsor-bar img.sponsor-logo-sandia {
     max-width: min(108px, 100%);
     max-height: 56px;
+  }
+
+  .sponsor-bar img.sponsor-logo-diode {
+    max-width: min(92px, 100%);
+    max-height: 58px;
   }
 
 }
