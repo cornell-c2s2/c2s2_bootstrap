@@ -139,8 +139,17 @@
     "date": "Spring 2026",
     "category": "Digital",
     "summary": "RISC-V 32IM CPU with on-chip SRAM and a systolic array.",
-    "text": "Coming soon.",
-    "img_url": "../assets/img/chips/c2s2-2026-digital.png"
+    "text": "C2S2’s Spring 2026 Digital tapeout on TSMC 180 nm features a CPU, a systolic-array matrix-multiplication accelerator, on-chip SRAM, and the supporting infrastructure that connects these blocks within a 5 mm² die area. The CPU implements the 32-bit RISC-V IM instruction set with superscalar, in-order execution and supports up to eight memory instructions in flight. The systolic array uses a 16-bit, 4 × 4, output-stationary architecture with memory-mapped I/O for control. Memory consists of a byte-writable 16 kB SRAM organized as 32-bit words, with a small register-based backup called TinyMem for redundancy. The SoC is supported by a crossbar with round-robin arbitration, as well as SPI minion and master interfaces for testing the SoC and communicating with external SPI devices. The RTL-to-tapeout flow uses Synopsys Design Compiler for synthesis, Cadence Innovus for placement and routing, and Calibre for design-rule checks. The design undergoes extensive verification with Synopsys VCS through RTL, functional gate-level, and back-annotated gate-level simulations.",
+    "img_url": "../assets/img/chips/c2s2-2026-digital.png",
+    "specifications": {
+      "Process": "TSMC 180 nm",
+      "Clock Frequency": "71.4 MHz",
+      "ISA": "RV32IM",
+      "Memory": "16 kB on-chip SRAM",
+      "Protocols": "SPI as master and minion",
+      "Accelerators": "4 × 4, 16-bit matrix-multiplication systolic array (output stationary)",
+      "Status": "Powers on successfully, testing over SPI in progress"
+    }
   },
   {
     "id": "rfic-2026",
