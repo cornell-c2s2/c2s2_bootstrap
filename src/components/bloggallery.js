@@ -1,5 +1,8 @@
 import React from "react";
 
+//thumbnails - FA26
+import JaneRFICTestingThumbnail from "../blogposts/FA26/thumbnails/JaneRFICTesting.webp";
+
 //thumbnails - SP26
 import RidwanahBLIMPThumbnail from "../blogposts/SP26/thumbnails/RidwanahBLIMP.webp";
 import AmbilaIMUThumbnail from "../blogposts/SP26/thumbnails/AmbilaIMU.webp";
@@ -78,10 +81,41 @@ function BlogGallery() {
       >
         <div className="container">
           <div className="section-title">
+            <p>Fall 2026</p>
+          </div>
+
+          <div className="row">
+            <div
+              className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+            >
+              <div className="post">
+                <a href="/blog/JaneRFICTesting">
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    src={JaneRFICTestingThumbnail}
+                    className="img-fluid"
+                    alt="Spring 2025 RFIC test board"
+                  />
+                  <div className="post-info">
+                    <div className="post-info-content">
+                      <h4>From 915 MHz to 2.4 GHz: RFIC Testing on Platforms</h4>
+                      <span>Jane Chen</span>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="section-title">
             <p>Spring 2026</p>
           </div>
 
           <div className="row">
+
             <div
               className="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-6 d-block align-items-center"
               data-aos="zoom-in"

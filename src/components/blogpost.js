@@ -56,6 +56,9 @@ import TechnicalPM from "../blogposts/SP24/TechnicalPM";
 import TwoWorlds from "../blogposts/SP24/TwoWorlds";
 import VerifyBetterFFT from "../blogposts/SP24/VerifyBetterFFT";
 
+// FA26
+import JaneRFICTesting from "../blogposts/FA26/JaneRFICTesting";
+
 // SP26
 import RidwanahBLIMP from "../blogposts/SP26/RidwanahBLIMP";
 import AmbilaIMU from "../blogposts/SP26/AmbilaIMU";
@@ -103,6 +106,9 @@ function BlogPost() {
     SystemArchitectureProgressReport: SystemArchitectureProgressReport,
     TheProcessOfAcquiringSponsors: TheProcessOfAcquiringSponsors,
     TwoSidesOfACoin: TwoSidesOfACoin,
+
+    // FA26 Blog Posts
+    JaneRFICTesting: JaneRFICTesting,
 
     // SP26 Blog Posts
     RidwanahBLIMP: RidwanahBLIMP,

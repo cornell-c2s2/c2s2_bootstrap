@@ -2030,10 +2030,11 @@ Alumni Companies Section
 }
 
 .c2s2-alumni-title {
-  font-size: 3rem;
+  font-size: 36px;
   margin-bottom: 24px;
-  color: #000;
+  color: #440a0a;
   font-weight: 700;
+  line-height: 1.2;
 }
 
 .c2s2-alumni-description {
@@ -2175,10 +2176,6 @@ Alumni Companies Section
 
 /* Responsive design */
 @media (max-width: 992px) {
-  .c2s2-alumni-title {
-    font-size: 2.5rem;
-  }
-
   .c2s2-alumni-marquee-wrapper::before,
   .c2s2-alumni-marquee-wrapper::after {
     width: 80px;
@@ -2195,10 +2192,6 @@ Alumni Companies Section
 }
 
 @media (max-width: 768px) {
-  .c2s2-alumni-title {
-    font-size: 2.2rem;
-  }
-
   .c2s2-alumni-marquee-wrapper {
     gap: 18px;
     padding: 0 10px;
@@ -2221,7 +2214,7 @@ Alumni Companies Section
   }
 
   .c2s2-alumni-title {
-    font-size: 2rem;
+    font-size: 30px;
   }
 
   .c2s2-alumni-description {
